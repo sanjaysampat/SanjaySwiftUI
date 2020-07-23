@@ -16,6 +16,8 @@
 		72663AC224C5C7BD000596C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72663AC024C5C7BD000596C9 /* LaunchScreen.storyboard */; };
 		72663ACD24C5C7BD000596C9 /* SanjaySwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663ACC24C5C7BD000596C9 /* SanjaySwiftUITests.swift */; };
 		72663AD824C5C7BE000596C9 /* SanjaySwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663AD724C5C7BE000596C9 /* SanjaySwiftUIUITests.swift */; };
+		729B0EF424C99FCF00054F9F /* AlertControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B0EF324C99FCF00054F9F /* AlertControlView.swift */; };
+		729B0EF724C9B40E00054F9F /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B0EF524C9B40E00054F9F /* Person+CoreDataClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		72663AD324C5C7BE000596C9 /* SanjaySwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SanjaySwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72663AD724C5C7BE000596C9 /* SanjaySwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanjaySwiftUIUITests.swift; sourceTree = "<group>"; };
 		72663AD924C5C7BE000596C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		729B0EF324C99FCF00054F9F /* AlertControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControlView.swift; sourceTree = "<group>"; };
+		729B0EF524C9B40E00054F9F /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,8 @@
 		72663AB124C5C7AC000596C9 /* SanjaySwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				729B0EF924C9B41600054F9F /* Model */,
+				729B0EF024C979FD00054F9F /* Utilities */,
 				72663AB224C5C7AC000596C9 /* AppDelegate.swift */,
 				72663AB424C5C7AC000596C9 /* SceneDelegate.swift */,
 				72663AB924C5C7AC000596C9 /* ContentView.swift */,
@@ -137,6 +143,22 @@
 				72663AD924C5C7BE000596C9 /* Info.plist */,
 			);
 			path = SanjaySwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		729B0EF024C979FD00054F9F /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				729B0EF324C99FCF00054F9F /* AlertControlView.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		729B0EF924C9B41600054F9F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				729B0EF524C9B40E00054F9F /* Person+CoreDataClass.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,6 +293,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				72663AB824C5C7AC000596C9 /* SanjaySwiftUI.xcdatamodeld in Sources */,
+				729B0EF424C99FCF00054F9F /* AlertControlView.swift in Sources */,
+				729B0EF724C9B40E00054F9F /* Person+CoreDataClass.swift in Sources */,
 				72663AB324C5C7AC000596C9 /* AppDelegate.swift in Sources */,
 				72663ABA24C5C7AC000596C9 /* ContentView.swift in Sources */,
 				72663AB524C5C7AC000596C9 /* SceneDelegate.swift in Sources */,
