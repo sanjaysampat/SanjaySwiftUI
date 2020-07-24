@@ -8,64 +8,10 @@
 
 import SwiftUI
 
-/*
-class ViewModel: ObservableObject {
-    @State var name = "Name"
-    
-    @FetchRequest(
-        entity: Person.entity(),
-        sortDescriptors: [
-            NSSortDescriptor(keyPath: \Person.name, ascending: true)
-        ]
-    //, predicate: predicate
-    ) var persons: FetchedResults<Person>
-        /*
-    {
-        didSet {
-            if let coreDataName = self.persons[0].name {
-                if !coreDataName.isEmpty && !coreDataName.elementsEqual("Name") {
-                    name = coreDataName
-                }
-            }
-            print(name)
-        }
-    }
-    */
-    @Published var showingAlert = 0 {
-        didSet {
-            /*
-            if showingAlert == 2 {
-                if name != persons[0].name {
-                    persons[0].name = name
-                }
-            }
-             */
-        }
-    }
-    /*
-       @FetchRequest var persons: FetchedResults<Person>
-       init() {
-        //Intialize the FetchRequest property wrapper
-        self._persons = FetchRequest(entity: Person.entity(), sortDescriptors: [
-            NSSortDescriptor(keyPath: \Person.name, ascending: true)
-        ]
-        )
-           if let coreDataName = self.persons[0].name {
-               if !coreDataName.isEmpty && coreDataName.elementsEqual("Name") {
-                   name = coreDataName
-               }
-           }
-           print(name)
-       }
-    */
-}
-*/
-
 struct ContentView: View {
     
-    
     @Environment(\.managedObjectContext) var managedObjectContext
-
+    
     @FetchRequest(
         entity: Person.entity(),
         sortDescriptors: [
@@ -77,17 +23,17 @@ struct ContentView: View {
     @State private var showingAlert:Int = 0
     
     @State private var nameChanged = false
-
+    
     //@ObservedObject var viewModel = ViewModel()
-
+    
     var body: some View {
         ZStack() {
-            
+            // hidden control for code modifications.
             Toggle("", isOn:$nameChanged)
                 .frame(width: 0, height: 0)
                 .clipped()
                 .onReceive([self.$nameChanged].publisher.first()) { (value) in
-                     //print("New value is: \(value)")
+                    //print("New value is: \(value)")
                     //print( "SSTODO - Toggle - Showing Alert \(self.showingAlert) and self.nameChanged=\(self.nameChanged)" )
                     if self.nameChanged {
                         if self.persons.count <= 0 {
@@ -98,8 +44,12 @@ struct ContentView: View {
                             self.persons[0].name = self.name
                             self.saveContext()
                         }
+                    } else {
+                        if self.persons.count > 0 {
+                            self.name = self.persons[self.persons.count-1].name ?? "Name"
+                        }
                     }
-                }
+            }
             
             Rectangle()
                 .scale(1.25)
@@ -113,7 +63,7 @@ struct ContentView: View {
                 .scaledToFit()
                 .foregroundColor(Color.pink)
                 .opacity(0.75)
-
+            
             if self.showingAlert == 1 {
                 
                 AlertControlView(textChanged: $nameChanged,
@@ -123,53 +73,93 @@ struct ContentView: View {
                                  message: "What's name ?")
                 
             }
-
+            
             VStack(alignment: .center) {
                 Text("\(self.name)")
                     .font(.largeTitle)
                     .foregroundColor(Color.pink)
                 
-                
                 Text("in my Heart")
                     .font(.title)
                     .fontWeight(.thin)
                     .foregroundColor(Color.pink)
-                    .padding(.bottom)
-                                
-                Button(action: {
-                    self.showingAlert = 1
-                    self.nameChanged = false
-                    //print( "SSTODO - Button - Showing Alert \(self.showingAlert)" )
-                }) {
-                    Text("Click to write '\(self.name)'")
+                
+                if self.persons.count > 0 {
+                    Text("(1 of \(self.persons.count))")
+                        .font(.footnote)
+                        .foregroundColor(Color.pink)
                 }
+                
+                HStack(alignment: .center) {
+                    Button(action: {
+                        //self.showingAlert = 1
+                        //self.nameChanged = false
+                    }) {
+                        Image(systemName: "chevron.left.circle")
+                    }
                     .foregroundColor(Color.pink)
+                    .padding(.trailing)
+ 
+                    Button(action: {
+                        //self.showingAlert = 1
+                        //self.nameChanged = false
+                    }) {
+                        Image(systemName: "bin.xmark")
+                    }
+                    .foregroundColor(Color.pink)
+                    .padding(.trailing)
+
+                    Button(action: {
+                        //self.showingAlert = 1
+                        //self.nameChanged = false
+                    }) {
+                        Image(systemName: "chevron.right.circle")
+                    }
+                    .foregroundColor(Color.pink)
+                }
+                
+                addName()
 
             }
             .rotationEffect(Angle(degrees: -45), anchor: .center)
-
+            
         }
         .background(Color.blue)
         .edgesIgnoringSafeArea(.all)
-
+        
+        
+    }
     
+    // Pass id to edit existing Person.
+    func addName( id : Int = 0 ) -> some View {
+        
+        Button(action: {
+            self.showingAlert = 1
+            self.nameChanged = false
+            //print( "SSTODO - Button - Showing Alert \(self.showingAlert)" )
+        }) {
+            Text("Click to edit '\(self.name)'")
+        }
+        .foregroundColor(Color.pink)
+        .padding(.top, 40)
+        
     }
     
     func saveContext() {
-      do {
-        try managedObjectContext.save()
-      } catch {
-        print("Error saving managed object context: \(error)")
-      }
+        do {
+            try managedObjectContext.save()
+        } catch {
+            print("Error saving managed object context: \(error)")
+        }
     }
     
-
+    
 }
 
 /*
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(person: <#T##Person#>)
-    }
-}
-*/
+ struct ContentView_Previews: PreviewProvider {
+ static var previews: some View {
+ ContentView(person: <#T##Person#>)
+ }
+ }
+ */
