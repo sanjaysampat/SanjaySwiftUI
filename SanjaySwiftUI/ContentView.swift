@@ -91,34 +91,49 @@ struct ContentView: View {
                 }
                 
                 HStack(alignment: .center) {
+                    
+                    addName(id: 0)
+                    
                     Button(action: {
                         //self.showingAlert = 1
                         //self.nameChanged = false
                     }) {
-                        Image(systemName: "chevron.left.circle")
+                        VStack( alignment: .center) {
+                            Image(systemName: "chevron.left.circle")
+                            Text("Previous")
+                                .font(.caption)
+                        }
                     }
                     .foregroundColor(Color.pink)
-                    .padding(.trailing)
- 
-                    Button(action: {
-                        //self.showingAlert = 1
-                        //self.nameChanged = false
-                    }) {
-                        Image(systemName: "bin.xmark")
-                    }
-                    .foregroundColor(Color.pink)
-                    .padding(.trailing)
 
                     Button(action: {
                         //self.showingAlert = 1
                         //self.nameChanged = false
                     }) {
-                        Image(systemName: "chevron.right.circle")
+                        VStack( alignment: .center) {
+                            Image(systemName: "chevron.right.circle")
+                            Text("Next")
+                                .font(.caption)
+                        }
                     }
                     .foregroundColor(Color.pink)
+                    
+                    Button(action: {
+                        //self.showingAlert = 1
+                        //self.nameChanged = false
+                    }) {
+                        VStack( alignment: .center) {
+                            Image(systemName: "bin.xmark")
+                            Text("Delete")
+                                .font(.caption)
+                        }
+                    }
+                    .foregroundColor(Color.pink)
+                    
                 }
                 
                 addName()
+
 
             }
             .rotationEffect(Angle(degrees: -45), anchor: .center)
@@ -131,17 +146,28 @@ struct ContentView: View {
     }
     
     // Pass id to edit existing Person.
-    func addName( id : Int = 0 ) -> some View {
+    func addName( id : Int = -1 ) -> some View {
         
         Button(action: {
             self.showingAlert = 1
             self.nameChanged = false
             //print( "SSTODO - Button - Showing Alert \(self.showingAlert)" )
         }) {
-            Text("Click to edit '\(self.name)'")
+            if ( id >= 0 ) {
+                VStack( alignment: .center) {
+                        Image(systemName: "square.and.pencil")
+                        Text("Edit")
+                            .font(.caption)
+                    }
+            } else {
+                VStack( alignment: .center) {
+                    Image(systemName: "plus.square.on.square")
+                    Text("Add")
+                        .font(.caption)
+                }
+            }
         }
         .foregroundColor(Color.pink)
-        .padding(.top, 40)
         
     }
     
