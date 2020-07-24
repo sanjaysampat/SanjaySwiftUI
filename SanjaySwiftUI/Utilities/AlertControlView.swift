@@ -10,6 +10,7 @@ import SwiftUI
 
 struct AlertControlView: UIViewControllerRepresentable {
     
+    @Binding var textChanged: Bool
     @Binding var textString: String
     @Binding var showAlert: Int
     
@@ -24,7 +25,7 @@ struct AlertControlView: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: UIViewController, context: UIViewControllerRepresentableContext<AlertControlView>) {
         // Make sure that Alert instance exist after View's body get re-rendered
         guard context.coordinator.alert == nil else { return }
-
+        //print( "SSTODO - AlertControlView - self.showAlert \(self.showAlert) and self.textChanged=\(self.textChanged)" )
         if self.showAlert == 1 {
 
             // Create UIAlertController instance that is gonna present on UIViewController
@@ -43,7 +44,7 @@ struct AlertControlView: UIViewControllerRepresentable {
 
                 // On dismiss, SiwftUI view's two-way binding variable must be update (setting false) means, remove Alert's View from UI
                 alert.dismiss(animated: true) {
-                    self.showAlert = 2
+                    self.showAlert = 0
                 }
             })
 
@@ -54,7 +55,8 @@ struct AlertControlView: UIViewControllerRepresentable {
                 }
 
                 alert.dismiss(animated: true) {
-                    self.showAlert = 2
+                    self.textChanged = true
+                    self.showAlert = 0
                 }
             })
 
@@ -62,7 +64,6 @@ struct AlertControlView: UIViewControllerRepresentable {
             // Curious? then remove `DispatchQueue.main.async` & find out yourself, Dont be lazy
             DispatchQueue.main.async { // must be async !!
                 uiViewController.present(alert, animated: true, completion: {
-                    self.showAlert = 2  // hide holder after alert dismiss
                     context.coordinator.alert = nil
                 })
 
