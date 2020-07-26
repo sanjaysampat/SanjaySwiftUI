@@ -24,6 +24,10 @@ struct ContentView: View {
     
     @State private var nameChanged = false
     
+    @State private var currentPos:Int = 0
+    
+    @State private var isEditMode:Bool = false
+    
     //@ObservedObject var viewModel = ViewModel()
     
     var body: some View {
@@ -35,18 +39,21 @@ struct ContentView: View {
                 .onReceive([self.$nameChanged].publisher.first()) { (value) in
                     //print("New value is: \(value)")
                     //print( "SSTODO - Toggle - Showing Alert \(self.showingAlert) and self.nameChanged=\(self.nameChanged)" )
+                    self.currentPos = self.persons.count-1
                     if self.nameChanged {
-                        if self.persons.count <= 0 {
+                        if self.persons.count <= 0 { //|| !self.isEditMode {
+                            // Recursive issue in add mode.
                             let newPerson = Person(context: self.managedObjectContext)
                             newPerson.name = self.name
                             self.saveContext()
-                        } else if self.name != self.persons[0].name {
-                            self.persons[0].name = self.name
+                        } else if self.name != self.persons[self.currentPos].name {
+                            self.persons[self.currentPos].name = self.name
                             self.saveContext()
+                            //self.currentPos = self.persons.count-1
                         }
                     } else {
                         if self.persons.count > 0 {
-                            self.name = self.persons[self.persons.count-1].name ?? "Name"
+                            self.name = self.persons[self.currentPos].name ?? "Name"
                         }
                     }
             }
@@ -151,6 +158,7 @@ struct ContentView: View {
         Button(action: {
             self.showingAlert = 1
             self.nameChanged = false
+            self.isEditMode = ( id >= 0 )
             //print( "SSTODO - Button - Showing Alert \(self.showingAlert)" )
         }) {
             if ( id >= 0 ) {
