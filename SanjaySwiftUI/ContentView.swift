@@ -26,6 +26,8 @@ struct ContentView: View {
     
     @State private var isEditMode:Bool = false
     
+    private let paddingSize:CGFloat = 10
+    
     //@ObservedObject var viewModel = ViewModel()
     
     var body: some View {
@@ -122,6 +124,7 @@ struct ContentView: View {
                         }
                     }
                     .foregroundColor(Color.pink)
+                    .padding(paddingSize)
                     
                     Button(action: {
                         self.currentPos = self.currentPos + 1
@@ -136,7 +139,8 @@ struct ContentView: View {
                         }
                     }
                     .foregroundColor(Color.pink)
-                    
+                    .padding(paddingSize)
+
                     Button(action: {
                         _ =
                             self.managedObjectContext.delete(self.persons[self.currentPos])
@@ -156,7 +160,8 @@ struct ContentView: View {
                         }
                     }
                     .foregroundColor(Color.pink)
-                    
+                    .padding(paddingSize)
+
                 }
                 
                 addName()
@@ -173,7 +178,7 @@ struct ContentView: View {
     }
     
     // Pass id to edit existing Person.
-    func addName( id : Int = -1 ) -> some View {
+    func addName( id : Int = -1, padding : Bool = false ) -> some View {
         
         Button(action: {
             self.showingAlert = 1
@@ -195,8 +200,8 @@ struct ContentView: View {
                 }
             }
         }
+        .padding(padding ? paddingSize : 0)
         .foregroundColor(Color.pink)
-        
     }
     
     func saveContext() {
