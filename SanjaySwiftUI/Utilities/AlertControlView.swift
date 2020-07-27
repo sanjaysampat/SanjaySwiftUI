@@ -57,6 +57,7 @@ struct AlertControlView: UIViewControllerRepresentable {
                 alert.dismiss(animated: true) {
                     self.textChanged = true
                     self.showAlert = 0
+                    print( "SSTODO - AlertControlView alert.dismiss - self.showAlert=\(self.showAlert) and self.textChanged=\(self.textChanged) and self.textString=\(self.textString)" )
                 }
             })
 
@@ -65,6 +66,7 @@ struct AlertControlView: UIViewControllerRepresentable {
             DispatchQueue.main.async { // must be async !!
                 uiViewController.present(alert, animated: true, completion: {
                     context.coordinator.alert = nil
+                    self.showAlert = 0  // important here
                 })
 
             }
