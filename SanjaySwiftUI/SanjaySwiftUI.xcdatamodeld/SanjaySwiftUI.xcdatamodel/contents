@@ -3,8 +3,9 @@
     <entity name="Person" representedClassName="Person" syncable="YES" codeGenerationType="category">
         <attribute name="datetime" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="photo" optional="YES" attributeType="Binary"/>
     </entity>
     <elements>
-        <element name="Person" positionX="-63" positionY="-18" width="128" height="73"/>
+        <element name="Person" positionX="-63" positionY="-18" width="128" height="88"/>
     </elements>
 </model>
