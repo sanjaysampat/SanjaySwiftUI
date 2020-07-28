@@ -12,10 +12,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Photo Editor View Controller-->
         <scene sceneID="uEC-fL-K3E">
             <objects>
-                <viewController id="ieW-eS-XLV" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SSPhotoEditorViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ieW-eS-XLV" customClass="SSPhotoEditorViewController" customModule="SanjaySwiftUI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="sjM-8s-SGC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,7 +29,7 @@
                                             <constraint firstAttribute="height" constant="667" id="ReG-qd-nmt"/>
                                         </constraints>
                                     </imageView>
-                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BBi-PQ-VOy">
+                                    <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BBi-PQ-VOy" userLabel="Canvas Image View">
                                         <rect key="frame" x="0.0" y="-108.5" width="300" height="667"/>
                                     </imageView>
                                 </subviews>
@@ -49,14 +49,14 @@
                                     <constraint firstItem="bOX-f0-s7y" firstAttribute="top" secondItem="hU6-4E-nS6" secondAttribute="top" priority="750" id="vrZ-TM-j9y"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLb-zS-ZTk" userLabel="Top Gradient" customClass="GradientView" customModule="testSanjayXCode8" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tLb-zS-ZTk" userLabel="Top Gradient" customClass="GradientView" customModule="SanjaySwiftUI" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44" width="414" height="60"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="Yp2-zr-49g"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lVp-wJ-a0h" userLabel="Bottom Gradient" customClass="GradientView" customModule="testSanjayXCode8" customModuleProvider="target">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lVp-wJ-a0h" userLabel="Bottom Gradient" customClass="GradientView" customModule="SanjaySwiftUI" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="782" width="414" height="80"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -80,6 +80,9 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.1532266695" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="cropButtonTapped:" destination="ieW-eS-XLV" eventType="touchUpInside" id="bTB-cb-mPp"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHF-zw-KMc" userLabel="Sticker Button">
                                                 <rect key="frame" x="45" y="0.0" width="30" height="60"/>
@@ -89,6 +92,9 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.1532266695" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="stickersButtonTapped:" destination="ieW-eS-XLV" eventType="touchUpInside" id="msX-M3-bNf"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjA-bC-iDt" userLabel="Draw Button">
                                                 <rect key="frame" x="90" y="0.0" width="30" height="60"/>
@@ -98,6 +104,9 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.1532266695" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="drawButtonTapped:" destination="ieW-eS-XLV" eventType="touchUpInside" id="PNW-S1-vPM"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5XQ-pe-lyQ" userLabel="Text Button">
                                                 <rect key="frame" x="135" y="0.0" width="30" height="60"/>
@@ -107,17 +116,23 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.1532266695" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="textButtonTapped:" destination="ieW-eS-XLV" eventType="touchUpInside" id="a3A-ch-u0S"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="erA-Lf-kx6">
-                                        <rect key="frame" x="12" y="9" width="30" height="42"/>
+                                        <rect key="frame" x="12" y="11.5" width="30" height="37"/>
                                         <fontDescription key="fontDescription" name="icomoon" family="icomoon" pointSize="25"/>
                                         <size key="titleShadowOffset" width="1" height="0.0"/>
                                         <state key="normal" title="">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.1532266695" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="CancelButtonTapped:" destination="ieW-eS-XLV" eventType="touchUpInside" id="c1m-Ek-Oml"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -144,6 +159,9 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.1532266695" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="saveButtonTapped:" destination="ieW-eS-XLV" eventType="touchUpInside" id="2P4-An-9gg"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTG-nK-tQD" userLabel="Share Button">
                                                 <rect key="frame" x="45" y="0.0" width="30" height="52"/>
@@ -153,6 +171,9 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.1532266695" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="shareButtonTapped:" destination="ieW-eS-XLV" eventType="touchUpInside" id="wRV-nu-CPk"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iU-2f-jX4" userLabel="Clear Button">
                                                 <rect key="frame" x="90" y="0.0" width="30" height="52"/>
@@ -162,17 +183,23 @@
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.1532266695" colorSpace="calibratedRGB"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="clearButtonTapped:" destination="ieW-eS-XLV" eventType="touchUpInside" id="DB3-Ih-lBa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAV-gL-Q0Y">
-                                        <rect key="frame" x="344" y="-23" width="58" height="71"/>
+                                        <rect key="frame" x="352" y="-14" width="50" height="62"/>
                                         <fontDescription key="fontDescription" name="icomoon" family="icomoon" pointSize="50"/>
                                         <size key="titleShadowOffset" width="1" height="0.0"/>
                                         <state key="normal" title="">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.1532266695" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <action selector="continueButtonPressed:" destination="ieW-eS-XLV" eventType="touchUpInside" id="zt0-1n-cii"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -193,6 +220,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.1532266695" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="doneButtonTapped:" destination="ieW-eS-XLV" eventType="touchUpInside" id="31U-0w-uJS"/>
+                                </connections>
                             </button>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zvj-yC-e3K" userLabel="Color Picker">
                                 <rect key="frame" x="0.0" y="812" width="414" height="50"/>
@@ -224,7 +254,7 @@
                                 <rect key="frame" x="182" y="800" width="50" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8v0-SE-s9B">
-                                        <rect key="frame" x="7.5" y="7.5" width="35.5" height="35"/>
+                                        <rect key="frame" x="9.5" y="10" width="31" height="30"/>
                                         <fontDescription key="fontDescription" name="icomoon" family="icomoon" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -267,6 +297,30 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pBp-nK-Zkg"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomGradient" destination="lVp-wJ-a0h" id="KMr-Wg-k2N"/>
+                        <outlet property="bottomToolbar" destination="Sr3-Hr-xx9" id="K3r-wp-oQ3"/>
+                        <outlet property="canvasImageView" destination="BBi-PQ-VOy" id="XaQ-OM-4Rx"/>
+                        <outlet property="canvasView" destination="hU6-4E-nS6" id="9WR-bS-Ipm"/>
+                        <outlet property="clearButton" destination="7iU-2f-jX4" id="j2e-7b-o6S"/>
+                        <outlet property="colorPickerView" destination="Zvj-yC-e3K" id="a5Z-7M-s86"/>
+                        <outlet property="colorPickerViewBottomConstraint" destination="Ypw-fz-DAk" id="je2-7M-QUR"/>
+                        <outlet property="colorsCollectionView" destination="7sv-Of-by5" id="PQX-ub-EOn"/>
+                        <outlet property="cropButton" destination="Vy4-bs-Vdh" id="ple-7J-aOQ"/>
+                        <outlet property="deleteView" destination="ohG-z2-cpR" id="Fkf-u1-Ypi"/>
+                        <outlet property="doneButton" destination="Cct-kK-aAD" id="zSD-Mk-Wi6"/>
+                        <outlet property="drawButton" destination="bjA-bC-iDt" id="bbd-0r-A94"/>
+                        <outlet property="imageView" destination="bOX-f0-s7y" id="AQq-Kr-wwt"/>
+                        <outlet property="imageViewHeightConstraint" destination="ReG-qd-nmt" id="JGN-UJ-VRn"/>
+                        <outlet property="myCanvasHeightConstraint" destination="U4g-1C-Ccf" id="BEX-Kj-Qoy"/>
+                        <outlet property="myCanvasWidthConstraint" destination="sWn-8Q-dpa" id="Wtb-KO-mEb"/>
+                        <outlet property="saveButton" destination="ByB-PR-do4" id="Juu-0Y-54R"/>
+                        <outlet property="shareButton" destination="uTG-nK-tQD" id="ZWU-Fl-E37"/>
+                        <outlet property="stickerButton" destination="zHF-zw-KMc" id="Fll-KG-VTO"/>
+                        <outlet property="textButton" destination="5XQ-pe-lyQ" id="AGB-Ze-myD"/>
+                        <outlet property="topGradient" destination="tLb-zS-ZTk" id="EDx-be-OI9"/>
+                        <outlet property="topToolbar" destination="FvF-RG-hrg" id="wB6-pe-Ra2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5aI-QY-K2W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

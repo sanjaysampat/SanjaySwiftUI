@@ -25,13 +25,20 @@ struct ContentView: View {
     @State private var currentPos:Int = -1
     
     @State private var isEditMode:Bool = false
-    
+
+    @State private var isPresentedStoryboardSanjay: Bool = false
+    @State private var personPhoto:UIImage? = nil
+
     private let paddingSize:CGFloat = 10
     
     //@ObservedObject var viewModel = ViewModel()
     
     var body: some View {
         ZStack() {
+            
+            // SSTODO to save image in coredata
+            // self.persons[self.currentPos].photo = UIImagePNGRepresentation( self.personPhoto )
+            
             // hidden control for code modifications.
             Toggle("", isOn:$nameChanged)
                 .frame(width: 0, height: 0)
@@ -60,6 +67,9 @@ struct ContentView: View {
                     } else {
                         if self.persons.count > 0 {
                             self.name = self.persons[self.currentPos].name ?? "Name"
+                            if let data = self.persons[self.currentPos].photo {
+                                self.personPhoto = UIImage(data: data )
+                            }
                         }
                     }
             }
@@ -109,7 +119,7 @@ struct ContentView: View {
                 
                 HStack(alignment: .center) {
                     
-                    addName(id: self.currentPos)
+                    addName(id: self.currentPos, padding: true)
                     
                     Button(action: {
                         self.currentPos = self.currentPos - 1
@@ -164,8 +174,32 @@ struct ContentView: View {
 
                 }
                 
-                addName()
+                HStack(alignment: .center) {
+                    
+                    addName(id: -1, padding: true)
                 
+                    Button(action: {
+                        if self.currentPos >= 0 {
+                            self.isPresentedStoryboardSanjay.toggle()
+                        } else {
+                            // Show error to add person.
+                        }
+                    }) {
+                        VStack( alignment: .center) {
+                            Image(systemName: "photo")
+                            Text("Photo")
+                                .font(.caption)
+                        }
+                    }
+                    .sheet(isPresented: $isPresentedStoryboardSanjay)
+                    {
+                        CustomViewController(isPresentedStoryboardSanjay: self.$isPresentedStoryboardSanjay, photo: self.$personPhoto)
+                    }
+                    .foregroundColor(Color.pink)
+                    .padding(paddingSize)
+                    .padding(.leading, paddingSize * 4)
+
+                }
                 
             }
             .rotationEffect(Angle(degrees: -45), anchor: .center)
