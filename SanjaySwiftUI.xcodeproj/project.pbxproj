@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7216BB5C24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */; };
+		7216BB5E24D17BC30097AFA4 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */; };
 		72663AB324C5C7AC000596C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663AB224C5C7AC000596C9 /* AppDelegate.swift */; };
 		72663AB524C5C7AC000596C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663AB424C5C7AC000596C9 /* SceneDelegate.swift */; };
 		72663AB824C5C7AC000596C9 /* SanjaySwiftUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72663AB624C5C7AC000596C9 /* SanjaySwiftUI.xcdatamodeld */; };
@@ -17,7 +19,7 @@
 		72663ACD24C5C7BD000596C9 /* SanjaySwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663ACC24C5C7BD000596C9 /* SanjaySwiftUITests.swift */; };
 		72663AD824C5C7BE000596C9 /* SanjaySwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663AD724C5C7BE000596C9 /* SanjaySwiftUIUITests.swift */; };
 		72735B4F24D01A86006B75C9 /* StoryboardSanjay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72735B4E24D01A86006B75C9 /* StoryboardSanjay.storyboard */; };
-		72735B5124D02872006B75C9 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B5024D02872006B75C9 /* CustomViewController.swift */; };
+		72735B5124D02872006B75C9 /* CustomImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B5024D02872006B75C9 /* CustomImagePickerViewController.swift */; };
 		72735B7424D034B0006B75C9 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72735B5324D034B0006B75C9 /* icomoon.ttf */; };
 		72735B7524D034B0006B75C9 /* StickersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72735B5424D034B0006B75C9 /* StickersViewController.xib */; };
 		72735B7624D034B0006B75C9 /* ColorsCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B5524D034B0006B75C9 /* ColorsCollectionViewDelegate.swift */; };
@@ -74,6 +76,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPhotoImagePickerViewController.swift; sourceTree = "<group>"; };
+		7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		72663AAF24C5C7AC000596C9 /* SanjaySwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SanjaySwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72663AB224C5C7AC000596C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72663AB424C5C7AC000596C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,7 +94,7 @@
 		72663AD724C5C7BE000596C9 /* SanjaySwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanjaySwiftUIUITests.swift; sourceTree = "<group>"; };
 		72663AD924C5C7BE000596C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		72735B4E24D01A86006B75C9 /* StoryboardSanjay.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryboardSanjay.storyboard; sourceTree = "<group>"; };
-		72735B5024D02872006B75C9 /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		72735B5024D02872006B75C9 /* CustomImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImagePickerViewController.swift; sourceTree = "<group>"; };
 		72735B5324D034B0006B75C9 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
 		72735B5424D034B0006B75C9 /* StickersViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StickersViewController.xib; sourceTree = "<group>"; };
 		72735B5524D034B0006B75C9 /* ColorsCollectionViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorsCollectionViewDelegate.swift; sourceTree = "<group>"; };
@@ -188,7 +192,7 @@
 				72663AB624C5C7AC000596C9 /* SanjaySwiftUI.xcdatamodeld */,
 				72663ABD24C5C7BD000596C9 /* Preview Content */,
 				72735B4E24D01A86006B75C9 /* StoryboardSanjay.storyboard */,
-				72735B5024D02872006B75C9 /* CustomViewController.swift */,
+				72735B5024D02872006B75C9 /* CustomImagePickerViewController.swift */,
 			);
 			path = SanjaySwiftUI;
 			sourceTree = "<group>";
@@ -263,6 +267,7 @@
 		729B0EF024C979FD00054F9F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */,
 				72735B5224D034B0006B75C9 /* Photo_Editor */,
 				729B0EF324C99FCF00054F9F /* AlertControlView.swift */,
 			);
@@ -272,6 +277,7 @@
 		729B0EF924C9B41600054F9F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */,
 				729B0EF524C9B40E00054F9F /* Person+CoreDataClass.swift */,
 			);
 			path = Model;
@@ -418,11 +424,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7216BB5C24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift in Sources */,
 				72735B9824D03BE5006B75C9 /* SSPhotoEditorViewController.swift in Sources */,
 				72663AB824C5C7AC000596C9 /* SanjaySwiftUI.xcdatamodeld in Sources */,
 				72735B9124D034B0006B75C9 /* PhotoEditor+Crop.swift in Sources */,
 				72735B9324D034B0006B75C9 /* GradientView.swift in Sources */,
-				72735B5124D02872006B75C9 /* CustomViewController.swift in Sources */,
+				72735B5124D02872006B75C9 /* CustomImagePickerViewController.swift in Sources */,
 				72735B8524D034B0006B75C9 /* PhotoEditor+Drawing.swift in Sources */,
 				72735B8C24D034B0006B75C9 /* PhotoEditor+Gestures.swift in Sources */,
 				729B0EF424C99FCF00054F9F /* AlertControlView.swift in Sources */,
@@ -439,6 +446,7 @@
 				72735B7A24D034B0006B75C9 /* PhotoEditor+UITextView.swift in Sources */,
 				72735B7924D034B0006B75C9 /* PhotoEditor+StickersViewController.swift in Sources */,
 				72735B8F24D034B0006B75C9 /* StickerCollectionViewCell.swift in Sources */,
+				7216BB5E24D17BC30097AFA4 /* Person+CoreDataProperties.swift in Sources */,
 				72735B9024D034B0006B75C9 /* CropViewController.swift in Sources */,
 				72663ABA24C5C7AC000596C9 /* ContentView.swift in Sources */,
 				72735B8024D034B0006B75C9 /* UIView+Image.swift in Sources */,

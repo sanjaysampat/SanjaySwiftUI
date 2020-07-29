@@ -27,24 +27,43 @@ struct ContentView: View {
     @State private var isEditMode:Bool = false
 
     @State private var isPresentedStoryboardSanjay: Bool = false
+    @State private var photoChanged = false
     @State private var personPhoto:UIImage? = nil
 
     private let paddingSize:CGFloat = 10
+    
+    @State private var lastPos:Int = -1
     
     //@ObservedObject var viewModel = ViewModel()
     
     var body: some View {
         ZStack() {
             
-            // SSTODO to save image in coredata
-            // self.persons[self.currentPos].photo = UIImagePNGRepresentation( self.personPhoto )
+            /*
+            // hidden control for code modifications.
+            Toggle("", isOn: $photoChanged)
+                .frame(width: 0, height: 0)
+                .clipped()
+                .onReceive([self.$photoChanged].publisher.first()) { (value) in
+                    //print("New value photoChanged is: \(value)")
+                    if self.photoChanged {
+                        if self.currentPos >= 0 {
+                            if let photo = self.personPhoto {
+                                // to save image in coredata
+                                self.persons[self.currentPos].photo = photo.pngData()
+                            }
+                        }
+                        self.photoChanged = false
+                    }
+            }
+            */
             
             // hidden control for code modifications.
             Toggle("", isOn:$nameChanged)
                 .frame(width: 0, height: 0)
                 .clipped()
                 .onReceive([self.$nameChanged].publisher.first()) { (value) in
-                    //print("New value is: \(value)")
+                    //print("New value nameChanged is: \(value)")
                     print( "SSTODO - Toggle - Showing Alert \(self.showingAlert) and self.nameChanged=\(self.nameChanged)   self.isEditmode=\(self.isEditMode) self.currentPos=\(self.currentPos) self.name=\(self.name)" )
                     if self.currentPos < 0 {
                         self.currentPos = self.persons.count-1
@@ -63,13 +82,10 @@ struct ContentView: View {
                             self.persons[self.currentPos].name = self.name
                             self.saveContext()
                         }
-                        self.nameChanged = false  // SSLASTCHANGE
+                        self.nameChanged = false 
                     } else {
                         if self.persons.count > 0 {
                             self.name = self.persons[self.currentPos].name ?? "Name"
-                            if let data = self.persons[self.currentPos].photo {
-                                self.personPhoto = UIImage(data: data )
-                            }
                         }
                     }
             }
@@ -79,6 +95,34 @@ struct ContentView: View {
                 .rotation(Angle(degrees: -45), anchor: .center)
                 .edgesIgnoringSafeArea(.all)
                 .opacity(0.15)
+            
+            Image(uiImage: self.personPhoto, placeholderSystemName: "person")
+                //.resizable(resizingMode: .stretch)
+                .rotationEffect(Angle(degrees: -45), anchor: .center)
+                //.scaledToFit()
+                .opacity(0.25)
+                .font(Font.title.weight(.ultraLight))
+                .onReceive([self.$photoChanged].publisher.first()) { (value) in
+                    //print("New value photoChanged is: \(value)")
+                    print( "SSTODO - Toggle - self.photoChanged \(self.photoChanged) and self.nameChanged=\(self.nameChanged)   self.isEditmode=\(self.isEditMode) self.currentPos=\(self.currentPos) self.name=\(self.name)" )
+                    if self.currentPos >= 0 {
+                        if self.photoChanged {
+                            if let photo = self.personPhoto {
+                                // to save image in coredata
+                                self.persons[self.currentPos].photo = photo.pngData()
+                                self.saveContext()
+                            }
+                            self.photoChanged = false
+                        } else if ( self.lastPos != self.currentPos) {
+                            if let data = self.persons[self.currentPos].photo {
+                                self.personPhoto = UIImage(data: data )
+                            } else {
+                                self.personPhoto = nil
+                            }
+                            self.lastPos = self.currentPos
+                        }
+                    }
+            }
             
             Image(systemName: "heart")
                 .resizable(resizingMode: .stretch)
@@ -193,8 +237,8 @@ struct ContentView: View {
                     }
                     .sheet(isPresented: $isPresentedStoryboardSanjay)
                     {
-                        CustomViewController(isPresentedStoryboardSanjay: self.$isPresentedStoryboardSanjay, photo: self.$personPhoto)
-                    }
+                        CustomPersonPhotoImagePickerViewController(isPresentedStoryboardSanjay: self.$isPresentedStoryboardSanjay, photoChanged: self.$photoChanged,  photo: self.$personPhoto)
+                   }
                     .foregroundColor(Color.pink)
                     .padding(paddingSize)
                     .padding(.leading, paddingSize * 4)
@@ -261,5 +305,15 @@ extension View {
     func PrintinView(_ vars: Any...) -> some View {
         for v in vars { print(v) }
         return EmptyView()
+    }
+}
+
+extension Image {
+    public init(uiImage: UIImage?, placeholderSystemName: String) {
+        guard let uiImage = uiImage else {
+            self = Image(systemName: placeholderSystemName)
+            return
+        }
+        self = Image(uiImage: uiImage)
     }
 }
