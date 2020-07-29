@@ -97,11 +97,25 @@ struct ContentView: View {
                 .opacity(0.15)
             
             Image(uiImage: self.personPhoto, placeholderSystemName: "person")
-                //.resizable(resizingMode: .stretch)
+                .resizable(resizingMode: .stretch)
+                .mask(LinearGradient(gradient: Gradient(stops: [
+                    .init(color: .clear, location: 0),
+                    .init(color: .black, location: 0.25),
+                    .init(color: .black, location: 0.75),
+                    .init(color: .clear, location: 1)
+                ]), startPoint: .top, endPoint: .bottom))
+                .mask(LinearGradient(gradient: Gradient(stops: [
+                    .init(color: .clear, location: 0),
+                    .init(color: .black, location: 0.25),
+                    .init(color: .black, location: 0.75),
+                    .init(color: .clear, location: 1)
+                ]), startPoint: .leading, endPoint: .trailing))
                 .rotationEffect(Angle(degrees: -45), anchor: .center)
-                //.scaledToFit()
-                .opacity(0.25)
+                .scaledToFit()
+                .scaleEffect(0.55)
+                .opacity(0.45)
                 .font(Font.title.weight(.ultraLight))
+                .foregroundColor(Color.gray)
                 .onReceive([self.$photoChanged].publisher.first()) { (value) in
                     //print("New value photoChanged is: \(value)")
                     print( "SSTODO - Toggle - self.photoChanged \(self.photoChanged) and self.nameChanged=\(self.nameChanged)   self.isEditmode=\(self.isEditMode) self.currentPos=\(self.currentPos) self.name=\(self.name)" )
@@ -317,3 +331,13 @@ extension Image {
         self = Image(uiImage: uiImage)
     }
 }
+
+/*
+ //.mask(RadialGradient(gradient: Gradient(colors:[.blue, .white]), center: .center, startRadius: 2, endRadius: 1200))
+ //.mask(AngularGradient(gradient: Gradient(colors:[.blue, .white]), center: .center))
+ //.mask(LinearGradient(gradient: Gradient(colors: [
+ //    .clear,
+ //    .black
+ //]), startPoint: .top, endPoint: .bottom))
+
+ */
