@@ -39,7 +39,7 @@ struct CustomPersonPhotoImagePickerViewController: UIViewControllerRepresentable
         let personPhotoImagePickerViewController = PersonPhotoImagePickerViewController()
         personPhotoImagePickerViewController.modalTransitionStyle = .crossDissolve
         personPhotoImagePickerViewController.modalPresentationStyle = .overFullScreen
-        
+        personPhotoImagePickerViewController.imageForEditing = photo
         personPhotoImagePickerViewController.delegate = context.coordinator
 
         return personPhotoImagePickerViewController

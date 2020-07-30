@@ -102,8 +102,35 @@ public enum control {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        if let alphaBackgroundImage = UIImage(named: "alpha_background") {
+            self.view.backgroundColor = UIColor( patternImage: alphaBackgroundImage )
+        }
+        self.setImageView(image: image!)
+        
+        deleteView.layer.cornerRadius = deleteView.bounds.height / 2
+        deleteView.layer.borderWidth = 2.0
+        deleteView.layer.borderColor = UIColor.white.cgColor
+        deleteView.clipsToBounds = true
+        
+        let edgePan = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(screenEdgeSwiped))
+        edgePan.edges = .bottom
+        edgePan.delegate = self
+        self.view.addGestureRecognizer(edgePan)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidShow),
+                                               name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide),
+                                               name: UIResponder.keyboardWillHideNotification, object: nil)
+        NotificationCenter.default.addObserver(self,selector: #selector(keyboardWillChangeFrame(_:)),
+                                               name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+        
+        
+        configureCollectionView()
+        stickersViewController = StickersViewController(nibName: "StickersViewController", bundle: Bundle(for: StickersViewController.self))
+        hideControls()
+        
+        // SSTODO TEMP
+        //// canvasImageView.backgroundColor = .red
     }
     
     func configureCollectionView() {

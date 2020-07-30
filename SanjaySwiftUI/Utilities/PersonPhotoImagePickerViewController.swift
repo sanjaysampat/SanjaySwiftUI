@@ -19,15 +19,24 @@ class PersonPhotoImagePickerViewController: UIViewController {
     
     weak var delegate: PersonPhotoImagePickerViewControllerDelegate?
     
+    var imageForEditing: UIImage?
+    
     let containerView: UIView = {
         let view = UIView()
-        view.backgroundColor = .white
+        view.backgroundColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 0.75)
         view.clipsToBounds = true
         view.layer.cornerRadius = 8
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
+    let editStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        return stackView
+    }()
+
     let cameraStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -99,6 +108,26 @@ class PersonPhotoImagePickerViewController: UIViewController {
         return label
     }()
     
+    let editImageButton: UIButton = {
+        let button = UIButton()
+        let symbolConfig = UIImage.SymbolConfiguration(pointSize: 50, weight: .light, scale: .medium)
+        let image = UIImage(systemName: "square.and.pencil", withConfiguration: symbolConfig)
+        button.setImage(image, for: .normal)
+        button.imageView?.tintColor = appColor
+        button.addTarget(self, action: #selector(editButtonPressed), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    let editLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Edit"
+        label.textColor = .systemGray
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+
     let cancelButtonStackView: UIStackView = {
         let stackView = UIStackView()
         stackView.distribution = .equalCentering
@@ -119,10 +148,58 @@ class PersonPhotoImagePickerViewController: UIViewController {
         return button
     }()
     
+    let doneButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("Done", for: .normal)
+        button.tintColor = .white
+        button.backgroundColor = appColor
+        button.layer.cornerRadius = 10
+        button.clipsToBounds = true
+        button.addTarget(self, action: #selector(doneButtonPressed), for: .touchUpInside)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
+    }()
+    
+    let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.contentMode = .scaleAspectFit
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        return imageView
+    }()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = #colorLiteral(red: 0, green: 0, blue: 0, alpha: 0.746368838)
+        
+        view.addSubview(imageView)
+        imageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        imageView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+        imageView.leadingAnchor.constraint(equalTo: view.leadingAnchor,
+                                               constant: 25).isActive = true
+        imageView.trailingAnchor.constraint(equalTo: view.trailingAnchor,
+                                                constant: -25).isActive = true
+        imageView.topAnchor.constraint(equalTo: view.topAnchor,
+                                               constant: 25).isActive = true
+        imageView.bottomAnchor.constraint(equalTo: view.bottomAnchor,
+                                                constant: -25).isActive = true
+        imageView.image = imageForEditing
+        
+        /*
+         // SSTODO
+        .mask(LinearGradient(gradient: Gradient(stops: [
+            .init(color: .clear, location: 0),
+            .init(color: .black, location: 0.25),
+            .init(color: .black, location: 0.75),
+            .init(color: .clear, location: 1)
+        ]), startPoint: .top, endPoint: .bottom))
+        .mask(LinearGradient(gradient: Gradient(stops: [
+            .init(color: .clear, location: 0),
+            .init(color: .black, location: 0.25),
+            .init(color: .black, location: 0.75),
+            .init(color: .clear, location: 1)
+        ]), startPoint: .leading, endPoint: .trailing))
+        */
         
         view.addSubview(containerView)
         containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -139,16 +216,24 @@ class PersonPhotoImagePickerViewController: UIViewController {
         cameraStackView.addArrangedSubview(cameraImageButton)
         cameraStackView.addArrangedSubview(cameraLabel)
         
+        editStackView.addArrangedSubview(editImageButton)
+        editStackView.addArrangedSubview(editLabel)
+	
         stackViewHorizontal.addArrangedSubview(UIView())
         stackViewHorizontal.addArrangedSubview(galeryStackView)
         stackViewHorizontal.addArrangedSubview(UIView())
         stackViewHorizontal.addArrangedSubview(cameraStackView)
         stackViewHorizontal.addArrangedSubview(UIView())
+        stackViewHorizontal.addArrangedSubview(editStackView)
+        stackViewHorizontal.addArrangedSubview(UIView())
+        
         
         cancelButtonStackView.addArrangedSubview(UIView())
         cancelButtonStackView.addArrangedSubview(cancelButton)
         cancelButtonStackView.addArrangedSubview(UIView())
-        
+        cancelButtonStackView.addArrangedSubview(doneButton)
+        cancelButtonStackView.addArrangedSubview(UIView())
+
         stackViewVertical.addArrangedSubview(stackViewHorizontal)
         stackViewVertical.addArrangedSubview(cancelButtonStackView)
 
@@ -162,6 +247,10 @@ class PersonPhotoImagePickerViewController: UIViewController {
         
         cancelButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
         cancelButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        
+        doneButton.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        doneButton.widthAnchor.constraint(equalToConstant: 200).isActive = true
+        
     }
     
     @objc
@@ -181,6 +270,18 @@ class PersonPhotoImagePickerViewController: UIViewController {
     }
     
     @objc
+    func doneButtonPressed() {
+        self.dismiss(animated: true, completion: {
+            if let photo = self.imageForEditing {
+                self.imageView.image = self.imageForEditing
+                self.delegate?.didSelect(profileImage: photo)
+            } else {
+                self.delegate?.didCancel()
+            }
+        })
+    }
+    
+    @objc
     func cameraButtonPressed() {
         let vc = UIImagePickerController()
         vc.sourceType = .camera
@@ -189,6 +290,27 @@ class PersonPhotoImagePickerViewController: UIViewController {
         present(vc, animated: true)
     }
     
+    @objc
+    func editButtonPressed() {
+        let storyboardSanjay = UIStoryboard(name: "StoryboardSanjay", bundle: Bundle.main)
+        let loadSSPhotoEditorViewController = storyboardSanjay.instantiateViewController(identifier: "SSPhotoEditorViewController") as! SSPhotoEditorViewController
+        loadSSPhotoEditorViewController.image = imageForEditing
+        loadSSPhotoEditorViewController.ssPhotoEditorDelegate = self
+        
+        //Colors for drawing and Text, If not set default values will be used
+        //loadSSPhotoEditorViewController.colors = [.red, .blue, .green]
+        
+        //Stickers that the user will choose from to add on the image
+        //for i in 0...10 {
+        //    loadSSPhotoEditorViewController.stickers.append(UIImage(named: i.description )!)
+        //}
+        
+        //To hide controls - array of enum control
+        //loadSSPhotoEditorViewController.hiddenControls = [.crop, .draw, .share]
+        
+        present(loadSSPhotoEditorViewController, animated: true)
+    }
+
 }
 
 extension PersonPhotoImagePickerViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
@@ -200,10 +322,24 @@ extension PersonPhotoImagePickerViewController: UIImagePickerControllerDelegate,
         }
         picker.dismiss(animated: true, completion: {
             self.dismiss(animated: true, completion: {
-                self.delegate?.didSelect(profileImage: image)
+                self.imageForEditing = image
+                self.imageView.image = self.imageForEditing
             })
         })
     }
     
 }
 
+
+extension PersonPhotoImagePickerViewController: SSPhotoEditorDelegate {
+    
+    func doneEditing(image: UIImage) {
+        self.imageForEditing = image
+        self.imageView.image = self.imageForEditing
+    }
+    
+    func canceledEditing() {
+        //self.delegate?.didCancel()
+    }
+
+}
