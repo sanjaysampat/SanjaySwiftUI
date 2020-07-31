@@ -1,0 +1,411 @@
+Agent version:	1.13.1
+Hostname:	prd-atl-std-b-xcode-11-1-200731164637-dNf2RQgtD9LVETudaFNpZf.local
+Start time:	2020-07-31T16:48:50Z
+$ bitrise "run" "--config" "/var/folders/6q/wgy6jtp12w5gzgm9lzcglpqw0000gn/T/bitrise-agent662959674/bitrise.yml" "--inventory" "/var/folders/6q/wgy6jtp12w5gzgm9lzcglpqw0000gn/T/bitrise-agent662959674/bitrise.secrets.yml" "--json-params-base64" "eyJ3b3JrZmxvdyI6InByaW1hcnkifQ=="
+
+  ██████╗ ██╗████████╗██████╗ ██╗███████╗███████╗
+  ██╔══██╗██║╚══██╔══╝██╔══██╗██║██╔════╝██╔════╝
+  ██████╔╝██║   ██║   ██████╔╝██║███████╗█████╗
+  ██╔══██╗██║   ██║   ██╔══██╗██║╚════██║██╔══╝
+  ██████╔╝██║   ██║   ██║  ██║██║███████║███████╗
+  ╚═════╝ ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚══════╝╚══════╝
+
+[32;1m  version: 1.42.0[0m
+
+[36mINFO[0m[16:48:50] [33;1mbitrise runs in Secret Filtering mode[0m 
+[36mINFO[0m[16:48:50] [33;1mbitrise runs in CI mode[0m           
+[36mINFO[0m[16:48:50] Running workflow: [32;1mprimary[0m         
+
+[34;1mSwitching to workflow:[0m primary
+
+[36mINFO[0m[16:48:51] Step uses latest version -- Updating StepLib ... 
++------------------------------------------------------------------------------+
+| (0) activate-ssh-key@4                                                       |
++------------------------------------------------------------------------------+
+| id: activate-ssh-key                                                         |
+| version: 4.0.5                                                               |
+| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+| toolkit: go                                                                  |
+| time: 2020-07-31T16:48:57Z                                                   |
++------------------------------------------------------------------------------+
+|                                                                              |
+[33mWARN[0m[16:48:57] The step's (activate-ssh-key@4) Run-If expression evaluated to false - skipping 
+[36mINFO[0m[16:48:57] The Run-If expression was: [34;1m{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}[0m 
+|                                                                              |
++---+---------------------------------------------------------------+----------+
+| [34;1m-[0m | [34;1mactivate-ssh-key@4[0m                                            | 6.67 sec |
++---+---------------------------------------------------------------+----------+
+
+                                          ▼
+
++------------------------------------------------------------------------------+
+| (1) git-clone@4                                                              |
++------------------------------------------------------------------------------+
+| id: git-clone                                                                |
+| version: 4.0.18                                                              |
+| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+| toolkit: go                                                                  |
+| time: 2020-07-31T16:48:59Z                                                   |
++------------------------------------------------------------------------------+
+|                                                                              |
+[34;1mconfig:
+[0m
+- RepositoryURL: https://github.com/sanjaysampat/SanjaySwiftUI.git
+- CloneIntoDir: /Users/vagrant/git
+- Commit: 
+- Tag: 
+- Branch: master
+- BranchDest: 
+- PRID: 0
+- PRRepositoryURL: 
+- PRMergeBranch: 
+- ResetRepository: false
+- CloneDepth: 0
+- BuildURL: https://app.bitrise.io/build/bd2aa29eaf87fe9b
+- BuildAPIToken: [REDACTED]
+- UpdateSubmodules: true
+- ManualMerge: true
+[34;1mgit "init"[0m
+Initialized empty Git repository in /Users/vagrant/git/.git/
+[34;1mgit "remote" "add" "origin" "https://github.com/sanjaysampat/SanjaySwiftUI.git"[0m
+[34;1mgit "fetch" "origin" "master"[0m
+From https://github.com/sanjaysampat/SanjaySwiftUI
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+[34;1mgit "checkout" "master"[0m
+Already on 'master'
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+[34;1mgit "merge" "origin/master"[0m
+Already up to date.
+[34;1mgit "submodule" "update" "--init" "--recursive"[0m
+[34;1m
+Exporting git logs
+[0m
+=> GIT_CLONE_COMMIT_AUTHOR_EMAIL
+   value: 67892577+sanjaysampat@users.noreply.github.com
+
+=> GIT_CLONE_COMMIT_COMMITER_NAME
+   value: GitHub
+
+=> GIT_CLONE_COMMIT_COMMITER_EMAIL
+   value: noreply@github.com
+
+=> GIT_CLONE_COMMIT_HASH
+   value: 5e997ef2320a0b82c01d78298a37676b63919040
+
+=> GIT_CLONE_COMMIT_MESSAGE_SUBJECT
+   value: Add files via upload
+
+=> GIT_CLONE_COMMIT_MESSAGE_BODY
+   value: 
+
+=> GIT_CLONE_COMMIT_AUTHOR_NAME
+   value: Sanjay Sampat
+
+=> GIT_CLONE_COMMIT_COUNT
+   value: 19
+
+[32;1m
+Success[0m
+|                                                                              |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mgit-clone@4[0m                                                   | 10.81 sec|
++---+---------------------------------------------------------------+----------+
+
+                                          ▼
+
++------------------------------------------------------------------------------+
+| (2) cache-pull@2                                                             |
++------------------------------------------------------------------------------+
+| id: cache-pull                                                               |
+| version: 2.1.4                                                               |
+| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+| toolkit: go                                                                  |
+| time: 2020-07-31T16:49:09Z                                                   |
++------------------------------------------------------------------------------+
+|                                                                              |
+[34;1mConfig:
+[0m- CacheAPIURL: [REDACTED]
+- DebugMode: false
+- StackID: osx-xcode-11.1.x
+
+[34;1mDownloading remote cache archive[0m
+[31;1mFailed to get cache download url: build cache not found: probably cache not initialised yet (first cache push initialises the cache), nothing to worry about ;)[0m
+[33mWARN[0m[16:49:12] Step (cache-pull@2) failed, but was marked as skippable 
+|                                                                              |
++---+---------------------------------------------------------------+----------+
+| [33;1m![0m | [33;1mcache-pull@2 (exit code: 1)[0m                                   | 4.25 sec |
++---+---------------------------------------------------------------+----------+
+| Issue tracker: https://github.com/bitrise-steplib/steps-cache-pull/issues    |
+| Source: https://github.com/bitrise-steplib/steps-cache-pull.git              |
++---+---------------------------------------------------------------+----------+
+
+                                          ▼
+
++------------------------------------------------------------------------------+
+| (3) Do anything with Script step                                             |
++------------------------------------------------------------------------------+
+| id: script                                                                   |
+| version: 1.1.6                                                               |
+| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+| toolkit: bash                                                                |
+| time: 2020-07-31T16:49:13Z                                                   |
++------------------------------------------------------------------------------+
+|                                                                              |
++ echo 'Hello World!'
+Hello World!
+|                                                                              |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mDo anything with Script step[0m                                  | 1.83 sec |
++---+---------------------------------------------------------------+----------+
+
+                                          ▼
+
++------------------------------------------------------------------------------+
+| (4) certificate-and-profile-installer@1                                      |
++------------------------------------------------------------------------------+
+| id: certificate-and-profile-installer                                        |
+| version: 1.10.3                                                              |
+| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+| toolkit: go                                                                  |
+| time: 2020-07-31T16:49:15Z                                                   |
++------------------------------------------------------------------------------+
+|                                                                              |
+[36mINFO[0m[16:49:15]  * [32;1m[OK][0m Step dependency (go) installed, available. 
+
+[34;1mConfigs:[0m
+ - CertificateURL: 
+ - CertificatePassphrase: 
+ - ProvisioningProfileURL: 
+ - InstallDefaults: yes
+ - DefaultCertificateURL: https://s3-***p12
+ - DefaultCertificatePassphrase: ***
+ - DefaultProvisioningProfileURL: https://s3-***ion
+ - KeychainPath: /Users/vagrant/Library/Keychains/login.keychain
+ - KeychainPassword: ***
+
+Default Certificate given
+Provided Certificate count: 1
+Default Provisioning Profile given
+Provided Provisioning Profile count: 1
+
+[33;1mKeychain (/Users/vagrant/Library/Keychains/login.keychain) does not exist[0m
+ Checking (/Users/vagrant/Library/Keychains/login.keychain-db)
+
+[34;1mDownloading & installing Certificate(s)[0m
+
+Downloading certificate: 1/1
+Installing downloaded certificates
+
+[32;1miPhone Developer: Dev Portal Bot Bitrise (E89JV3W9K4)[0m
+serial: 2474233440580336676
+team: BITFALL FEJLESZTO KORLATOLT FELELOSSEGU TARSASAG (72SA8V3WYL)
+expire: 2021-01-27 11:29:18 +0000 UTC
+
+
+[34;1mDownloading & installing Provisioning Profile(s)[0m
+
+Downloading provisioning profile: 1/1
+Moving it to: /Users/vagrant/Library/MobileDevice/Provisioning Profiles/787bdab8-5f19-4cc3-9efd-6d11f4288a6c.mobileprovision
+
+[32;1mBitriseBot-Wildcard (787bdab8-5f19-4cc3-9efd-6d11f4288a6c)[0m
+exportType: development
+team: BITFALL FEJLESZTO KORLATOLT FELELOSSEGU TARSASAG (72SA8V3WYL)
+bundleID: *
+capabilities:
+- keychain-access-groups: [72SA8V3WYL.*]
+certificates:
+- iPhone Developer: Dev Portal Bot Bitrise (E89JV3W9K4)
+  serial: 2474233440580336676
+  teamID: 72SA8V3WYL
+devices:
+- 21bbc342c380001152f6f44055d3e8b3f4229740
+expire: 2021-01-27 12:01:19 +0000 UTC
+|                                                                              |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mcertificate-and-profile-installer@1[0m                           | 6.13 sec |
++---+---------------------------------------------------------------+----------+
+
+                                          ▼
+
++------------------------------------------------------------------------------+
+| (5) recreate-user-schemes@1                                                  |
++------------------------------------------------------------------------------+
+| id: recreate-user-schemes                                                    |
+| version: 1.0.2                                                               |
+| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+| toolkit: go                                                                  |
+| time: 2020-07-31T16:49:22Z                                                   |
++------------------------------------------------------------------------------+
+|                                                                              |
+[36mINFO[0m[16:49:22]  * [32;1m[OK][0m Step dependency (go) installed, available. 
+[34;1mConfigs:[0m
+- ProjectPath: SanjaySwiftUI.xcodeproj
+
+[34;1mSearching for project shared schemes...[0m
+shared scheme count: 2
+
+[32;1mShared schemes:[0m
+- SanjaySwiftUI
+- SanjaySwiftUI
+|                                                                              |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mrecreate-user-schemes@1[0m                                       | 3.76 sec |
++---+---------------------------------------------------------------+----------+
+
+                                          ▼
+
++------------------------------------------------------------------------------+
+| (6) cocoapods-install@1                                                      |
++------------------------------------------------------------------------------+
+| id: cocoapods-install                                                        |
+| version: 1.11.0                                                              |
+| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+| toolkit: go                                                                  |
+| time: 2020-07-31T16:49:25Z                                                   |
++------------------------------------------------------------------------------+
+|                                                                              |
+[36mINFO[0m[16:49:25]  * [32;1m[OK][0m Step dependency (go) installed, available. 
+
+[34;1mConfigs:[0m
+- SourceRootPath: /Users/vagrant/git
+- PodfilePath: 
+- IsUpdateCocoapods: false
+- InstallCocoapodsVersion: 
+- Verbose: true
+- IsCacheDisabled: false
+
+[34;1mSearching for Podfile[0m
+[31;1mNo Podfile found[0m
+|                                                                              |
++---+---------------------------------------------------------------+----------+
+| [31;1mx[0m | [31;1mcocoapods-install@1 (exit code: 1)[0m                            | 6.60 sec |
++---+---------------------------------------------------------------+----------+
+| Issue tracker: https://github.com/bitrise-io/steps-cocoapods-install/issues  |
+| Source: https://github.com/bitrise-io/steps-cocoapods-install                |
++---+---------------------------------------------------------------+----------+
+
+                                          ▼
+
++------------------------------------------------------------------------------+
+| (7) xcode-test@2                                                             |
++------------------------------------------------------------------------------+
+| id: xcode-test                                                               |
+| version: 2.4.6                                                               |
+| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+| toolkit: go                                                                  |
+| time: 2020-07-31T16:49:33Z                                                   |
++------------------------------------------------------------------------------+
+|                                                                              |
+[33mWARN[0m[16:49:33] A previous step failed, and this step (xcode-test@2) was not marked as IsAlwaysRun, skipped 
+|                                                                              |
++---+---------------------------------------------------------------+----------+
+| [34;1m-[0m | [34;1mxcode-test@2[0m                                                  | 2.20 sec |
++---+---------------------------------------------------------------+----------+
+
+                                          ▼
+
++------------------------------------------------------------------------------+
+| (8) deploy-to-bitrise-io@1                                                   |
++------------------------------------------------------------------------------+
+| id: deploy-to-bitrise-io                                                     |
+| version: 1.10.0                                                              |
+| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+| toolkit: go                                                                  |
+| time: 2020-07-31T16:49:34Z                                                   |
++------------------------------------------------------------------------------+
+|                                                                              |
+[34;1mConfig:
+[0m- BuildURL: https://app.bitrise.io/build/bd2aa29eaf87fe9b
+- APIToken: [REDACTED]
+- IsCompress: false
+- ZipName: 
+- DeployPath: /Users/vagrant/deploy
+- NotifyUserGroups: everyone
+- NotifyEmailList: 
+- IsPublicPageEnabled: true
+- PublicInstallPageMapFormat: {{range $index, $element := .}}{{if $index}}|{{end}}{{$element.File}}=>{{$element.URL}}{{end}}
+- BuildSlug: bd2aa29eaf87fe9b
+- TestDeployDir: /var/folders/6q/wgy6jtp12w5gzgm9lzcglpqw0000gn/T/test_results734407398
+- AppSlug: 7f70516d70556cc9
+- AddonAPIBaseURL: [REDACTED]
+- AddonAPIToken: [REDACTED]
+- DebugMode: false
+- BundletoolVersion: 0.13.4
+
+
+[34;1mDeploying the content of the Deploy directory separately[0m
+
+[34;1mList of files to deploy[0m
+
+[34;1mDeploying files[0m
+
+[32;1mSuccess[0m
+You can find the Artifact on Bitrise, on the Build's page: https://app.bitrise.io/build/bd2aa29eaf87fe9b
+
+[34;1mUpload test results[0m
+- uploading (0) test results
+[32;1mSuccess[0m
+|                                                                              |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mdeploy-to-bitrise-io@1[0m                                        | 7.30 sec |
++---+---------------------------------------------------------------+----------+
+
+                                          ▼
+
++------------------------------------------------------------------------------+
+| (9) cache-push@2                                                             |
++------------------------------------------------------------------------------+
+| id: cache-push                                                               |
+| version: 2.3.0                                                               |
+| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+| toolkit: go                                                                  |
+| time: 2020-07-31T16:49:41Z                                                   |
++------------------------------------------------------------------------------+
+|                                                                              |
+[33mWARN[0m[16:49:41] A previous step failed, and this step (cache-push@2) was not marked as IsAlwaysRun, skipped 
+|                                                                              |
++---+---------------------------------------------------------------+----------+
+| [34;1m-[0m | [34;1mcache-push@2[0m                                                  | 1.51 sec |
++---+---------------------------------------------------------------+----------+
+
+
++------------------------------------------------------------------------------+
+|                               bitrise summary                                |
++---+---------------------------------------------------------------+----------+
+|   | title                                                         | time (s) |
++---+---------------------------------------------------------------+----------+
+| [34;1m-[0m | [34;1mactivate-ssh-key@4[0m                                            | 6.67 sec |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mgit-clone@4[0m                                                   | 10.81 sec|
++---+---------------------------------------------------------------+----------+
+| [33;1m![0m | [33;1mcache-pull@2 (exit code: 1)[0m                                   | 4.25 sec |
++---+---------------------------------------------------------------+----------+
+| Issue tracker: https://github.com/bitrise-steplib/steps-cache-pull/issues    |
+| Source: https://github.com/bitrise-steplib/steps-cache-pull.git              |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mDo anything with Script step[0m                                  | 1.83 sec |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mcertificate-and-profile-installer@1[0m                           | 6.13 sec |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mrecreate-user-schemes@1[0m                                       | 3.76 sec |
++---+---------------------------------------------------------------+----------+
+| [31;1mx[0m | [31;1mcocoapods-install@1 (exit code: 1)[0m                            | 6.60 sec |
++---+---------------------------------------------------------------+----------+
+| Issue tracker: https://github.com/bitrise-io/steps-cocoapods-install/issues  |
+| Source: https://github.com/bitrise-io/steps-cocoapods-install                |
++---+---------------------------------------------------------------+----------+
+| [34;1m-[0m | [34;1mxcode-test@2[0m                                                  | 2.20 sec |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mdeploy-to-bitrise-io@1[0m                                        | 7.30 sec |
++---+---------------------------------------------------------------+----------+
+| [34;1m-[0m | [34;1mcache-push@2[0m                                                  | 1.51 sec |
++---+---------------------------------------------------------------+----------+
+| Total runtime: 51.06 sec                                                     |
++------------------------------------------------------------------------------+
+
+[34;1m[0m
+[34;1mSubmitting anonymized usage informations...[0m
+[34;1mFor more information visit:[0m
+[34;1mhttps://github.com/bitrise-io/bitrise-plugins-analytics/blob/master/README.md[0m
+exit status 1
