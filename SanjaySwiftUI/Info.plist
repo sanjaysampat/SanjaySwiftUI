@@ -23,7 +23,7 @@
 	<key>NSCameraUsageDescription</key>
 	<string>App use Camera access to get full sized photo.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>App use Photo Library access to get selected original full sized photos</string>
+	<string>App uses Photo Library access to get selected original full sized photos</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
