@@ -29,11 +29,11 @@ SwiftUI project creation to learn.
     * Custom AlertControlView via UIViewControllerRepresentable for getting 'name' text from user.
     * 'View' extension to print debug messages with PrintView method.
     
-2. GIT integration
+2. GIT integration (Github)
     * Added Project to GIT from XCode 11
     * Creation and Commit to master branch from XCode
     
-3. Build project from Gihub with [Bitrise](https://www.bitrise.io/) in cloud. ( concept is still not clear )
+3. Build project from Github with [Bitrise](https://www.bitrise.io/) in cloud. ( concept is still not clear )
 
 4. Coredata
     * usage of .xcdatamodeld
