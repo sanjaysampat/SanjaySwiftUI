@@ -1,0 +1,977 @@
+Agent version:	1.13.1
+Hostname:	prd-atl-std-b-xcode-11-6-200731171425-KKyY5vMeNG9xji3VMkRFSC.local
+Start time:	2020-07-31T17:22:34Z
+$ bitrise "run" "--config" "/var/folders/6q/wgy6jtp12w5gzgm9lzcglpqw0000gn/T/bitrise-agent029431715/bitrise.yml" "--inventory" "/var/folders/6q/wgy6jtp12w5gzgm9lzcglpqw0000gn/T/bitrise-agent029431715/bitrise.secrets.yml" "--json-params-base64" "eyJ3b3JrZmxvdyI6InByaW1hcnkifQ=="
+
+  ██████╗ ██╗████████╗██████╗ ██╗███████╗███████╗
+  ██╔══██╗██║╚══██╔══╝██╔══██╗██║██╔════╝██╔════╝
+  ██████╔╝██║   ██║   ██████╔╝██║███████╗█████╗
+  ██╔══██╗██║   ██║   ██╔══██╗██║╚════██║██╔══╝
+  ██████╔╝██║   ██║   ██║  ██║██║███████║███████╗
+  ╚═════╝ ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚══════╝╚══════╝
+
+[32;1m  version: 1.42.0[0m
+
+[36mINFO[0m[17:22:34] [33;1mbitrise runs in Secret Filtering mode[0m 
+[36mINFO[0m[17:22:34] [33;1mbitrise runs in CI mode[0m           
+[36mINFO[0m[17:22:34] Running workflow: [32;1mprimary[0m         
+
+[34;1mSwitching to workflow:[0m primary
+
+[36mINFO[0m[17:22:34] Step uses latest version -- Updating StepLib ... 
++------------------------------------------------------------------------------+
+| (0) activate-ssh-key@4                                                       |
++------------------------------------------------------------------------------+
+| id: activate-ssh-key                                                         |
+| version: 4.0.5                                                               |
+| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+| toolkit: go                                                                  |
+| time: 2020-07-31T17:22:40Z                                                   |
++------------------------------------------------------------------------------+
+|                                                                              |
+[33mWARN[0m[17:22:40] The step's (activate-ssh-key@4) Run-If expression evaluated to false - skipping 
+[36mINFO[0m[17:22:40] The Run-If expression was: [34;1m{{getenv "SSH_RSA_PRIVATE_KEY" | ne ""}}[0m 
+|                                                                              |
++---+---------------------------------------------------------------+----------+
+| [34;1m-[0m | [34;1mactivate-ssh-key@4[0m                                            | 5.99 sec |
++---+---------------------------------------------------------------+----------+
+
+                                          ▼
+
++------------------------------------------------------------------------------+
+| (1) git-clone@4                                                              |
++------------------------------------------------------------------------------+
+| id: git-clone                                                                |
+| version: 4.0.18                                                              |
+| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+| toolkit: go                                                                  |
+| time: 2020-07-31T17:22:42Z                                                   |
++------------------------------------------------------------------------------+
+|                                                                              |
+[34;1mconfig:
+[0m
+- RepositoryURL: https://github.com/sanjaysampat/SanjaySwiftUI.git
+- CloneIntoDir: /Users/vagrant/git
+- Commit: 
+- Tag: 
+- Branch: master
+- BranchDest: 
+- PRID: 0
+- PRRepositoryURL: 
+- PRMergeBranch: 
+- ResetRepository: false
+- CloneDepth: 0
+- BuildURL: https://app.bitrise.io/build/ebf57fa9244f42d1
+- BuildAPIToken: [REDACTED]
+- UpdateSubmodules: true
+- ManualMerge: true
+[34;1mgit "init"[0m
+Initialized empty Git repository in /Users/vagrant/git/.git/
+[34;1mgit "remote" "add" "origin" "https://github.com/sanjaysampat/SanjaySwiftUI.git"[0m
+[34;1mgit "fetch" "origin" "master"[0m
+From https://github.com/sanjaysampat/SanjaySwiftUI
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+[34;1mgit "checkout" "master"[0m
+Already on 'master'
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+[34;1mgit "merge" "origin/master"[0m
+Already up to date.
+[34;1mgit "submodule" "update" "--init" "--recursive"[0m
+[34;1m
+Exporting git logs
+[0m
+=> GIT_CLONE_COMMIT_AUTHOR_NAME
+   value: Sanjay Sampat
+
+=> GIT_CLONE_COMMIT_AUTHOR_EMAIL
+   value: 67892577+sanjaysampat@users.noreply.github.com
+
+=> GIT_CLONE_COMMIT_COMMITER_NAME
+   value: GitHub
+
+=> GIT_CLONE_COMMIT_COMMITER_EMAIL
+   value: noreply@github.com
+
+=> GIT_CLONE_COMMIT_HASH
+   value: 3aa873576e52efe88d6050a2ae6b2ee3db3beab7
+
+=> GIT_CLONE_COMMIT_MESSAGE_SUBJECT
+   value: Delete SanjaySwiftUI.xcscheme
+
+=> GIT_CLONE_COMMIT_MESSAGE_BODY
+   value: 
+
+=> GIT_CLONE_COMMIT_COUNT
+   value: 20
+
+[32;1m
+Success[0m
+|                                                                              |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mgit-clone@4[0m                                                   | 9.43 sec |
++---+---------------------------------------------------------------+----------+
+
+                                          ▼
+
++------------------------------------------------------------------------------+
+| (2) cache-pull@2                                                             |
++------------------------------------------------------------------------------+
+| id: cache-pull                                                               |
+| version: 2.1.4                                                               |
+| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+| toolkit: go                                                                  |
+| time: 2020-07-31T17:22:51Z                                                   |
++------------------------------------------------------------------------------+
+|                                                                              |
+[34;1mConfig:
+[0m- CacheAPIURL: [REDACTED]
+- DebugMode: false
+- StackID: osx-xcode-11.6.x
+
+[34;1mDownloading remote cache archive[0m
+[31;1mFailed to get cache download url: build cache not found: probably cache not initialised yet (first cache push initialises the cache), nothing to worry about ;)[0m
+[33mWARN[0m[17:22:54] Step (cache-pull@2) failed, but was marked as skippable 
+|                                                                              |
++---+---------------------------------------------------------------+----------+
+| [33;1m![0m | [33;1mcache-pull@2 (exit code: 1)[0m                                   | 4.21 sec |
++---+---------------------------------------------------------------+----------+
+| Issue tracker: https://github.com/bitrise-steplib/steps-cache-pull/issues    |
+| Source: https://github.com/bitrise-steplib/steps-cache-pull.git              |
++---+---------------------------------------------------------------+----------+
+
+                                          ▼
+
++------------------------------------------------------------------------------+
+| (3) Do anything with Script step                                             |
++------------------------------------------------------------------------------+
+| id: script                                                                   |
+| version: 1.1.6                                                               |
+| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+| toolkit: bash                                                                |
+| time: 2020-07-31T17:22:55Z                                                   |
++------------------------------------------------------------------------------+
+|                                                                              |
++ echo 'Hello World!'
+Hello World!
+|                                                                              |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mDo anything with Script step[0m                                  | 1.70 sec |
++---+---------------------------------------------------------------+----------+
+
+                                          ▼
+
++------------------------------------------------------------------------------+
+| (4) certificate-and-profile-installer@1                                      |
++------------------------------------------------------------------------------+
+| id: certificate-and-profile-installer                                        |
+| version: 1.10.3                                                              |
+| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+| toolkit: go                                                                  |
+| time: 2020-07-31T17:22:57Z                                                   |
++------------------------------------------------------------------------------+
+|                                                                              |
+[36mINFO[0m[17:22:57]  * [32;1m[OK][0m Step dependency (go) installed, available. 
+
+[34;1mConfigs:[0m
+ - CertificateURL: 
+ - CertificatePassphrase: 
+ - ProvisioningProfileURL: 
+ - InstallDefaults: yes
+ - DefaultCertificateURL: https://s3-***p12
+ - DefaultCertificatePassphrase: ***
+ - DefaultProvisioningProfileURL: https://s3-***ion
+ - KeychainPath: /Users/vagrant/Library/Keychains/login.keychain
+ - KeychainPassword: ***
+
+Default Certificate given
+Provided Certificate count: 1
+Default Provisioning Profile given
+Provided Provisioning Profile count: 1
+
+[33;1mKeychain (/Users/vagrant/Library/Keychains/login.keychain) does not exist[0m
+ Checking (/Users/vagrant/Library/Keychains/login.keychain-db)
+
+[34;1mDownloading & installing Certificate(s)[0m
+
+Downloading certificate: 1/1
+Installing downloaded certificates
+
+[32;1miPhone Developer: Dev Portal Bot Bitrise (E89JV3W9K4)[0m
+serial: 2474233440580336676
+team: BITFALL FEJLESZTO KORLATOLT FELELOSSEGU TARSASAG (72SA8V3WYL)
+expire: 2021-01-27 11:29:18 +0000 UTC
+
+
+[34;1mDownloading & installing Provisioning Profile(s)[0m
+
+Downloading provisioning profile: 1/1
+Moving it to: /Users/vagrant/Library/MobileDevice/Provisioning Profiles/787bdab8-5f19-4cc3-9efd-6d11f4288a6c.mobileprovision
+
+[32;1mBitriseBot-Wildcard (787bdab8-5f19-4cc3-9efd-6d11f4288a6c)[0m
+exportType: development
+team: BITFALL FEJLESZTO KORLATOLT FELELOSSEGU TARSASAG (72SA8V3WYL)
+bundleID: *
+capabilities:
+- keychain-access-groups: [72SA8V3WYL.*]
+certificates:
+- iPhone Developer: Dev Portal Bot Bitrise (E89JV3W9K4)
+  serial: 2474233440580336676
+  teamID: 72SA8V3WYL
+devices:
+- 21bbc342c380001152f6f44055d3e8b3f4229740
+expire: 2021-01-27 12:01:19 +0000 UTC
+|                                                                              |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mcertificate-and-profile-installer@1[0m                           | 5.72 sec |
++---+---------------------------------------------------------------+----------+
+
+                                          ▼
+
++------------------------------------------------------------------------------+
+| (5) recreate-user-schemes@1                                                  |
++------------------------------------------------------------------------------+
+| id: recreate-user-schemes                                                    |
+| version: 1.0.2                                                               |
+| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+| toolkit: go                                                                  |
+| time: 2020-07-31T17:23:02Z                                                   |
++------------------------------------------------------------------------------+
+|                                                                              |
+[36mINFO[0m[17:23:02]  * [32;1m[OK][0m Step dependency (go) installed, available. 
+[34;1mConfigs:[0m
+- ProjectPath: SanjaySwiftUI.xcodeproj
+
+[34;1mSearching for project shared schemes...[0m
+shared scheme count: 1
+
+[32;1mShared schemes:[0m
+- SanjaySwiftUI
+|                                                                              |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mrecreate-user-schemes@1[0m                                       | 3.32 sec |
++---+---------------------------------------------------------------+----------+
+
+                                          ▼
+
++------------------------------------------------------------------------------+
+| (6) xcode-test@2                                                             |
++------------------------------------------------------------------------------+
+| id: xcode-test                                                               |
+| version: 2.4.6                                                               |
+| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+| toolkit: go                                                                  |
+| time: 2020-07-31T17:23:06Z                                                   |
++------------------------------------------------------------------------------+
+|                                                                              |
+[36mINFO[0m[17:23:07]  * [32;1m[OK][0m Step dependency (xcode) installed, available. 
+[36mINFO[0m[17:23:07]  * [32;1m[OK][0m Step dependency (go) installed, available. 
+[34;1mConfigs:
+[0m- ProjectPath: SanjaySwiftUI.xcodeproj
+- Scheme: SanjaySwiftUI
+- SimulatorPlatform: iOS Simulator
+- SimulatorDevice: iPhone 8 Plus
+- SimulatorOsVersion: latest
+- OutputTool: xcpretty
+- IsCleanBuild: false
+- IsSingleBuild: true
+- ShouldBuildBeforeTest: true
+- ShouldRetryTestOnFail: false
+- GenerateCodeCoverageFiles: false
+- ExportUITestArtifacts: false
+- DisableIndexWhileBuilding: true
+- TestOptions: 
+- XcprettyTestOptions: --color --report html --output "/Users/vagrant/deploy/xcode-test-results-SanjaySwiftUI.html"
+- Verbose: false
+- HeadlessMode: true
+- CacheLevel: swift_packages
+
+* action: -project
+- xcodebuildVersion: Xcode 11.6 (Build version 11E708)
+
+[34;1mChecking if output tool (xcpretty) is installed[0m
+- xcprettyVersion: 0.3.0
+
+[34;1mSimulator infos[0m
+* simulator_name: iPhone 8 Plus, version: iOS 13.6, UDID: 80F44F48-5CE9-4340-A516-00C33ABBBC43, status: Shutdown
+* device_destination: id=80F44F48-5CE9-4340-A516-00C33ABBBC43
+
+[34;1mRunning the tests...[0m
+$ set -o pipefail && env "NSUnbufferedIO=YES" xcodebuild "-project" "/Users/vagrant/git/SanjaySwiftUI.xcodeproj" "-scheme" "SanjaySwiftUI" "build" "COMPILER_INDEX_STORE_ENABLE=NO" "test" "-destination" "id=80F44F48-5CE9-4340-A516-00C33ABBBC43" "-resultBundlePath" "/var/folders/6q/wgy6jtp12w5gzgm9lzcglpqw0000gn/T/XCUITestOutput321146801/Test.xcresult" | xcpretty "--color" "--report" "html" "--output" "/Users/vagrant/deploy/xcode-test-results-SanjaySwiftUI.html"
+
+[33m▸[0m [39;1mCompiling[0m PersonPhotoImagePickerViewController.swift
+[33m▸[0m [39;1mCompiling[0m SSPhotoEditorViewController.swift
+[33m▸[0m [39;1mCompiling[0m PhotoEditor+Crop.swift
+[33m▸[0m [39;1mCompiling[0m GradientView.swift
+[33m▸[0m [39;1mCompiling[0m CustomImagePickerViewController.swift
+[33m▸[0m [39;1mCompiling[0m PhotoEditor+Drawing.swift
+[33m▸[0m [39;1mCompiling[0m PhotoEditor+Gestures.swift
+[33m▸[0m [39;1mCompiling[0m AlertControlView.swift
+[33m▸[0m [39;1mCompiling[0m Protocols.swift
+[33m▸[0m [39;1mCompiling[0m UIImageView+Alpha.swift
+[33m▸[0m [39;1mCompiling[0m Person+CoreDataClass.swift
+[33m▸[0m [39;1mCompiling[0m EmojiCollectionViewCell.swift
+[33m▸[0m [39;1mCompiling[0m CropRectView.swift
+[33m▸[0m [39;1mCompiling[0m AppDelegate.swift
+[33m▸[0m [39;1mCompiling[0m StickersViewController.swift
+[33m▸[0m [39;1mCompiling[0m UIImage+Size.swift
+[33m▸[0m [39;1mCompiling[0m ColorsCollectionViewDelegate.swift
+[33m▸[0m [39;1mCompiling[0m CropView.swift
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:240:20: [33m'beginAnimations(_:context:)' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.beginAnimations(nil, context: nil)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:241:20: [33m'setAnimationDuration' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationDuration(0.25)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:242:20: [33m'setAnimationBeginsFromCurrentState' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationBeginsFromCurrentState(true)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:252:20: [33m'commitAnimations()' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.commitAnimations()
+[36m                   ^[0m
+
+
+[33m▸[0m [39;1mCompiling[0m PhotoEditor+UITextView.swift
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:240:20: [33m'beginAnimations(_:context:)' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.beginAnimations(nil, context: nil)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:241:20: [33m'setAnimationDuration' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationDuration(0.25)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:242:20: [33m'setAnimationBeginsFromCurrentState' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationBeginsFromCurrentState(true)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:252:20: [33m'commitAnimations()' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.commitAnimations()
+[36m                   ^[0m
+
+
+[33m▸[0m [39;1mCompiling[0m PhotoEditor+StickersViewController.swift
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:240:20: [33m'beginAnimations(_:context:)' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.beginAnimations(nil, context: nil)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:241:20: [33m'setAnimationDuration' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationDuration(0.25)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:242:20: [33m'setAnimationBeginsFromCurrentState' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationBeginsFromCurrentState(true)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:252:20: [33m'commitAnimations()' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.commitAnimations()
+[36m                   ^[0m
+
+
+[33m▸[0m [39;1mCompiling[0m StickerCollectionViewCell.swift
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:240:20: [33m'beginAnimations(_:context:)' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.beginAnimations(nil, context: nil)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:241:20: [33m'setAnimationDuration' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationDuration(0.25)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:242:20: [33m'setAnimationBeginsFromCurrentState' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationBeginsFromCurrentState(true)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:252:20: [33m'commitAnimations()' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.commitAnimations()
+[36m                   ^[0m
+
+
+[33m▸[0m [39;1mCompiling[0m Person+CoreDataProperties.swift
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:240:20: [33m'beginAnimations(_:context:)' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.beginAnimations(nil, context: nil)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:241:20: [33m'setAnimationDuration' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationDuration(0.25)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:242:20: [33m'setAnimationBeginsFromCurrentState' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationBeginsFromCurrentState(true)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:252:20: [33m'commitAnimations()' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.commitAnimations()
+[36m                   ^[0m
+
+
+[33m▸[0m [39;1mCompiling[0m CropViewController.swift
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:240:20: [33m'beginAnimations(_:context:)' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.beginAnimations(nil, context: nil)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:241:20: [33m'setAnimationDuration' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationDuration(0.25)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:242:20: [33m'setAnimationBeginsFromCurrentState' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationBeginsFromCurrentState(true)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:252:20: [33m'commitAnimations()' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.commitAnimations()
+[36m                   ^[0m
+
+
+[33m▸[0m [39;1mCompiling[0m ContentView.swift
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:240:20: [33m'beginAnimations(_:context:)' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.beginAnimations(nil, context: nil)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:241:20: [33m'setAnimationDuration' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationDuration(0.25)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:242:20: [33m'setAnimationBeginsFromCurrentState' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationBeginsFromCurrentState(true)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:252:20: [33m'commitAnimations()' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.commitAnimations()
+[36m                   ^[0m
+
+
+[33m▸[0m [39;1mCompiling[0m UIView+Image.swift
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:240:20: [33m'beginAnimations(_:context:)' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.beginAnimations(nil, context: nil)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:241:20: [33m'setAnimationDuration' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationDuration(0.25)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:242:20: [33m'setAnimationBeginsFromCurrentState' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationBeginsFromCurrentState(true)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:252:20: [33m'commitAnimations()' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.commitAnimations()
+[36m                   ^[0m
+
+
+[33m▸[0m [39;1mCompiling[0m PhotoEditor+Keyboard.swift
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:240:20: [33m'beginAnimations(_:context:)' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.beginAnimations(nil, context: nil)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:241:20: [33m'setAnimationDuration' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationDuration(0.25)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:242:20: [33m'setAnimationBeginsFromCurrentState' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationBeginsFromCurrentState(true)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:252:20: [33m'commitAnimations()' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.commitAnimations()
+[36m                   ^[0m
+
+
+[33m▸[0m [39;1mCompiling[0m EmojisCollectionViewDelegate.swift
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:240:20: [33m'beginAnimations(_:context:)' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.beginAnimations(nil, context: nil)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:241:20: [33m'setAnimationDuration' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationDuration(0.25)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:242:20: [33m'setAnimationBeginsFromCurrentState' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationBeginsFromCurrentState(true)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:252:20: [33m'commitAnimations()' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.commitAnimations()
+[36m                   ^[0m
+
+
+[33m▸[0m [39;1mCompiling[0m ResizeControl.swift
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:240:20: [33m'beginAnimations(_:context:)' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.beginAnimations(nil, context: nil)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:241:20: [33m'setAnimationDuration' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationDuration(0.25)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:242:20: [33m'setAnimationBeginsFromCurrentState' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationBeginsFromCurrentState(true)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:252:20: [33m'commitAnimations()' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.commitAnimations()
+[36m                   ^[0m
+
+
+[33m▸[0m [39;1mCompiling[0m UIImage+Crop.swift
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:240:20: [33m'beginAnimations(_:context:)' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.beginAnimations(nil, context: nil)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:241:20: [33m'setAnimationDuration' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationDuration(0.25)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:242:20: [33m'setAnimationBeginsFromCurrentState' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationBeginsFromCurrentState(true)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:252:20: [33m'commitAnimations()' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.commitAnimations()
+[36m                   ^[0m
+
+
+[33m▸[0m [39;1mCompiling[0m SceneDelegate.swift
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:240:20: [33m'beginAnimations(_:context:)' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.beginAnimations(nil, context: nil)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:241:20: [33m'setAnimationDuration' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationDuration(0.25)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:242:20: [33m'setAnimationBeginsFromCurrentState' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationBeginsFromCurrentState(true)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:252:20: [33m'commitAnimations()' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.commitAnimations()
+[36m                   ^[0m
+
+
+[33m▸[0m [39;1mCompiling[0m PhotoEditor+Font.swift
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:240:20: [33m'beginAnimations(_:context:)' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.beginAnimations(nil, context: nil)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:241:20: [33m'setAnimationDuration' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationDuration(0.25)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:242:20: [33m'setAnimationBeginsFromCurrentState' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationBeginsFromCurrentState(true)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:252:20: [33m'commitAnimations()' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.commitAnimations()
+[36m                   ^[0m
+
+
+[33m▸[0m [39;1mCompiling[0m UIImage+Extra.swift
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:240:20: [33m'beginAnimations(_:context:)' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.beginAnimations(nil, context: nil)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:241:20: [33m'setAnimationDuration' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationDuration(0.25)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:242:20: [33m'setAnimationBeginsFromCurrentState' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationBeginsFromCurrentState(true)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:252:20: [33m'commitAnimations()' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.commitAnimations()
+[36m                   ^[0m
+
+
+[33m▸[0m [39;1mCompiling[0m ColorCollectionViewCell.swift
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:240:20: [33m'beginAnimations(_:context:)' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.beginAnimations(nil, context: nil)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:241:20: [33m'setAnimationDuration' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationDuration(0.25)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:242:20: [33m'setAnimationBeginsFromCurrentState' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.setAnimationBeginsFromCurrentState(true)
+[36m                   ^[0m
+
+
+
+[33m⚠️  [0m/Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/CropView.swift:252:20: [33m'commitAnimations()' was deprecated in iOS 13.0: Use the block-based animation API instead[0m
+
+            UIView.commitAnimations()
+[36m                   ^[0m
+
+
+[33m▸[0m [39;1mLinking[0m SanjaySwiftUI
+[33m▸[0m [39;1mCopying[0m /Users/vagrant/git/SanjaySwiftUI/Utilities/Photo_Editor/icomoon.ttf
+[33m▸[0m [39;1mCompiling[0m StickersViewController.xib
+[33m▸[0m [39;1mCompiling[0m StickerCollectionViewCell.xib
+[33m▸[0m [39;1mCompiling[0m EmojiCollectionViewCell.xib
+[33m▸[0m [39;1mCompiling[0m ColorCollectionViewCell.xib
+[33m▸[0m [39;1mCompiling[0m StoryboardSanjay.storyboard
+[33m▸[0m [39;1mCompiling[0m LaunchScreen.storyboard
+[33m▸[0m [39;1mProcessing[0m Info.plist
+[33m▸[0m [39;1mTouching[0m SanjaySwiftUI.app (in target 'SanjaySwiftUI' from project 'SanjaySwiftUI')
+[33m▸[0m [39;1mBuild[0m Succeeded
+[33m▸[0m [39;1mLinking[0m SanjaySwiftUI
+[33m▸[0m [39;1mCompiling[0m SanjaySwiftUIUITests.swift
+[33m▸[0m [39;1mProcessing[0m Info.plist
+[33m▸[0m [39;1mProcessing[0m Info.plist
+[33m▸[0m [39;1mCompiling[0m SanjaySwiftUITests.swift
+[33m▸[0m [39;1mLinking[0m SanjaySwiftUIUITests
+[33m▸[0m [39;1mCopying[0m /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib
+[33m▸[0m [39;1mCopying[0m /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTAutomationSupport.framework
+[33m▸[0m [39;1mCopying[0m /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework
+[33m▸[0m [39;1mTouching[0m SanjaySwiftUIUITests.xctest (in target 'SanjaySwiftUIUITests' from project 'SanjaySwiftUI')
+[33m▸[0m [39;1mLinking[0m SanjaySwiftUITests
+[33m▸[0m [39;1mCopying[0m /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib
+[33m▸[0m [39;1mCopying[0m /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/lib/libXCTestBundleInject.dylib
+[33m▸[0m [39;1mCopying[0m /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/PrivateFrameworks/XCTAutomationSupport.framework
+[33m▸[0m [39;1mCopying[0m /Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/Library/Frameworks/XCTest.framework
+[33m▸[0m [39;1mTouching[0m SanjaySwiftUITests.xctest (in target 'SanjaySwiftUITests' from project 'SanjaySwiftUI')
+[39;1mAll tests[0m
+Test Suite [39;1mSanjaySwiftUITests.xctest[0m started
+[39;1mSanjaySwiftUITests[0m
+    [32;1m✓[0m testExample (0.002 seconds)
+    [33m◷[0m testPerformanceExample measured (0.000 seconds)
+    [32;1m✓[0m testPerformanceExample ([31m0.341[0m seconds)
+
+
+[32;1m	 Executed 2 tests, with 0 failures (0 unexpected) in 0.343 (0.345) seconds
+[0m
+[39;1mAll tests[0m
+Test Suite [39;1mSanjaySwiftUIUITests.xctest[0m started
+[39;1mSanjaySwiftUIUITests[0m
+    [32;1m✓[0m testExample ([31m3.068[0m seconds)
+    [32;1m✓[0m testLaunchPerformance ([31m23.122[0m seconds)
+
+
+[32;1m	 Executed 2 tests, with 0 failures (0 unexpected) in 26.190 (26.196) seconds
+[0m
+[33m▸[0m [39;1mTest[0m Succeeded
+
+[34;1mExporting test results[0m
+[32;1m$ cp "-a" "/var/folders/6q/wgy6jtp12w5gzgm9lzcglpqw0000gn/T/XCUITestOutput321146801/Test.xcresult" "/var/folders/6q/wgy6jtp12w5gzgm9lzcglpqw0000gn/T/test_results878403176/test_result322072577/SanjaySwiftUI/"[0m
+
+[34;1mXcode Test command succeeded.[0m
+|                                                                              |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mxcode-test@2[0m                                                  | 3.3 min  |
++---+---------------------------------------------------------------+----------+
+
+                                          ▼
+
++------------------------------------------------------------------------------+
+| (7) deploy-to-bitrise-io@1                                                   |
++------------------------------------------------------------------------------+
+| id: deploy-to-bitrise-io                                                     |
+| version: 1.10.0                                                              |
+| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+| toolkit: go                                                                  |
+| time: 2020-07-31T17:26:26Z                                                   |
++------------------------------------------------------------------------------+
+|                                                                              |
+[34;1mConfig:
+[0m- BuildURL: https://app.bitrise.io/build/ebf57fa9244f42d1
+- APIToken: [REDACTED]
+- IsCompress: false
+- ZipName: 
+- DeployPath: /Users/vagrant/deploy
+- NotifyUserGroups: everyone
+- NotifyEmailList: 
+- IsPublicPageEnabled: true
+- PublicInstallPageMapFormat: {{range $index, $element := .}}{{if $index}}|{{end}}{{$element.File}}=>{{$element.URL}}{{end}}
+- BuildSlug: ebf57fa9244f42d1
+- TestDeployDir: /var/folders/6q/wgy6jtp12w5gzgm9lzcglpqw0000gn/T/test_results878403176
+- AppSlug: 7f70516d70556cc9
+- AddonAPIBaseURL: [REDACTED]
+- AddonAPIToken: [REDACTED]
+- DebugMode: false
+- BundletoolVersion: 0.13.4
+
+
+[34;1mDeploying the content of the Deploy directory separately[0m
+
+[34;1mList of files to deploy[0m
+- /Users/vagrant/deploy/xcode-test-results-SanjaySwiftUI.html
+
+[34;1mDeploying files[0m
+
+[32;1mUploading file: /Users/vagrant/deploy/xcode-test-results-SanjaySwiftUI.html[0m
+creating artifact
+  file size: 9419B
+uploading artifact
+finishing artifact
+[33;1mis_enable_public_page is set, but public download isn't allowed for this type of file[0m
+
+[32;1mSuccess[0m
+You can find the Artifact on Bitrise, on the Build's page: https://app.bitrise.io/build/ebf57fa9244f42d1
+
+[34;1mUpload test results[0m
+- uploading (1) test results
+[32;1mSuccess[0m
+|                                                                              |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mdeploy-to-bitrise-io@1[0m                                        | 15.59 sec|
++---+---------------------------------------------------------------+----------+
+
+                                          ▼
+
++------------------------------------------------------------------------------+
+| (8) cache-push@2                                                             |
++------------------------------------------------------------------------------+
+| id: cache-push                                                               |
+| version: 2.3.0                                                               |
+| collection: https://github.com/bitrise-io/bitrise-steplib.git                |
+| toolkit: go                                                                  |
+| time: 2020-07-31T17:26:41Z                                                   |
++------------------------------------------------------------------------------+
+|                                                                              |
+[34;1mConfig:
+[0m- Paths: /var/folders/6q/wgy6jtp12w5gzgm9lzcglpqw0000gn/T/cache437294759
+
+
+/Users/vagrant/Library/Developer/Xcode/DerivedData/SanjaySwiftUI-cznulkmmeipcviejazsvksjscwrp/SourcePackages
+
+- IgnoredPaths: 
+
+!/Users/vagrant/Library/Developer/Xcode/DerivedData/SanjaySwiftUI-cznulkmmeipcviejazsvksjscwrp/SourcePackages/manifest.db
+
+- CacheAPIURL: [REDACTED]
+- FingerprintMethodID: file-content-hash
+- CompressArchive: false
+- DebugMode: false
+- StackID: osx-xcode-11.6.x
+
+[34;1mCleaning paths[0m
+[32;1mDone in 278.48µs
+[0m
+[34;1mChecking previous cache status[0m
+No previous cache info found
+[32;1mDone in 63.042µs
+[0m
+[34;1mGenerating cache archive[0m
+[32;1mDone in 960.265µs
+[0m
+[34;1mUploading cache archive[0m
+Archive file size: 4096 bytes / 0.003906 MB
+[32;1mDone in 537.411164ms
+[0m
+[32;1mTotal time: 539.058059ms[0m
+|                                                                              |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mcache-push@2[0m                                                  | 4.41 sec |
++---+---------------------------------------------------------------+----------+
+
+
++------------------------------------------------------------------------------+
+|                               bitrise summary                                |
++---+---------------------------------------------------------------+----------+
+|   | title                                                         | time (s) |
++---+---------------------------------------------------------------+----------+
+| [34;1m-[0m | [34;1mactivate-ssh-key@4[0m                                            | 5.99 sec |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mgit-clone@4[0m                                                   | 9.43 sec |
++---+---------------------------------------------------------------+----------+
+| [33;1m![0m | [33;1mcache-pull@2 (exit code: 1)[0m                                   | 4.21 sec |
++---+---------------------------------------------------------------+----------+
+| Issue tracker: https://github.com/bitrise-steplib/steps-cache-pull/issues    |
+| Source: https://github.com/bitrise-steplib/steps-cache-pull.git              |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mDo anything with Script step[0m                                  | 1.70 sec |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mcertificate-and-profile-installer@1[0m                           | 5.72 sec |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mrecreate-user-schemes@1[0m                                       | 3.32 sec |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mxcode-test@2[0m                                                  | 3.3 min  |
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mdeploy-to-bitrise-io@1[0m                                        | 15.59 sec|
++---+---------------------------------------------------------------+----------+
+| [32;1m✓[0m | [32;1mcache-push@2[0m                                                  | 4.41 sec |
++---+---------------------------------------------------------------+----------+
+| Total runtime: 4.2 min                                                       |
++------------------------------------------------------------------------------+
+
+[34;1m[0m
+[34;1mSubmitting anonymized usage informations...[0m
+[34;1mFor more information visit:[0m
+[34;1mhttps://github.com/bitrise-io/bitrise-plugins-analytics/blob/master/README.md[0m
