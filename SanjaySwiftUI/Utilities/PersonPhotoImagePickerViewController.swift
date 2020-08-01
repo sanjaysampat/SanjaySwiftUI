@@ -185,22 +185,6 @@ class PersonPhotoImagePickerViewController: UIViewController {
                                                 constant: -25).isActive = true
         imageView.image = imageForEditing
         
-        /*
-         // SSTODO
-        .mask(LinearGradient(gradient: Gradient(stops: [
-            .init(color: .clear, location: 0),
-            .init(color: .black, location: 0.25),
-            .init(color: .black, location: 0.75),
-            .init(color: .clear, location: 1)
-        ]), startPoint: .top, endPoint: .bottom))
-        .mask(LinearGradient(gradient: Gradient(stops: [
-            .init(color: .clear, location: 0),
-            .init(color: .black, location: 0.25),
-            .init(color: .black, location: 0.75),
-            .init(color: .clear, location: 1)
-        ]), startPoint: .leading, endPoint: .trailing))
-        */
-        
         view.addSubview(containerView)
         containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
@@ -300,10 +284,10 @@ class PersonPhotoImagePickerViewController: UIViewController {
         //Colors for drawing and Text, If not set default values will be used
         //loadSSPhotoEditorViewController.colors = [.red, .blue, .green]
         
-        //Stickers that the user will choose from to add on the image
-        //for i in 0...10 {
-        //    loadSSPhotoEditorViewController.stickers.append(UIImage(named: i.description )!)
-        //}
+        // Stickers that the user will choose from to add on the image
+        for i in 0...10 {
+            loadSSPhotoEditorViewController.stickers.append(UIImage(named: i.description )!)
+        }
         
         //To hide controls - array of enum control
         //loadSSPhotoEditorViewController.hiddenControls = [.crop, .draw, .share]

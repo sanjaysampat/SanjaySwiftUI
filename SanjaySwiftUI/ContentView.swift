@@ -40,6 +40,7 @@ struct ContentView: View {
         ZStack() {
             
             /*
+             // SSNote ; the modified @State variables should not run in recursive loops.
             // hidden control for code modifications.
             Toggle("", isOn: $photoChanged)
                 .frame(width: 0, height: 0)
