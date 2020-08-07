@@ -8,9 +8,16 @@
 
 import SwiftUI
 
+// SSTODO
+//1) goto new SwiftUI view
+//2) create HStack and VStack with image/audio links
+//3) get data from post webservices.
+
+
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) var managedObjectContext
+    @EnvironmentObject  var  userAuth: UserAuth
     
     @FetchRequest(
         entity: Person.entity(),
@@ -18,11 +25,12 @@ struct ContentView: View {
             NSSortDescriptor(keyPath: \Person.datetime, ascending: true)
         ]
     ) var persons: FetchedResults<Person>
-    
+
+    @State private var currentPos:Int = -1
+
     @State private var name = "Name"
     @State private var showingAlert:Int = 0
     @State private var nameChanged = false
-    @State private var currentPos:Int = -1
     
     @State private var isEditMode:Bool = false
 
@@ -33,31 +41,15 @@ struct ContentView: View {
     private let paddingSize:CGFloat = 10
     
     @State private var lastPos:Int = -1
+
+    @State var listSelection: Int? = 0
     
     //@ObservedObject var viewModel = ViewModel()
     
     var body: some View {
         ZStack() {
             
-            /*
-             // SSNote ; the modified @State variables should not run in recursive loops.
-            // hidden control for code modifications.
-            Toggle("", isOn: $photoChanged)
-                .frame(width: 0, height: 0)
-                .clipped()
-                .onReceive([self.$photoChanged].publisher.first()) { (value) in
-                    //print("New value photoChanged is: \(value)")
-                    if self.photoChanged {
-                        if self.currentPos >= 0 {
-                            if let photo = self.personPhoto {
-                                // to save image in coredata
-                                self.persons[self.currentPos].photo = photo.pngData()
-                            }
-                        }
-                        self.photoChanged = false
-                    }
-            }
-            */
+            if listSelection == 0 {
             
             // hidden control for code modifications.
             Toggle("", isOn:$nameChanged)
@@ -67,6 +59,7 @@ struct ContentView: View {
                     //print("New value nameChanged is: \(value)")
                     print( "SSTODO - Toggle - Showing Alert \(self.showingAlert) and self.nameChanged=\(self.nameChanged)   self.isEditmode=\(self.isEditMode) self.currentPos=\(self.currentPos) self.name=\(self.name)" )
                     if self.currentPos < 0 {
+                        print( "SSTODO - \(self.persons.count)" )
                         self.currentPos = self.persons.count-1
                     }
                     if self.nameChanged {
@@ -256,17 +249,37 @@ struct ContentView: View {
                    }
                     .foregroundColor(Color.pink)
                     .padding(paddingSize)
-                    .padding(.leading, paddingSize * 4)
+                    .padding(.leading, paddingSize)
+                
+                    Button(action: {
+                        if self.currentPos >= 0 {
+                            self.listSelection = 1
+                            
+                        }
+                    }) {
+                        VStack( alignment: .center) {
+                            Image(systemName: "square.stack.3d.down.right")
+                            Text("List")
+                                .font(.caption)
+                        }
+                    }
+                    .foregroundColor(Color.pink)
+                    .padding(paddingSize)
+                    .padding(.leading, paddingSize)
+                    
 
                 }
                 
             }
             .rotationEffect(Angle(degrees: -45), anchor: .center)
+
+        } else {
+                ListView(listSelection: $listSelection, currentPos: $currentPos)
+        }
             
         }
         .background(Color.blue)
         .edgesIgnoringSafeArea(.all)
-        
         
     }
     
@@ -295,6 +308,7 @@ struct ContentView: View {
         }
         .padding(padding ? paddingSize : 0)
         .foregroundColor(Color.pink)
+        
     }
     
     func saveContext() {
