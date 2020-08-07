@@ -20,6 +20,8 @@ SwiftUI project creation to learn.
         * Image with aspectratio, mask of gradient, scaleEffect
             * logically load UIImage or placeholder image from systemName
             * onReceive - changes published, do some tasks.
+            * loading list of filtered images in multiple HStacks on a screen in various sizes.
+    * Multiple SwiftUI views loading from contentView
     * Loading UIViewControllers via UIViewControllerRepresentable in SwiftUI
         * Use Coordinator to handle delegates
         * to pass .constant as @Binding vars for SwiftUI PreviewProvider
