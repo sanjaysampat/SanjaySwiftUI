@@ -57,7 +57,7 @@ struct AlertControlView: UIViewControllerRepresentable {
                 alert.dismiss(animated: true) {
                     self.textChanged = true
                     self.showAlert = 0
-                    print( "SSTODO - AlertControlView alert.dismiss - self.showAlert=\(self.showAlert) and self.textChanged=\(self.textChanged) and self.textString=\(self.textString)" )
+                    //print( "SSTODO - AlertControlView alert.dismiss - self.showAlert=\(self.showAlert) and self.textChanged=\(self.textChanged) and self.textString=\(self.textString)" )
                 }
             })
 

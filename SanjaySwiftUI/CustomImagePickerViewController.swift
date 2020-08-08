@@ -13,8 +13,6 @@ struct CustomPersonPhotoImagePickerViewController: UIViewControllerRepresentable
     @Binding var isPresentedStoryboardSanjay: Bool
     @Binding var photoChanged: Bool
     @Binding var photo: UIImage?
-
-    // SSTODO to add photo selection for add/edit photo
     
     func makeUIViewController(context: Context) -> UIViewController {
         let personPhotoImagePickerViewController = PersonPhotoImagePickerViewController()

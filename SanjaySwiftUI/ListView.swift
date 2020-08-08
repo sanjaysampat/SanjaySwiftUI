@@ -20,6 +20,9 @@ struct ListView: View {
     
     @Binding var listSelection: Int?
     @Binding var currentPos:Int
+    
+    let myPaddingSpace:CGFloat = 5
+    let myCornerRadious:CGFloat = 5
 
     var body: some View {
         ZStack {
@@ -32,24 +35,28 @@ struct ListView: View {
                         HStack( alignment: .center) {
                             Image(systemName: "chevron.left")
                             Text("Back")
-                                .font(.caption)
+                                .font(.body)
+                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                .shadow(radius: 1.5)
+                            
                         }
                     }
-                    .foregroundColor(Color.pink)
+                    .foregroundColor(CommonUtils.cu_activity_foreground_color)
                     .padding()
                     
                     Spacer()
                 }
                 .padding()
+                
                 ScrollView(.vertical) {
                     
                     Text("Start")
-                        .foregroundColor(.white)
+                        .foregroundColor(CommonUtils.cu_activity_light_text_color)
                         .shadow(radius: 1.5)
                         .padding()
 
                 ScrollView(.horizontal) {
-                    HStack(spacing: 20) {
+                    HStack(spacing: myPaddingSpace) {
                         /*
                         ForEach(persons, id: \.datetime) { person in
                             ZStack {
@@ -59,7 +66,7 @@ struct ListView: View {
                                 .frame(width: 400, height: 200)
                                 
                                 Text("Name is \(person.name ?? "")")
-                                .foregroundColor(.white)
+                                .foregroundColor(CommonUtils.cu_activity_background_color)
                                 .shadow(radius: 1.5)
                                 .frame(width: 400, height: 200, alignment: .bottom)
                             }
@@ -72,74 +79,92 @@ struct ListView: View {
                                     .resizable()
                                     .scaledToFit()
                                     .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 100, idealHeight: 200, maxHeight: 200, alignment: .center)
+                                    .cornerRadius(self.myCornerRadious)
                                 
                                 Text(landmark.name)
-                                    .foregroundColor(.white)
+                                    .foregroundColor(CommonUtils.cu_activity_background_color)
                                     .shadow(radius: 1.5)
                                     .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 200, idealHeight: 200, maxHeight: 200, alignment: .bottom)
                             }
                         }
                     }
+                    .padding(10)
+                    
                     }
                     ScrollView(.horizontal) {
-                        HStack(spacing: 20) {
+                        HStack(spacing: myPaddingSpace) {
                             ForEach(landmarkData.filter {$0.category == .lakes }) { landmark in
                                 ZStack {
                                     landmark.image
                                         .resizable(resizingMode: .stretch)
                                         .scaledToFit()
                                         .frame(width: 400, height: 400, alignment: .center)
-                                    
+                                    .cornerRadius(self.myCornerRadious)
+
                                     Text(landmark.name)
-                                        .foregroundColor(.white)
+                                        .foregroundColor(CommonUtils.cu_activity_background_color)
                                         .shadow(radius: 1.5)
                                         .frame(width: 400, height: 400, alignment: .bottom)
                                 }
                             }
                         }
+                        .padding(10)
+
                     }
                     ForEach(landmarkData.filter {$0.category == .featured }) { landmark in
                     ZStack {
                         landmark.image
                             .resizable(resizingMode: .stretch)
                             .scaledToFit()
-                        
+                            .cornerRadius(self.myCornerRadious)
+
                         Text(landmark.name)
-                            .foregroundColor(.white)
+                            .foregroundColor(CommonUtils.cu_activity_background_color)
                             .shadow(radius: 1.5)
                     }
+                    .padding(10)
+                        
                     }
+                    
                     ScrollView(.horizontal) {
-                        HStack(spacing: 20) {
+                        HStack(spacing: myPaddingSpace) {
                             ForEach(landmarkData.filter {$0.category == .rivers }) { landmark in
                                 ZStack {
                                     landmark.image
                                         .resizable(resizingMode: .stretch)
                                         .scaledToFit()
                                         .frame(width: 400, height: 400, alignment: .center)
-                                    
+                                        .cornerRadius(self.myCornerRadious)
+
                                     Text(landmark.name)
-                                        .foregroundColor(.white)
+                                        .foregroundColor(CommonUtils.cu_activity_background_color)
                                         .shadow(radius: 1.5)
                                         .frame(width: 400, height: 400, alignment: .bottom)
                                 }
                             }
                         }
+                        .padding(10)
+
                     }
                     if self.persons.count > 0 && self.currentPos >= 0 && self.currentPos < self.persons.count {
                     ZStack {
                         Image( uiImage: UIImage(data: self.persons[self.currentPos].photo ?? Data()), placeholderSystemName: "person")
                             .resizable(resizingMode: .stretch)
                             .scaledToFit()
-                        
+                            .font(Font.title.weight(.ultraLight))
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .cornerRadius(self.myCornerRadious)
+
                         Text(self.persons[self.currentPos].name ?? "")
-                            .foregroundColor(.white)
+                            .foregroundColor(CommonUtils.cu_activity_background_color)
                             .shadow(radius: 1.5)
                     }
+                    .padding(10)
+                        
                     }
                     
                     Text("End")
-                        .foregroundColor(.white)
+                        .foregroundColor(CommonUtils.cu_activity_light_text_color)
                         .shadow(radius: 1.5)
                         .padding()
                     
@@ -147,7 +172,7 @@ struct ListView: View {
                 }
             }
         }
-        .background(Color.blue)
+        .background(CommonUtils.cu_activity_background_color)
         //.edgesIgnoringSafeArea(.all)
     }
 }

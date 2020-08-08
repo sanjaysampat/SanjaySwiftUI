@@ -10,8 +10,7 @@ import SwiftUI
 
 // SSTODO
 //1) goto new SwiftUI view
-//2) create HStack and VStack with image/audio links
-//3) get data from post webservices.
+//2) get data from post webservices.
 
 
 struct ContentView: View {
@@ -57,9 +56,9 @@ struct ContentView: View {
                 .clipped()
                 .onReceive([self.$nameChanged].publisher.first()) { (value) in
                     //print("New value nameChanged is: \(value)")
-                    print( "SSTODO - Toggle - Showing Alert \(self.showingAlert) and self.nameChanged=\(self.nameChanged)   self.isEditmode=\(self.isEditMode) self.currentPos=\(self.currentPos) self.name=\(self.name)" )
+                    //print( "SSTODO - Toggle - Showing Alert \(self.showingAlert) and self.nameChanged=\(self.nameChanged)   self.isEditmode=\(self.isEditMode) self.currentPos=\(self.currentPos) self.name=\(self.name)" )
                     if self.currentPos < 0 {
-                        print( "SSTODO - \(self.persons.count)" )
+                        print( "SSTODO - persons.count = \(self.persons.count)" )
                         self.currentPos = self.persons.count-1
                     }
                     if self.nameChanged {
@@ -88,7 +87,9 @@ struct ContentView: View {
                 .scale(1.25)
                 .rotation(Angle(degrees: -45), anchor: .center)
                 .edgesIgnoringSafeArea(.all)
-                .opacity(0.15)
+                //.opacity(0.15)
+                .foregroundColor(CommonUtils.cu_activity_light_theam_color)
+
             
             Image(uiImage: self.personPhoto, placeholderSystemName: "person")
                 .resizable(resizingMode: .stretch)
@@ -109,10 +110,10 @@ struct ContentView: View {
                 .scaleEffect(0.55)
                 .opacity(0.45)
                 .font(Font.title.weight(.ultraLight))
-                .foregroundColor(Color.gray)
+                .foregroundColor(CommonUtils.cu_activity_light_text_color)
                 .onReceive([self.$photoChanged].publisher.first()) { (value) in
                     //print("New value photoChanged is: \(value)")
-                    print( "SSTODO - Toggle - self.photoChanged \(self.photoChanged) and self.nameChanged=\(self.nameChanged)   self.isEditmode=\(self.isEditMode) self.currentPos=\(self.currentPos) self.name=\(self.name)" )
+                    //print( "SSTODO - Toggle - self.photoChanged \(self.photoChanged) and self.nameChanged=\(self.nameChanged)   self.isEditmode=\(self.isEditMode) self.currentPos=\(self.currentPos) self.name=\(self.name)" )
                     if self.currentPos >= 0 {
                         if self.photoChanged {
                             if let photo = self.personPhoto {
@@ -131,16 +132,17 @@ struct ContentView: View {
                         }
                     }
             }
-            
+                
+                
             Image(systemName: "heart")
                 .resizable(resizingMode: .stretch)
                 .rotationEffect(Angle(degrees: -45), anchor: .center)
                 .scaledToFit()
-                .foregroundColor(Color.pink)
+                .foregroundColor(CommonUtils.cu_activity_foreground_color)
                 .opacity(0.75)
             
             if self.showingAlert == 1 {
-                PrintinView("SSTODO - ContentView - self.showingAlert \(self.showingAlert) and self.nameChanged=\(self.nameChanged) self.name=\(self.name)")
+                PrintinView("SSTODO - PrintinView - ContentView - self.showingAlert \(self.showingAlert) and self.nameChanged=\(self.nameChanged) self.name=\(self.name)")
                 AlertControlView(textChanged: $nameChanged,
                                  textString: $name,
                                  showAlert: $showingAlert,
@@ -152,21 +154,21 @@ struct ContentView: View {
             VStack(alignment: .center) {
                 Text("\(self.name)")
                     .font(.largeTitle)
-                    .foregroundColor(Color.pink)
+                    .foregroundColor(CommonUtils.cu_activity_foreground_color)
                 
                 Text("in my Heart")
                     .font(.title)
                     .fontWeight(.thin)
-                    .foregroundColor(Color.pink)
+                    .foregroundColor(CommonUtils.cu_activity_foreground_color)
                 
                 if self.persons.count > 0 {
                     Text("(\(self.currentPos+1) of \(self.persons.count))")
                         .font(.footnote)
-                        .foregroundColor(Color.pink)
+                        .foregroundColor(CommonUtils.cu_activity_foreground_color)
                 } else {
                     Text("(No Records)")
                     .font(.footnote)
-                    .foregroundColor(Color.pink)
+                    .foregroundColor(CommonUtils.cu_activity_foreground_color)
                 }
                 
                 HStack(alignment: .center) {
@@ -185,7 +187,7 @@ struct ContentView: View {
                                 .font(.caption)
                         }
                     }
-                    .foregroundColor(Color.pink)
+                    .foregroundColor(CommonUtils.cu_activity_foreground_color)
                     .padding(paddingSize)
                     
                     Button(action: {
@@ -200,7 +202,7 @@ struct ContentView: View {
                                 .font(.caption)
                         }
                     }
-                    .foregroundColor(Color.pink)
+                    .foregroundColor(CommonUtils.cu_activity_foreground_color)
                     .padding(paddingSize)
 
                     Button(action: {
@@ -221,7 +223,7 @@ struct ContentView: View {
                                 .font(.caption)
                         }
                     }
-                    .foregroundColor(Color.pink)
+                    .foregroundColor(CommonUtils.cu_activity_foreground_color)
                     .padding(paddingSize)
 
                 }
@@ -247,7 +249,7 @@ struct ContentView: View {
                     {
                         CustomPersonPhotoImagePickerViewController(isPresentedStoryboardSanjay: self.$isPresentedStoryboardSanjay, photoChanged: self.$photoChanged,  photo: self.$personPhoto)
                    }
-                    .foregroundColor(Color.pink)
+                    .foregroundColor(CommonUtils.cu_activity_foreground_color)
                     .padding(paddingSize)
                     .padding(.leading, paddingSize)
                 
@@ -263,7 +265,7 @@ struct ContentView: View {
                                 .font(.caption)
                         }
                     }
-                    .foregroundColor(Color.pink)
+                    .foregroundColor(CommonUtils.cu_activity_foreground_color)
                     .padding(paddingSize)
                     .padding(.leading, paddingSize)
                     
@@ -278,7 +280,7 @@ struct ContentView: View {
         }
             
         }
-        .background(Color.blue)
+        .background(CommonUtils.cu_activity_background_color)
         .edgesIgnoringSafeArea(.all)
         
     }
@@ -290,7 +292,7 @@ struct ContentView: View {
             self.showingAlert = 1
             self.nameChanged = false
             self.isEditMode = ( id >= 0 )
-            print( "SSTODO - Button - Showing Alert \(self.showingAlert) self.isEditMode=\(self.isEditMode) Id=\(id)" )
+            //print( "SSTODO - Button - Showing Alert \(self.showingAlert) self.isEditMode=\(self.isEditMode) Id=\(id)" )
         }) {
             if ( id >= 0 ) {
                 VStack( alignment: .center) {
@@ -307,7 +309,7 @@ struct ContentView: View {
             }
         }
         .padding(padding ? paddingSize : 0)
-        .foregroundColor(Color.pink)
+        .foregroundColor(CommonUtils.cu_activity_foreground_color)
         
     }
     
@@ -341,6 +343,7 @@ extension Image {
     public init(uiImage: UIImage?, placeholderSystemName: String) {
         guard let uiImage = uiImage else {
             self = Image(systemName: placeholderSystemName)
+
             return
         }
         self = Image(uiImage: uiImage)

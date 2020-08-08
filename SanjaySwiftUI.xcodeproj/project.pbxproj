@@ -74,6 +74,7 @@
 		72B551D524DD743E009A0014 /* stmarylake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551C624DD743E009A0014 /* stmarylake.jpg */; };
 		72B551D624DD743E009A0014 /* chilkoottrail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551C724DD743E009A0014 /* chilkoottrail.jpg */; };
 		72B551D724DD743E009A0014 /* rainbowlake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551C824DD743E009A0014 /* rainbowlake.jpg */; };
+		72BBAF0224DE694900CFC7D6 /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BBAF0124DE694900CFC7D6 /* CommonUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -167,6 +168,7 @@
 		72B551C624DD743E009A0014 /* stmarylake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stmarylake.jpg; sourceTree = "<group>"; };
 		72B551C724DD743E009A0014 /* chilkoottrail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chilkoottrail.jpg; sourceTree = "<group>"; };
 		72B551C824DD743E009A0014 /* rainbowlake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rainbowlake.jpg; sourceTree = "<group>"; };
+		72BBAF0124DE694900CFC7D6 /* CommonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,6 +313,7 @@
 				7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */,
 				72735B5224D034B0006B75C9 /* Photo_Editor */,
 				729B0EF324C99FCF00054F9F /* AlertControlView.swift */,
+				72BBAF0124DE694900CFC7D6 /* CommonUtils.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -521,6 +524,7 @@
 				729B0EF424C99FCF00054F9F /* AlertControlView.swift in Sources */,
 				72735B8424D034B0006B75C9 /* Protocols.swift in Sources */,
 				72735B7B24D034B0006B75C9 /* UIImageView+Alpha.swift in Sources */,
+				72BBAF0224DE694900CFC7D6 /* CommonUtils.swift in Sources */,
 				729B0EF724C9B40E00054F9F /* Person+CoreDataClass.swift in Sources */,
 				72735B8824D034B0006B75C9 /* EmojiCollectionViewCell.swift in Sources */,
 				72735B9424D034B0006B75C9 /* CropRectView.swift in Sources */,
