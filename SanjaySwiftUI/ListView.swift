@@ -17,12 +17,14 @@ struct ListView: View {
         ]
     ) var persons: FetchedResults<Person>
 
-    
+    @State var photoFrame : (width:CGFloat, height:CGFloat) = (width:400, height:400)
+
     @Binding var listSelection: Int?
     @Binding var currentPos:Int
     
     let myPaddingSpace:CGFloat = 5
-    let myCornerRadious:CGFloat = 5
+    
+    let myCornerRadius = CommonUtils.cu_CornerRadius
 
     var body: some View {
         ZStack {
@@ -54,6 +56,9 @@ struct ListView: View {
                         .foregroundColor(CommonUtils.cu_activity_light_text_color)
                         .shadow(radius: 1.5)
                         .padding()
+                    
+                    SigninViewer(photoFrame: $photoFrame)
+                        .padding(10)
 
                 ScrollView(.horizontal) {
                     HStack(spacing: myPaddingSpace) {
@@ -79,7 +84,7 @@ struct ListView: View {
                                     .resizable()
                                     .scaledToFit()
                                     .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 100, idealHeight: 200, maxHeight: 200, alignment: .center)
-                                    .cornerRadius(self.myCornerRadious)
+                                    .cornerRadius(self.myCornerRadius)
                                 
                                 Text(landmark.name)
                                     .foregroundColor(CommonUtils.cu_activity_background_color)
@@ -99,7 +104,7 @@ struct ListView: View {
                                         .resizable(resizingMode: .stretch)
                                         .scaledToFit()
                                         .frame(width: 400, height: 400, alignment: .center)
-                                    .cornerRadius(self.myCornerRadious)
+                                    .cornerRadius(self.myCornerRadius)
 
                                     Text(landmark.name)
                                         .foregroundColor(CommonUtils.cu_activity_background_color)
@@ -116,7 +121,7 @@ struct ListView: View {
                         landmark.image
                             .resizable(resizingMode: .stretch)
                             .scaledToFit()
-                            .cornerRadius(self.myCornerRadious)
+                            .cornerRadius(self.myCornerRadius)
 
                         Text(landmark.name)
                             .foregroundColor(CommonUtils.cu_activity_background_color)
@@ -134,7 +139,7 @@ struct ListView: View {
                                         .resizable(resizingMode: .stretch)
                                         .scaledToFit()
                                         .frame(width: 400, height: 400, alignment: .center)
-                                        .cornerRadius(self.myCornerRadious)
+                                        .cornerRadius(self.myCornerRadius)
 
                                     Text(landmark.name)
                                         .foregroundColor(CommonUtils.cu_activity_background_color)
@@ -146,6 +151,7 @@ struct ListView: View {
                         .padding(10)
 
                     }
+                    
                     if self.persons.count > 0 && self.currentPos >= 0 && self.currentPos < self.persons.count {
                     ZStack {
                         Image( uiImage: UIImage(data: self.persons[self.currentPos].photo ?? Data()), placeholderSystemName: "person")
@@ -153,7 +159,7 @@ struct ListView: View {
                             .scaledToFit()
                             .font(Font.title.weight(.ultraLight))
                             .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                            .cornerRadius(self.myCornerRadious)
+                            .cornerRadius(self.myCornerRadius)
 
                         Text(self.persons[self.currentPos].name ?? "")
                             .foregroundColor(CommonUtils.cu_activity_background_color)

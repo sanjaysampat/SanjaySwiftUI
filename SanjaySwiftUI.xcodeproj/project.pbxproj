@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7204276724DFD43D00DF4958 /* SwiftUIAsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204276624DFD43D00DF4958 /* SwiftUIAsyncImageView.swift */; };
+		7204276924DFD4A200DF4958 /* SwiftUIImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204276824DFD4A200DF4958 /* SwiftUIImageLoader.swift */; };
+		7204276F24DFFA3600DF4958 /* PrivateCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204276E24DFFA3600DF4958 /* PrivateCommit.swift */; };
 		7216BB5C24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */; };
 		7216BB5E24D17BC30097AFA4 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */; };
 		7252639324D55633002C5ACA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7252639224D55633002C5ACA /* README.md */; };
@@ -75,6 +78,12 @@
 		72B551D624DD743E009A0014 /* chilkoottrail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551C724DD743E009A0014 /* chilkoottrail.jpg */; };
 		72B551D724DD743E009A0014 /* rainbowlake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551C824DD743E009A0014 /* rainbowlake.jpg */; };
 		72BBAF0224DE694900CFC7D6 /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BBAF0124DE694900CFC7D6 /* CommonUtils.swift */; };
+		72BBAF0824DE8AFB00CFC7D6 /* signin.json in Resources */ = {isa = PBXBuildFile; fileRef = 72BBAF0724DE8AFB00CFC7D6 /* signin.json */; };
+		72BBAF0C24DE8E3000CFC7D6 /* SigninSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BBAF0B24DE8E2F00CFC7D6 /* SigninSuccess.swift */; };
+		72BBAF1024DE8F9700CFC7D6 /* SignInUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BBAF0F24DE8F9600CFC7D6 /* SignInUser.swift */; };
+		72BBAF1224DEBE5700CFC7D6 /* SigninFeatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BBAF1124DEBE5700CFC7D6 /* SigninFeatcher.swift */; };
+		72BBAF1424DEC8EA00CFC7D6 /* SigninViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BBAF1324DEC8EA00CFC7D6 /* SigninViewer.swift */; };
+		72BBAF1724DED16100CFC7D6 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BBAF1624DED16100CFC7D6 /* SwiftyJSON.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +104,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7204276624DFD43D00DF4958 /* SwiftUIAsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAsyncImageView.swift; sourceTree = "<group>"; };
+		7204276824DFD4A200DF4958 /* SwiftUIImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIImageLoader.swift; sourceTree = "<group>"; };
+		7204276E24DFFA3600DF4958 /* PrivateCommit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateCommit.swift; sourceTree = "<group>"; };
 		7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPhotoImagePickerViewController.swift; sourceTree = "<group>"; };
 		7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7252639224D55633002C5ACA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -169,6 +181,12 @@
 		72B551C724DD743E009A0014 /* chilkoottrail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chilkoottrail.jpg; sourceTree = "<group>"; };
 		72B551C824DD743E009A0014 /* rainbowlake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rainbowlake.jpg; sourceTree = "<group>"; };
 		72BBAF0124DE694900CFC7D6 /* CommonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
+		72BBAF0724DE8AFB00CFC7D6 /* signin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signin.json; sourceTree = "<group>"; };
+		72BBAF0B24DE8E2F00CFC7D6 /* SigninSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninSuccess.swift; sourceTree = "<group>"; };
+		72BBAF0F24DE8F9600CFC7D6 /* SignInUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInUser.swift; sourceTree = "<group>"; };
+		72BBAF1124DEBE5700CFC7D6 /* SigninFeatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninFeatcher.swift; sourceTree = "<group>"; };
+		72BBAF1324DEC8EA00CFC7D6 /* SigninViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewer.swift; sourceTree = "<group>"; };
+		72BBAF1624DED16100CFC7D6 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +214,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7204276324DFD34300DF4958 /* SwiftUIAsyncImageView */ = {
+			isa = PBXGroup;
+			children = (
+				7204276824DFD4A200DF4958 /* SwiftUIImageLoader.swift */,
+				7204276624DFD43D00DF4958 /* SwiftUIAsyncImageView.swift */,
+			);
+			path = SwiftUIAsyncImageView;
+			sourceTree = "<group>";
+		};
 		72663AA624C5C7AC000596C9 = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +247,7 @@
 		72663AB124C5C7AC000596C9 /* SanjaySwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				72BBAF0424DE899C00CFC7D6 /* SignInJson */,
 				72B551B824DD743E009A0014 /* LandmarkModels */,
 				72B551BB24DD743E009A0014 /* LandmarkResources */,
 				729B0EF924C9B41600054F9F /* Model */,
@@ -310,6 +338,9 @@
 		729B0EF024C979FD00054F9F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				7204276E24DFFA3600DF4958 /* PrivateCommit.swift */,
+				7204276324DFD34300DF4958 /* SwiftUIAsyncImageView */,
+				72BBAF1524DED16100CFC7D6 /* SwiftyJSON */,
 				7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */,
 				72735B5224D034B0006B75C9 /* Photo_Editor */,
 				729B0EF324C99FCF00054F9F /* AlertControlView.swift */,
@@ -354,6 +385,26 @@
 				72B551C824DD743E009A0014 /* rainbowlake.jpg */,
 			);
 			path = LandmarkResources;
+			sourceTree = "<group>";
+		};
+		72BBAF0424DE899C00CFC7D6 /* SignInJson */ = {
+			isa = PBXGroup;
+			children = (
+				72BBAF1324DEC8EA00CFC7D6 /* SigninViewer.swift */,
+				72BBAF1124DEBE5700CFC7D6 /* SigninFeatcher.swift */,
+				72BBAF0F24DE8F9600CFC7D6 /* SignInUser.swift */,
+				72BBAF0B24DE8E2F00CFC7D6 /* SigninSuccess.swift */,
+				72BBAF0724DE8AFB00CFC7D6 /* signin.json */,
+			);
+			path = SignInJson;
+			sourceTree = "<group>";
+		};
+		72BBAF1524DED16100CFC7D6 /* SwiftyJSON */ = {
+			isa = PBXGroup;
+			children = (
+				72BBAF1624DED16100CFC7D6 /* SwiftyJSON.swift */,
+			);
+			path = SwiftyJSON;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,6 +518,7 @@
 				72735B8724D034B0006B75C9 /* PhotoCropEditorBorder.png in Resources */,
 				72B551D324DD743E009A0014 /* chincoteague.jpg in Resources */,
 				72735B7C24D034B0006B75C9 /* ColorCollectionViewCell.xib in Resources */,
+				72BBAF0824DE8AFB00CFC7D6 /* signin.json in Resources */,
 				72B551D024DD743E009A0014 /* twinlake.jpg in Resources */,
 				72663AC224C5C7BD000596C9 /* LaunchScreen.storyboard in Resources */,
 				72735B7524D034B0006B75C9 /* StickersViewController.xib in Resources */,
@@ -512,8 +564,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7216BB5C24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift in Sources */,
+				72BBAF1224DEBE5700CFC7D6 /* SigninFeatcher.swift in Sources */,
 				72735B9824D03BE5006B75C9 /* SSPhotoEditorViewController.swift in Sources */,
+				72BBAF1724DED16100CFC7D6 /* SwiftyJSON.swift in Sources */,
+				7204276924DFD4A200DF4958 /* SwiftUIImageLoader.swift in Sources */,
 				72663AB824C5C7AC000596C9 /* SanjaySwiftUI.xcdatamodeld in Sources */,
+				7204276724DFD43D00DF4958 /* SwiftUIAsyncImageView.swift in Sources */,
 				72B551CA24DD743E009A0014 /* Landmark.swift in Sources */,
 				72735B9124D034B0006B75C9 /* PhotoEditor+Crop.swift in Sources */,
 				72735B9324D034B0006B75C9 /* GradientView.swift in Sources */,
@@ -524,8 +580,11 @@
 				729B0EF424C99FCF00054F9F /* AlertControlView.swift in Sources */,
 				72735B8424D034B0006B75C9 /* Protocols.swift in Sources */,
 				72735B7B24D034B0006B75C9 /* UIImageView+Alpha.swift in Sources */,
+				72BBAF1024DE8F9700CFC7D6 /* SignInUser.swift in Sources */,
+				72BBAF1424DEC8EA00CFC7D6 /* SigninViewer.swift in Sources */,
 				72BBAF0224DE694900CFC7D6 /* CommonUtils.swift in Sources */,
 				729B0EF724C9B40E00054F9F /* Person+CoreDataClass.swift in Sources */,
+				72BBAF0C24DE8E3000CFC7D6 /* SigninSuccess.swift in Sources */,
 				72735B8824D034B0006B75C9 /* EmojiCollectionViewCell.swift in Sources */,
 				72735B9424D034B0006B75C9 /* CropRectView.swift in Sources */,
 				72663AB324C5C7AC000596C9 /* AppDelegate.swift in Sources */,
@@ -545,6 +604,7 @@
 				72735B7724D034B0006B75C9 /* PhotoEditor+Keyboard.swift in Sources */,
 				72735B8924D034B0006B75C9 /* EmojisCollectionViewDelegate.swift in Sources */,
 				72735B8B24D034B0006B75C9 /* ResizeControl.swift in Sources */,
+				7204276F24DFFA3600DF4958 /* PrivateCommit.swift in Sources */,
 				72735B8224D034B0006B75C9 /* UIImage+Crop.swift in Sources */,
 				72663AB524C5C7AC000596C9 /* SceneDelegate.swift in Sources */,
 				72735B7E24D034B0006B75C9 /* PhotoEditor+Font.swift in Sources */,

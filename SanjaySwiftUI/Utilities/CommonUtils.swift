@@ -18,6 +18,9 @@ struct CommonUtils {
     static let cu_activity_background_color :Color = Color.white
     static let cu_activity_light_text_color :Color = Color(.sRGB, red: 242/255, green: 125/255, blue: 131/255, opacity: 255/255)
 
-    static var cuAPPVersionNumber           = "0.0"
+    static let cu_CornerRadius:CGFloat = 5
+
+    // vars
+    static var cu_APPVersionNumber           = "0.0"
 
 }
