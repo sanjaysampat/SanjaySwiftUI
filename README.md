@@ -30,7 +30,8 @@ SwiftUI project creation to learn.
     * Add custom storyboard in SwiftUI project and communication with it via UIViewControllerRepresentable
     * PersonPhotoImagePickerViewController from camera and gallery via UIViewControllerRepresentable. This is creating UI with code using UIKit
     * Use Photo Editor ( earlier version swift ) via UIViewControllerRepresentable. This is using UI with storyboard
-    * Custom AlertControlView via UIViewControllerRepresentable for getting 'name' text from user.
+    * --Custom AlertControlView via UIViewControllerRepresentable for getting 'name' text from user.-- (not in use)
+    * 'alertSS' functions to call custom alerts with textfield.
     * 'View' extension to print debug messages with PrintView method.
     
 2. GIT integration (Github)

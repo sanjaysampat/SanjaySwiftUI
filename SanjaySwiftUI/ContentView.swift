@@ -9,6 +9,7 @@
 import SwiftUI
 
 // SSTODO
+//0) Try to move common alertSS and it's related functions to commonUtils
 //1) SCLAlertView using UIKit implementation
 //2) Actual signin implementation
 
@@ -29,7 +30,6 @@ struct ContentView: View {
 
     @State private var name = "Name"
     @State private var showingAlert:Int = 0
-    @State var showsAlert = false
 
     @State private var nameChanged = false
     
@@ -44,6 +44,7 @@ struct ContentView: View {
     @State private var lastPos:Int = -1
 
     @State var listSelection: Int? = 0
+    
     
     //@ObservedObject var viewModel = ViewModel()
     
@@ -143,27 +144,21 @@ struct ContentView: View {
                 .foregroundColor(CommonUtils.cu_activity_foreground_color)
                 .opacity(0.75)
             
-                /*
-                VStack {
-                    Text("Hello, Alert!")
-                }
-                .alert(isPresented: $showsAlert, TextAlert(title: "What's name", action: {
-                    print("Callback \($0 ?? "<cancel>")")
-                }))
-                */
-                
             if self.showingAlert == 1 {
-                PrintinView("SSTODO - PrintinView - ContentView - self.showingAlert \(self.showingAlert) and self.nameChanged=\(self.nameChanged) self.name=\(self.name)")
+                //PrintinView("SSTODO - PrintinView - ContentView - self.showingAlert \(self.showingAlert) and self.nameChanged=\(self.nameChanged) self.name=\(self.name)")
+                /*
+                 // NOW UNUSED.
                 AlertControlView(textChanged: $nameChanged,
                                  textString: $name,
                                  showAlert: $showingAlert,
                                  title: "in your Heart",
                                  message: "What's name ?")
-                
+               */
             }
                 
             
             VStack(alignment: .center) {
+                
                 Text("\(self.name)")
                     .font(.largeTitle)
                     .foregroundColor(CommonUtils.cu_activity_foreground_color)
@@ -302,9 +297,10 @@ struct ContentView: View {
         
         Button(action: {
             self.showingAlert = 1
-            self.showsAlert = true
             self.nameChanged = false
             self.isEditMode = ( id >= 0 )
+            // SSNote : working alert usage code.
+            self.alertSS(title: "in your Heart", message: "What's name ?", text: self.isEditMode ? self.name : "" )
             //print( "SSTODO - Button - Showing Alert \(self.showingAlert) self.isEditMode=\(self.isEditMode) Id=\(id)" )
         }) {
             if ( id >= 0 ) {
@@ -334,7 +330,60 @@ struct ContentView: View {
         }
     }
     
+    private func alertSS( title:String = "", message:String = "", placeHolder:String = "Enter text here", text:String = "" ) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.text = text
+            textField.placeholder = placeHolder
+        }
+
+        alert.addAction(UIAlertAction(title: "Done", style: .default) { _ in
+            let textField = alert.textFields![0] as UITextField
+            self.name = textField.text ?? "Name"
+            self.nameChanged = true
+        })
+        
+        alert.addAction(UIAlertAction(title: "Cancel", style: .default) { _ in })
+        
+        showAlert(alert: alert)
+    }
+
+    func showAlert(alert: UIAlertController) {
+        if let controller = topMostViewController() {
+            controller.present(alert, animated: true)
+        }
+    }
     
+    private func keyWindow() -> UIWindow? {
+        return UIApplication.shared.connectedScenes
+        .filter {$0.activationState == .foregroundActive}
+        .compactMap {$0 as? UIWindowScene}
+        .first?.windows.filter {$0.isKeyWindow}.first
+    }
+    
+    private func topMostViewController() -> UIViewController? {
+        guard let rootController = keyWindow()?.rootViewController else {
+            return nil
+        }
+        return topMostViewController(for: rootController)
+    }
+
+    private func topMostViewController(for controller: UIViewController) -> UIViewController {
+        if let presentedController = controller.presentedViewController {
+            return topMostViewController(for: presentedController)
+        } else if let navigationController = controller as? UINavigationController {
+            guard let topController = navigationController.topViewController else {
+                return navigationController
+            }
+            return topMostViewController(for: topController)
+        } else if let tabController = controller as? UITabBarController {
+            guard let topController = tabController.selectedViewController else {
+                return tabController
+            }
+            return topMostViewController(for: topController)
+        }
+        return controller
+    }
 }
 
 /*

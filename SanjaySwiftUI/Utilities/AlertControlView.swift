@@ -8,6 +8,8 @@
 
 import SwiftUI
 
+// SSNote : now not in Use.
+
 struct AlertControlView: UIViewControllerRepresentable {
     
     @Binding var textChanged: Bool
