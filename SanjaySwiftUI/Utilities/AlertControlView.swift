@@ -22,7 +22,7 @@ struct AlertControlView: UIViewControllerRepresentable {
     func makeUIViewController(context: UIViewControllerRepresentableContext<AlertControlView>) -> UIViewController {
         return UIViewController() // Container on which UIAlertContoller presents
     }
-    func updateUIViewController(_ uiViewController: UIViewController, context: UIViewControllerRepresentableContext<AlertControlView>) {
+    func updateUIViewController(_ uiViewControllerSS: UIViewController, context: UIViewControllerRepresentableContext<AlertControlView>) {
         // Make sure that Alert instance exist after View's body get re-rendered
         guard context.coordinator.alert == nil else { return }
         //print( "SSTODO - AlertControlView - self.showAlert \(self.showAlert) and self.textChanged=\(self.textChanged)" )
@@ -64,7 +64,7 @@ struct AlertControlView: UIViewControllerRepresentable {
             // Most important, must be dispatched on Main thread,
             // Curious? then remove `DispatchQueue.main.async` & find out yourself, Dont be lazy
             DispatchQueue.main.async { // must be async !!
-                uiViewController.present(alert, animated: true, completion: {
+                uiViewControllerSS.present(alert, animated: true, completion: {
                     context.coordinator.alert = nil
                     self.showAlert = 0  // important here
                 })

@@ -12,7 +12,7 @@ import Combine
 
 struct SigninViewer: View {
     @ObservedObject var signinFetcher = SigninFetcher()
-    
+
     @Binding var photoFrame : (width:CGFloat, height:CGFloat)
 
     var body: some View {
@@ -62,6 +62,8 @@ extension SigninViewer {
     }
     
     struct UserView: View {
+        @Environment(\.imageCache) var cache: ImageCache
+        
         private let signinSuccess: SigninSuccess
         private var photoFrame : (width:CGFloat, height:CGFloat)
         
@@ -86,9 +88,9 @@ extension SigninViewer {
                         Text(self.signinSuccess.users[number].profileData.UserProfileImagePathActual)
                     }
                     //let url:URL = URL(string: self.signinSuccess.users[number].profileData.UserProfileImagePathActual)
-                    SwiftUIAsyncImageView(url: URL(string: self.signinSuccess.users[number].profileData.UserProfileImagePathActual), placeholder: Text("Loading ..."))
+                    SwiftUIAsyncImageView(url: URL(string: self.signinSuccess.users[number].profileData.UserProfileImagePathActual), placeholder: Text("Loading ..."), cache: self.cache)
                         .frame(width: self.photoFrame.width, height: self.photoFrame.height, alignment: .center)
-                    .cornerRadius(CommonUtils.cu_CornerRadius)
+                        .cornerRadius(CommonUtils.cu_CornerRadius)
                     }
                 }
                 

@@ -10,6 +10,7 @@
 		7204276724DFD43D00DF4958 /* SwiftUIAsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204276624DFD43D00DF4958 /* SwiftUIAsyncImageView.swift */; };
 		7204276924DFD4A200DF4958 /* SwiftUIImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204276824DFD4A200DF4958 /* SwiftUIImageLoader.swift */; };
 		7204276F24DFFA3600DF4958 /* PrivateCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204276E24DFFA3600DF4958 /* PrivateCommit.swift */; };
+		7204277524DFFEB900DF4958 /* SwiftUIImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204277424DFFEB900DF4958 /* SwiftUIImageCache.swift */; };
 		7216BB5C24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */; };
 		7216BB5E24D17BC30097AFA4 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */; };
 		7252639324D55633002C5ACA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7252639224D55633002C5ACA /* README.md */; };
@@ -107,6 +108,7 @@
 		7204276624DFD43D00DF4958 /* SwiftUIAsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAsyncImageView.swift; sourceTree = "<group>"; };
 		7204276824DFD4A200DF4958 /* SwiftUIImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIImageLoader.swift; sourceTree = "<group>"; };
 		7204276E24DFFA3600DF4958 /* PrivateCommit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrivateCommit.swift; sourceTree = "<group>"; };
+		7204277424DFFEB900DF4958 /* SwiftUIImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIImageCache.swift; sourceTree = "<group>"; };
 		7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPhotoImagePickerViewController.swift; sourceTree = "<group>"; };
 		7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7252639224D55633002C5ACA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 			children = (
 				7204276824DFD4A200DF4958 /* SwiftUIImageLoader.swift */,
 				7204276624DFD43D00DF4958 /* SwiftUIAsyncImageView.swift */,
+				7204277424DFFEB900DF4958 /* SwiftUIImageCache.swift */,
 			);
 			path = SwiftUIAsyncImageView;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 				72BBAF1024DE8F9700CFC7D6 /* SignInUser.swift in Sources */,
 				72BBAF1424DEC8EA00CFC7D6 /* SigninViewer.swift in Sources */,
 				72BBAF0224DE694900CFC7D6 /* CommonUtils.swift in Sources */,
+				7204277524DFFEB900DF4958 /* SwiftUIImageCache.swift in Sources */,
 				729B0EF724C9B40E00054F9F /* Person+CoreDataClass.swift in Sources */,
 				72BBAF0C24DE8E3000CFC7D6 /* SigninSuccess.swift in Sources */,
 				72735B8824D034B0006B75C9 /* EmojiCollectionViewCell.swift in Sources */,

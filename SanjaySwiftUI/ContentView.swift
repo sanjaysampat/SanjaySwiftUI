@@ -29,6 +29,8 @@ struct ContentView: View {
 
     @State private var name = "Name"
     @State private var showingAlert:Int = 0
+    @State var showsAlert = false
+
     @State private var nameChanged = false
     
     @State private var isEditMode:Bool = false
@@ -141,6 +143,15 @@ struct ContentView: View {
                 .foregroundColor(CommonUtils.cu_activity_foreground_color)
                 .opacity(0.75)
             
+                /*
+                VStack {
+                    Text("Hello, Alert!")
+                }
+                .alert(isPresented: $showsAlert, TextAlert(title: "What's name", action: {
+                    print("Callback \($0 ?? "<cancel>")")
+                }))
+                */
+                
             if self.showingAlert == 1 {
                 PrintinView("SSTODO - PrintinView - ContentView - self.showingAlert \(self.showingAlert) and self.nameChanged=\(self.nameChanged) self.name=\(self.name)")
                 AlertControlView(textChanged: $nameChanged,
@@ -150,6 +161,7 @@ struct ContentView: View {
                                  message: "What's name ?")
                 
             }
+                
             
             VStack(alignment: .center) {
                 Text("\(self.name)")
@@ -290,6 +302,7 @@ struct ContentView: View {
         
         Button(action: {
             self.showingAlert = 1
+            self.showsAlert = true
             self.nameChanged = false
             self.isEditMode = ( id >= 0 )
             //print( "SSTODO - Button - Showing Alert \(self.showingAlert) self.isEditMode=\(self.isEditMode) Id=\(id)" )

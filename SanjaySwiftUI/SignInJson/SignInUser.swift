@@ -10,7 +10,7 @@ struct SigninUser: Codable, Identifiable {
     public var id: String = ""
     public var token: String = ""
     public var profileData : ProfileData = ProfileData()
-    //public var companyData : CompanyData
+    //public var companyData : CompanyData = CompanyData()
     
     enum CodingKeys: String, CodingKey {
         case id = "UserId"
@@ -22,7 +22,11 @@ struct SigninUser: Codable, Identifiable {
 }
 
 struct CompanyData: Codable {
-    public var abc: String
+    public var UserCompanyEmail: String = ""
+    public var UserCompanyWebsite: String = ""
+    public var UserCompanyLogo: String = ""
+    public var UserCompanyAddress: String = ""
+    
 }
 
 struct ProfileData: Codable {

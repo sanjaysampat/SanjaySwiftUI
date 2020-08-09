@@ -305,10 +305,10 @@ extension PersonPhotoImagePickerViewController: UIImagePickerControllerDelegate,
             return
         }
         picker.dismiss(animated: true, completion: {
-            self.dismiss(animated: true, completion: {
+            //self.dismiss(animated: true, completion: {    // SSCommented 20200809
                 self.imageForEditing = image
                 self.imageView.image = self.imageForEditing
-            })
+            //})
         })
     }
     
