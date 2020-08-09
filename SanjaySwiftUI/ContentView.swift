@@ -9,8 +9,8 @@
 import SwiftUI
 
 // SSTODO
-//1) goto new SwiftUI view
-//2) get data from post webservices.
+//1) SCLAlertView using UIKit implementation
+//2) Actual signin implementation
 
 
 struct ContentView: View {
@@ -157,7 +157,7 @@ struct ContentView: View {
                 AlertControlView(textChanged: $nameChanged,
                                  textString: $name,
                                  showAlert: $showingAlert,
-                                 title: "Lover",
+                                 title: "in your Heart",
                                  message: "What's name ?")
                 
             }

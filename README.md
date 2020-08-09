@@ -21,7 +21,9 @@ SwiftUI project creation to learn.
             * logically load UIImage or placeholder image from systemName
             * onReceive - changes published, do some tasks.
             * loading list of filtered images in multiple HStacks on a screen in various sizes.
+            * loading image from web URL with cache
     * Multiple SwiftUI views loading from contentView
+    * Loading and updating JSON service response with codable protocol. Pending to make for nested JSON
     * Loading UIViewControllers via UIViewControllerRepresentable in SwiftUI
         * Use Coordinator to handle delegates
         * to pass .constant as @Binding vars for SwiftUI PreviewProvider
