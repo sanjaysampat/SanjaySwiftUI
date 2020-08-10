@@ -11,9 +11,14 @@ import Foundation
 class UserAuth: ObservableObject {
     
     @Published var isLoggedin:Bool = false
+    @Published var userEmail:String = ""
 
     func login() {
         self.isLoggedin = true
+    }
+    
+    func setUserEmail( userEmail:String ) {
+        self.userEmail = userEmail
     }
 
 }

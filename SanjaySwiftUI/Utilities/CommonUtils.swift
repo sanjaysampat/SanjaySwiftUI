@@ -21,6 +21,101 @@ struct CommonUtils {
     static let cu_CornerRadius:CGFloat = 5
 
     // vars
-    static var cu_APPVersionNumber           = "0.0"
+    static var cu_APPVersionNumber              = "0.0"
+
+    static var cuDocumentFolderPath             = ""
+    static var cuApplicationSupportFolder       = ""
+    
+    
+    static func createRequiredFolders() -> Bool {
+        
+        let fileManager:FileManager = FileManager.default
+
+        // Documents folder
+        let dirsList = NSSearchPathForDirectoriesInDomains(FileManager.SearchPathDirectory.documentDirectory, FileManager.SearchPathDomainMask.allDomainsMask, true)
+        if dirsList.count > 0 {
+            CommonUtils.cuDocumentFolderPath = dirsList[0]
+        }
+        if CommonUtils.cuDocumentFolderPath .isEmpty {
+            return false
+        }
+        
+        // Support folder // Library/Application Support
+        CommonUtils.cuApplicationSupportFolder = NSSearchPathForDirectoriesInDomains(.applicationSupportDirectory,.userDomainMask, true).last!
+        if !fileManager.fileExists(atPath: CommonUtils.cuApplicationSupportFolder) {
+            do {
+                try fileManager .createDirectory(atPath: CommonUtils.cuApplicationSupportFolder, withIntermediateDirectories: false, attributes: nil)
+            } catch _ as NSError {
+                return false
+            }
+        }
+        // Example to create files in Support folder
+        //let data:Data = Data()
+        //let isSaved = CommonUtils.writeFileToSupportFolder(folderName:"FolderName", fileName:"MyFile.test", fileData:data, atomicWrite:true)
+        
+
+        return true
+    }
+    
+    static func writeFileToDocument(folderName:String, fileName:String, fileData:Data, atomicWrite:Bool = true) -> Bool {
+        return writeFile(basePath:CommonUtils.cuDocumentFolderPath, folderName:folderName, fileName:fileName, fileData:fileData, atomicWrite:atomicWrite)
+    }
+    
+    static func writeFileToSupportFolder(folderName:String, fileName:String, fileData:Data, atomicWrite:Bool = true) -> Bool {
+        return writeFile(basePath:CommonUtils.cuApplicationSupportFolder, folderName:folderName, fileName:fileName, fileData:fileData, atomicWrite:atomicWrite)
+    }
+
+    static func writeFile(basePath:String, folderName:String, fileName:String, fileData:Data, atomicWrite:Bool = true) -> Bool {
+        let fileManager:FileManager = FileManager.default
+        do
+        {
+            // Create subdirectory in support folder
+            let folderPath = basePath.stringByAppendingPathComponent(path: folderName)
+            try fileManager.createDirectory(atPath: folderPath, withIntermediateDirectories: true, attributes: nil)
+            // Save 'data' to file in above directory
+            let documentURL = URL(fileURLWithPath: folderPath.stringByAppendingPathComponent(path: fileName))
+            if atomicWrite {
+                // write data to an auxiliary file first and then exchange the files.
+                try fileData.write(to: documentURL, options: [.atomic])
+            } else {
+                try fileData.write(to: documentURL, options: [.atomic])
+            }
+            return true
+        }
+        catch
+        {
+          print("An error occured \(error)")
+        }
+        return false
+    }
+    
+    static func readFileFromDocument(folderName:String, fileName:String) -> Data? {
+        return readFile(basePath:CommonUtils.cuDocumentFolderPath, folderName:folderName, fileName:fileName)
+    }
+    
+    static func readFileFromSupportFolder(folderName:String, fileName:String) -> Data? {
+        return readFile(basePath:CommonUtils.cuApplicationSupportFolder, folderName:folderName, fileName:fileName)
+    }
+
+    static func readFile( basePath:String, folderName:String, fileName:String ) -> Data? {
+        var fileData:Data? = nil
+        do
+        {
+            let folderPath = basePath.stringByAppendingPathComponent(path: folderName)
+            let documentURL = URL(fileURLWithPath: folderPath.stringByAppendingPathComponent(path: fileName))
+            
+            let data = try Data(contentsOf: documentURL)
+            
+            fileData = data
+
+        }
+        catch
+        {
+          print("An error occured \(error)")
+        }
+        
+        return fileData
+    }
+
 
 }

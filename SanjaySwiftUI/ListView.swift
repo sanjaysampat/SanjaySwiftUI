@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct ListView: View {
+    @EnvironmentObject  var  userAuth: UserAuth
 
     @FetchRequest(
         entity: Person.entity(),
@@ -57,7 +58,7 @@ struct ListView: View {
                         .shadow(radius: 1.5)
                         .padding()
                     
-                    SigninViewer(photoFrame: $photoFrame)
+                    SigninViewer(signinFetcher: SigninFetcher(userEmail: userAuth.userEmail), photoFrame: $photoFrame )
                         .padding(10)
 
                 ScrollView(.horizontal) {

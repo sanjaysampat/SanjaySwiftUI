@@ -23,14 +23,18 @@ SwiftUI project creation to learn.
             * loading list of filtered images in multiple HStacks on a screen in various sizes.
             * loading image from web URL with cache
     * Multiple SwiftUI views loading from contentView
-    * Loading and updating JSON service response with codable protocol. Pending to make for nested JSON
+    * JSON service with Codable protocol
+        * Loading and updating JSON service response. 
+        * **Pending to make for nested JSON**
+        * Saving json in document folder
+        * Loading again the same from document folder, so no flicker on screen
     * Loading UIViewControllers via UIViewControllerRepresentable in SwiftUI
         * Use Coordinator to handle delegates
         * to pass .constant as @Binding vars for SwiftUI PreviewProvider
     * Add custom storyboard in SwiftUI project and communication with it via UIViewControllerRepresentable
     * PersonPhotoImagePickerViewController from camera and gallery via UIViewControllerRepresentable. This is creating UI with code using UIKit
     * Use Photo Editor ( earlier version swift ) via UIViewControllerRepresentable. This is using UI with storyboard
-    * --Custom AlertControlView via UIViewControllerRepresentable for getting 'name' text from user.-- (not in use)
+    * ~~Custom AlertControlView via UIViewControllerRepresentable for getting 'name' text from user.~~ (not in use)
     * 'alertSS' functions to call custom alerts with textfield.
     * 'View' extension to print debug messages with PrintView method.
     

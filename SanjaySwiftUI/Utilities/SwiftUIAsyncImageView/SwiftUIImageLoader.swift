@@ -39,7 +39,7 @@ class SwiftUIImageLoader: ObservableObject {
         
         if let url = self.url {
             cancellable = URLSession.shared.dataTaskPublisher(for: url)
-                .subscribe(on: Self.imageProcessingQueue)
+                 .subscribe(on: Self.imageProcessingQueue)
                 .map { UIImage(data: $0.data) }
                 .replaceError(with: nil)
                 .handleEvents(receiveSubscription: { [weak self] _ in self?.onStart() },

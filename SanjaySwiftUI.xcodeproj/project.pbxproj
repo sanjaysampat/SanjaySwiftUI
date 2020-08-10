@@ -87,6 +87,8 @@
 		72BBAF1224DEBE5700CFC7D6 /* SigninFeatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BBAF1124DEBE5700CFC7D6 /* SigninFeatcher.swift */; };
 		72BBAF1424DEC8EA00CFC7D6 /* SigninViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BBAF1324DEC8EA00CFC7D6 /* SigninViewer.swift */; };
 		72BBAF1724DED16100CFC7D6 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BBAF1624DED16100CFC7D6 /* SwiftyJSON.swift */; };
+		72D9779F24E1116E0044754C /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D9779E24E1116E0044754C /* CommonExtensions.swift */; };
+		72D977A124E120AC0044754C /* String+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D977A024E120AB0044754C /* String+Extra.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -193,6 +195,8 @@
 		72BBAF1124DEBE5700CFC7D6 /* SigninFeatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninFeatcher.swift; sourceTree = "<group>"; };
 		72BBAF1324DEC8EA00CFC7D6 /* SigninViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninViewer.swift; sourceTree = "<group>"; };
 		72BBAF1624DED16100CFC7D6 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		72D9779E24E1116E0044754C /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
+		72D977A024E120AB0044754C /* String+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extra.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -354,6 +358,7 @@
 		729B0EF024C979FD00054F9F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				72D977A024E120AB0044754C /* String+Extra.swift */,
 				7204277824E01CC700DF4958 /* SCLAlertView */,
 				7204276E24DFFA3600DF4958 /* PrivateCommit.swift */,
 				7204276324DFD34300DF4958 /* SwiftUIAsyncImageView */,
@@ -362,6 +367,7 @@
 				72735B5224D034B0006B75C9 /* Photo_Editor */,
 				729B0EF324C99FCF00054F9F /* AlertControlView.swift */,
 				72BBAF0124DE694900CFC7D6 /* CommonUtils.swift */,
+				72D9779E24E1116E0044754C /* CommonExtensions.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -611,6 +617,7 @@
 				72735B8124D034B0006B75C9 /* UIImage+Size.swift in Sources */,
 				72B551AF24DD1690009A0014 /* ListView.swift in Sources */,
 				72735B7624D034B0006B75C9 /* ColorsCollectionViewDelegate.swift in Sources */,
+				72D9779F24E1116E0044754C /* CommonExtensions.swift in Sources */,
 				72735B8A24D034B0006B75C9 /* CropView.swift in Sources */,
 				72735B7A24D034B0006B75C9 /* PhotoEditor+UITextView.swift in Sources */,
 				72735B7924D034B0006B75C9 /* PhotoEditor+StickersViewController.swift in Sources */,
@@ -622,6 +629,7 @@
 				72663ABA24C5C7AC000596C9 /* ContentView.swift in Sources */,
 				72735B8024D034B0006B75C9 /* UIView+Image.swift in Sources */,
 				72735B7724D034B0006B75C9 /* PhotoEditor+Keyboard.swift in Sources */,
+				72D977A124E120AC0044754C /* String+Extra.swift in Sources */,
 				72735B8924D034B0006B75C9 /* EmojisCollectionViewDelegate.swift in Sources */,
 				72735B8B24D034B0006B75C9 /* ResizeControl.swift in Sources */,
 				7204276F24DFFA3600DF4958 /* PrivateCommit.swift in Sources */,

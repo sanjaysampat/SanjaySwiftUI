@@ -9,9 +9,10 @@
 import SwiftUI
 
 // SSTODO
-//0) Try to move common alertSS and it's related functions to commonUtils
 //1) SCLAlertView using UIKit implementation
 //2) Actual signin implementation
+//3) create list loading json and images from local
+
 
 
 struct ContentView: View {
@@ -393,24 +394,6 @@ struct ContentView: View {
  }
  }
  */
-
-extension View {
-    func PrintinView(_ vars: Any...) -> some View {
-        for v in vars { print(v) }
-        return EmptyView()
-    }
-}
-
-extension Image {
-    public init(uiImage: UIImage?, placeholderSystemName: String) {
-        guard let uiImage = uiImage else {
-            self = Image(systemName: placeholderSystemName)
-
-            return
-        }
-        self = Image(uiImage: uiImage)
-    }
-}
 
 /*
  //.mask(RadialGradient(gradient: Gradient(colors:[.blue, .white]), center: .center, startRadius: 2, endRadius: 1200))

@@ -12,11 +12,42 @@ import Combine
 public class SigninFetcher: ObservableObject {
     @Published var signinSuccess : SigninSuccess = SigninSuccess()
     
-    init() {
-        load()
+    let jsonFileName = "signin.json"
+    
+    init( userEmail:String = "" ) {
+        // SSTODO to check here if local json file of user is available.
+        if userEmail.isEmpty || !loadLocally(userEmail: userEmail) {
+            load()
+        }
     }
     
-    func load() {
+    func loadLocally( userEmail:String ) -> Bool {
+        
+        if let dataFromFile = CommonUtils.readFileFromDocument( folderName:"Users/\(userEmail)", fileName:self.jsonFileName ) {
+            do {
+                
+                //let json = JSON(d)  // SSTEST - SwiftyJSON //
+
+                let decodedReturn = try JSONDecoder().decode(SigninSuccess.self, from: dataFromFile)
+                // SSTODO - Save profile image to user's document folder
+                
+                DispatchQueue.main.async {
+                    self.signinSuccess = decodedReturn
+                    
+                    self.load(doRefresh: false)
+                }
+                return true
+            } catch {
+                print ("Error decoding data")
+            }
+        } else {
+            print ("Error reading file")
+        }
+        return false
+    }
+    
+    // in case of doRefresh, it will write the JSON file in document folder.
+    func load( doRefresh:Bool = true ) {
 
         guard let url = URL(string: PrivateCommit.nc_signinurl) else {
             print( "Error: Can not create URL" )
@@ -47,14 +78,27 @@ public class SigninFetcher: ObservableObject {
                 return
             }
             do {
-                if let d = data {
+                if let dataFromURL = data {
                     
-                    //let json = JSON(d)  // SSTEST // 
+                    //let json = JSON(d)  // SSTEST - SwiftyJSON // 
 
-                    let decodedReturn = try JSONDecoder().decode(SigninSuccess.self, from: d)
+                    let decodedReturn = try JSONDecoder().decode(SigninSuccess.self, from: dataFromURL)
                     
-                    DispatchQueue.main.async {
-                        self.signinSuccess = decodedReturn
+                    // Save the data to local json file
+                    let userEmail = decodedReturn.users[0].profileData.UserEmail
+                    if !userEmail.isEmpty {
+                        if CommonUtils.writeFileToDocument(folderName:"Users/\(userEmail)", fileName:self.jsonFileName, fileData:dataFromURL, atomicWrite:true) {
+                            // write success
+                            
+                        } else {
+                            // write fail
+                        }
+                    }
+                    // SSTODO - Save profile image to user's document folder
+                    if doRefresh {
+                        DispatchQueue.main.async {
+                            self.signinSuccess = decodedReturn
+                        }
                     }
                 }else {
                     print("No Data")
