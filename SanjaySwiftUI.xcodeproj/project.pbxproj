@@ -15,6 +15,9 @@
 		7204277C24E01CC800DF4958 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204277A24E01CC700DF4958 /* SCLExtensions.swift */; };
 		7216BB5C24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */; };
 		7216BB5E24D17BC30097AFA4 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */; };
+		7249748E24E4F112006F5C52 /* TonySectionCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7249748924E4F112006F5C52 /* TonySectionCat.swift */; };
+		7249748F24E4F112006F5C52 /* TonySectionViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7249748A24E4F112006F5C52 /* TonySectionViewer.swift */; };
+		7249749024E4F112006F5C52 /* TonySectionFeatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7249748B24E4F112006F5C52 /* TonySectionFeatcher.swift */; };
 		7252639324D55633002C5ACA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7252639224D55633002C5ACA /* README.md */; };
 		72663AB324C5C7AC000596C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663AB224C5C7AC000596C9 /* AppDelegate.swift */; };
 		72663AB524C5C7AC000596C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663AB424C5C7AC000596C9 /* SceneDelegate.swift */; };
@@ -117,6 +120,9 @@
 		7204277A24E01CC700DF4958 /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
 		7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPhotoImagePickerViewController.swift; sourceTree = "<group>"; };
 		7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7249748924E4F112006F5C52 /* TonySectionCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TonySectionCat.swift; sourceTree = "<group>"; };
+		7249748A24E4F112006F5C52 /* TonySectionViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TonySectionViewer.swift; sourceTree = "<group>"; };
+		7249748B24E4F112006F5C52 /* TonySectionFeatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TonySectionFeatcher.swift; sourceTree = "<group>"; };
 		7252639224D55633002C5ACA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		72663AAF24C5C7AC000596C9 /* SanjaySwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SanjaySwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72663AB224C5C7AC000596C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -243,6 +249,16 @@
 			path = SCLAlertView;
 			sourceTree = "<group>";
 		};
+		7249748824E4F112006F5C52 /* TonySectionJson */ = {
+			isa = PBXGroup;
+			children = (
+				7249748924E4F112006F5C52 /* TonySectionCat.swift */,
+				7249748A24E4F112006F5C52 /* TonySectionViewer.swift */,
+				7249748B24E4F112006F5C52 /* TonySectionFeatcher.swift */,
+			);
+			path = TonySectionJson;
+			sourceTree = "<group>";
+		};
 		72663AA624C5C7AC000596C9 = {
 			isa = PBXGroup;
 			children = (
@@ -267,6 +283,7 @@
 		72663AB124C5C7AC000596C9 /* SanjaySwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				7249748824E4F112006F5C52 /* TonySectionJson */,
 				72BBAF0424DE899C00CFC7D6 /* SignInJson */,
 				72B551B824DD743E009A0014 /* LandmarkModels */,
 				72B551BB24DD743E009A0014 /* LandmarkResources */,
@@ -589,6 +606,7 @@
 				7216BB5C24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift in Sources */,
 				72BBAF1224DEBE5700CFC7D6 /* SigninFeatcher.swift in Sources */,
 				7204277C24E01CC800DF4958 /* SCLExtensions.swift in Sources */,
+				7249748F24E4F112006F5C52 /* TonySectionViewer.swift in Sources */,
 				72735B9824D03BE5006B75C9 /* SSPhotoEditorViewController.swift in Sources */,
 				72BBAF1724DED16100CFC7D6 /* SwiftyJSON.swift in Sources */,
 				7204276924DFD4A200DF4958 /* SwiftUIImageLoader.swift in Sources */,
@@ -598,8 +616,10 @@
 				72735B9124D034B0006B75C9 /* PhotoEditor+Crop.swift in Sources */,
 				72735B9324D034B0006B75C9 /* GradientView.swift in Sources */,
 				72735B5124D02872006B75C9 /* CustomImagePickerViewController.swift in Sources */,
+				7249748E24E4F112006F5C52 /* TonySectionCat.swift in Sources */,
 				72B551B124DD1C8A009A0014 /* UserAuth.swift in Sources */,
 				72735B8524D034B0006B75C9 /* PhotoEditor+Drawing.swift in Sources */,
+				7249749024E4F112006F5C52 /* TonySectionFeatcher.swift in Sources */,
 				72735B8C24D034B0006B75C9 /* PhotoEditor+Gestures.swift in Sources */,
 				729B0EF424C99FCF00054F9F /* AlertControlView.swift in Sources */,
 				72735B8424D034B0006B75C9 /* Protocols.swift in Sources */,

@@ -57,10 +57,10 @@ struct ListView: View {
                         .foregroundColor(CommonUtils.cu_activity_light_text_color)
                         .shadow(radius: 1.5)
                         .padding()
-                    
-                    SigninViewer(signinFetcher: SigninFetcher(userEmail: userAuth.userEmail), photoFrame: $photoFrame )
-                        .padding(10)
 
+                    TonySectionViewer(tonySectionFeatcher: TonySectionFeatcher(userEmail: userAuth.userEmail), photoFrame: $photoFrame )
+                    .padding(10)
+                    
                 ScrollView(.horizontal) {
                     HStack(spacing: myPaddingSpace) {
                         /*
@@ -170,6 +170,9 @@ struct ListView: View {
                         
                     }
                     
+                    //SigninViewer(signinFetcher: SigninFetcher(userEmail: userAuth.userEmail), photoFrame: $photoFrame )
+                    //    .padding(10)
+
                     Text("End")
                         .foregroundColor(CommonUtils.cu_activity_light_text_color)
                         .shadow(radius: 1.5)
