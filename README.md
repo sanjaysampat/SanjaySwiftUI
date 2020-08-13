@@ -28,6 +28,7 @@ SwiftUI project creation to learn.
         * **Pending to make for nested JSON**
         * Saving json in document folder
         * Loading again the same from document folder, so no flicker on screen
+        * Testing by loading jsons with multiple image urls to test loading and background saving ( continued )
     * Loading UIViewControllers via UIViewControllerRepresentable in SwiftUI
         * Use Coordinator to handle delegates
         * to pass .constant as @Binding vars for SwiftUI PreviewProvider

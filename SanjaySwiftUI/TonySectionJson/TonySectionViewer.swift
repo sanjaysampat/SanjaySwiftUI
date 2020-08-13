@@ -32,7 +32,7 @@ struct TonySectionViewer: View {
             else if !signinFetcher.signinSuccess.ErrorCode.isEmpty {
                 ErrorView(signinSuccess: signinFetcher.signinSuccess)
             }
-            */
+            
             else {
                 VStack (alignment: .leading) {
                     ForEach(0 ..< 6) {row in
@@ -40,7 +40,7 @@ struct TonySectionViewer: View {
                     }
                 }
             }
-            
+            */
         }
     }
     
@@ -62,14 +62,17 @@ extension TonySectionViewer {
         }
         
         var body: some View {
-            VStack {
-                
+            ScrollView(.horizontal) {
+            HStack {
+
                 ForEach( 0 ..< self.categories.count, id: \.self) { index in
                     
                     VStack {
-                        VStack (alignment: .leading) {
-                            Text("\(self.categories[index].catFirstTitle)  \(self.categories[index].catSecondTitle)")
-                        }
+                            //Text("\(self.categories[index].catFirstTitle)  \(self.categories[index].catSecondTitle)")
+                            
+                            SwiftUIAsyncImageView(url: URL(string: self.categories[index].imgPath), placeholder: Text("Loading ..."), cache: self.cache)
+                                .frame(width: self.photoFrame.width, height: self.photoFrame.height, alignment: .center)
+                                .cornerRadius(CommonUtils.cu_CornerRadius)
                     }
                     .onAppear(perform: {
                         //let user = self.signinSuccess.users[number]
@@ -81,6 +84,7 @@ extension TonySectionViewer {
                     })
                 }
             }
+        }
         }
         
     }

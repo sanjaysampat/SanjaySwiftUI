@@ -47,6 +47,7 @@ struct TonySectionCat: Codable {
     */
 }
 
+// unused
 struct TonySectionCatagories: Codable {
     public var catagories : [TonySectionCat] = []
 

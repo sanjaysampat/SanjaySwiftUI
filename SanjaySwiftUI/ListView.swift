@@ -18,7 +18,7 @@ struct ListView: View {
         ]
     ) var persons: FetchedResults<Person>
 
-    @State var photoFrame : (width:CGFloat, height:CGFloat) = (width:400, height:400)
+    @State var photoFrame : (width:CGFloat, height:CGFloat) = (width:400, height:300)
 
     @Binding var listSelection: Int?
     @Binding var currentPos:Int
@@ -97,6 +97,10 @@ struct ListView: View {
                     .padding(10)
                     
                     }
+                    
+                    TonySectionViewer(tonySectionFeatcher: TonySectionFeatcher(userEmail: userAuth.userEmail, categoryFetchType: .mostLoved), photoFrame: $photoFrame )
+                    .padding(10)
+
                     ScrollView(.horizontal) {
                         HStack(spacing: myPaddingSpace) {
                             ForEach(landmarkData.filter {$0.category == .lakes }) { landmark in

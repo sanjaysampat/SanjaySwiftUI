@@ -18,6 +18,7 @@
 		7249748E24E4F112006F5C52 /* TonySectionCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7249748924E4F112006F5C52 /* TonySectionCat.swift */; };
 		7249748F24E4F112006F5C52 /* TonySectionViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7249748A24E4F112006F5C52 /* TonySectionViewer.swift */; };
 		7249749024E4F112006F5C52 /* TonySectionFeatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7249748B24E4F112006F5C52 /* TonySectionFeatcher.swift */; };
+		7249749424E52684006F5C52 /* getHomeSliderCatRecordTony.json in Resources */ = {isa = PBXBuildFile; fileRef = 7249749324E52684006F5C52 /* getHomeSliderCatRecordTony.json */; };
 		7252639324D55633002C5ACA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7252639224D55633002C5ACA /* README.md */; };
 		72663AB324C5C7AC000596C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663AB224C5C7AC000596C9 /* AppDelegate.swift */; };
 		72663AB524C5C7AC000596C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663AB424C5C7AC000596C9 /* SceneDelegate.swift */; };
@@ -64,6 +65,7 @@
 		72735B9424D034B0006B75C9 /* CropRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B7324D034B0006B75C9 /* CropRectView.swift */; };
 		72735B9824D03BE5006B75C9 /* SSPhotoEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B9724D03BE5006B75C9 /* SSPhotoEditorViewController.swift */; };
 		72735B9A24D048C7006B75C9 /* UIImage+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B9924D048C7006B75C9 /* UIImage+Extra.swift */; };
+		7282060A24E5769600F5F8CB /* getnewMostLovedCatData.json in Resources */ = {isa = PBXBuildFile; fileRef = 7282060924E5769500F5F8CB /* getnewMostLovedCatData.json */; };
 		729B0EF424C99FCF00054F9F /* AlertControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B0EF324C99FCF00054F9F /* AlertControlView.swift */; };
 		729B0EF724C9B40E00054F9F /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B0EF524C9B40E00054F9F /* Person+CoreDataClass.swift */; };
 		72B551AF24DD1690009A0014 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B551AE24DD1690009A0014 /* ListView.swift */; };
@@ -123,6 +125,7 @@
 		7249748924E4F112006F5C52 /* TonySectionCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TonySectionCat.swift; sourceTree = "<group>"; };
 		7249748A24E4F112006F5C52 /* TonySectionViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TonySectionViewer.swift; sourceTree = "<group>"; };
 		7249748B24E4F112006F5C52 /* TonySectionFeatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TonySectionFeatcher.swift; sourceTree = "<group>"; };
+		7249749324E52684006F5C52 /* getHomeSliderCatRecordTony.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getHomeSliderCatRecordTony.json; sourceTree = "<group>"; };
 		7252639224D55633002C5ACA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		72663AAF24C5C7AC000596C9 /* SanjaySwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SanjaySwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72663AB224C5C7AC000596C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +178,7 @@
 		72735B7324D034B0006B75C9 /* CropRectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropRectView.swift; sourceTree = "<group>"; };
 		72735B9724D03BE5006B75C9 /* SSPhotoEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSPhotoEditorViewController.swift; sourceTree = "<group>"; };
 		72735B9924D048C7006B75C9 /* UIImage+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extra.swift"; sourceTree = "<group>"; };
+		7282060924E5769500F5F8CB /* getnewMostLovedCatData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getnewMostLovedCatData.json; sourceTree = "<group>"; };
 		729B0EF324C99FCF00054F9F /* AlertControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControlView.swift; sourceTree = "<group>"; };
 		729B0EF524C9B40E00054F9F /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 		72B551AE24DD1690009A0014 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -252,6 +256,8 @@
 		7249748824E4F112006F5C52 /* TonySectionJson */ = {
 			isa = PBXGroup;
 			children = (
+				7282060924E5769500F5F8CB /* getnewMostLovedCatData.json */,
+				7249749324E52684006F5C52 /* getHomeSliderCatRecordTony.json */,
 				7249748924E4F112006F5C52 /* TonySectionCat.swift */,
 				7249748A24E4F112006F5C52 /* TonySectionViewer.swift */,
 				7249748B24E4F112006F5C52 /* TonySectionFeatcher.swift */,
@@ -572,8 +578,10 @@
 				72B551CE24DD743E009A0014 /* lakemcdonald.jpg in Resources */,
 				72B551CD24DD743E009A0014 /* icybay.jpg in Resources */,
 				72B551D624DD743E009A0014 /* chilkoottrail.jpg in Resources */,
+				7249749424E52684006F5C52 /* getHomeSliderCatRecordTony.json in Resources */,
 				72663ABF24C5C7BD000596C9 /* Preview Assets.xcassets in Resources */,
 				72B551CC24DD743E009A0014 /* silversalmoncreek.jpg in Resources */,
+				7282060A24E5769600F5F8CB /* getnewMostLovedCatData.json in Resources */,
 				72B551D524DD743E009A0014 /* stmarylake.jpg in Resources */,
 				72663ABC24C5C7BD000596C9 /* Assets.xcassets in Resources */,
 				72B551D424DD743E009A0014 /* yukon_charleyrivers.jpg in Resources */,
