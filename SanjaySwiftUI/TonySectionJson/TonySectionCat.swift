@@ -6,7 +6,7 @@
 //  Copyright © 2020 Sanjay Sampat. All rights reserved.
 //
 
-struct TonySectionCat: Codable {
+struct TonySectionCat: Codable, Hashable {
     public var id: String = ""
     public var parentCat: String = ""
     public var catFirstTitle: String = ""

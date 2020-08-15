@@ -22,8 +22,10 @@ struct TonySectionViewer: View {
             
             if tonySectionFeatcher.categories.count > 0 {
                 CategoryView(categories: tonySectionFeatcher.categories, photoFrame: photoFrame)
+            } else if tonySectionFeatcher.categoriesInArrays.count > 0 {
+                CategoryView(categoriesInArrays: tonySectionFeatcher.categoriesInArrays, photoFrame: photoFrame)
             }
-            
+
             /*
             if signinFetcher.signinSuccess.users.count > 0 {
                 UserView(signinSuccess: signinFetcher.signinSuccess, photoFrame: photoFrame)
@@ -53,6 +55,7 @@ extension TonySectionViewer {
         @EnvironmentObject  var  userAuth: UserAuth
         
         private var categories : [TonySectionCat] = []
+        private var categoriesInArrays : [[[TonySectionCat]]] = [[[]]]
         //private let tonySectionCatagories: TonySectionCatagories
         private var photoFrame : (width:CGFloat, height:CGFloat)
         
@@ -61,34 +64,66 @@ extension TonySectionViewer {
             self.photoFrame = photoFrame
         }
         
-        var body: some View {
-            ScrollView(.horizontal) {
-            HStack {
-
-                ForEach( 0 ..< self.categories.count, id: \.self) { index in
-                    
-                    VStack {
-                            //Text("\(self.categories[index].catFirstTitle)  \(self.categories[index].catSecondTitle)")
-                            
-                            SwiftUIAsyncImageView(url: URL(string: self.categories[index].imgPath), placeholder: Text("Loading ..."), cache: self.cache)
-                                .frame(width: self.photoFrame.width, height: self.photoFrame.height, alignment: .center)
-                                .cornerRadius(CommonUtils.cu_CornerRadius)
-                    }
-                    .onAppear(perform: {
-                        //let user = self.signinSuccess.users[number]
-                        
-                        if !self.userAuth.userEmail.elementsEqual(PrivateCommit.nc_email) {
-                            self.userAuth.userEmail = PrivateCommit.nc_email
-                        }
-                        
-                    })
-                }
-            }
-        }
+        init(categoriesInArrays: [[[TonySectionCat]]], photoFrame:(width:CGFloat, height:CGFloat) ) {
+            self.categoriesInArrays = categoriesInArrays
+            self.photoFrame = photoFrame
         }
         
+        var body: some View {
+            VStack {
+                if self.categories.count > 0 {
+                    InnerCategoryView(innerCategories: categories, photoFrame: photoFrame)
+                }
+                else if self.categoriesInArrays.count > 0 {
+                    ForEach(self.categoriesInArrays, id:\.self) { array1 in
+                        ForEach(array1, id:\.self) { categories in
+                            InnerCategoryView(innerCategories: categories, photoFrame: self.photoFrame)
+                        }
+                    }
+                    
+                }
+            }
+            
+        }
+    }
+
+    struct InnerCategoryView: View {
+        @Environment(\.imageCache) var cache: ImageCache
+        @EnvironmentObject  var  userAuth: UserAuth
+
+        private var innerCategories : [TonySectionCat] = []
+        private var photoFrame : (width:CGFloat, height:CGFloat)
+
+        init(innerCategories: [TonySectionCat], photoFrame:(width:CGFloat, height:CGFloat) ) {
+            self.innerCategories = innerCategories
+            self.photoFrame = photoFrame
+        }
+
+        var body: some View {
+            ScrollView(.horizontal) {
+                HStack {
+                    ForEach( 0 ..< self.innerCategories.count, id: \.self) { index in
+                        VStack {
+                            //Text("\(self.categories[index].catFirstTitle)  \(self.categories[index].catSecondTitle)")
+                            
+                            SwiftUIAsyncImageView(url: URL(string: self.innerCategories[index].imgPath), placeholder: Text("Loading ..."), cache: self.cache)
+                                .frame(width: self.photoFrame.width, height: self.photoFrame.height, alignment: .center)
+                                .cornerRadius(CommonUtils.cu_CornerRadius)
+                        }
+                    }
+                }
+                .onAppear(perform: {
+                    
+                    if !self.userAuth.userEmail.elementsEqual(PrivateCommit.nc_email) {
+                        self.userAuth.userEmail = PrivateCommit.nc_email
+                    }
+                    
+                })
+            }
+        }
     }
 }
+
 /*
 extension SigninViewer {
     struct ErrorView: View {

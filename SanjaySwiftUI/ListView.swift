@@ -59,7 +59,7 @@ struct ListView: View {
                         .padding()
 
                     TonySectionViewer(tonySectionFeatcher: TonySectionFeatcher(userEmail: userAuth.userEmail), photoFrame: $photoFrame )
-                    .padding(10)
+                        .padding(10)
                     
                 ScrollView(.horizontal) {
                     HStack(spacing: myPaddingSpace) {

@@ -48,6 +48,7 @@ public enum CategoryFetchType{
 
 public class TonySectionFeatcher: ObservableObject {
     @Published var categories : [TonySectionCat] = []
+    @Published var categoriesInArrays : [[[TonySectionCat]]] = [[[]]]
     
     var currentFetchType:CategoryFetchType = .homeSlider
     
@@ -65,12 +66,20 @@ public class TonySectionFeatcher: ObservableObject {
             do {
                 
                 //let json = JSON(dataFromFile)  // SSTEST - SwiftyJSON //
+                if currentFetchType == .homeSlider {
+                    let decodedReturn = try JSONDecoder().decode([TonySectionCat].self, from: dataFromFile)
 
-                let decodedReturn = try JSONDecoder().decode([TonySectionCat].self, from: dataFromFile)
+                    DispatchQueue.main.async {
+                        self.categories = decodedReturn
+                        self.load(doRefresh: false)
+                    }
+                } else {
+                    let decodedReturn = try JSONDecoder().decode([[[TonySectionCat]]].self, from: dataFromFile)
 
-                DispatchQueue.main.async {
-                    self.categories = decodedReturn
-                    self.load(doRefresh: false)
+                    DispatchQueue.main.async {
+                        self.categoriesInArrays = decodedReturn
+                        self.load(doRefresh: false)
+                    }
                 }
                 return true
             } catch {
@@ -126,8 +135,21 @@ public class TonySectionFeatcher: ObservableObject {
                     
                     //let json = JSON(dataFromURL)  // SSTEST - SwiftyJSON //
 
-                    let decodedReturn = try JSONDecoder().decode([TonySectionCat].self, from: dataFromURL)
-                    
+                    if self.currentFetchType == .homeSlider {
+                        let decodedReturn = try JSONDecoder().decode([TonySectionCat].self, from: dataFromURL)
+                        if doRefresh {
+                            DispatchQueue.main.async {
+                                self.categories = decodedReturn
+                            }
+                        }
+                    } else {
+                        let decodedReturn = try JSONDecoder().decode([[[TonySectionCat]]].self, from: dataFromURL)
+                        if doRefresh {
+                            DispatchQueue.main.async {
+                                self.categoriesInArrays = decodedReturn
+                            }
+                        }
+                    }
                     // Save the data to local json file
                     let userEmail = PrivateCommit.nc_email  //decodedReturn.users[0].profileData.UserEmail
                     if !userEmail.isEmpty {
@@ -139,11 +161,6 @@ public class TonySectionFeatcher: ObservableObject {
                         }
                     }
                     
-                    if doRefresh {
-                        DispatchQueue.main.async {
-                            self.categories = decodedReturn
-                        }
-                    }
                 }else {
                     print("No Data")
                 }

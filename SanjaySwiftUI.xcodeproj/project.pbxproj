@@ -66,6 +66,16 @@
 		72735B9824D03BE5006B75C9 /* SSPhotoEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B9724D03BE5006B75C9 /* SSPhotoEditorViewController.swift */; };
 		72735B9A24D048C7006B75C9 /* UIImage+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B9924D048C7006B75C9 /* UIImage+Extra.swift */; };
 		7282060A24E5769600F5F8CB /* getnewMostLovedCatData.json in Resources */ = {isa = PBXBuildFile; fileRef = 7282060924E5769500F5F8CB /* getnewMostLovedCatData.json */; };
+		7299E6A324E8046800704724 /* getDailyQuote.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69924E8046300704724 /* getDailyQuote.json */; };
+		7299E6A424E8046800704724 /* getnewpriorityFreedomsbyuser.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69A24E8046500704724 /* getnewpriorityFreedomsbyuser.json */; };
+		7299E6A524E8046800704724 /* getdailyStory.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69B24E8046500704724 /* getdailyStory.json */; };
+		7299E6A624E8046800704724 /* gettonyCategoryList.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69C24E8046600704724 /* gettonyCategoryList.json */; };
+		7299E6A724E8046800704724 /* getnewCatRecsByUserPriority.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69D24E8046600704724 /* getnewCatRecsByUserPriority.json */; };
+		7299E6A824E8046800704724 /* getChartRecordByUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69E24E8046700704724 /* getChartRecordByUser.json */; };
+		7299E6A924E8046800704724 /* getUserPurchaseDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69F24E8046700704724 /* getUserPurchaseDetail.json */; };
+		7299E6AA24E8046800704724 /* getQuestionLockValue.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E6A024E8046800704724 /* getQuestionLockValue.json */; };
+		7299E6AB24E8046800704724 /* getHomeSliderCatRecord.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E6A124E8046800704724 /* getHomeSliderCatRecord.json */; };
+		7299E6AC24E8046800704724 /* getUsersRecord.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E6A224E8046800704724 /* getUsersRecord.json */; };
 		729B0EF424C99FCF00054F9F /* AlertControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B0EF324C99FCF00054F9F /* AlertControlView.swift */; };
 		729B0EF724C9B40E00054F9F /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B0EF524C9B40E00054F9F /* Person+CoreDataClass.swift */; };
 		72B551AF24DD1690009A0014 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B551AE24DD1690009A0014 /* ListView.swift */; };
@@ -179,6 +189,16 @@
 		72735B9724D03BE5006B75C9 /* SSPhotoEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSPhotoEditorViewController.swift; sourceTree = "<group>"; };
 		72735B9924D048C7006B75C9 /* UIImage+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extra.swift"; sourceTree = "<group>"; };
 		7282060924E5769500F5F8CB /* getnewMostLovedCatData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getnewMostLovedCatData.json; sourceTree = "<group>"; };
+		7299E69924E8046300704724 /* getDailyQuote.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getDailyQuote.json; sourceTree = "<group>"; };
+		7299E69A24E8046500704724 /* getnewpriorityFreedomsbyuser.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getnewpriorityFreedomsbyuser.json; sourceTree = "<group>"; };
+		7299E69B24E8046500704724 /* getdailyStory.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getdailyStory.json; sourceTree = "<group>"; };
+		7299E69C24E8046600704724 /* gettonyCategoryList.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gettonyCategoryList.json; sourceTree = "<group>"; };
+		7299E69D24E8046600704724 /* getnewCatRecsByUserPriority.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getnewCatRecsByUserPriority.json; sourceTree = "<group>"; };
+		7299E69E24E8046700704724 /* getChartRecordByUser.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getChartRecordByUser.json; sourceTree = "<group>"; };
+		7299E69F24E8046700704724 /* getUserPurchaseDetail.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getUserPurchaseDetail.json; sourceTree = "<group>"; };
+		7299E6A024E8046800704724 /* getQuestionLockValue.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getQuestionLockValue.json; sourceTree = "<group>"; };
+		7299E6A124E8046800704724 /* getHomeSliderCatRecord.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getHomeSliderCatRecord.json; sourceTree = "<group>"; };
+		7299E6A224E8046800704724 /* getUsersRecord.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getUsersRecord.json; sourceTree = "<group>"; };
 		729B0EF324C99FCF00054F9F /* AlertControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControlView.swift; sourceTree = "<group>"; };
 		729B0EF524C9B40E00054F9F /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 		72B551AE24DD1690009A0014 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -256,8 +276,18 @@
 		7249748824E4F112006F5C52 /* TonySectionJson */ = {
 			isa = PBXGroup;
 			children = (
-				7282060924E5769500F5F8CB /* getnewMostLovedCatData.json */,
+				7299E69E24E8046700704724 /* getChartRecordByUser.json */,
+				7299E69924E8046300704724 /* getDailyQuote.json */,
+				7299E69B24E8046500704724 /* getdailyStory.json */,
+				7299E6A124E8046800704724 /* getHomeSliderCatRecord.json */,
 				7249749324E52684006F5C52 /* getHomeSliderCatRecordTony.json */,
+				7299E69D24E8046600704724 /* getnewCatRecsByUserPriority.json */,
+				7282060924E5769500F5F8CB /* getnewMostLovedCatData.json */,
+				7299E69A24E8046500704724 /* getnewpriorityFreedomsbyuser.json */,
+				7299E6A024E8046800704724 /* getQuestionLockValue.json */,
+				7299E69C24E8046600704724 /* gettonyCategoryList.json */,
+				7299E69F24E8046700704724 /* getUserPurchaseDetail.json */,
+				7299E6A224E8046800704724 /* getUsersRecord.json */,
 				7249748924E4F112006F5C52 /* TonySectionCat.swift */,
 				7249748A24E4F112006F5C52 /* TonySectionViewer.swift */,
 				7249748B24E4F112006F5C52 /* TonySectionFeatcher.swift */,
@@ -557,26 +587,35 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7299E6A824E8046800704724 /* getChartRecordByUser.json in Resources */,
+				7299E6A324E8046800704724 /* getDailyQuote.json in Resources */,
 				72735B7D24D034B0006B75C9 /* EmojiCollectionViewCell.xib in Resources */,
 				72735B7824D034B0006B75C9 /* Photo_Editor.xcassets in Resources */,
 				72735B7424D034B0006B75C9 /* icomoon.ttf in Resources */,
 				72735B8E24D034B0006B75C9 /* StickerCollectionViewCell.xib in Resources */,
 				72735B8724D034B0006B75C9 /* PhotoCropEditorBorder.png in Resources */,
+				7299E6A724E8046800704724 /* getnewCatRecsByUserPriority.json in Resources */,
 				72B551D324DD743E009A0014 /* chincoteague.jpg in Resources */,
 				72735B7C24D034B0006B75C9 /* ColorCollectionViewCell.xib in Resources */,
 				72BBAF0824DE8AFB00CFC7D6 /* signin.json in Resources */,
 				72B551D024DD743E009A0014 /* twinlake.jpg in Resources */,
 				72663AC224C5C7BD000596C9 /* LaunchScreen.storyboard in Resources */,
 				72735B7524D034B0006B75C9 /* StickersViewController.xib in Resources */,
+				7299E6A624E8046800704724 /* gettonyCategoryList.json in Resources */,
+				7299E6A424E8046800704724 /* getnewpriorityFreedomsbyuser.json in Resources */,
+				7299E6AB24E8046800704724 /* getHomeSliderCatRecord.json in Resources */,
 				72B551D124DD743E009A0014 /* umbagog.jpg in Resources */,
 				72B551CF24DD743E009A0014 /* hiddenlake.jpg in Resources */,
 				72735B7F24D034B0006B75C9 /* PhotoCropEditorBorder@2x.png in Resources */,
 				72735B4F24D01A86006B75C9 /* StoryboardSanjay.storyboard in Resources */,
 				72B551D224DD743E009A0014 /* landmarkData.json in Resources */,
 				7252639324D55633002C5ACA /* README.md in Resources */,
+				7299E6A524E8046800704724 /* getdailyStory.json in Resources */,
 				72735B8624D034B0006B75C9 /* PhotoCropEditorBorder@3x.png in Resources */,
 				72B551CE24DD743E009A0014 /* lakemcdonald.jpg in Resources */,
 				72B551CD24DD743E009A0014 /* icybay.jpg in Resources */,
+				7299E6A924E8046800704724 /* getUserPurchaseDetail.json in Resources */,
+				7299E6AC24E8046800704724 /* getUsersRecord.json in Resources */,
 				72B551D624DD743E009A0014 /* chilkoottrail.jpg in Resources */,
 				7249749424E52684006F5C52 /* getHomeSliderCatRecordTony.json in Resources */,
 				72663ABF24C5C7BD000596C9 /* Preview Assets.xcassets in Resources */,
@@ -587,6 +626,7 @@
 				72B551D424DD743E009A0014 /* yukon_charleyrivers.jpg in Resources */,
 				72B551D724DD743E009A0014 /* rainbowlake.jpg in Resources */,
 				72B551CB24DD743E009A0014 /* turtlerock.jpg in Resources */,
+				7299E6AA24E8046800704724 /* getQuestionLockValue.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
