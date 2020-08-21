@@ -157,6 +157,7 @@ struct ListView: View {
 
                     }
                     
+                    Group {
                     if self.persons.count > 0 && self.currentPos >= 0 && self.currentPos < self.persons.count {
                     ZStack {
                         Image( uiImage: UIImage(data: self.persons[self.currentPos].photo ?? Data()), placeholderSystemName: "person")
@@ -175,7 +176,10 @@ struct ListView: View {
                     }
                     
                     //SigninViewer(signinFetcher: SigninFetcher(userEmail: userAuth.userEmail), photoFrame: $photoFrame )
-                    //    .padding(10)
+                        //.padding(10)
+                        
+                        AudioView()
+                    }
 
                     Text("End")
                         .foregroundColor(CommonUtils.cu_activity_light_text_color)

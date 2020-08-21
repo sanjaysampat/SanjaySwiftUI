@@ -38,6 +38,9 @@ SwiftUI project creation to learn.
     * ~~Custom AlertControlView via UIViewControllerRepresentable for getting 'name' text from user.~~ (not in use)
     * 'alertSS' functions to call custom alerts with textfield.
     * 'View' extension to print debug messages with PrintView method.
+    * Integration / modification of Views created by 'Chris Mash' project [AVPlayer-SwiftUI](https://github.com/ChrisMash/AVPlayer-SwiftUI) for Audio play functionality integration at bottom of LIstView
+        * Added play/pause button in Audio
+        * Continuing how to create proper observers of AVPlayer.
     
 2. GIT integration (Github)
     * Added Project to GIT from XCode 11
