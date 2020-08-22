@@ -179,6 +179,8 @@ struct ListView: View {
                         //.padding(10)
                         
                         AudioView()
+                        
+                        VideoView()
                     }
 
                     Text("End")

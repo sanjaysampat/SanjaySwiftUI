@@ -23,8 +23,8 @@ struct AudioPlayerControlsView: View {
     let timeObserver: PlayerTimeObserver
     let durationObserver: PlayerDurationObserver
     let itemObserver: PlayerItemObserver
-    let itemStatusObserver: PlayerItemStatusObserver
-    let itemLikelyToKeepUpObserver: PlayerItemLikelyToKeepUpObserver
+    //let itemStatusObserver: PlayerItemStatusObserver
+    //let itemLikelyToKeepUpObserver: PlayerItemLikelyToKeepUpObserver
     @State private var currentTime: TimeInterval = 0
     @State private var currentDuration: TimeInterval = 0
     @State private var state = PlaybackState.waitingForSelection
@@ -48,7 +48,7 @@ struct AudioPlayerControlsView: View {
             HStack {
             // Play/pause button
             Button(action: togglePlayPause) {
-                Image(systemName: state == .readyToPlay || state == .playing ? (playerPaused ? "play" : "pause") : "questionmark.diamond")
+                Image(systemName: state == .buffering || state == .readyToPlay || state == .playing ? (playerPaused ? "play" : "pause") : "questionmark.diamond")
                     .padding(.trailing, 10)
             }
             .disabled(state == .waitingForSelection)
@@ -84,10 +84,12 @@ struct AudioPlayerControlsView: View {
             
             print("hasItem : \(hasItem)")
             
-            self.state = hasItem ? self.state : .waitingForSelection
+            //self.state = hasItem ? self.state : .waitingForSelection
+            self.state = hasItem ? .buffering : .waitingForSelection
             self.currentTime = 0
             self.currentDuration = 0
         }
+        /*
         // Listen out for the item observer publishing a status of player item.
         .onReceive(itemStatusObserver.publisher) { playerStatus in
                 
@@ -103,7 +105,7 @@ struct AudioPlayerControlsView: View {
                 self.state = isKeepUp ? self.state : .buffering
 
         }
-        
+        */
         // TODO the below could replace the above but causes a crash
 //        // Listen out for the player's item changing
 //        .onReceive(player.publisher(for: \.currentItem)) { item in
@@ -139,7 +141,7 @@ struct AudioPlayerControlsView: View {
         }
         else {
             // Editing finished, start the seek
-            ////state = .buffering
+            state = .buffering
             let targetTime = CMTime(seconds: currentTime,
                                     preferredTimescale: 600)
             player.seek(to: targetTime) { _ in
@@ -166,9 +168,10 @@ struct AudioView: View {
             AudioPlayerControlsView(player: player,
                                     timeObserver: PlayerTimeObserver(player: player),
                                     durationObserver: PlayerDurationObserver(player: player),
-                                    itemObserver: PlayerItemObserver(player: player),
-                                    itemStatusObserver: PlayerItemStatusObserver(player: player),
-                                    itemLikelyToKeepUpObserver: PlayerItemLikelyToKeepUpObserver(player: player)
+                                    itemObserver: PlayerItemObserver(player: player)
+                                    //,
+                                    //itemStatusObserver: PlayerItemStatusObserver(player: player),
+                                    //itemLikelyToKeepUpObserver: PlayerItemLikelyToKeepUpObserver(player: player)
             )
             
             List(items, id: \.title) { item in
@@ -179,6 +182,10 @@ struct AudioView: View {
                     
                     // SSTODO - here we will get the AVPlayerItem status when Item is replaced.
                     // SSTODO the PlayerItemObserver and PlayerItemStatusObserver of AVPlayer object should be using AVPlayerItem observers eg. code as under
+                    
+                    // Be careful while adding the observers.
+                    // issue of 'SourceKitService" and/or 'Swift' process on mac taking max memory, so xcode and all mac proccesses slogs to halt
+                    
                     /*
                     // Create a new AVPlayerItem with the asset and an
                     // array of asset keys to be automatically loaded
@@ -231,8 +238,9 @@ struct AudioView: View {
                     */
                     
                     let playerItem = AVPlayerItem(url: url)
+                    
                     self.player.replaceCurrentItem(with: playerItem)
-                    //self.player.play()
+                    self.player.play()
                 }
             }
         }
@@ -244,6 +252,7 @@ struct AudioView: View {
 }
 
 import Combine
+// AVPlayer Observers
 class PlayerTimeObserver {
     let publisher = PassthroughSubject<TimeInterval, Never>()
     private weak var player: AVPlayer?
@@ -274,7 +283,13 @@ class PlayerTimeObserver {
         paused = pause
     }
 }
+/*
+ // There are currently three declared observers.
+ // We need to be careful while adding observers. for eg. if we uncomment the following
+ Two observers then
+ // issue of 'SourceKitService" and/or 'Swift' process on mac taking max memory, so xcode and all mac proccesses slogs to halt
 
+ // AVPlayer other Observers
 class PlayerItemStatusObserver {
     let publisher = PassthroughSubject<AVPlayer.Status, Never>()
     private var itemObservation: NSKeyValueObservation?
@@ -316,6 +331,7 @@ class PlayerItemLikelyToKeepUpObserver {
         }
     }
 }
+*/
 
 class PlayerItemObserver {
     let publisher = PassthroughSubject<Bool, Never>()

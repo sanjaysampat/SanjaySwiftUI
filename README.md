@@ -41,6 +41,8 @@ SwiftUI project creation to learn.
     * Integration / modification of Views created by 'Chris Mash' project [AVPlayer-SwiftUI](https://github.com/ChrisMash/AVPlayer-SwiftUI) for Audio play functionality integration at bottom of LIstView
         * Added play/pause button in Audio
         * Continuing how to create proper observers of AVPlayer.
+            * Issue while adding more observers.
+            * 'SourceKitService" and/or 'Swift' process on mac taking max memory, so xcode and all mac proccesses slogs to halt ( macOS Catalina 10.15.6, tried on XCode 11.6 and 11.5)
     
 2. GIT integration (Github)
     * Added Project to GIT from XCode 11
