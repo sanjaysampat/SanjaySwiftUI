@@ -43,6 +43,7 @@ SwiftUI project creation to learn.
         * Continuing how to create proper observers of AVPlayer.
             * Issue while adding more observers.
             * 'SourceKitService" and/or 'Swift' process on mac taking max memory, so xcode and all mac proccesses slogs to halt ( macOS Catalina 10.15.6, tried on XCode 11.6 and 11.5)
+    * Added Navigation view - 'Menu' option in content view.
     
 2. GIT integration (Github)
     * Added Project to GIT from XCode 11
@@ -61,3 +62,6 @@ SwiftUI project creation to learn.
 5. Use of SF Symbols for **systemImage** icons.
     * [System Icons](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/system-icons/) (iOS12  and Earlier)
     * There are over 1,500 symbols text that can be used in apps running in iOS 13 and later. To browse the full set of symbols, download [the SF Symbols mac app](https://developer.apple.com/design/downloads/SF-Symbols.dmg). 
+    
+####### Note:- Replace 'PrivateCommit' with 'PublicCommit' to run. 
+

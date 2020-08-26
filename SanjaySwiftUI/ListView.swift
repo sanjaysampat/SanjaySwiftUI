@@ -20,7 +20,7 @@ struct ListView: View {
 
     @State var photoFrame : (width:CGFloat, height:CGFloat) = (width:400, height:300)
 
-    @Binding var listSelection: Int?
+    //@Binding var listSelection: Int?  // SSNote: no back button now, as we are calling this from navigation view.
     @Binding var currentPos:Int
     
     let myPaddingSpace:CGFloat = 5
@@ -30,6 +30,7 @@ struct ListView: View {
     var body: some View {
         ZStack {
             VStack {
+                /* // SSNote : no back button now
                 HStack {
                     
                     Button(action: {
@@ -50,6 +51,7 @@ struct ListView: View {
                     Spacer()
                 }
                 .padding()
+                */
                 
                 ScrollView(.vertical) {
                     
@@ -199,6 +201,6 @@ struct ListView: View {
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        ListView(listSelection: .constant(1), currentPos: .constant(-1))
+        ListView(currentPos: .constant(-1))
     }
 }

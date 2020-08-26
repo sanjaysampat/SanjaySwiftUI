@@ -44,7 +44,7 @@ struct ContentView: View {
     
     @State private var lastPos:Int = -1
 
-    @State var listSelection: Int? = 0
+    @State var menuSelection: Int? = 0
     
     
     //@ObservedObject var viewModel = ViewModel()
@@ -52,7 +52,7 @@ struct ContentView: View {
     var body: some View {
         ZStack() {
             
-            if listSelection == 0 {
+            if menuSelection == 0 {
             
             // hidden control for code modifications.
             Toggle("", isOn:$nameChanged)
@@ -259,23 +259,24 @@ struct ContentView: View {
                    }
                     .foregroundColor(CommonUtils.cu_activity_foreground_color)
                     .padding(paddingSize)
-                    .padding(.leading, paddingSize)
+                    //.padding(.leading, paddingSize)
                 
                     Button(action: {
                         if self.currentPos >= 0 {
-                            self.listSelection = 1
+                            self.menuSelection = 1
                             
                         }
                     }) {
                         VStack( alignment: .center) {
-                            Image(systemName: "square.stack.3d.down.right")
-                            Text("List")
+                            Image(systemName: "text.justify")
+                            Text("Menu")
                                 .font(.caption)
+                                
                         }
                     }
                     .foregroundColor(CommonUtils.cu_activity_foreground_color)
                     .padding(paddingSize)
-                    .padding(.leading, paddingSize)
+                    //.padding(.leading, paddingSize)
                     
 
                 }
@@ -284,7 +285,7 @@ struct ContentView: View {
             .rotationEffect(Angle(degrees: -45), anchor: .center)
 
         } else {
-                ListView(listSelection: $listSelection, currentPos: $currentPos)
+                MenuView(menuSelection: $menuSelection, currentPos: $currentPos)
         }
             
         }
