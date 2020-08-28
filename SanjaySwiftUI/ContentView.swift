@@ -285,12 +285,12 @@ struct ContentView: View {
             .rotationEffect(Angle(degrees: -45), anchor: .center)
 
         } else {
-                MenuView(menuSelection: $menuSelection, currentPos: $currentPos)
+            MenuView(menuSelection: $menuSelection, currentPos: $currentPos)
         }
             
         }
         .background(CommonUtils.cu_activity_background_color)
-        .edgesIgnoringSafeArea(.all)
+        //.edgesIgnoringSafeArea(.all)
         
     }
     

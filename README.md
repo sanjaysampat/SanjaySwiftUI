@@ -39,6 +39,8 @@ SwiftUI project creation to learn.
     * 'alertSS' functions to call custom alerts with textfield.
     * 'View' extension to print debug messages with PrintView method.
     * Integration / modification of Views created by 'Chris Mash' project [AVPlayer-SwiftUI](https://github.com/ChrisMash/AVPlayer-SwiftUI) for Audio play functionality integration at bottom of LIstView
+        * List refill on shuffle array of songs.
+        * Add/delete single item to core data in second audio list.
         * Added play/pause button in Audio
         * Continuing how to create proper observers of AVPlayer.
             * Issue while adding more observers.

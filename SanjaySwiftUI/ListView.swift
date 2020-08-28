@@ -30,28 +30,6 @@ struct ListView: View {
     var body: some View {
         ZStack {
             VStack {
-                /* // SSNote : no back button now
-                HStack {
-                    
-                    Button(action: {
-                        self.listSelection = 0
-                    }) {
-                        HStack( alignment: .center) {
-                            Image(systemName: "chevron.left")
-                            Text("Back")
-                                .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                                .shadow(radius: 1.5)
-                            
-                        }
-                    }
-                    .foregroundColor(CommonUtils.cu_activity_foreground_color)
-                    .padding()
-                    
-                    Spacer()
-                }
-                .padding()
-                */
                 
                 ScrollView(.vertical) {
                     
@@ -59,10 +37,29 @@ struct ListView: View {
                         .foregroundColor(CommonUtils.cu_activity_light_text_color)
                         .shadow(radius: 1.5)
                         .padding()
-
-                    TonySectionViewer(tonySectionFeatcher: TonySectionFeatcher(userEmail: userAuth.userEmail), photoFrame: $photoFrame )
-                        .padding(10)
                     
+                    Group {
+                    if self.persons.count > 0 && self.currentPos >= 0 && self.currentPos < self.persons.count {
+                    ZStack {
+                        Image( uiImage: UIImage(data: self.persons[self.currentPos].photo ?? Data()), placeholderSystemName: "person")
+                            .resizable(resizingMode: .stretch)
+                            .scaledToFit()
+                            .font(Font.title.weight(.ultraLight))
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .cornerRadius(self.myCornerRadius)
+
+                        Text(self.persons[self.currentPos].name ?? "")
+                            .foregroundColor(CommonUtils.cu_activity_background_color)
+                            .shadow(radius: 1.5)
+                    }
+                    .padding(10)
+                        
+                    }
+                    
+                    //SigninViewer(signinFetcher: SigninFetcher(userEmail: userAuth.userEmail), photoFrame: $photoFrame )
+                        //.padding(10)
+                    }
+
                 ScrollView(.horizontal) {
                     HStack(spacing: myPaddingSpace) {
                         /*
@@ -99,9 +96,6 @@ struct ListView: View {
                     .padding(10)
                     
                     }
-                    
-                    TonySectionViewer(tonySectionFeatcher: TonySectionFeatcher(userEmail: userAuth.userEmail, categoryFetchType: .mostLoved), photoFrame: $photoFrame )
-                    .padding(10)
 
                     ScrollView(.horizontal) {
                         HStack(spacing: myPaddingSpace) {
@@ -159,31 +153,11 @@ struct ListView: View {
 
                     }
                     
-                    Group {
-                    if self.persons.count > 0 && self.currentPos >= 0 && self.currentPos < self.persons.count {
-                    ZStack {
-                        Image( uiImage: UIImage(data: self.persons[self.currentPos].photo ?? Data()), placeholderSystemName: "person")
-                            .resizable(resizingMode: .stretch)
-                            .scaledToFit()
-                            .font(Font.title.weight(.ultraLight))
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                            .cornerRadius(self.myCornerRadius)
+                    TonySectionViewer(tonySectionFeatcher: TonySectionFeatcher(userEmail: userAuth.userEmail), photoFrame: $photoFrame )
+                        .padding(10)
 
-                        Text(self.persons[self.currentPos].name ?? "")
-                            .foregroundColor(CommonUtils.cu_activity_background_color)
-                            .shadow(radius: 1.5)
-                    }
+                    TonySectionViewer(tonySectionFeatcher: TonySectionFeatcher(userEmail: userAuth.userEmail, categoryFetchType: .mostLoved), photoFrame: $photoFrame )
                     .padding(10)
-                        
-                    }
-                    
-                    //SigninViewer(signinFetcher: SigninFetcher(userEmail: userAuth.userEmail), photoFrame: $photoFrame )
-                        //.padding(10)
-                        
-                        AudioView()
-                        
-                        VideoView()
-                    }
 
                     Text("End")
                         .foregroundColor(CommonUtils.cu_activity_light_text_color)

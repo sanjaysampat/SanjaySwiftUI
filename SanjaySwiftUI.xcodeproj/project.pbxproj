@@ -107,8 +107,12 @@
 		72BD188824EEAA600032E3B7 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BD188524EEAA600032E3B7 /* VideoView.swift */; };
 		72BD188924EEAA600032E3B7 /* PlayerUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BD188624EEAA600032E3B7 /* PlayerUtility.swift */; };
 		72BD188A24EEAA600032E3B7 /* AudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BD188724EEAA600032E3B7 /* AudioView.swift */; };
+		72CEEB4F24F8F8BC00A1AFE9 /* AudioPlayerControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CEEB4E24F8F8BC00A1AFE9 /* AudioPlayerControlsView.swift */; };
+		72CEEB5124F92EBE00A1AFE9 /* AVListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CEEB5024F92EBE00A1AFE9 /* AVListView.swift */; };
 		72D9779F24E1116E0044754C /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D9779E24E1116E0044754C /* CommonExtensions.swift */; };
 		72D977A124E120AC0044754C /* String+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D977A024E120AB0044754C /* String+Extra.swift */; };
+		72F0CBDD24F7F24600BE9DB0 /* Audio+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0CBDB24F7F24600BE9DB0 /* Audio+CoreDataClass.swift */; };
+		72F0CBDE24F7F24600BE9DB0 /* Audio+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0CBDC24F7F24600BE9DB0 /* Audio+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -235,8 +239,12 @@
 		72BD188524EEAA600032E3B7 /* VideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		72BD188624EEAA600032E3B7 /* PlayerUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerUtility.swift; sourceTree = "<group>"; };
 		72BD188724EEAA600032E3B7 /* AudioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioView.swift; sourceTree = "<group>"; };
+		72CEEB4E24F8F8BC00A1AFE9 /* AudioPlayerControlsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerControlsView.swift; sourceTree = "<group>"; };
+		72CEEB5024F92EBE00A1AFE9 /* AVListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVListView.swift; sourceTree = "<group>"; };
 		72D9779E24E1116E0044754C /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
 		72D977A024E120AB0044754C /* String+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extra.swift"; sourceTree = "<group>"; };
+		72F0CBDB24F7F24600BE9DB0 /* Audio+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Audio+CoreDataClass.swift"; sourceTree = "<group>"; };
+		72F0CBDC24F7F24600BE9DB0 /* Audio+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Audio+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +356,7 @@
 				72B551AE24DD1690009A0014 /* ListView.swift */,
 				72B551B024DD1C8A009A0014 /* UserAuth.swift */,
 				727E111124F6A994007231F7 /* MenuView.swift */,
+				72CEEB5024F92EBE00A1AFE9 /* AVListView.swift */,
 			);
 			path = SanjaySwiftUI;
 			sourceTree = "<group>";
@@ -441,6 +450,8 @@
 		729B0EF924C9B41600054F9F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				72F0CBDB24F7F24600BE9DB0 /* Audio+CoreDataClass.swift */,
+				72F0CBDC24F7F24600BE9DB0 /* Audio+CoreDataProperties.swift */,
 				7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */,
 				729B0EF524C9B40E00054F9F /* Person+CoreDataClass.swift */,
 			);
@@ -499,6 +510,7 @@
 		72BD188424EEAA600032E3B7 /* PlayerView */ = {
 			isa = PBXGroup;
 			children = (
+				72CEEB4E24F8F8BC00A1AFE9 /* AudioPlayerControlsView.swift */,
 				72BD188524EEAA600032E3B7 /* VideoView.swift */,
 				72BD188624EEAA600032E3B7 /* PlayerUtility.swift */,
 				72BD188724EEAA600032E3B7 /* AudioView.swift */,
@@ -674,6 +686,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72F0CBDD24F7F24600BE9DB0 /* Audio+CoreDataClass.swift in Sources */,
 				7216BB5C24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift in Sources */,
 				72BBAF1224DEBE5700CFC7D6 /* SigninFeatcher.swift in Sources */,
 				7204277C24E01CC800DF4958 /* SCLExtensions.swift in Sources */,
@@ -685,6 +698,7 @@
 				7204276724DFD43D00DF4958 /* SwiftUIAsyncImageView.swift in Sources */,
 				72B551CA24DD743E009A0014 /* Landmark.swift in Sources */,
 				72735B9124D034B0006B75C9 /* PhotoEditor+Crop.swift in Sources */,
+				72F0CBDE24F7F24600BE9DB0 /* Audio+CoreDataProperties.swift in Sources */,
 				72735B9324D034B0006B75C9 /* GradientView.swift in Sources */,
 				72735B5124D02872006B75C9 /* CustomImagePickerViewController.swift in Sources */,
 				72BD188A24EEAA600032E3B7 /* AudioView.swift in Sources */,
@@ -699,6 +713,7 @@
 				72735B7B24D034B0006B75C9 /* UIImageView+Alpha.swift in Sources */,
 				72BBAF1024DE8F9700CFC7D6 /* SignInUser.swift in Sources */,
 				72BBAF1424DEC8EA00CFC7D6 /* SigninViewer.swift in Sources */,
+				72CEEB4F24F8F8BC00A1AFE9 /* AudioPlayerControlsView.swift in Sources */,
 				727E111424F6C092007231F7 /* PublicCommit.swift in Sources */,
 				72BBAF0224DE694900CFC7D6 /* CommonUtils.swift in Sources */,
 				7204277524DFFEB900DF4958 /* SwiftUIImageCache.swift in Sources */,
@@ -728,6 +743,7 @@
 				72735B8924D034B0006B75C9 /* EmojisCollectionViewDelegate.swift in Sources */,
 				72735B8B24D034B0006B75C9 /* ResizeControl.swift in Sources */,
 				7204276F24DFFA3600DF4958 /* PrivateCommit.swift in Sources */,
+				72CEEB5124F92EBE00A1AFE9 /* AVListView.swift in Sources */,
 				72735B8224D034B0006B75C9 /* UIImage+Crop.swift in Sources */,
 				72663AB524C5C7AC000596C9 /* SceneDelegate.swift in Sources */,
 				72735B7E24D034B0006B75C9 /* PhotoEditor+Font.swift in Sources */,

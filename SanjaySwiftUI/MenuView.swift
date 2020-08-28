@@ -13,7 +13,7 @@ struct MenuView: View {
     @Binding var currentPos:Int
     
     var body: some View {
-        ZStack {
+        //ZStack {
             NavigationView {
                 VStack(alignment: .leading) {
                     HStack {
@@ -49,13 +49,31 @@ struct MenuView: View {
                         }
                         
                     }
+                    
+                    NavigationLink(destination:
+                        AVListView()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                Image(systemName: "play.circle")
+                                Text("Audio/Video List View")
+                                    .font(.caption)
+                            }
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
+                        }
+                        
+                    }
+
                     Spacer()
                 }
                 .background(CommonUtils.cu_activity_light_theam_color)
+                
             }
             
-        }
-        .padding(.top, 20)
+        //}
+        //.padding(.top, 20)
         
     }
 }
