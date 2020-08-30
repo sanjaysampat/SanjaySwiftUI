@@ -65,6 +65,22 @@ struct MenuView: View {
                         }
                         
                     }
+                    
+                    NavigationLink(destination:
+                        TabSwiftUiView()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                Image(systemName: "bed.double")
+                                Text("Tab View")
+                                    .font(.caption)
+                            }
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
+                        }
+                        
+                    }
 
                     Spacer()
                 }

@@ -29,6 +29,11 @@
 		72663AC224C5C7BD000596C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72663AC024C5C7BD000596C9 /* LaunchScreen.storyboard */; };
 		72663ACD24C5C7BD000596C9 /* SanjaySwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663ACC24C5C7BD000596C9 /* SanjaySwiftUITests.swift */; };
 		72663AD824C5C7BE000596C9 /* SanjaySwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663AD724C5C7BE000596C9 /* SanjaySwiftUIUITests.swift */; };
+		726763DD24FB76D00074715B /* TabSwiftUiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726763DC24FB76D00074715B /* TabSwiftUiView.swift */; };
+		726763E024FB7E830074715B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 726763DF24FB7E830074715B /* Localizable.strings */; };
+		726763E224FB7FA40074715B /* LocalDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726763E124FB7FA40074715B /* LocalDemoView.swift */; };
+		726763E524FB8C120074715B /* LocalMarathi.strings in Resources */ = {isa = PBXBuildFile; fileRef = 726763E324FB8C120074715B /* LocalMarathi.strings */; };
+		726763E624FB8C120074715B /* LocalGujarati.strings in Resources */ = {isa = PBXBuildFile; fileRef = 726763E424FB8C120074715B /* LocalGujarati.strings */; };
 		72735B4F24D01A86006B75C9 /* StoryboardSanjay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72735B4E24D01A86006B75C9 /* StoryboardSanjay.storyboard */; };
 		72735B5124D02872006B75C9 /* CustomImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B5024D02872006B75C9 /* CustomImagePickerViewController.swift */; };
 		72735B7424D034B0006B75C9 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72735B5324D034B0006B75C9 /* icomoon.ttf */; };
@@ -161,6 +166,11 @@
 		72663AD324C5C7BE000596C9 /* SanjaySwiftUIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SanjaySwiftUIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		72663AD724C5C7BE000596C9 /* SanjaySwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanjaySwiftUIUITests.swift; sourceTree = "<group>"; };
 		72663AD924C5C7BE000596C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		726763DC24FB76D00074715B /* TabSwiftUiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSwiftUiView.swift; sourceTree = "<group>"; };
+		726763DF24FB7E830074715B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		726763E124FB7FA40074715B /* LocalDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDemoView.swift; sourceTree = "<group>"; };
+		726763E324FB8C120074715B /* LocalMarathi.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = LocalMarathi.strings; sourceTree = "<group>"; };
+		726763E424FB8C120074715B /* LocalGujarati.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = LocalGujarati.strings; sourceTree = "<group>"; };
 		72735B4E24D01A86006B75C9 /* StoryboardSanjay.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryboardSanjay.storyboard; sourceTree = "<group>"; };
 		72735B5024D02872006B75C9 /* CustomImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImagePickerViewController.swift; sourceTree = "<group>"; };
 		72735B5324D034B0006B75C9 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
@@ -337,6 +347,7 @@
 		72663AB124C5C7AC000596C9 /* SanjaySwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				726763DE24FB7E830074715B /* Localization */,
 				7249748824E4F112006F5C52 /* TonySectionJson */,
 				72BBAF0424DE899C00CFC7D6 /* SignInJson */,
 				72B551B824DD743E009A0014 /* LandmarkModels */,
@@ -357,6 +368,8 @@
 				72B551B024DD1C8A009A0014 /* UserAuth.swift */,
 				727E111124F6A994007231F7 /* MenuView.swift */,
 				72CEEB5024F92EBE00A1AFE9 /* AVListView.swift */,
+				726763DC24FB76D00074715B /* TabSwiftUiView.swift */,
+				726763E124FB7FA40074715B /* LocalDemoView.swift */,
 			);
 			path = SanjaySwiftUI;
 			sourceTree = "<group>";
@@ -385,6 +398,16 @@
 				72663AD924C5C7BE000596C9 /* Info.plist */,
 			);
 			path = SanjaySwiftUIUITests;
+			sourceTree = "<group>";
+		};
+		726763DE24FB7E830074715B /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				726763E424FB8C120074715B /* LocalGujarati.strings */,
+				726763E324FB8C120074715B /* LocalMarathi.strings */,
+				726763DF24FB7E830074715B /* Localizable.strings */,
+			);
+			path = Localization;
 			sourceTree = "<group>";
 		};
 		72735B5224D034B0006B75C9 /* Photo_Editor */ = {
@@ -629,6 +652,7 @@
 				72735B7424D034B0006B75C9 /* icomoon.ttf in Resources */,
 				72735B8E24D034B0006B75C9 /* StickerCollectionViewCell.xib in Resources */,
 				72735B8724D034B0006B75C9 /* PhotoCropEditorBorder.png in Resources */,
+				726763E624FB8C120074715B /* LocalGujarati.strings in Resources */,
 				7299E6A724E8046800704724 /* getnewCatRecsByUserPriority.json in Resources */,
 				72B551D324DD743E009A0014 /* chincoteague.jpg in Resources */,
 				72735B7C24D034B0006B75C9 /* ColorCollectionViewCell.xib in Resources */,
@@ -654,6 +678,8 @@
 				72B551D624DD743E009A0014 /* chilkoottrail.jpg in Resources */,
 				7249749424E52684006F5C52 /* getHomeSliderCatRecordTony.json in Resources */,
 				72663ABF24C5C7BD000596C9 /* Preview Assets.xcassets in Resources */,
+				726763E024FB7E830074715B /* Localizable.strings in Resources */,
+				726763E524FB8C120074715B /* LocalMarathi.strings in Resources */,
 				72B551CC24DD743E009A0014 /* silversalmoncreek.jpg in Resources */,
 				7282060A24E5769600F5F8CB /* getnewMostLovedCatData.json in Resources */,
 				72B551D524DD743E009A0014 /* stmarylake.jpg in Resources */,
@@ -701,7 +727,9 @@
 				72F0CBDE24F7F24600BE9DB0 /* Audio+CoreDataProperties.swift in Sources */,
 				72735B9324D034B0006B75C9 /* GradientView.swift in Sources */,
 				72735B5124D02872006B75C9 /* CustomImagePickerViewController.swift in Sources */,
+				726763DD24FB76D00074715B /* TabSwiftUiView.swift in Sources */,
 				72BD188A24EEAA600032E3B7 /* AudioView.swift in Sources */,
+				726763E224FB7FA40074715B /* LocalDemoView.swift in Sources */,
 				7249748E24E4F112006F5C52 /* TonySectionCat.swift in Sources */,
 				72BD188924EEAA600032E3B7 /* PlayerUtility.swift in Sources */,
 				72B551B124DD1C8A009A0014 /* UserAuth.swift in Sources */,

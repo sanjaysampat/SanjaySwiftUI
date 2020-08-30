@@ -46,6 +46,7 @@ SwiftUI project creation to learn.
             * Issue while adding more observers.
             * 'SourceKitService" and/or 'Swift' process on mac taking max memory, so xcode and all mac proccesses slogs to halt ( macOS Catalina 10.15.6, tried on XCode 11.6 and 11.5)
     * Added Navigation view - 'Menu' option in content view.
+    * Tabview added with Localizable Strings files for ગુજરાતી and मराठी .
     
 2. GIT integration (Github)
     * Added Project to GIT from XCode 11
