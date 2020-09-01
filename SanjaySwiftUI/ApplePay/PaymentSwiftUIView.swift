@@ -16,7 +16,8 @@ struct PaymentSwiftUIView: View {
     
     ////@State private var payAvailable = false
     
-    @State private var landmarkOptional:Landmark? = nil
+    //@State private var landmarkOptional:Landmark? = nil
+    @State private var currentLandmarkId:Int = -1
     @State private var loadLandmarkView = false
     
     // SSNote : paymentHandler code is currently not working
@@ -38,7 +39,8 @@ struct PaymentSwiftUIView: View {
     var body: some View {
         ZStack {
             if self.loadLandmarkView {
-                ViewLandmarkSwiftUIView(loadLandmarkView: $loadLandmarkView, landmarkOptional: self.landmarkOptional )
+                //ViewLandmarkSwiftUIView(loadLandmarkView: $loadLandmarkView, landmarkOptional: self.landmarkOptional )
+                ViewLandmarkSwiftUIView(loadLandmarkView: $loadLandmarkView, currentLandmarkId: $currentLandmarkId )
             } else {
                 ScrollView {
                     ////
@@ -58,7 +60,8 @@ struct PaymentSwiftUIView: View {
                     ////
                     ForEach(landmarkData) { landmark in
                         Button( action: {
-                            self.landmarkOptional = landmark
+                            //self.landmarkOptional = landmark
+                            self.currentLandmarkId = landmark.id
                             self.loadLandmarkView = true
                         } ) {
                             VStack {
@@ -77,12 +80,12 @@ struct PaymentSwiftUIView: View {
                                         .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .top)
 
                                     // bought text
-                                    // SSTODO - pending - how to set the bought data again ?
                                     if landmark.bought {
                                         Text("bought")
-                                            .foregroundColor(CommonUtils.cu_activity_background_color)
+                                            .foregroundColor(CommonUtils.cu_activity_foreground_color)
                                             .shadow(radius: 1.5)
                                             .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .bottom)
+                                            //.opacity(0.5)
                                     } else {
                                         Text("")
                                     }
