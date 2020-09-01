@@ -19,9 +19,11 @@ struct PaymentSwiftUIView: View {
     @State private var landmarkOptional:Landmark? = nil
     @State private var loadLandmarkView = false
     
+    // SSNote : paymentHandler code is currently not working
     let paymentHandler = PaymentHandler()
 
     var bottomBar: some View {
+        // SSNote : currently not working
         VStack(spacing: 0) {
             Divider()
             Group {
@@ -66,13 +68,24 @@ struct PaymentSwiftUIView: View {
                                     landmark.image
                                         .resizable()
                                         .scaledToFit()
-                                        .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .top)
                                         .cornerRadius(20)
+                                        .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .top)
                                     
                                     Text(landmark.name)
                                         .foregroundColor(CommonUtils.cu_activity_background_color)
                                         .shadow(radius: 1.5)
                                         .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .top)
+
+                                    // bought text
+                                    // SSTODO - pending - how to set the bought data again ?
+                                    if landmark.bought {
+                                        Text("bought")
+                                            .foregroundColor(CommonUtils.cu_activity_background_color)
+                                            .shadow(radius: 1.5)
+                                            .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .bottom)
+                                    } else {
+                                        Text("")
+                                    }
 
                                 }
                                 Divider()
@@ -88,7 +101,7 @@ struct PaymentSwiftUIView: View {
     }
     
     func orderItem() {
-        
+        // SSNote : currently not working
         var paymentSummaryItems = [PKPaymentSummaryItem]()
         let amount = PKPaymentSummaryItem(label: "Amount", amount: NSDecimalNumber(string: "8.88"), type: .final)
         let tax = PKPaymentSummaryItem(label: "Tax", amount: NSDecimalNumber(string: "1.12"), type: .final)

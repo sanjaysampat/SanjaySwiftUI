@@ -34,13 +34,25 @@ struct ViewLandmarkSwiftUIView: View {
                 landmarkOptional?.image
                     .resizable()
                     .scaledToFit()
-                    .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .top)
                     .cornerRadius(20)
+                    .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .top)
                 
                 Text(landmarkOptional?.name ?? "")
                     .foregroundColor(CommonUtils.cu_activity_background_color)
                     .shadow(radius: 1.5)
                     .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .top)
+
+                // bought text
+                if ( landmarkOptional?.bought ?? false ) == true {
+                    Text("bought")
+                        .foregroundColor(CommonUtils.cu_activity_background_color)
+                        .shadow(radius: 1.5)
+                        .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .bottom)
+                        .opacity(0.5)
+                } else {
+                    Text("")
+                }
+                
             }
 
             self.bottomBar
@@ -51,7 +63,9 @@ struct ViewLandmarkSwiftUIView: View {
     }
     
     func orderItem() {
-        if let landmark = self.landmarkOptional {
+        var landmark:Landmark
+        if let lm = self.landmarkOptional {
+            landmark = lm
             var paymentSummaryItems = [PKPaymentSummaryItem]()
             let amount = PKPaymentSummaryItem(label: "Amount", amount: NSDecimalNumber(string: landmark.Amount), type: .final)
             let tax = PKPaymentSummaryItem(label: "Tax", amount: NSDecimalNumber(string: landmark.Tax), type: .final)
@@ -61,6 +75,7 @@ struct ViewLandmarkSwiftUIView: View {
             self.paymentHandler.startPayment(paymentSummaryItems: paymentSummaryItems)  { (success) in
                 if success {
                     print("Apple Pay Success for \(landmark.name)")
+                    landmark.bought = true
                 } else {
                     print("Apple Pay Failed for \(landmark.name)")
                 }
