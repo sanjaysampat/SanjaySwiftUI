@@ -81,6 +81,22 @@ struct MenuView: View {
                         }
                         
                     }
+                    
+                    NavigationLink(destination:
+                        PaymentSwiftUIView()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                Image(systemName: "dollarsign.circle")
+                                Text("Apple Pay")
+                                    .font(.caption)
+                            }
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
+                        }
+                        
+                    }
 
                     Spacer()
                 }

@@ -28,6 +28,28 @@ struct Landmark: Hashable, Codable, Identifiable {
         case lakes = "Lakes"
         case rivers = "Rivers"
     }
+
+    var bought:Bool = false
+    
+    var Amount:String
+    var Tax:String
+    var Total:String
+        
+    init( from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = try container.decode(Int.self, forKey: .id)
+        name = try container.decode(String.self, forKey: .name)
+        imageName = try container.decode(String.self, forKey: .imageName)
+        state = try container.decode(String.self, forKey: .state)
+        park = try container.decode(String.self, forKey: .park)
+        Amount = try container.decode(String.self, forKey: .Amount)
+        Tax = try container.decode(String.self, forKey: .Tax)
+        Total = try container.decode(String.self, forKey: .Total)
+        coordinates = try container.decode(Coordinates.self, forKey: .coordinates)
+        category = try container.decode(Category.self, forKey: .category)
+        // optional json item
+        bought = ( try? container.decodeIfPresent(Bool.self, forKey: .bought) ) ?? false
+    }
 }
 
 extension Landmark {

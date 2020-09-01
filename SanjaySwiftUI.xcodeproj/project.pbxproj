@@ -34,6 +34,127 @@
 		726763E224FB7FA40074715B /* LocalDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726763E124FB7FA40074715B /* LocalDemoView.swift */; };
 		726763E524FB8C120074715B /* LocalMarathi.strings in Resources */ = {isa = PBXBuildFile; fileRef = 726763E324FB8C120074715B /* LocalMarathi.strings */; };
 		726763E624FB8C120074715B /* LocalGujarati.strings in Resources */ = {isa = PBXBuildFile; fileRef = 726763E424FB8C120074715B /* LocalGujarati.strings */; };
+		726763E924FBA1380074715B /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726763E824FBA1380074715B /* PaymentButton.swift */; };
+		726763EB24FBA1710074715B /* PaymentSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726763EA24FBA1710074715B /* PaymentSwiftUIView.swift */; };
+		726763ED24FBA27E0074715B /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726763EC24FBA27E0074715B /* VisualEffectBlur.swift */; };
+		726763F024FBB27E0074715B /* Audio+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0CBDB24F7F24600BE9DB0 /* Audio+CoreDataClass.swift */; };
+		726763F124FBB27E0074715B /* PersonPhotoImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */; };
+		726763F224FBB27E0074715B /* SigninFeatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BBAF1124DEBE5700CFC7D6 /* SigninFeatcher.swift */; };
+		726763F324FBB27E0074715B /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204277A24E01CC700DF4958 /* SCLExtensions.swift */; };
+		726763F424FBB27E0074715B /* TonySectionViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7249748A24E4F112006F5C52 /* TonySectionViewer.swift */; };
+		726763F524FBB27E0074715B /* SSPhotoEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B9724D03BE5006B75C9 /* SSPhotoEditorViewController.swift */; };
+		726763F624FBB27E0074715B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BBAF1624DED16100CFC7D6 /* SwiftyJSON.swift */; };
+		726763F724FBB27E0074715B /* SwiftUIImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204276824DFD4A200DF4958 /* SwiftUIImageLoader.swift */; };
+		726763F824FBB27E0074715B /* SanjaySwiftUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72663AB624C5C7AC000596C9 /* SanjaySwiftUI.xcdatamodeld */; };
+		726763F924FBB27E0074715B /* SwiftUIAsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204276624DFD43D00DF4958 /* SwiftUIAsyncImageView.swift */; };
+		726763FA24FBB27E0074715B /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B551BA24DD743E009A0014 /* Landmark.swift */; };
+		726763FB24FBB27E0074715B /* PhotoEditor+Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B7024D034B0006B75C9 /* PhotoEditor+Crop.swift */; };
+		726763FC24FBB27E0074715B /* Audio+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0CBDC24F7F24600BE9DB0 /* Audio+CoreDataProperties.swift */; };
+		726763FD24FBB27E0074715B /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B7224D034B0006B75C9 /* GradientView.swift */; };
+		726763FE24FBB27E0074715B /* CustomImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B5024D02872006B75C9 /* CustomImagePickerViewController.swift */; };
+		726763FF24FBB27E0074715B /* TabSwiftUiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726763DC24FB76D00074715B /* TabSwiftUiView.swift */; };
+		7267640024FBB27E0074715B /* AudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BD188724EEAA600032E3B7 /* AudioView.swift */; };
+		7267640124FBB27E0074715B /* LocalDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726763E124FB7FA40074715B /* LocalDemoView.swift */; };
+		7267640224FBB27E0074715B /* TonySectionCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7249748924E4F112006F5C52 /* TonySectionCat.swift */; };
+		7267640324FBB27E0074715B /* PlayerUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BD188624EEAA600032E3B7 /* PlayerUtility.swift */; };
+		7267640424FBB27E0074715B /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B551B024DD1C8A009A0014 /* UserAuth.swift */; };
+		7267640524FBB27E0074715B /* PhotoEditor+Drawing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B6424D034B0006B75C9 /* PhotoEditor+Drawing.swift */; };
+		7267640624FBB27E0074715B /* TonySectionFeatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7249748B24E4F112006F5C52 /* TonySectionFeatcher.swift */; };
+		7267640724FBB27E0074715B /* PhotoEditor+Gestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B6B24D034B0006B75C9 /* PhotoEditor+Gestures.swift */; };
+		7267640824FBB27E0074715B /* AlertControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B0EF324C99FCF00054F9F /* AlertControlView.swift */; };
+		7267640924FBB27E0074715B /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B6324D034B0006B75C9 /* Protocols.swift */; };
+		7267640A24FBB27E0074715B /* UIImageView+Alpha.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B5A24D034B0006B75C9 /* UIImageView+Alpha.swift */; };
+		7267640B24FBB27E0074715B /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726763EC24FBA27E0074715B /* VisualEffectBlur.swift */; };
+		7267640C24FBB27E0074715B /* SignInUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BBAF0F24DE8F9600CFC7D6 /* SignInUser.swift */; };
+		7267640D24FBB27E0074715B /* SigninViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BBAF1324DEC8EA00CFC7D6 /* SigninViewer.swift */; };
+		7267640E24FBB27E0074715B /* AudioPlayerControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CEEB4E24F8F8BC00A1AFE9 /* AudioPlayerControlsView.swift */; };
+		7267640F24FBB27E0074715B /* PublicCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E111324F6C091007231F7 /* PublicCommit.swift */; };
+		7267641024FBB27E0074715B /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BBAF0124DE694900CFC7D6 /* CommonUtils.swift */; };
+		7267641124FBB27E0074715B /* SwiftUIImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204277424DFFEB900DF4958 /* SwiftUIImageCache.swift */; };
+		7267641224FBB27E0074715B /* Person+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729B0EF524C9B40E00054F9F /* Person+CoreDataClass.swift */; };
+		7267641324FBB27E0074715B /* SigninSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BBAF0B24DE8E2F00CFC7D6 /* SigninSuccess.swift */; };
+		7267641424FBB27E0074715B /* PaymentSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726763EA24FBA1710074715B /* PaymentSwiftUIView.swift */; };
+		7267641524FBB27E0074715B /* EmojiCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B6724D034B0006B75C9 /* EmojiCollectionViewCell.swift */; };
+		7267641624FBB27E0074715B /* CropRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B7324D034B0006B75C9 /* CropRectView.swift */; };
+		7267641724FBB27E0074715B /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726763E824FBA1380074715B /* PaymentButton.swift */; };
+		7267641824FBB27E0074715B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663AB224C5C7AC000596C9 /* AppDelegate.swift */; };
+		7267641924FBB27E0074715B /* StickersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B6224D034B0006B75C9 /* StickersViewController.swift */; };
+		7267641A24FBB27E0074715B /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B6024D034B0006B75C9 /* UIImage+Size.swift */; };
+		7267641B24FBB27E0074715B /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B551AE24DD1690009A0014 /* ListView.swift */; };
+		7267641C24FBB27E0074715B /* ColorsCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B5524D034B0006B75C9 /* ColorsCollectionViewDelegate.swift */; };
+		7267641D24FBB27E0074715B /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D9779E24E1116E0044754C /* CommonExtensions.swift */; };
+		7267641E24FBB27E0074715B /* CropView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B6924D034B0006B75C9 /* CropView.swift */; };
+		7267641F24FBB27E0074715B /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BD188524EEAA600032E3B7 /* VideoView.swift */; };
+		7267642024FBB27E0074715B /* PhotoEditor+UITextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B5924D034B0006B75C9 /* PhotoEditor+UITextView.swift */; };
+		7267642124FBB27E0074715B /* PhotoEditor+StickersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B5824D034B0006B75C9 /* PhotoEditor+StickersViewController.swift */; };
+		7267642224FBB27E0074715B /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204277924E01CC700DF4958 /* SCLAlertView.swift */; };
+		7267642324FBB27E0074715B /* StickerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B6E24D034B0006B75C9 /* StickerCollectionViewCell.swift */; };
+		7267642424FBB27E0074715B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B551B924DD743E009A0014 /* Data.swift */; };
+		7267642524FBB27E0074715B /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */; };
+		7267642624FBB27E0074715B /* CropViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B6F24D034B0006B75C9 /* CropViewController.swift */; };
+		7267642724FBB27E0074715B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663AB924C5C7AC000596C9 /* ContentView.swift */; };
+		7267642824FBB27E0074715B /* UIView+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B5F24D034B0006B75C9 /* UIView+Image.swift */; };
+		7267642924FBB27E0074715B /* PhotoEditor+Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B5624D034B0006B75C9 /* PhotoEditor+Keyboard.swift */; };
+		7267642A24FBB27E0074715B /* String+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D977A024E120AB0044754C /* String+Extra.swift */; };
+		7267642B24FBB27E0074715B /* EmojisCollectionViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B6824D034B0006B75C9 /* EmojisCollectionViewDelegate.swift */; };
+		7267642C24FBB27E0074715B /* ResizeControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B6A24D034B0006B75C9 /* ResizeControl.swift */; };
+		7267642D24FBB27E0074715B /* PrivateCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204276E24DFFA3600DF4958 /* PrivateCommit.swift */; };
+		7267642E24FBB27E0074715B /* AVListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CEEB5024F92EBE00A1AFE9 /* AVListView.swift */; };
+		7267642F24FBB27E0074715B /* UIImage+Crop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B6124D034B0006B75C9 /* UIImage+Crop.swift */; };
+		7267643024FBB27E0074715B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663AB424C5C7AC000596C9 /* SceneDelegate.swift */; };
+		7267643124FBB27E0074715B /* PhotoEditor+Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B5D24D034B0006B75C9 /* PhotoEditor+Font.swift */; };
+		7267643224FBB27E0074715B /* UIImage+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B9924D048C7006B75C9 /* UIImage+Extra.swift */; };
+		7267643324FBB27E0074715B /* ColorCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B7124D034B0006B75C9 /* ColorCollectionViewCell.swift */; };
+		7267643424FBB27E0074715B /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E111124F6A994007231F7 /* MenuView.swift */; };
+		7267643724FBB27E0074715B /* getChartRecordByUser.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69E24E8046700704724 /* getChartRecordByUser.json */; };
+		7267643824FBB27E0074715B /* getDailyQuote.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69924E8046300704724 /* getDailyQuote.json */; };
+		7267643924FBB27E0074715B /* EmojiCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72735B5C24D034B0006B75C9 /* EmojiCollectionViewCell.xib */; };
+		7267643A24FBB27E0074715B /* Photo_Editor.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72735B5724D034B0006B75C9 /* Photo_Editor.xcassets */; };
+		7267643B24FBB27E0074715B /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72735B5324D034B0006B75C9 /* icomoon.ttf */; };
+		7267643C24FBB27E0074715B /* StickerCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72735B6D24D034B0006B75C9 /* StickerCollectionViewCell.xib */; };
+		7267643D24FBB27E0074715B /* PhotoCropEditorBorder.png in Resources */ = {isa = PBXBuildFile; fileRef = 72735B6624D034B0006B75C9 /* PhotoCropEditorBorder.png */; };
+		7267643E24FBB27E0074715B /* LocalGujarati.strings in Resources */ = {isa = PBXBuildFile; fileRef = 726763E424FB8C120074715B /* LocalGujarati.strings */; };
+		7267643F24FBB27E0074715B /* getnewCatRecsByUserPriority.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69D24E8046600704724 /* getnewCatRecsByUserPriority.json */; };
+		7267644024FBB27E0074715B /* chincoteague.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551C424DD743E009A0014 /* chincoteague.jpg */; };
+		7267644124FBB27E0074715B /* ColorCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72735B5B24D034B0006B75C9 /* ColorCollectionViewCell.xib */; };
+		7267644224FBB27E0074715B /* signin.json in Resources */ = {isa = PBXBuildFile; fileRef = 72BBAF0724DE8AFB00CFC7D6 /* signin.json */; };
+		7267644324FBB27E0074715B /* twinlake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551C124DD743E009A0014 /* twinlake.jpg */; };
+		7267644424FBB27E0074715B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72663AC024C5C7BD000596C9 /* LaunchScreen.storyboard */; };
+		7267644524FBB27E0074715B /* StickersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 72735B5424D034B0006B75C9 /* StickersViewController.xib */; };
+		7267644624FBB27E0074715B /* gettonyCategoryList.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69C24E8046600704724 /* gettonyCategoryList.json */; };
+		7267644724FBB27E0074715B /* getnewpriorityFreedomsbyuser.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69A24E8046500704724 /* getnewpriorityFreedomsbyuser.json */; };
+		7267644824FBB27E0074715B /* getHomeSliderCatRecord.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E6A124E8046800704724 /* getHomeSliderCatRecord.json */; };
+		7267644924FBB27E0074715B /* umbagog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551C224DD743E009A0014 /* umbagog.jpg */; };
+		7267644A24FBB27E0074715B /* hiddenlake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551C024DD743E009A0014 /* hiddenlake.jpg */; };
+		7267644B24FBB27E0074715B /* PhotoCropEditorBorder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72735B5E24D034B0006B75C9 /* PhotoCropEditorBorder@2x.png */; };
+		7267644C24FBB27E0074715B /* StoryboardSanjay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72735B4E24D01A86006B75C9 /* StoryboardSanjay.storyboard */; };
+		7267644D24FBB27E0074715B /* landmarkData.json in Resources */ = {isa = PBXBuildFile; fileRef = 72B551C324DD743E009A0014 /* landmarkData.json */; };
+		7267644E24FBB27E0074715B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7252639224D55633002C5ACA /* README.md */; };
+		7267644F24FBB27E0074715B /* getdailyStory.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69B24E8046500704724 /* getdailyStory.json */; };
+		7267645024FBB27E0074715B /* PhotoCropEditorBorder@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 72735B6524D034B0006B75C9 /* PhotoCropEditorBorder@3x.png */; };
+		7267645124FBB27E0074715B /* lakemcdonald.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551BF24DD743E009A0014 /* lakemcdonald.jpg */; };
+		7267645224FBB27E0074715B /* icybay.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551BE24DD743E009A0014 /* icybay.jpg */; };
+		7267645324FBB27E0074715B /* getUserPurchaseDetail.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69F24E8046700704724 /* getUserPurchaseDetail.json */; };
+		7267645424FBB27E0074715B /* getUsersRecord.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E6A224E8046800704724 /* getUsersRecord.json */; };
+		7267645524FBB27E0074715B /* chilkoottrail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551C724DD743E009A0014 /* chilkoottrail.jpg */; };
+		7267645624FBB27E0074715B /* getHomeSliderCatRecordTony.json in Resources */ = {isa = PBXBuildFile; fileRef = 7249749324E52684006F5C52 /* getHomeSliderCatRecordTony.json */; };
+		7267645724FBB27E0074715B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72663ABE24C5C7BD000596C9 /* Preview Assets.xcassets */; };
+		7267645824FBB27E0074715B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 726763DF24FB7E830074715B /* Localizable.strings */; };
+		7267645924FBB27E0074715B /* LocalMarathi.strings in Resources */ = {isa = PBXBuildFile; fileRef = 726763E324FB8C120074715B /* LocalMarathi.strings */; };
+		7267645A24FBB27E0074715B /* silversalmoncreek.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551BD24DD743E009A0014 /* silversalmoncreek.jpg */; };
+		7267645B24FBB27E0074715B /* getnewMostLovedCatData.json in Resources */ = {isa = PBXBuildFile; fileRef = 7282060924E5769500F5F8CB /* getnewMostLovedCatData.json */; };
+		7267645C24FBB27E0074715B /* stmarylake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551C624DD743E009A0014 /* stmarylake.jpg */; };
+		7267645D24FBB27E0074715B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72663ABB24C5C7BD000596C9 /* Assets.xcassets */; };
+		7267645E24FBB27E0074715B /* yukon_charleyrivers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551C524DD743E009A0014 /* yukon_charleyrivers.jpg */; };
+		7267645F24FBB27E0074715B /* rainbowlake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551C824DD743E009A0014 /* rainbowlake.jpg */; };
+		7267646024FBB27E0074715B /* turtlerock.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551BC24DD743E009A0014 /* turtlerock.jpg */; };
+		7267646124FBB27E0074715B /* getQuestionLockValue.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E6A024E8046800704724 /* getQuestionLockValue.json */; };
+		7267646A24FBD7DA0074715B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267646824FBD7D90074715B /* Configuration.swift */; };
+		7267646B24FBD7DA0074715B /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267646824FBD7D90074715B /* Configuration.swift */; };
+		7267646C24FBD7DA0074715B /* PaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267646924FBD7DA0074715B /* PaymentHandler.swift */; };
+		7267646D24FBD7DA0074715B /* PaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267646924FBD7DA0074715B /* PaymentHandler.swift */; };
+		7267646F24FBE3E50074715B /* ApplePayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267646E24FBE3E50074715B /* ApplePayController.swift */; };
+		7267647024FBE3E50074715B /* ApplePayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267646E24FBE3E50074715B /* ApplePayController.swift */; };
 		72735B4F24D01A86006B75C9 /* StoryboardSanjay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72735B4E24D01A86006B75C9 /* StoryboardSanjay.storyboard */; };
 		72735B5124D02872006B75C9 /* CustomImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B5024D02872006B75C9 /* CustomImagePickerViewController.swift */; };
 		72735B7424D034B0006B75C9 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72735B5324D034B0006B75C9 /* icomoon.ttf */; };
@@ -114,6 +235,8 @@
 		72BD188A24EEAA600032E3B7 /* AudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BD188724EEAA600032E3B7 /* AudioView.swift */; };
 		72CEEB4F24F8F8BC00A1AFE9 /* AudioPlayerControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CEEB4E24F8F8BC00A1AFE9 /* AudioPlayerControlsView.swift */; };
 		72CEEB5124F92EBE00A1AFE9 /* AVListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CEEB5024F92EBE00A1AFE9 /* AVListView.swift */; };
+		72D2498824FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D2498724FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift */; };
+		72D2498924FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D2498724FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift */; };
 		72D9779F24E1116E0044754C /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D9779E24E1116E0044754C /* CommonExtensions.swift */; };
 		72D977A124E120AC0044754C /* String+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D977A024E120AB0044754C /* String+Extra.swift */; };
 		72F0CBDD24F7F24600BE9DB0 /* Audio+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0CBDB24F7F24600BE9DB0 /* Audio+CoreDataClass.swift */; };
@@ -171,6 +294,15 @@
 		726763E124FB7FA40074715B /* LocalDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDemoView.swift; sourceTree = "<group>"; };
 		726763E324FB8C120074715B /* LocalMarathi.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = LocalMarathi.strings; sourceTree = "<group>"; };
 		726763E424FB8C120074715B /* LocalGujarati.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = LocalGujarati.strings; sourceTree = "<group>"; };
+		726763E824FBA1380074715B /* PaymentButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentButton.swift; sourceTree = "<group>"; };
+		726763EA24FBA1710074715B /* PaymentSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentSwiftUIView.swift; sourceTree = "<group>"; };
+		726763EC24FBA27E0074715B /* VisualEffectBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
+		7267646524FBB27E0074715B /* SanjaySwiftUIPay.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SanjaySwiftUIPay.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7267646624FBB2860074715B /* SanjaySwiftUI copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SanjaySwiftUI copy-Info.plist"; path = "/Users/Shared/sanjaysampat/myIOSProjects/SanjaySwiftUI/SanjaySwiftUI copy-Info.plist"; sourceTree = "<absolute>"; };
+		7267646724FBB2D70074715B /* SanjaySwiftUIPay.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SanjaySwiftUIPay.entitlements; sourceTree = "<group>"; };
+		7267646824FBD7D90074715B /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		7267646924FBD7DA0074715B /* PaymentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentHandler.swift; sourceTree = "<group>"; };
+		7267646E24FBE3E50074715B /* ApplePayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayController.swift; sourceTree = "<group>"; };
 		72735B4E24D01A86006B75C9 /* StoryboardSanjay.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryboardSanjay.storyboard; sourceTree = "<group>"; };
 		72735B5024D02872006B75C9 /* CustomImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImagePickerViewController.swift; sourceTree = "<group>"; };
 		72735B5324D034B0006B75C9 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
@@ -251,6 +383,7 @@
 		72BD188724EEAA600032E3B7 /* AudioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioView.swift; sourceTree = "<group>"; };
 		72CEEB4E24F8F8BC00A1AFE9 /* AudioPlayerControlsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerControlsView.swift; sourceTree = "<group>"; };
 		72CEEB5024F92EBE00A1AFE9 /* AVListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVListView.swift; sourceTree = "<group>"; };
+		72D2498724FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLandmarkSwiftUIView.swift; sourceTree = "<group>"; };
 		72D9779E24E1116E0044754C /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
 		72D977A024E120AB0044754C /* String+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extra.swift"; sourceTree = "<group>"; };
 		72F0CBDB24F7F24600BE9DB0 /* Audio+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Audio+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -273,6 +406,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		72663AD024C5C7BE000596C9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7267643524FBB27E0074715B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -326,11 +466,13 @@
 		72663AA624C5C7AC000596C9 = {
 			isa = PBXGroup;
 			children = (
+				7267646724FBB2D70074715B /* SanjaySwiftUIPay.entitlements */,
 				7252639224D55633002C5ACA /* README.md */,
 				72663AB124C5C7AC000596C9 /* SanjaySwiftUI */,
 				72663ACB24C5C7BD000596C9 /* SanjaySwiftUITests */,
 				72663AD624C5C7BE000596C9 /* SanjaySwiftUIUITests */,
 				72663AB024C5C7AC000596C9 /* Products */,
+				7267646624FBB2860074715B /* SanjaySwiftUI copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -340,6 +482,7 @@
 				72663AAF24C5C7AC000596C9 /* SanjaySwiftUI.app */,
 				72663AC824C5C7BD000596C9 /* SanjaySwiftUITests.xctest */,
 				72663AD324C5C7BE000596C9 /* SanjaySwiftUIUITests.xctest */,
+				7267646524FBB27E0074715B /* SanjaySwiftUIPay.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -347,6 +490,7 @@
 		72663AB124C5C7AC000596C9 /* SanjaySwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				726763E724FBA1380074715B /* ApplePay */,
 				726763DE24FB7E830074715B /* Localization */,
 				7249748824E4F112006F5C52 /* TonySectionJson */,
 				72BBAF0424DE899C00CFC7D6 /* SignInJson */,
@@ -410,6 +554,19 @@
 			path = Localization;
 			sourceTree = "<group>";
 		};
+		726763E724FBA1380074715B /* ApplePay */ = {
+			isa = PBXGroup;
+			children = (
+				7267646824FBD7D90074715B /* Configuration.swift */,
+				7267646924FBD7DA0074715B /* PaymentHandler.swift */,
+				726763E824FBA1380074715B /* PaymentButton.swift */,
+				726763EA24FBA1710074715B /* PaymentSwiftUIView.swift */,
+				7267646E24FBE3E50074715B /* ApplePayController.swift */,
+				72D2498724FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift */,
+			);
+			path = ApplePay;
+			sourceTree = "<group>";
+		};
 		72735B5224D034B0006B75C9 /* Photo_Editor */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,6 +611,7 @@
 		729B0EF024C979FD00054F9F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				726763EC24FBA27E0074715B /* VisualEffectBlur.swift */,
 				727E111324F6C091007231F7 /* PublicCommit.swift */,
 				72BD188424EEAA600032E3B7 /* PlayerView */,
 				72D977A024E120AB0044754C /* String+Extra.swift */,
@@ -597,6 +755,23 @@
 			productReference = 72663AD324C5C7BE000596C9 /* SanjaySwiftUIUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		726763EE24FBB27E0074715B /* SanjaySwiftUIPay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7267646224FBB27E0074715B /* Build configuration list for PBXNativeTarget "SanjaySwiftUIPay" */;
+			buildPhases = (
+				726763EF24FBB27E0074715B /* Sources */,
+				7267643524FBB27E0074715B /* Frameworks */,
+				7267643624FBB27E0074715B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SanjaySwiftUIPay;
+			productName = SanjaySwiftUI;
+			productReference = 7267646524FBB27E0074715B /* SanjaySwiftUIPay.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -636,6 +811,7 @@
 				72663AAE24C5C7AC000596C9 /* SanjaySwiftUI */,
 				72663AC724C5C7BD000596C9 /* SanjaySwiftUITests */,
 				72663AD224C5C7BE000596C9 /* SanjaySwiftUIUITests */,
+				726763EE24FBB27E0074715B /* SanjaySwiftUIPay */,
 			);
 		};
 /* End PBXProject section */
@@ -705,6 +881,56 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7267643624FBB27E0074715B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7267643724FBB27E0074715B /* getChartRecordByUser.json in Resources */,
+				7267643824FBB27E0074715B /* getDailyQuote.json in Resources */,
+				7267643924FBB27E0074715B /* EmojiCollectionViewCell.xib in Resources */,
+				7267643A24FBB27E0074715B /* Photo_Editor.xcassets in Resources */,
+				7267643B24FBB27E0074715B /* icomoon.ttf in Resources */,
+				7267643C24FBB27E0074715B /* StickerCollectionViewCell.xib in Resources */,
+				7267643D24FBB27E0074715B /* PhotoCropEditorBorder.png in Resources */,
+				7267643E24FBB27E0074715B /* LocalGujarati.strings in Resources */,
+				7267643F24FBB27E0074715B /* getnewCatRecsByUserPriority.json in Resources */,
+				7267644024FBB27E0074715B /* chincoteague.jpg in Resources */,
+				7267644124FBB27E0074715B /* ColorCollectionViewCell.xib in Resources */,
+				7267644224FBB27E0074715B /* signin.json in Resources */,
+				7267644324FBB27E0074715B /* twinlake.jpg in Resources */,
+				7267644424FBB27E0074715B /* LaunchScreen.storyboard in Resources */,
+				7267644524FBB27E0074715B /* StickersViewController.xib in Resources */,
+				7267644624FBB27E0074715B /* gettonyCategoryList.json in Resources */,
+				7267644724FBB27E0074715B /* getnewpriorityFreedomsbyuser.json in Resources */,
+				7267644824FBB27E0074715B /* getHomeSliderCatRecord.json in Resources */,
+				7267644924FBB27E0074715B /* umbagog.jpg in Resources */,
+				7267644A24FBB27E0074715B /* hiddenlake.jpg in Resources */,
+				7267644B24FBB27E0074715B /* PhotoCropEditorBorder@2x.png in Resources */,
+				7267644C24FBB27E0074715B /* StoryboardSanjay.storyboard in Resources */,
+				7267644D24FBB27E0074715B /* landmarkData.json in Resources */,
+				7267644E24FBB27E0074715B /* README.md in Resources */,
+				7267644F24FBB27E0074715B /* getdailyStory.json in Resources */,
+				7267645024FBB27E0074715B /* PhotoCropEditorBorder@3x.png in Resources */,
+				7267645124FBB27E0074715B /* lakemcdonald.jpg in Resources */,
+				7267645224FBB27E0074715B /* icybay.jpg in Resources */,
+				7267645324FBB27E0074715B /* getUserPurchaseDetail.json in Resources */,
+				7267645424FBB27E0074715B /* getUsersRecord.json in Resources */,
+				7267645524FBB27E0074715B /* chilkoottrail.jpg in Resources */,
+				7267645624FBB27E0074715B /* getHomeSliderCatRecordTony.json in Resources */,
+				7267645724FBB27E0074715B /* Preview Assets.xcassets in Resources */,
+				7267645824FBB27E0074715B /* Localizable.strings in Resources */,
+				7267645924FBB27E0074715B /* LocalMarathi.strings in Resources */,
+				7267645A24FBB27E0074715B /* silversalmoncreek.jpg in Resources */,
+				7267645B24FBB27E0074715B /* getnewMostLovedCatData.json in Resources */,
+				7267645C24FBB27E0074715B /* stmarylake.jpg in Resources */,
+				7267645D24FBB27E0074715B /* Assets.xcassets in Resources */,
+				7267645E24FBB27E0074715B /* yukon_charleyrivers.jpg in Resources */,
+				7267645F24FBB27E0074715B /* rainbowlake.jpg in Resources */,
+				7267646024FBB27E0074715B /* turtlerock.jpg in Resources */,
+				7267646124FBB27E0074715B /* getQuestionLockValue.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -715,6 +941,7 @@
 				72F0CBDD24F7F24600BE9DB0 /* Audio+CoreDataClass.swift in Sources */,
 				7216BB5C24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift in Sources */,
 				72BBAF1224DEBE5700CFC7D6 /* SigninFeatcher.swift in Sources */,
+				7267646F24FBE3E50074715B /* ApplePayController.swift in Sources */,
 				7204277C24E01CC800DF4958 /* SCLExtensions.swift in Sources */,
 				7249748F24E4F112006F5C52 /* TonySectionViewer.swift in Sources */,
 				72735B9824D03BE5006B75C9 /* SSPhotoEditorViewController.swift in Sources */,
@@ -728,6 +955,7 @@
 				72735B9324D034B0006B75C9 /* GradientView.swift in Sources */,
 				72735B5124D02872006B75C9 /* CustomImagePickerViewController.swift in Sources */,
 				726763DD24FB76D00074715B /* TabSwiftUiView.swift in Sources */,
+				7267646A24FBD7DA0074715B /* Configuration.swift in Sources */,
 				72BD188A24EEAA600032E3B7 /* AudioView.swift in Sources */,
 				726763E224FB7FA40074715B /* LocalDemoView.swift in Sources */,
 				7249748E24E4F112006F5C52 /* TonySectionCat.swift in Sources */,
@@ -739,6 +967,7 @@
 				729B0EF424C99FCF00054F9F /* AlertControlView.swift in Sources */,
 				72735B8424D034B0006B75C9 /* Protocols.swift in Sources */,
 				72735B7B24D034B0006B75C9 /* UIImageView+Alpha.swift in Sources */,
+				726763ED24FBA27E0074715B /* VisualEffectBlur.swift in Sources */,
 				72BBAF1024DE8F9700CFC7D6 /* SignInUser.swift in Sources */,
 				72BBAF1424DEC8EA00CFC7D6 /* SigninViewer.swift in Sources */,
 				72CEEB4F24F8F8BC00A1AFE9 /* AudioPlayerControlsView.swift in Sources */,
@@ -747,10 +976,13 @@
 				7204277524DFFEB900DF4958 /* SwiftUIImageCache.swift in Sources */,
 				729B0EF724C9B40E00054F9F /* Person+CoreDataClass.swift in Sources */,
 				72BBAF0C24DE8E3000CFC7D6 /* SigninSuccess.swift in Sources */,
+				726763EB24FBA1710074715B /* PaymentSwiftUIView.swift in Sources */,
 				72735B8824D034B0006B75C9 /* EmojiCollectionViewCell.swift in Sources */,
 				72735B9424D034B0006B75C9 /* CropRectView.swift in Sources */,
+				726763E924FBA1380074715B /* PaymentButton.swift in Sources */,
 				72663AB324C5C7AC000596C9 /* AppDelegate.swift in Sources */,
 				72735B8324D034B0006B75C9 /* StickersViewController.swift in Sources */,
+				7267646C24FBD7DA0074715B /* PaymentHandler.swift in Sources */,
 				72735B8124D034B0006B75C9 /* UIImage+Size.swift in Sources */,
 				72B551AF24DD1690009A0014 /* ListView.swift in Sources */,
 				72735B7624D034B0006B75C9 /* ColorsCollectionViewDelegate.swift in Sources */,
@@ -758,6 +990,7 @@
 				72735B8A24D034B0006B75C9 /* CropView.swift in Sources */,
 				72BD188824EEAA600032E3B7 /* VideoView.swift in Sources */,
 				72735B7A24D034B0006B75C9 /* PhotoEditor+UITextView.swift in Sources */,
+				72D2498824FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift in Sources */,
 				72735B7924D034B0006B75C9 /* PhotoEditor+StickersViewController.swift in Sources */,
 				7204277B24E01CC800DF4958 /* SCLAlertView.swift in Sources */,
 				72735B8F24D034B0006B75C9 /* StickerCollectionViewCell.swift in Sources */,
@@ -794,6 +1027,86 @@
 			buildActionMask = 2147483647;
 			files = (
 				72663AD824C5C7BE000596C9 /* SanjaySwiftUIUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		726763EF24FBB27E0074715B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				726763F024FBB27E0074715B /* Audio+CoreDataClass.swift in Sources */,
+				726763F124FBB27E0074715B /* PersonPhotoImagePickerViewController.swift in Sources */,
+				726763F224FBB27E0074715B /* SigninFeatcher.swift in Sources */,
+				7267647024FBE3E50074715B /* ApplePayController.swift in Sources */,
+				726763F324FBB27E0074715B /* SCLExtensions.swift in Sources */,
+				726763F424FBB27E0074715B /* TonySectionViewer.swift in Sources */,
+				726763F524FBB27E0074715B /* SSPhotoEditorViewController.swift in Sources */,
+				726763F624FBB27E0074715B /* SwiftyJSON.swift in Sources */,
+				726763F724FBB27E0074715B /* SwiftUIImageLoader.swift in Sources */,
+				726763F824FBB27E0074715B /* SanjaySwiftUI.xcdatamodeld in Sources */,
+				726763F924FBB27E0074715B /* SwiftUIAsyncImageView.swift in Sources */,
+				726763FA24FBB27E0074715B /* Landmark.swift in Sources */,
+				726763FB24FBB27E0074715B /* PhotoEditor+Crop.swift in Sources */,
+				726763FC24FBB27E0074715B /* Audio+CoreDataProperties.swift in Sources */,
+				726763FD24FBB27E0074715B /* GradientView.swift in Sources */,
+				726763FE24FBB27E0074715B /* CustomImagePickerViewController.swift in Sources */,
+				726763FF24FBB27E0074715B /* TabSwiftUiView.swift in Sources */,
+				7267646B24FBD7DA0074715B /* Configuration.swift in Sources */,
+				7267640024FBB27E0074715B /* AudioView.swift in Sources */,
+				7267640124FBB27E0074715B /* LocalDemoView.swift in Sources */,
+				7267640224FBB27E0074715B /* TonySectionCat.swift in Sources */,
+				7267640324FBB27E0074715B /* PlayerUtility.swift in Sources */,
+				7267640424FBB27E0074715B /* UserAuth.swift in Sources */,
+				7267640524FBB27E0074715B /* PhotoEditor+Drawing.swift in Sources */,
+				7267640624FBB27E0074715B /* TonySectionFeatcher.swift in Sources */,
+				7267640724FBB27E0074715B /* PhotoEditor+Gestures.swift in Sources */,
+				7267640824FBB27E0074715B /* AlertControlView.swift in Sources */,
+				7267640924FBB27E0074715B /* Protocols.swift in Sources */,
+				7267640A24FBB27E0074715B /* UIImageView+Alpha.swift in Sources */,
+				7267640B24FBB27E0074715B /* VisualEffectBlur.swift in Sources */,
+				7267640C24FBB27E0074715B /* SignInUser.swift in Sources */,
+				7267640D24FBB27E0074715B /* SigninViewer.swift in Sources */,
+				7267640E24FBB27E0074715B /* AudioPlayerControlsView.swift in Sources */,
+				7267640F24FBB27E0074715B /* PublicCommit.swift in Sources */,
+				7267641024FBB27E0074715B /* CommonUtils.swift in Sources */,
+				7267641124FBB27E0074715B /* SwiftUIImageCache.swift in Sources */,
+				7267641224FBB27E0074715B /* Person+CoreDataClass.swift in Sources */,
+				7267641324FBB27E0074715B /* SigninSuccess.swift in Sources */,
+				7267641424FBB27E0074715B /* PaymentSwiftUIView.swift in Sources */,
+				7267641524FBB27E0074715B /* EmojiCollectionViewCell.swift in Sources */,
+				7267641624FBB27E0074715B /* CropRectView.swift in Sources */,
+				7267641724FBB27E0074715B /* PaymentButton.swift in Sources */,
+				7267641824FBB27E0074715B /* AppDelegate.swift in Sources */,
+				7267641924FBB27E0074715B /* StickersViewController.swift in Sources */,
+				7267646D24FBD7DA0074715B /* PaymentHandler.swift in Sources */,
+				7267641A24FBB27E0074715B /* UIImage+Size.swift in Sources */,
+				7267641B24FBB27E0074715B /* ListView.swift in Sources */,
+				7267641C24FBB27E0074715B /* ColorsCollectionViewDelegate.swift in Sources */,
+				7267641D24FBB27E0074715B /* CommonExtensions.swift in Sources */,
+				7267641E24FBB27E0074715B /* CropView.swift in Sources */,
+				7267641F24FBB27E0074715B /* VideoView.swift in Sources */,
+				7267642024FBB27E0074715B /* PhotoEditor+UITextView.swift in Sources */,
+				72D2498924FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift in Sources */,
+				7267642124FBB27E0074715B /* PhotoEditor+StickersViewController.swift in Sources */,
+				7267642224FBB27E0074715B /* SCLAlertView.swift in Sources */,
+				7267642324FBB27E0074715B /* StickerCollectionViewCell.swift in Sources */,
+				7267642424FBB27E0074715B /* Data.swift in Sources */,
+				7267642524FBB27E0074715B /* Person+CoreDataProperties.swift in Sources */,
+				7267642624FBB27E0074715B /* CropViewController.swift in Sources */,
+				7267642724FBB27E0074715B /* ContentView.swift in Sources */,
+				7267642824FBB27E0074715B /* UIView+Image.swift in Sources */,
+				7267642924FBB27E0074715B /* PhotoEditor+Keyboard.swift in Sources */,
+				7267642A24FBB27E0074715B /* String+Extra.swift in Sources */,
+				7267642B24FBB27E0074715B /* EmojisCollectionViewDelegate.swift in Sources */,
+				7267642C24FBB27E0074715B /* ResizeControl.swift in Sources */,
+				7267642D24FBB27E0074715B /* PrivateCommit.swift in Sources */,
+				7267642E24FBB27E0074715B /* AVListView.swift in Sources */,
+				7267642F24FBB27E0074715B /* UIImage+Crop.swift in Sources */,
+				7267643024FBB27E0074715B /* SceneDelegate.swift in Sources */,
+				7267643124FBB27E0074715B /* PhotoEditor+Font.swift in Sources */,
+				7267643224FBB27E0074715B /* UIImage+Extra.swift in Sources */,
+				7267643324FBB27E0074715B /* ColorCollectionViewCell.swift in Sources */,
+				7267643424FBB27E0074715B /* MenuView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1064,6 +1377,52 @@
 			};
 			name = Release;
 		};
+		7267646324FBB27E0074715B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SanjaySwiftUIPay.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SanjaySwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = H83M7E9Y5U;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SanjaySwiftUI copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OFFERING_APPLE_PAY_BUNDLE_PREFIX = com.dgflick.SanjaySwiftUIPay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dgflick.SanjaySwiftUIPay;
+				PRODUCT_NAME = SanjaySwiftUIPay;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7267646424FBB27E0074715B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SanjaySwiftUIPay.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"SanjaySwiftUI/Preview Content\"";
+				DEVELOPMENT_TEAM = H83M7E9Y5U;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "SanjaySwiftUI copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OFFERING_APPLE_PAY_BUNDLE_PREFIX = com.dgflick.SanjaySwiftUIPay;
+				PRODUCT_BUNDLE_IDENTIFIER = com.dgflick.SanjaySwiftUIPay;
+				PRODUCT_NAME = SanjaySwiftUIPay;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1099,6 +1458,15 @@
 			buildConfigurations = (
 				72663AE324C5C7BE000596C9 /* Debug */,
 				72663AE424C5C7BE000596C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7267646224FBB27E0074715B /* Build configuration list for PBXNativeTarget "SanjaySwiftUIPay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7267646324FBB27E0074715B /* Debug */,
+				7267646424FBB27E0074715B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
