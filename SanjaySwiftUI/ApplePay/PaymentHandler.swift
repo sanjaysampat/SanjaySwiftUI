@@ -14,6 +14,7 @@ class PaymentHandler: NSObject {
 
     var paymentController: PKPaymentAuthorizationController?
     var paymentSummaryItems = [PKPaymentSummaryItem]()
+    var requiredShippingContactFields:Set<PKContactField> = []
     var paymentStatus = PKPaymentAuthorizationStatus.failure
     var completionHandler: PaymentCompletionHandler?
 
@@ -29,11 +30,12 @@ class PaymentHandler: NSObject {
                 PKPaymentAuthorizationController.canMakePayments(usingNetworks: supportedNetworks))
     }
     
-    func startPayment(paymentSummaryItems:[PKPaymentSummaryItem], completion: @escaping PaymentCompletionHandler) {
+    func startPayment( paymentSummaryItems:[PKPaymentSummaryItem], requiredShippingContactFields:Set<PKContactField> = [], completion: @escaping PaymentCompletionHandler ) {
 
         completionHandler = completion
         
         self.paymentSummaryItems = paymentSummaryItems
+        self.requiredShippingContactFields = requiredShippingContactFields
         /*
         let amount = PKPaymentSummaryItem(label: "Amount", amount: NSDecimalNumber(string: "8.88"), type: .final)
         let tax = PKPaymentSummaryItem(label: "Tax", amount: NSDecimalNumber(string: "1.12"), type: .final)
@@ -48,7 +50,7 @@ class PaymentHandler: NSObject {
         paymentRequest.merchantCapabilities = .capability3DS
         paymentRequest.countryCode = "US"
         paymentRequest.currencyCode = "USD"
-        //paymentRequest.requiredShippingContactFields = [.postalAddress, .phoneNumber]
+        paymentRequest.requiredShippingContactFields = requiredShippingContactFields // [.postalAddress, .phoneNumber]
         paymentRequest.supportedNetworks = PaymentHandler.supportedNetworks
         
         // Display our payment request
@@ -105,6 +107,7 @@ extension PaymentHandler: PKPaymentAuthorizationControllerDelegate {
     
     func paymentAuthorizationController(_ controller: PKPaymentAuthorizationController, didSelectPaymentMethod paymentMethod: PKPaymentMethod, handler completion: @escaping (PKPaymentRequestPaymentMethodUpdate) -> Void) {
         // The didSelectPaymentMethod delegate method allows you to make changes when the user updates their payment card
+        
         // Here we're applying a $2 discount when a debit card is selected
         guard paymentMethod.type == .debit else {
             completion(PKPaymentRequestPaymentMethodUpdate(paymentSummaryItems: paymentSummaryItems))
@@ -112,11 +115,13 @@ extension PaymentHandler: PKPaymentAuthorizationControllerDelegate {
         }
 
         var discountedSummaryItems = paymentSummaryItems
+        /*
         let discount = PKPaymentSummaryItem(label: "Debit Card Discount", amount: NSDecimalNumber(string: "-2.00"))
         discountedSummaryItems.insert(discount, at: paymentSummaryItems.count - 1)
         if let total = paymentSummaryItems.last {
             total.amount = total.amount.subtracting(NSDecimalNumber(string: "2.00"))
         }
+        */
         completion(PKPaymentRequestPaymentMethodUpdate(paymentSummaryItems: discountedSummaryItems))
     }
     

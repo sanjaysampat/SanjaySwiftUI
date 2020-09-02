@@ -1,5 +1,21 @@
 [
-    {
+     {
+        "name": "Learning Python",
+        "category": "EBook",
+        "city": "Fabrizio Romano",
+        "state": "PACKT",
+        "id": 2001,
+        "park": "Learning to code like a professional with Python",
+        "coordinates": {
+            "longitude": 0,
+            "latitude": 0
+        },
+        "Amount": "1.0",
+        "Tax":"0.2",
+        "Total":"1.2",
+        "imageName": "LearningPython"
+    },
+   {
         "name": "Turtle Rock",
         "category": "Featured",
         "city": "Twentynine Palms",

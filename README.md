@@ -49,6 +49,7 @@ SwiftUI project creation to learn.
     * Tabview added with Localizable Strings files for ગુજરાતી and मराठी .
     * Apple Pay test integration
         * Buy with various Landmark items. 
+        * Set different shipping options with shipping charges ( Work in Progress )
     * Set landmark item as 'bought' 
         * temporary both for success/fail
         * used filteredLandMark and 'firstIndex' to find the index of record, to modify it.

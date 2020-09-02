@@ -34,6 +34,12 @@ struct ViewLandmarkSwiftUIView: View {
 
     var body: some View {
         VStack {
+            
+            Text(filteredLandMark?.category.rawValue ?? "")
+                .foregroundColor(CommonUtils.cu_activity_background_color)
+                .shadow(radius: 1.5)
+                .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .bottom)
+
             ZStack {
                 filteredLandMark?.image
                     .resizable()
@@ -45,17 +51,17 @@ struct ViewLandmarkSwiftUIView: View {
                     .foregroundColor(CommonUtils.cu_activity_background_color)
                     .shadow(radius: 1.5)
                     .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .top)
-
-                // bought text
-                if ( filteredLandMark?.bought ?? false ) == true {
-                    Text("bought")
-                        .foregroundColor(CommonUtils.cu_activity_foreground_color)
-                        .shadow(radius: 1.5)
-                        .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .bottom)
+                
+                    // bought text
+                    if ( filteredLandMark?.bought ?? false ) == true {
+                        Text("bought")
+                            .foregroundColor(CommonUtils.cu_activity_foreground_color)
+                            .shadow(radius: 1.5)
+                            .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .bottom)
                         //.opacity(0.5)
-                } else {
-                    Text("")
-                }
+                    } else {
+                        Text("")
+                    }
                 
             }
 
@@ -77,13 +83,33 @@ struct ViewLandmarkSwiftUIView: View {
         var landmark:Landmark
         if let lm = self.filteredLandMark {
             landmark = lm
+            
+            // category
+            // email - .ebook  - [.email]
+            // default - [.postalAddress, .phoneNumber] 
+            var requiredShippingContactFields:Set<PKContactField> = []
+            switch landmark.category {
+                case .ebook :    
+                    requiredShippingContactFields = [.emailAddress]
+                default :    
+                    requiredShippingContactFields = [.postalAddress, .phoneNumber]
+            }
+                          
             var paymentSummaryItems = [PKPaymentSummaryItem]()
             let amount = PKPaymentSummaryItem(label: "Amount", amount: NSDecimalNumber(string: landmark.Amount), type: .final)
             let tax = PKPaymentSummaryItem(label: "Tax", amount: NSDecimalNumber(string: landmark.Tax), type: .final)
-            let total = PKPaymentSummaryItem(label: "Total", amount: NSDecimalNumber(string: landmark.Total), type: .pending)
-            paymentSummaryItems = [amount, tax, total]
+            paymentSummaryItems = [amount, tax]
+            var shipping = ""
+            if landmark.category == .lakes && NSDecimalNumber(string: landmark.Total) > 0.00 {
+                shipping = "0.5"
+                let fullTotal = NSDecimalNumber(string: landmark.Total).adding(NSDecimalNumber(string: shipping))
+                paymentSummaryItems.append(PKPaymentSummaryItem(label: "Shipping", amount: NSDecimalNumber(string: shipping), type: .final))
+                paymentSummaryItems.append(PKPaymentSummaryItem(label: "Total", amount: fullTotal, type: .pending))
+           } else {
+                paymentSummaryItems.append(PKPaymentSummaryItem(label: "Total", amount: NSDecimalNumber(string: landmark.Total), type: .pending))
+            }
             
-            self.paymentHandler.startPayment(paymentSummaryItems: paymentSummaryItems)  { (success) in
+            self.paymentHandler.startPayment( paymentSummaryItems: paymentSummaryItems, requiredShippingContactFields:requiredShippingContactFields )  { (success) in
                 
                 if let row = landmarkData.firstIndex(where: { $0.id == self.currentLandmarkId }) {
                     if success {

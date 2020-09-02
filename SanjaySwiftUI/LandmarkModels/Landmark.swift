@@ -27,6 +27,7 @@ struct Landmark: Hashable, Codable, Identifiable {
         case featured = "Featured"
         case lakes = "Lakes"
         case rivers = "Rivers"
+        case ebook = "EBook"
     }
 
     var bought:Bool = false
