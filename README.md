@@ -46,10 +46,13 @@ SwiftUI project creation to learn.
             * Issue while adding more observers.
             * 'SourceKitService" and/or 'Swift' process on mac taking max memory, so xcode and all mac proccesses slogs to halt ( macOS Catalina 10.15.6, tried on XCode 11.6 and 11.5)
     * Added Navigation view - 'Menu' option in content view.
-    * Tabview added with Localizable Strings files for ગુજરાતી and मराठी .
+    * Tabview added with Localizable Strings files for ગુજરાતી and मराठी display in tab.
     * Apple Pay test integration
         * Buy with various Landmark items. 
-        * Set different shipping options with shipping charges ( Work in Progress )
+        * Set different shipping options with shipping charges
+            * EBook category with email shippingContactFields only
+            * PaymentSummaryItem 'Shipping' charges for Lakes
+            * 0 amount product without shipping charges.
     * Set landmark item as 'bought' 
         * temporary both for success/fail
         * used filteredLandMark and 'firstIndex' to find the index of record, to modify it.

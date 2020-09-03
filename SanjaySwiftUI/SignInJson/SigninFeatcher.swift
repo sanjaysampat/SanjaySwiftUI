@@ -15,7 +15,7 @@ public class SigninFetcher: ObservableObject {
     let jsonFileName = "signin.json"
     
     init( userEmail:String = "" ) {
-        // SSTODO to check here if local json file of user is available.
+        // SSNote to check here if local json file of user is available.
         if userEmail.isEmpty || !loadLocally(userEmail: userEmail) {
             load()
         }

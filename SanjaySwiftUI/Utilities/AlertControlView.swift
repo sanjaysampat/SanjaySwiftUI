@@ -27,7 +27,7 @@ struct AlertControlView: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewControllerSS: UIViewController, context: UIViewControllerRepresentableContext<AlertControlView>) {
         // Make sure that Alert instance exist after View's body get re-rendered
         guard context.coordinator.alert == nil else { return }
-        //print( "SSTODO - AlertControlView - self.showAlert \(self.showAlert) and self.textChanged=\(self.textChanged)" )
+        //print( "SSPrint - AlertControlView - self.showAlert \(self.showAlert) and self.textChanged=\(self.textChanged)" )
         if self.showAlert == 1 {
 
             // Create UIAlertController instance that is gonna present on UIViewController
@@ -59,7 +59,7 @@ struct AlertControlView: UIViewControllerRepresentable {
                 alert.dismiss(animated: true) {
                     self.textChanged = true
                     self.showAlert = 0
-                    //print( "SSTODO - AlertControlView alert.dismiss - self.showAlert=\(self.showAlert) and self.textChanged=\(self.textChanged) and self.textString=\(self.textString)" )
+                    //print( "SSPrint - AlertControlView alert.dismiss - self.showAlert=\(self.showAlert) and self.textChanged=\(self.textChanged) and self.textString=\(self.textString)" )
                 }
             })
 

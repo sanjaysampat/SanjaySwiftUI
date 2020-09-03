@@ -23,8 +23,8 @@ struct SigninSuccess: Codable {
         case CompanyUserId
     }
     
-    // SSTODO how to decode signInUsers or "Success" or Users()
-    // SSTOD take help of "https://matteomanferdini.com/codable/"
+    // SSNote how to decode signInUsers or "Success" or Users()
+    // take help of "https://matteomanferdini.com/codable/"
     
     init( from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)

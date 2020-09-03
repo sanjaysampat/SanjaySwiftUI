@@ -117,8 +117,7 @@ struct ViewLandmarkSwiftUIView: View {
                         self.loadLandmarkView = false
                     } else {
                         print("Apple Pay Failed for \(self.filteredLandMark?.name ?? "Unknown")")
-                        // SSNote : for testing only // SSTODO
-                        landmarkData[row].bought = true
+                        landmarkData[row].bought = false
                         self.loadLandmarkView = false
                     }
                 } else {

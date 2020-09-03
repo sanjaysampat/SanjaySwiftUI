@@ -14,7 +14,7 @@ struct LocalDemoView: View {
 
     var body: some View {
         VStack {
-            PrintinView("SSTODO - PrintinView - LocalDemoView - self.localeLanguage \(self.localeLanguage)")
+            PrintinView("SSPrint - PrintinView - LocalDemoView - self.localeLanguage \(self.localeLanguage)")
 
             Text("string_my_name_is", tableName: localeLanguage, bundle: Bundle.main, comment: "Comment")
             Text("string_my_address_is", tableName: localeLanguage, bundle: Bundle.main, comment: "Comment")

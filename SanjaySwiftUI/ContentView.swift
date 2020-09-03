@@ -8,13 +8,6 @@
 
 import SwiftUI
 
-// SSTODO
-//1) SCLAlertView using UIKit implementation
-//2) Actual signin implementation
-//3) create list loading json and images from local
-
-
-
 struct ContentView: View {
     
     @Environment(\.managedObjectContext) var managedObjectContext
@@ -60,9 +53,9 @@ struct ContentView: View {
                 .clipped()
                 .onReceive([self.$nameChanged].publisher.first()) { (value) in
                     //print("New value nameChanged is: \(value)")
-                    //print( "SSTODO - Toggle - Showing Alert \(self.showingAlert) and self.nameChanged=\(self.nameChanged)   self.isEditmode=\(self.isEditMode) self.currentPos=\(self.currentPos) self.name=\(self.name)" )
+                    //print( "SSPrint - Toggle - Showing Alert \(self.showingAlert) and self.nameChanged=\(self.nameChanged)   self.isEditmode=\(self.isEditMode) self.currentPos=\(self.currentPos) self.name=\(self.name)" )
                     if self.currentPos < 0 {
-                        print( "SSTODO - persons.count = \(self.persons.count)" )
+                        print( "SSPrint - persons.count = \(self.persons.count)" )
                         self.currentPos = self.persons.count-1
                     }
                     if self.nameChanged {
@@ -117,7 +110,7 @@ struct ContentView: View {
                 .foregroundColor(CommonUtils.cu_activity_light_text_color)
                 .onReceive([self.$photoChanged].publisher.first()) { (value) in
                     //print("New value photoChanged is: \(value)")
-                    //print( "SSTODO - Toggle - self.photoChanged \(self.photoChanged) and self.nameChanged=\(self.nameChanged)   self.isEditmode=\(self.isEditMode) self.currentPos=\(self.currentPos) self.name=\(self.name)" )
+                    //print( "SSPrint - Toggle - self.photoChanged \(self.photoChanged) and self.nameChanged=\(self.nameChanged)   self.isEditmode=\(self.isEditMode) self.currentPos=\(self.currentPos) self.name=\(self.name)" )
                     if self.currentPos >= 0 {
                         if self.photoChanged {
                             if let photo = self.personPhoto {
@@ -146,7 +139,7 @@ struct ContentView: View {
                 .opacity(0.75)
             
             if self.showingAlert == 1 {
-                //PrintinView("SSTODO - PrintinView - ContentView - self.showingAlert \(self.showingAlert) and self.nameChanged=\(self.nameChanged) self.name=\(self.name)")
+                //PrintinView("SSPrint - PrintinView - ContentView - self.showingAlert \(self.showingAlert) and self.nameChanged=\(self.nameChanged) self.name=\(self.name)")
                 /*
                  // NOW UNUSED.
                 AlertControlView(textChanged: $nameChanged,
@@ -303,7 +296,7 @@ struct ContentView: View {
             self.isEditMode = ( id >= 0 )
             // SSNote : working alert usage code.
             self.alertSS(title: "in your Heart", message: "What's name ?", text: self.isEditMode ? self.name : "" )
-            //print( "SSTODO - Button - Showing Alert \(self.showingAlert) self.isEditMode=\(self.isEditMode) Id=\(id)" )
+            //print( "SSPrint - Button - Showing Alert \(self.showingAlert) self.isEditMode=\(self.isEditMode) Id=\(id)" )
         }) {
             if ( id >= 0 ) {
                 VStack( alignment: .center) {
