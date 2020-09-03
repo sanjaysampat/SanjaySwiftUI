@@ -28,7 +28,7 @@ struct TabSwiftUiView: View {
                 }
                 .tabItem {
                     Image(systemName: "2.square.fill")
-                    Text("Gujarati")
+                    Text("ગુજરાતી")
                 }
             LocalDemoView(localeLanguage: "LocalMarathi")
                 .onTapGesture {
@@ -36,7 +36,7 @@ struct TabSwiftUiView: View {
                 }
                 .tabItem {
                     Image(systemName: "3.square.fill")
-                    Text("Marathi")
+                    Text("मराठी")
                 }
         }
         .font(.headline)

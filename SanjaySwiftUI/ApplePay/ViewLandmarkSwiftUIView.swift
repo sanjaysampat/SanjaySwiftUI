@@ -36,9 +36,8 @@ struct ViewLandmarkSwiftUIView: View {
         VStack {
             
             Text(filteredLandMark?.category.rawValue ?? "")
-                .foregroundColor(CommonUtils.cu_activity_background_color)
+                .foregroundColor(CommonUtils.cu_activity_light_text_color)
                 .shadow(radius: 1.5)
-                .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .bottom)
 
             ZStack {
                 filteredLandMark?.image
@@ -104,9 +103,9 @@ struct ViewLandmarkSwiftUIView: View {
                 shipping = "0.5"
                 let fullTotal = NSDecimalNumber(string: landmark.Total).adding(NSDecimalNumber(string: shipping))
                 paymentSummaryItems.append(PKPaymentSummaryItem(label: "Shipping", amount: NSDecimalNumber(string: shipping), type: .final))
-                paymentSummaryItems.append(PKPaymentSummaryItem(label: "Total", amount: fullTotal, type: .pending))
+                paymentSummaryItems.append(PKPaymentSummaryItem(label: "Total", amount: fullTotal, type: .final))
            } else {
-                paymentSummaryItems.append(PKPaymentSummaryItem(label: "Total", amount: NSDecimalNumber(string: landmark.Total), type: .pending))
+                paymentSummaryItems.append(PKPaymentSummaryItem(label: "Total", amount: NSDecimalNumber(string: landmark.Total), type: .final))
             }
             
             self.paymentHandler.startPayment( paymentSummaryItems: paymentSummaryItems, requiredShippingContactFields:requiredShippingContactFields )  { (success) in

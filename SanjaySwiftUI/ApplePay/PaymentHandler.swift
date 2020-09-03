@@ -73,11 +73,11 @@ class PaymentHandler: NSObject {
 extension PaymentHandler: PKPaymentAuthorizationControllerDelegate {
 
     func paymentAuthorizationController(_ controller: PKPaymentAuthorizationController, didAuthorizePayment payment: PKPayment, handler completion: @escaping (PKPaymentAuthorizationResult) -> Void) {
-        
+                
         // Perform some very basic validation on the provided contact information
         var errors = [Error]()
         var status = PKPaymentAuthorizationStatus.success
-        if payment.shippingContact?.postalAddress?.isoCountryCode != "US" {
+        if self.requiredShippingContactFields.contains(PKContactField.postalAddress) && payment.shippingContact?.postalAddress?.isoCountryCode != "US" {
             let pickupError = PKPaymentRequest.paymentShippingAddressUnserviceableError(withLocalizedDescription: "Sample App only delivers in the United States")
             let countryError = PKPaymentRequest.paymentShippingAddressInvalidError(withKey: CNPostalAddressCountryKey, localizedDescription: "Invalid country")
             errors.append(pickupError)
