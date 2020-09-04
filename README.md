@@ -49,6 +49,9 @@ SwiftUI project creation to learn.
     * Tabview added with Localizable Strings files for ગુજરાતી and मराठी display in tab.
     * Apple Pay test integration
         * Buy with various Landmark items. 
+            * Saving Landmark data in document folder after buying, to store status of 'bought' 
+            * Loading the landmark json from document folder if available ( or from bundle )
+            * 'Clear all Bought data' - Work in Progress. ( file delete is working, but could not trigger view reload. )
         * Set different shipping options with shipping charges
             * EBook category with email shippingContactFields only
             * PaymentSummaryItem 'Shipping' charges for Lakes

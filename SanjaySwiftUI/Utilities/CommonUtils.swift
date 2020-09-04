@@ -57,6 +57,19 @@ struct CommonUtils {
         return true
     }
     
+    // eg. to use - storeJsonToDocumentFile(signin, to: "Users/\(userEmail)", as: "signin.json")
+    static func storeJsonToDocumentFile<T: Encodable>(_ object: T, to folderName:String, as fileName: String) -> Bool {
+        var isSuccess = false
+        let encoder = JSONEncoder()
+        do {
+            let fileData = try encoder.encode(object)
+            isSuccess = CommonUtils.writeFileToDocument(folderName:folderName, fileName:fileName, fileData:fileData, atomicWrite:true)
+        } catch {
+            print(error.localizedDescription)
+        }
+        return isSuccess
+    }
+    
     static func writeFileToDocument(folderName:String, fileName:String, fileData:Data, atomicWrite:Bool = true) -> Bool {
         return writeFile(basePath:CommonUtils.cuDocumentFolderPath, folderName:folderName, fileName:fileName, fileData:fileData, atomicWrite:atomicWrite)
     }
@@ -116,6 +129,28 @@ struct CommonUtils {
         
         return fileData
     }
+    
+    static func removeFileFromDocument(folderName:String, fileName:String) -> Bool {
+        return removeFile(basePath:CommonUtils.cuDocumentFolderPath, folderName:folderName, fileName:fileName)
+    }
+    
+    static func removeFileFromSupportFolder(folderName:String, fileName:String) -> Bool {
+        return removeFile(basePath:CommonUtils.cuApplicationSupportFolder, folderName:folderName, fileName:fileName)
+    }
 
+    static func removeFile( basePath:String, folderName:String, fileName:String ) -> Bool {
+        do
+        {
+            let folderPath = basePath.stringByAppendingPathComponent(path: folderName)
+            let documentURL = URL(fileURLWithPath: folderPath.stringByAppendingPathComponent(path: fileName))
+            try FileManager.default.removeItem(at: documentURL)
+            return true
+        }
+        catch
+        {
+            print("An error occured \(error)")
+        }
+        return false
+    }
 
 }

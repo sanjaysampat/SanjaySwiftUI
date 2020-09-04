@@ -54,10 +54,12 @@ struct ViewLandmarkSwiftUIView: View {
                     // bought text
                     if ( filteredLandMark?.bought ?? false ) == true {
                         Text("bought")
-                            .foregroundColor(CommonUtils.cu_activity_foreground_color)
                             .shadow(radius: 1.5)
+                            .padding(5)
+                            .background(CommonUtils.cu_activity_light_theam_color)
+                            .cornerRadius(5)
                             .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .bottom)
-                        //.opacity(0.5)
+                        .opacity(0.5)
                     } else {
                         Text("")
                     }
@@ -114,6 +116,8 @@ struct ViewLandmarkSwiftUIView: View {
                     if success {
                         print("Apple Pay Success for \(self.filteredLandMark?.name ?? "Unknown")")
                         landmarkData[row].bought = true
+                        let landmarkDataSaved = isLandmarkDataSaved
+                        print("Modified landmark json file saved = \(landmarkDataSaved)")
                         self.loadLandmarkView = false
                     } else {
                         print("Apple Pay Failed for \(self.filteredLandMark?.name ?? "Unknown")")

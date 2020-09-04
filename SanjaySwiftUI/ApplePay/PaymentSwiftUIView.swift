@@ -11,14 +11,12 @@ import PassKit
 
 
 struct PaymentSwiftUIView: View {
-    
     ////var paymentSummaryItems = [PKPaymentSummaryItem]()
-    
     ////@State private var payAvailable = false
-    
     //@State private var landmarkOptional:Landmark? = nil
     @State private var currentLandmarkId:Int = -1
     @State private var loadLandmarkView = false
+    @State private var reloadView = false
     
     // SSNote : paymentHandler code is currently not working
     let paymentHandler = PaymentHandler()
@@ -37,11 +35,30 @@ struct PaymentSwiftUIView: View {
     }
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .top) {
             if self.loadLandmarkView {
                 //ViewLandmarkSwiftUIView(loadLandmarkView: $loadLandmarkView, landmarkOptional: self.landmarkOptional )
                 ViewLandmarkSwiftUIView(loadLandmarkView: $loadLandmarkView, currentLandmarkId: $currentLandmarkId )
             } else {
+                /*
+                 // SSTODO can not refresh view after deleting json file
+                 // tried self.reloadView.toggle(). But could not find solution.
+                 // I do not want to exit this view and again call PaymentSiwftUIView
+                if self.reloadView {
+                    Text("true")
+                } else {
+                    Text("false")
+                }
+                Button( action: {
+                    let cleared = isLandmarkDataFileDeleted
+                    print("Landmark data file deleted = \(cleared)")
+                    if cleared {
+                        self.reloadView.toggle()
+                    }
+                } ) {
+                    Text("Clear all Bought data")
+                }
+                */
                 ScrollView {
                     ////
                     /*
@@ -82,10 +99,12 @@ struct PaymentSwiftUIView: View {
                                     // bought text
                                     if landmark.bought {
                                         Text("bought")
-                                            .foregroundColor(CommonUtils.cu_activity_foreground_color)
                                             .shadow(radius: 1.5)
+                                            .padding(5)
+                                            .background(CommonUtils.cu_activity_light_theam_color)
+                                            .cornerRadius(5)
                                             .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .bottom)
-                                            //.opacity(0.5)
+                                        .opacity(0.5)
                                     } else {
                                         Text("")
                                     }
@@ -99,6 +118,8 @@ struct PaymentSwiftUIView: View {
                     }
                     ////
                 }
+                .offset(y: 40)
+                
             }
         }
     }
