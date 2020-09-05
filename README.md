@@ -58,11 +58,10 @@ SwiftUI project creation to learn.
             * EBook category with email shippingContactFields only
             * PaymentSummaryItem 'Shipping' charges for Lakes
             * 0 amount product without shipping charges.
+        * Default alerts for test.
     * Set landmark item as 'bought' 
-        * temporary both for success/fail
         * used filteredLandMark and 'firstIndex' to find the index of record, to modify it.
         * It is always better to pass id's of struct array (insted of object). We can get index of it to modify the record.
-        * alerts tested in Apple pay list view.
     
 2. GIT integration (Github)
     * Added Project to GIT from XCode 11
