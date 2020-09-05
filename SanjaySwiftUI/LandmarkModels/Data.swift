@@ -18,6 +18,10 @@ let isLandmarkDataSaved:Bool = CommonUtils.storeJsonToDocumentFile(landmarkData,
 
 let isLandmarkDataFileDeleted:Bool = CommonUtils.removeFileFromDocument(folderName: landmarkDocumentFolder, fileName: landmarkFilename)
 
+func reloadLandmarkData() {
+    landmarkData = load(landmarkFilename)
+}
+
 func load<T: Decodable>(_ filename: String) -> T {
     // SSNote - to search first in local folder then load from Bundle
     let folderPath = CommonUtils.cuDocumentFolderPath.stringByAppendingPathComponent(path: landmarkDocumentFolder)

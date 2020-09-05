@@ -17,7 +17,9 @@ struct PaymentSwiftUIView: View {
     @State private var currentLandmarkId:Int = -1
     @State private var loadLandmarkView = false
     @State private var reloadView = false
-    
+    @State var alert2Shown = false
+    @State var alert1Shown = false
+
     // SSNote : paymentHandler code is currently not working
     let paymentHandler = PaymentHandler()
 
@@ -34,31 +36,34 @@ struct PaymentSwiftUIView: View {
         .background(VisualEffectBlur().edgesIgnoringSafeArea(.all))
     }
     
+    let alert1 = Alert(title: Text("Cleared"), message: Text("All bought data is cleared."), dismissButton: Alert.Button.default(Text("OK")) {print("You did something")})
+    
+    let alert2 = Alert(
+        title: Text("Clear"), message: Text("Do you want to clear all Bought data?"),
+                primaryButton: Alert.Button.destructive(Text("Clear")) {
+                        let cleared = isLandmarkDataFileDeleted
+                        print("Landmark data file deleted = \(cleared)")
+                        reloadLandmarkData()
+    }, secondaryButton: .cancel()
+    )
+
+    
     var body: some View {
         ZStack(alignment: .top) {
             if self.loadLandmarkView {
                 //ViewLandmarkSwiftUIView(loadLandmarkView: $loadLandmarkView, landmarkOptional: self.landmarkOptional )
                 ViewLandmarkSwiftUIView(loadLandmarkView: $loadLandmarkView, currentLandmarkId: $currentLandmarkId )
             } else {
-                /*
-                 // SSTODO can not refresh view after deleting json file
-                 // tried self.reloadView.toggle(). But could not find solution.
-                 // I do not want to exit this view and again call PaymentSiwftUIView
-                if self.reloadView {
-                    Text("true")
-                } else {
-                    Text("false")
-                }
                 Button( action: {
                     let cleared = isLandmarkDataFileDeleted
                     print("Landmark data file deleted = \(cleared)")
-                    if cleared {
-                        self.reloadView.toggle()
-                    }
+                    reloadLandmarkData()
+                    self.alert1Shown = true
                 } ) {
                     Text("Clear all Bought data")
                 }
-                */
+                .alert(isPresented: $alert1Shown) {alert1}
+                
                 ScrollView {
                     ////
                     /*
