@@ -18,7 +18,9 @@ struct MenuView: View {
                 VStack(alignment: .leading) {
                     HStack {
                     Button(action: {
-                        self.menuSelection = 0
+                        withAnimation(.linear(duration:2)){
+                            self.menuSelection = 0
+                        }
                     }) {
                         HStack( alignment: .center) {
                             Image(systemName: "chevron.left")
@@ -35,7 +37,8 @@ struct MenuView: View {
                         Spacer()
                     }
 
-                    NavigationLink(destination:                 ListView(currentPos: $currentPos)
+                    NavigationLink(destination:
+                        ListView(currentPos: $currentPos)
                     ) {
                         VStack( alignment: .leading) {
                             HStack {

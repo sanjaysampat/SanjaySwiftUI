@@ -73,7 +73,10 @@ struct ListView: View {
                         // SSTODO array shuffle working
                         // we need to add UUID and views in tuple.
                         Button(action: {
-                            self.viewArray.shuffle()
+                            // simple animation
+                            withAnimation{
+                                self.viewArray.shuffle()
+                            }
                             //print(self.viewArray)
                         }) {
                             Text("Shuffle views")

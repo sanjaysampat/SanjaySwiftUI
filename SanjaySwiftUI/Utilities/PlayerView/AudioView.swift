@@ -53,7 +53,11 @@ struct AudioView: View {
             
             HStack {
                 List {
-                    AddButtonView(title: "Shuffle", action: {self.items.shuffle()})
+                    AddButtonView(title: "Shuffle", action: {
+                        withAnimation{
+                            self.items.shuffle()
+                        }
+                    })
                 ForEach(items, id: \.title) { item in
                 Button(item.title) {
                     guard let url = URL(string: item.url) else {
