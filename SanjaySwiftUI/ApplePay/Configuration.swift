@@ -28,6 +28,7 @@ public class Configuration {
             guard let prefix = Bundle.main.object(forInfoDictionaryKey: "AAPLOfferingApplePayBundlePrefix") as? String else {
                 return ""
             }
+            //print(prefix)
             return prefix
         }()
     }
