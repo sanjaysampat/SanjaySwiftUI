@@ -47,7 +47,9 @@ SwiftUI project creation to learn.
             * Issue while adding more observers.
             * 'SourceKitService" and/or 'Swift' process on mac taking max memory, so xcode and all mac proccesses slogs to halt ( macOS Catalina 10.15.6, tried on XCode 11.6 and 11.5)
     * Added Navigation view - 'Menu' option in content view.
-    * TabSwiftUiView added with Localizable Strings files for "ગુજરાતી" and "मराठी" display in tab.
+    * TabSwiftUiView added with Localizable Strings files for "ગુજરાતી" and "मराठी" display in tab. 
+        * Refer: [Support multiple languages by localizing your iOS apps](https://zonneveld.dev/localize-your-ios-apps-to-support-multiple-languages/)
+        * Added hardcode files LocalArabic, LocalGujarati and LocalMarathi .strings files to manually show strings in selected languages in tab
         * Added files for "عربى" to check Right to Left alignment.
             * Auto alignment as per device language settings
             * Manual Text alignment set as 'Trailing' to show in Right to Left in all ( This will be again error in Arabic language device settings, as it will make 'Left to Right' in case of Trailing setting. )

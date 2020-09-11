@@ -32,7 +32,6 @@
 		72663ACD24C5C7BD000596C9 /* SanjaySwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663ACC24C5C7BD000596C9 /* SanjaySwiftUITests.swift */; };
 		72663AD824C5C7BE000596C9 /* SanjaySwiftUIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663AD724C5C7BE000596C9 /* SanjaySwiftUIUITests.swift */; };
 		726763DD24FB76D00074715B /* TabSwiftUiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726763DC24FB76D00074715B /* TabSwiftUiView.swift */; };
-		726763E024FB7E830074715B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 726763DF24FB7E830074715B /* Localizable.strings */; };
 		726763E224FB7FA40074715B /* LocalDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726763E124FB7FA40074715B /* LocalDemoView.swift */; };
 		726763E524FB8C120074715B /* LocalMarathi.strings in Resources */ = {isa = PBXBuildFile; fileRef = 726763E324FB8C120074715B /* LocalMarathi.strings */; };
 		726763E624FB8C120074715B /* LocalGujarati.strings in Resources */ = {isa = PBXBuildFile; fileRef = 726763E424FB8C120074715B /* LocalGujarati.strings */; };
@@ -141,7 +140,6 @@
 		7267645524FBB27E0074715B /* chilkoottrail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551C724DD743E009A0014 /* chilkoottrail.jpg */; };
 		7267645624FBB27E0074715B /* getHomeSliderCatRecordTony.json in Resources */ = {isa = PBXBuildFile; fileRef = 7249749324E52684006F5C52 /* getHomeSliderCatRecordTony.json */; };
 		7267645724FBB27E0074715B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72663ABE24C5C7BD000596C9 /* Preview Assets.xcassets */; };
-		7267645824FBB27E0074715B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 726763DF24FB7E830074715B /* Localizable.strings */; };
 		7267645924FBB27E0074715B /* LocalMarathi.strings in Resources */ = {isa = PBXBuildFile; fileRef = 726763E324FB8C120074715B /* LocalMarathi.strings */; };
 		7267645A24FBB27E0074715B /* silversalmoncreek.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551BD24DD743E009A0014 /* silversalmoncreek.jpg */; };
 		7267645B24FBB27E0074715B /* getnewMostLovedCatData.json in Resources */ = {isa = PBXBuildFile; fileRef = 7282060924E5769500F5F8CB /* getnewMostLovedCatData.json */; };
@@ -245,6 +243,8 @@
 		72D977A124E120AC0044754C /* String+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D977A024E120AB0044754C /* String+Extra.swift */; };
 		72EDF200250BA81F00879E40 /* LocalArabic.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72EDF1FF250BA81F00879E40 /* LocalArabic.strings */; };
 		72EDF201250BA81F00879E40 /* LocalArabic.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72EDF1FF250BA81F00879E40 /* LocalArabic.strings */; };
+		72EDF205250BC48800879E40 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72EDF208250BC48800879E40 /* Localizable.strings */; };
+		72EDF206250BC48800879E40 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72EDF208250BC48800879E40 /* Localizable.strings */; };
 		72F0CBDD24F7F24600BE9DB0 /* Audio+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0CBDB24F7F24600BE9DB0 /* Audio+CoreDataClass.swift */; };
 		72F0CBDE24F7F24600BE9DB0 /* Audio+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0CBDC24F7F24600BE9DB0 /* Audio+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
@@ -297,7 +297,6 @@
 		72663AD724C5C7BE000596C9 /* SanjaySwiftUIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanjaySwiftUIUITests.swift; sourceTree = "<group>"; };
 		72663AD924C5C7BE000596C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		726763DC24FB76D00074715B /* TabSwiftUiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabSwiftUiView.swift; sourceTree = "<group>"; };
-		726763DF24FB7E830074715B /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		726763E124FB7FA40074715B /* LocalDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDemoView.swift; sourceTree = "<group>"; };
 		726763E324FB8C120074715B /* LocalMarathi.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = LocalMarathi.strings; sourceTree = "<group>"; };
 		726763E424FB8C120074715B /* LocalGujarati.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = LocalGujarati.strings; sourceTree = "<group>"; };
@@ -395,6 +394,13 @@
 		72D9779E24E1116E0044754C /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
 		72D977A024E120AB0044754C /* String+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extra.swift"; sourceTree = "<group>"; };
 		72EDF1FF250BA81F00879E40 /* LocalArabic.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = LocalArabic.strings; sourceTree = "<group>"; };
+		72EDF202250BC30800879E40 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		72EDF203250BC34E00879E40 /* gu-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "gu-IN"; path = "gu-IN.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		72EDF204250BC36900879E40 /* mr-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "mr-IN"; path = "mr-IN.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		72EDF207250BC48800879E40 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		72EDF209250BC4A100879E40 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/Localizable.strings; sourceTree = "<group>"; };
+		72EDF20A250BC4B400879E40 /* gu-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "gu-IN"; path = "gu-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		72EDF20B250BC4C600879E40 /* mr-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "mr-IN"; path = "mr-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		72F0CBDB24F7F24600BE9DB0 /* Audio+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Audio+CoreDataClass.swift"; sourceTree = "<group>"; };
 		72F0CBDC24F7F24600BE9DB0 /* Audio+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Audio+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -568,7 +574,7 @@
 				72EDF1FF250BA81F00879E40 /* LocalArabic.strings */,
 				726763E424FB8C120074715B /* LocalGujarati.strings */,
 				726763E324FB8C120074715B /* LocalMarathi.strings */,
-				726763DF24FB7E830074715B /* Localizable.strings */,
+				72EDF208250BC48800879E40 /* Localizable.strings */,
 			);
 			path = Localization;
 			sourceTree = "<group>";
@@ -822,6 +828,9 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
+				"gu-IN",
+				"mr-IN",
 			);
 			mainGroup = 72663AA624C5C7AC000596C9;
 			productRefGroup = 72663AB024C5C7AC000596C9 /* Products */;
@@ -875,7 +884,7 @@
 				7249749424E52684006F5C52 /* getHomeSliderCatRecordTony.json in Resources */,
 				72EDF200250BA81F00879E40 /* LocalArabic.strings in Resources */,
 				72663ABF24C5C7BD000596C9 /* Preview Assets.xcassets in Resources */,
-				726763E024FB7E830074715B /* Localizable.strings in Resources */,
+				72EDF205250BC48800879E40 /* Localizable.strings in Resources */,
 				726763E524FB8C120074715B /* LocalMarathi.strings in Resources */,
 				728CBF392500D32C00EBEC9D /* LearningPython.jpg in Resources */,
 				72B551CC24DD743E009A0014 /* silversalmoncreek.jpg in Resources */,
@@ -941,7 +950,7 @@
 				7267645624FBB27E0074715B /* getHomeSliderCatRecordTony.json in Resources */,
 				72EDF201250BA81F00879E40 /* LocalArabic.strings in Resources */,
 				7267645724FBB27E0074715B /* Preview Assets.xcassets in Resources */,
-				7267645824FBB27E0074715B /* Localizable.strings in Resources */,
+				72EDF206250BC48800879E40 /* Localizable.strings in Resources */,
 				7267645924FBB27E0074715B /* LocalMarathi.strings in Resources */,
 				728CBF3A2500D32C00EBEC9D /* LearningPython.jpg in Resources */,
 				7267645A24FBB27E0074715B /* silversalmoncreek.jpg in Resources */,
@@ -1156,8 +1165,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				72663AC124C5C7BD000596C9 /* Base */,
+				72EDF202250BC30800879E40 /* ar */,
+				72EDF203250BC34E00879E40 /* gu-IN */,
+				72EDF204250BC36900879E40 /* mr-IN */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		72EDF208250BC48800879E40 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				72EDF207250BC48800879E40 /* en */,
+				72EDF209250BC4A100879E40 /* ar */,
+				72EDF20A250BC4B400879E40 /* gu-IN */,
+				72EDF20B250BC4C600879E40 /* mr-IN */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1167,6 +1190,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1227,6 +1251,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
