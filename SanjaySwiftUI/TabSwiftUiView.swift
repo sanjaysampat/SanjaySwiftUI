@@ -38,6 +38,14 @@ struct TabSwiftUiView: View {
                     Image(systemName: "3.square.fill")
                     Text("मराठी")
                 }
+            LocalDemoView(localeLanguage: "LocalArabic")
+                .onTapGesture {
+                    self.localeLanguage = "LocalArabic"
+                }
+                .tabItem {
+                    Image(systemName: "4.square.fill")
+                    Text("عربى")
+                }
         }
         .font(.headline)
     }

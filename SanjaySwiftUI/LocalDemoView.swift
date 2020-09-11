@@ -13,11 +13,42 @@ struct LocalDemoView: View {
     @State var localeLanguage:String = "Localizable"
 
     var body: some View {
-        VStack {
-            PrintinView("SSPrint - PrintinView - LocalDemoView - self.localeLanguage \(self.localeLanguage)")
+        ScrollView {
+            VStack( alignment: .leading) {
+                PrintinView("SSPrint - PrintinView - LocalDemoView - self.localeLanguage \(self.localeLanguage)")
+                
+                Text("string_my_name_is", tableName: localeLanguage, bundle: Bundle.main, comment: "Comment")
+                    .padding(.top, 10)
+                
+                Text("string_my_address_is", tableName: localeLanguage, bundle: Bundle.main, comment: "Comment")
+                .padding(.top, 10)
 
-            Text("string_my_name_is", tableName: localeLanguage, bundle: Bundle.main, comment: "Comment")
-            Text("string_my_address_is", tableName: localeLanguage, bundle: Bundle.main, comment: "Comment")
+                Text("The above text will auto display right to left in Arabic, Farsi or Urdu iPhone device languages.")
+                    .padding(.top, 10)
+                    .foregroundColor(Color.gray)
+                
+            }
+            Divider()
+            if localeLanguage.elementsEqual("LocalArabic") {
+                VStack( alignment: .trailing) {
+                    PrintinView("SSPrint - PrintinView - LocalDemoView - self.localeLanguage \(self.localeLanguage)")
+                    
+                    Text("string_my_name_is", tableName: localeLanguage, bundle: Bundle.main, comment: "Comment")
+                    .multilineTextAlignment(.trailing)
+                    .padding(.top, 10)
+
+                    Text("string_my_address_is", tableName: localeLanguage, bundle: Bundle.main, comment: "Comment")
+                    .multilineTextAlignment(.trailing)
+                    .padding(.top, 10)
+
+                    Text("The above text is manually set as right to left alignment.")
+                        .multilineTextAlignment(.trailing)
+                        .padding(.top, 10)
+                    .foregroundColor(Color.gray)
+
+                }
+                Divider()
+            }
         }
     }
 }

@@ -12,6 +12,9 @@ struct MenuView: View {
     @Binding var menuSelection: Int?
     @Binding var currentPos:Int
     
+    @State var selectedAnimationPos:Int = 0
+    var animateOptions = ["animatable"]
+    
     var body: some View {
         //ZStack {
             NavigationView {
@@ -100,6 +103,12 @@ struct MenuView: View {
                         }
                         
                     }
+                    /*
+                    Picker(selection: $selectedAnimationPos, label: Text("Select Ani")) {
+                        // SSTODO to display different animations
+                        
+                    }
+                    */
 
                     Spacer()
                 }

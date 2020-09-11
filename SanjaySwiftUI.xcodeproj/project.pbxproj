@@ -15,6 +15,8 @@
 		7204277C24E01CC800DF4958 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204277A24E01CC700DF4958 /* SCLExtensions.swift */; };
 		7216BB5C24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */; };
 		7216BB5E24D17BC30097AFA4 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */; };
+		723DE9EA2508D608000E8C03 /* AnimatableSwiftUIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723DE9E92508D608000E8C03 /* AnimatableSwiftUIViewEx.swift */; };
+		723DE9EB2508D608000E8C03 /* AnimatableSwiftUIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723DE9E92508D608000E8C03 /* AnimatableSwiftUIViewEx.swift */; };
 		7249748E24E4F112006F5C52 /* TonySectionCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7249748924E4F112006F5C52 /* TonySectionCat.swift */; };
 		7249748F24E4F112006F5C52 /* TonySectionViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7249748A24E4F112006F5C52 /* TonySectionViewer.swift */; };
 		7249749024E4F112006F5C52 /* TonySectionFeatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7249748B24E4F112006F5C52 /* TonySectionFeatcher.swift */; };
@@ -241,6 +243,8 @@
 		72D2498924FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D2498724FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift */; };
 		72D9779F24E1116E0044754C /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D9779E24E1116E0044754C /* CommonExtensions.swift */; };
 		72D977A124E120AC0044754C /* String+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D977A024E120AB0044754C /* String+Extra.swift */; };
+		72EDF200250BA81F00879E40 /* LocalArabic.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72EDF1FF250BA81F00879E40 /* LocalArabic.strings */; };
+		72EDF201250BA81F00879E40 /* LocalArabic.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72EDF1FF250BA81F00879E40 /* LocalArabic.strings */; };
 		72F0CBDD24F7F24600BE9DB0 /* Audio+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0CBDB24F7F24600BE9DB0 /* Audio+CoreDataClass.swift */; };
 		72F0CBDE24F7F24600BE9DB0 /* Audio+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0CBDC24F7F24600BE9DB0 /* Audio+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
@@ -271,6 +275,7 @@
 		7204277A24E01CC700DF4958 /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
 		7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPhotoImagePickerViewController.swift; sourceTree = "<group>"; };
 		7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		723DE9E92508D608000E8C03 /* AnimatableSwiftUIViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableSwiftUIViewEx.swift; sourceTree = "<group>"; };
 		7249748924E4F112006F5C52 /* TonySectionCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TonySectionCat.swift; sourceTree = "<group>"; };
 		7249748A24E4F112006F5C52 /* TonySectionViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TonySectionViewer.swift; sourceTree = "<group>"; };
 		7249748B24E4F112006F5C52 /* TonySectionFeatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TonySectionFeatcher.swift; sourceTree = "<group>"; };
@@ -389,6 +394,7 @@
 		72D2498724FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLandmarkSwiftUIView.swift; sourceTree = "<group>"; };
 		72D9779E24E1116E0044754C /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
 		72D977A024E120AB0044754C /* String+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extra.swift"; sourceTree = "<group>"; };
+		72EDF1FF250BA81F00879E40 /* LocalArabic.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = LocalArabic.strings; sourceTree = "<group>"; };
 		72F0CBDB24F7F24600BE9DB0 /* Audio+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Audio+CoreDataClass.swift"; sourceTree = "<group>"; };
 		72F0CBDC24F7F24600BE9DB0 /* Audio+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Audio+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -444,6 +450,14 @@
 			path = SCLAlertView;
 			sourceTree = "<group>";
 		};
+		723DE9E82508D5B0000E8C03 /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				723DE9E92508D608000E8C03 /* AnimatableSwiftUIViewEx.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
 		7249748824E4F112006F5C52 /* TonySectionJson */ = {
 			isa = PBXGroup;
 			children = (
@@ -493,6 +507,7 @@
 		72663AB124C5C7AC000596C9 /* SanjaySwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				723DE9E82508D5B0000E8C03 /* Animation */,
 				726763E724FBA1380074715B /* ApplePay */,
 				726763DE24FB7E830074715B /* Localization */,
 				7249748824E4F112006F5C52 /* TonySectionJson */,
@@ -550,6 +565,7 @@
 		726763DE24FB7E830074715B /* Localization */ = {
 			isa = PBXGroup;
 			children = (
+				72EDF1FF250BA81F00879E40 /* LocalArabic.strings */,
 				726763E424FB8C120074715B /* LocalGujarati.strings */,
 				726763E324FB8C120074715B /* LocalMarathi.strings */,
 				726763DF24FB7E830074715B /* Localizable.strings */,
@@ -857,6 +873,7 @@
 				7299E6AC24E8046800704724 /* getUsersRecord.json in Resources */,
 				72B551D624DD743E009A0014 /* chilkoottrail.jpg in Resources */,
 				7249749424E52684006F5C52 /* getHomeSliderCatRecordTony.json in Resources */,
+				72EDF200250BA81F00879E40 /* LocalArabic.strings in Resources */,
 				72663ABF24C5C7BD000596C9 /* Preview Assets.xcassets in Resources */,
 				726763E024FB7E830074715B /* Localizable.strings in Resources */,
 				726763E524FB8C120074715B /* LocalMarathi.strings in Resources */,
@@ -922,6 +939,7 @@
 				7267645424FBB27E0074715B /* getUsersRecord.json in Resources */,
 				7267645524FBB27E0074715B /* chilkoottrail.jpg in Resources */,
 				7267645624FBB27E0074715B /* getHomeSliderCatRecordTony.json in Resources */,
+				72EDF201250BA81F00879E40 /* LocalArabic.strings in Resources */,
 				7267645724FBB27E0074715B /* Preview Assets.xcassets in Resources */,
 				7267645824FBB27E0074715B /* Localizable.strings in Resources */,
 				7267645924FBB27E0074715B /* LocalMarathi.strings in Resources */,
@@ -971,6 +989,7 @@
 				7249749024E4F112006F5C52 /* TonySectionFeatcher.swift in Sources */,
 				72735B8C24D034B0006B75C9 /* PhotoEditor+Gestures.swift in Sources */,
 				729B0EF424C99FCF00054F9F /* AlertControlView.swift in Sources */,
+				723DE9EA2508D608000E8C03 /* AnimatableSwiftUIViewEx.swift in Sources */,
 				72735B8424D034B0006B75C9 /* Protocols.swift in Sources */,
 				72735B7B24D034B0006B75C9 /* UIImageView+Alpha.swift in Sources */,
 				726763ED24FBA27E0074715B /* VisualEffectBlur.swift in Sources */,
@@ -1067,6 +1086,7 @@
 				7267640624FBB27E0074715B /* TonySectionFeatcher.swift in Sources */,
 				7267640724FBB27E0074715B /* PhotoEditor+Gestures.swift in Sources */,
 				7267640824FBB27E0074715B /* AlertControlView.swift in Sources */,
+				723DE9EB2508D608000E8C03 /* AnimatableSwiftUIViewEx.swift in Sources */,
 				7267640924FBB27E0074715B /* Protocols.swift in Sources */,
 				7267640A24FBB27E0074715B /* UIImageView+Alpha.swift in Sources */,
 				7267640B24FBB27E0074715B /* VisualEffectBlur.swift in Sources */,

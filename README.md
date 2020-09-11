@@ -47,7 +47,10 @@ SwiftUI project creation to learn.
             * Issue while adding more observers.
             * 'SourceKitService" and/or 'Swift' process on mac taking max memory, so xcode and all mac proccesses slogs to halt ( macOS Catalina 10.15.6, tried on XCode 11.6 and 11.5)
     * Added Navigation view - 'Menu' option in content view.
-    * Tabview added with Localizable Strings files for ગુજરાતી and मराठी display in tab.
+    * TabSwiftUiView added with Localizable Strings files for "ગુજરાતી" and "मराठी" display in tab.
+        * Added files for "عربى" to check Right to Left alignment.
+            * Auto alignment as per device language settings
+            * Manual Text alignment set as 'Trailing' to show in Right to Left in all ( This will be again error in Arabic language device settings, as it will make 'Left to Right' in case of Trailing setting. )
     * Apple Pay test integration
         * Buy with various Landmark items. 
             * Saving Landmark data in document folder after buying, to store status of 'bought' 
