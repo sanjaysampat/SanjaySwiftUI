@@ -45,7 +45,7 @@ SwiftUI project creation to learn.
         * Added play/pause button in Audio
         * Continuing how to create proper observers of AVPlayer.
             * Issue while adding more observers.
-            * 'SourceKitService" and/or 'Swift' process on mac taking max memory, so xcode and all mac proccesses slogs to halt ( macOS Catalina 10.15.6, tried on XCode 11.6 and 11.5)
+            * 'SourceKitService" and/or 'Swift' process on mac taking max memory, so xcode and all mac proccesses slogs to halt ( macOS Catalina 10.15.6, tried on XCode 11.6 and 11.5). The issue was solved after update of XCode 11.7.
     * Added Navigation view - 'Menu' option in content view.
     * TabSwiftUiView added with Localizable Strings files for "ગુજરાતી" and "मराठी" display in tab. 
         * Refer: [Support multiple languages by localizing your iOS apps](https://zonneveld.dev/localize-your-ios-apps-to-support-multiple-languages/)
@@ -53,6 +53,8 @@ SwiftUI project creation to learn.
         * Added files for "عربى" to check Right to Left alignment.
             * Auto alignment as per device language settings
             * Manual Text alignment set as 'Trailing' to show in Right to Left in all ( This will be again error in Arabic language device settings, as it will make 'Left to Right' in case of Trailing setting. )
+            * How to localize Label text in "LaunchScreen.storyboard"
+                * Refer: [my comment on developer.apple.com forums](https://developer.apple.com/forums/thread/86567?answerId=632317022#632317022)
     * Apple Pay test integration
         * Buy with various Landmark items. 
             * Saving Landmark data in document folder after buying, to store status of 'bought' 
@@ -68,6 +70,7 @@ SwiftUI project creation to learn.
     * Set landmark item as 'bought' 
         * used filteredLandMark and 'firstIndex' to find the index of record, to modify it.
         * It is always better to pass id's of struct array (insted of object). We can get index of it to modify the record.
+    * Basic animation examples links added in 'Menuview'
     
 2. GIT integration (Github)
     * Added Project to GIT from XCode 11

@@ -12,11 +12,8 @@ struct MenuView: View {
     @Binding var menuSelection: Int?
     @Binding var currentPos:Int
     
-    @State var selectedAnimationPos:Int = 0
-    var animateOptions = ["animatable"]
-    
     var body: some View {
-        //ZStack {
+        //VStack {
             NavigationView {
                 VStack(alignment: .leading) {
                     HStack {
@@ -72,6 +69,8 @@ struct MenuView: View {
                         
                     }
                     
+                    Divider()
+                    
                     NavigationLink(destination:
                         TabSwiftUiView()
                     ) {
@@ -88,6 +87,8 @@ struct MenuView: View {
                         
                     }
                     
+                    Divider()
+
                     NavigationLink(destination:
                         PaymentSwiftUIView()
                     ) {
@@ -103,19 +104,65 @@ struct MenuView: View {
                         }
                         
                     }
-                    /*
-                    Picker(selection: $selectedAnimationPos, label: Text("Select Ani")) {
-                        // SSTODO to display different animations
-                        
-                    }
-                    */
+                    
+                    Divider()
 
+                    Group {
+                        NavigationLink(destination:
+                            AnimatableSwiftUIViewEx()
+                        ) {
+                            VStack( alignment: .leading) {
+                                HStack {
+                                    Image(systemName: "wand.and.stars")
+                                    Text("Animatable")
+                                        .font(.caption)
+                                }
+                                .font(.body)
+                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                .shadow(radius: 1.5)
+                            }
+                            
+                        }
+
+                        NavigationLink(destination:
+                            AnimatablePairSwiftUIViewEx()
+                        ) {
+                            VStack( alignment: .leading) {
+                                HStack {
+                                    Image(systemName: "wand.and.stars.inverse")
+                                    Text("AnimatablePair")
+                                        .font(.caption)
+                                }
+                                .font(.body)
+                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                .shadow(radius: 1.5)
+                            }
+                            
+                        }
+                        
+                        NavigationLink(destination:
+                            AnimArcInsettableShapeViewEx()
+                        ) {
+                            VStack( alignment: .leading) {
+                                HStack {
+                                    Image(systemName: "wand.and.rays")
+                                    Text("AnimArcInsettable")
+                                        .font(.caption)
+                                }
+                                .font(.body)
+                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                .shadow(radius: 1.5)
+                            }
+                            
+                        }
+                    }
                     Spacer()
                 }
                 .background(CommonUtils.cu_activity_light_theam_color)
                 
             }
-            
+            .navigationBarTitle("Select your choice")
+        
         //}
         //.padding(.top, 20)
         

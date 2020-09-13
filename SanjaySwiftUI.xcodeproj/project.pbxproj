@@ -15,6 +15,10 @@
 		7204277C24E01CC800DF4958 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204277A24E01CC700DF4958 /* SCLExtensions.swift */; };
 		7216BB5C24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */; };
 		7216BB5E24D17BC30097AFA4 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */; };
+		723ACB30250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ACB2F250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift */; };
+		723ACB31250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ACB2F250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift */; };
+		723ACB33250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ACB32250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift */; };
+		723ACB34250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ACB32250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift */; };
 		723DE9EA2508D608000E8C03 /* AnimatableSwiftUIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723DE9E92508D608000E8C03 /* AnimatableSwiftUIViewEx.swift */; };
 		723DE9EB2508D608000E8C03 /* AnimatableSwiftUIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723DE9E92508D608000E8C03 /* AnimatableSwiftUIViewEx.swift */; };
 		7249748E24E4F112006F5C52 /* TonySectionCat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7249748924E4F112006F5C52 /* TonySectionCat.swift */; };
@@ -275,6 +279,8 @@
 		7204277A24E01CC700DF4958 /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
 		7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPhotoImagePickerViewController.swift; sourceTree = "<group>"; };
 		7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		723ACB2F250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatablePairSwiftUIViewEx.swift; sourceTree = "<group>"; };
+		723ACB32250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimArcInsettableShapeViewEx.swift; sourceTree = "<group>"; };
 		723DE9E92508D608000E8C03 /* AnimatableSwiftUIViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableSwiftUIViewEx.swift; sourceTree = "<group>"; };
 		7249748924E4F112006F5C52 /* TonySectionCat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TonySectionCat.swift; sourceTree = "<group>"; };
 		7249748A24E4F112006F5C52 /* TonySectionViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TonySectionViewer.swift; sourceTree = "<group>"; };
@@ -361,6 +367,7 @@
 		7299E6A224E8046800704724 /* getUsersRecord.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getUsersRecord.json; sourceTree = "<group>"; };
 		729B0EF324C99FCF00054F9F /* AlertControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertControlView.swift; sourceTree = "<group>"; };
 		729B0EF524C9B40E00054F9F /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
+		729EE34F250E500600E61CFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		72B551AE24DD1690009A0014 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		72B551B024DD1C8A009A0014 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
 		72B551B924DD743E009A0014 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -459,7 +466,9 @@
 		723DE9E82508D5B0000E8C03 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				723ACB32250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift */,
 				723DE9E92508D608000E8C03 /* AnimatableSwiftUIViewEx.swift */,
+				723ACB2F250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -1031,6 +1040,7 @@
 				72B551C924DD743E009A0014 /* Data.swift in Sources */,
 				7216BB5E24D17BC30097AFA4 /* Person+CoreDataProperties.swift in Sources */,
 				72735B9024D034B0006B75C9 /* CropViewController.swift in Sources */,
+				723ACB30250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift in Sources */,
 				72663ABA24C5C7AC000596C9 /* ContentView.swift in Sources */,
 				72735B8024D034B0006B75C9 /* UIView+Image.swift in Sources */,
 				72735B7724D034B0006B75C9 /* PhotoEditor+Keyboard.swift in Sources */,
@@ -1038,6 +1048,7 @@
 				72735B8924D034B0006B75C9 /* EmojisCollectionViewDelegate.swift in Sources */,
 				72735B8B24D034B0006B75C9 /* ResizeControl.swift in Sources */,
 				7204276F24DFFA3600DF4958 /* PrivateCommit.swift in Sources */,
+				723ACB33250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift in Sources */,
 				72CEEB5124F92EBE00A1AFE9 /* AVListView.swift in Sources */,
 				72735B8224D034B0006B75C9 /* UIImage+Crop.swift in Sources */,
 				72663AB524C5C7AC000596C9 /* SceneDelegate.swift in Sources */,
@@ -1128,6 +1139,7 @@
 				7267642424FBB27E0074715B /* Data.swift in Sources */,
 				7267642524FBB27E0074715B /* Person+CoreDataProperties.swift in Sources */,
 				7267642624FBB27E0074715B /* CropViewController.swift in Sources */,
+				723ACB31250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift in Sources */,
 				7267642724FBB27E0074715B /* ContentView.swift in Sources */,
 				7267642824FBB27E0074715B /* UIView+Image.swift in Sources */,
 				7267642924FBB27E0074715B /* PhotoEditor+Keyboard.swift in Sources */,
@@ -1135,6 +1147,7 @@
 				7267642B24FBB27E0074715B /* EmojisCollectionViewDelegate.swift in Sources */,
 				7267642C24FBB27E0074715B /* ResizeControl.swift in Sources */,
 				7267642D24FBB27E0074715B /* PrivateCommit.swift in Sources */,
+				723ACB34250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift in Sources */,
 				7267642E24FBB27E0074715B /* AVListView.swift in Sources */,
 				7267642F24FBB27E0074715B /* UIImage+Crop.swift in Sources */,
 				7267643024FBB27E0074715B /* SceneDelegate.swift in Sources */,
@@ -1168,6 +1181,7 @@
 				72EDF202250BC30800879E40 /* ar */,
 				72EDF203250BC34E00879E40 /* gu-IN */,
 				72EDF204250BC36900879E40 /* mr-IN */,
+				729EE34F250E500600E61CFE /* en */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
