@@ -245,6 +245,8 @@
 		72D2498924FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D2498724FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift */; };
 		72D9779F24E1116E0044754C /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D9779E24E1116E0044754C /* CommonExtensions.swift */; };
 		72D977A124E120AC0044754C /* String+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D977A024E120AB0044754C /* String+Extra.swift */; };
+		72E42CD82511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E42CD72511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift */; };
+		72E42CD92511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E42CD72511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift */; };
 		72EDF200250BA81F00879E40 /* LocalArabic.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72EDF1FF250BA81F00879E40 /* LocalArabic.strings */; };
 		72EDF201250BA81F00879E40 /* LocalArabic.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72EDF1FF250BA81F00879E40 /* LocalArabic.strings */; };
 		72EDF205250BC48800879E40 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72EDF208250BC48800879E40 /* Localizable.strings */; };
@@ -400,6 +402,7 @@
 		72D2498724FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLandmarkSwiftUIView.swift; sourceTree = "<group>"; };
 		72D9779E24E1116E0044754C /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
 		72D977A024E120AB0044754C /* String+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extra.swift"; sourceTree = "<group>"; };
+		72E42CD72511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedSwiftuiAnimations.swift; sourceTree = "<group>"; };
 		72EDF1FF250BA81F00879E40 /* LocalArabic.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = LocalArabic.strings; sourceTree = "<group>"; };
 		72EDF202250BC30800879E40 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		72EDF203250BC34E00879E40 /* gu-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "gu-IN"; path = "gu-IN.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
@@ -466,6 +469,7 @@
 		723DE9E82508D5B0000E8C03 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				72E42CD72511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift */,
 				723ACB32250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift */,
 				723DE9E92508D608000E8C03 /* AnimatableSwiftUIViewEx.swift */,
 				723ACB2F250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift */,
@@ -998,6 +1002,7 @@
 				72735B5124D02872006B75C9 /* CustomImagePickerViewController.swift in Sources */,
 				726763DD24FB76D00074715B /* TabSwiftUiView.swift in Sources */,
 				7267646A24FBD7DA0074715B /* Configuration.swift in Sources */,
+				72E42CD82511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift in Sources */,
 				72BD188A24EEAA600032E3B7 /* AudioView.swift in Sources */,
 				726763E224FB7FA40074715B /* LocalDemoView.swift in Sources */,
 				7249748E24E4F112006F5C52 /* TonySectionCat.swift in Sources */,
@@ -1097,6 +1102,7 @@
 				726763FE24FBB27E0074715B /* CustomImagePickerViewController.swift in Sources */,
 				726763FF24FBB27E0074715B /* TabSwiftUiView.swift in Sources */,
 				7267646B24FBD7DA0074715B /* Configuration.swift in Sources */,
+				72E42CD92511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift in Sources */,
 				7267640024FBB27E0074715B /* AudioView.swift in Sources */,
 				7267640124FBB27E0074715B /* LocalDemoView.swift in Sources */,
 				7267640224FBB27E0074715B /* TonySectionCat.swift in Sources */,

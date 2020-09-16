@@ -70,7 +70,10 @@ SwiftUI project creation to learn.
     * Set landmark item as 'bought' 
         * used filteredLandMark and 'firstIndex' to find the index of record, to modify it.
         * It is always better to pass id's of struct array (insted of object). We can get index of it to modify the record.
-    * Basic animation examples links added in 'Menuview'
+    
+3. Animation test ( links added in 'Menuview' )
+    * Basic animation examples 
+    * AdvancedSwiftuiAnimations by [SwiftUI Lab](https://swiftui-lab.com/swiftui-animations-part1/)
     
 2. GIT integration (Github)
     * Added Project to GIT from XCode 11

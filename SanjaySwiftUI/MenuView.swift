@@ -155,6 +155,25 @@ struct MenuView: View {
                             }
                             
                         }
+                        
+                        
+                        
+                        NavigationLink(destination:
+                            AdvancedSwiftuiAnimations()
+                        ) {
+                            VStack( alignment: .leading) {
+                                HStack {
+                                    Image(systemName: "wand.and.rays.inverse")
+                                    Text("AdvancedSwiftuiAnimations by SwiftUI Lab")
+                                        .font(.caption)
+                                }
+                                .font(.body)
+                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                .shadow(radius: 1.5)
+                            }
+                            
+                        }
+
                     }
                     Spacer()
                 }
