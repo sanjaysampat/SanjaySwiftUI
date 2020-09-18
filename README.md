@@ -54,7 +54,8 @@ SwiftUI project creation to learn.
             * Auto alignment as per device language settings
             * Manual Text alignment set as 'Trailing' to show in Right to Left in all ( This will be again error in Arabic language device settings, as it will make 'Left to Right' in case of Trailing setting. )
             * How to localize Label text in "LaunchScreen.storyboard"
-                * Refer: [my comment on developer.apple.com forums](https://developer.apple.com/forums/thread/86567?answerId=632317022#632317022)
+                * Refer: [Comment on developer.apple.com forums](https://developer.apple.com/forums/thread/86567?answerId=632317022#632317022)
+                * Still could not see text in Arabic in LaunchScreen.
     * Apple Pay test integration
         * Buy with various Landmark items. 
             * Saving Landmark data in document folder after buying, to store status of 'bought' 
