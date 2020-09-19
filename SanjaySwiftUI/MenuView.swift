@@ -14,9 +14,9 @@ struct MenuView: View {
     
     var body: some View {
         //VStack {
-            NavigationView {
-                VStack(alignment: .leading) {
-                    HStack {
+        NavigationView {
+            VStack(alignment: .leading) {
+                HStack {
                     Button(action: {
                         withAnimation(.linear(duration:2)){
                             self.menuSelection = 0
@@ -33,12 +33,13 @@ struct MenuView: View {
                     }
                     .foregroundColor(CommonUtils.cu_activity_foreground_color)
                     //.padding()
-                        
-                        Spacer()
-                    }
-
+                    
+                    Spacer()
+                }
+                
+                Group {
                     NavigationLink(destination:
-                        ListView(currentPos: $currentPos)
+                                    ListView(currentPos: $currentPos)
                     ) {
                         VStack( alignment: .leading) {
                             HStack {
@@ -54,7 +55,7 @@ struct MenuView: View {
                     }
                     
                     NavigationLink(destination:
-                        AVListView()
+                                    AVListView()
                     ) {
                         VStack( alignment: .leading) {
                             HStack {
@@ -68,119 +69,137 @@ struct MenuView: View {
                         }
                         
                     }
-                    
                     Divider()
-                    
-                    NavigationLink(destination:
-                        TabSwiftUiView()
-                    ) {
-                        VStack( alignment: .leading) {
-                            HStack {
-                                Image(systemName: "bed.double")
-                                Text("Tab View")
-                                    .font(.caption)
-                            }
-                            .font(.body)
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                            .shadow(radius: 1.5)
-                        }
-                        
-                    }
-                    
-                    Divider()
-
-                    NavigationLink(destination:
-                        PaymentSwiftUIView()
-                    ) {
-                        VStack( alignment: .leading) {
-                            HStack {
-                                Image(systemName: "dollarsign.circle")
-                                Text("Apple Pay")
-                                    .font(.caption)
-                            }
-                            .font(.body)
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                            .shadow(radius: 1.5)
-                        }
-                        
-                    }
-                    
-                    Divider()
-
-                    Group {
-                        NavigationLink(destination:
-                            AnimatableSwiftUIViewEx()
-                        ) {
-                            VStack( alignment: .leading) {
-                                HStack {
-                                    Image(systemName: "wand.and.stars")
-                                    Text("Animatable")
-                                        .font(.caption)
-                                }
-                                .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                                .shadow(radius: 1.5)
-                            }
-                            
-                        }
-
-                        NavigationLink(destination:
-                            AnimatablePairSwiftUIViewEx()
-                        ) {
-                            VStack( alignment: .leading) {
-                                HStack {
-                                    Image(systemName: "wand.and.stars.inverse")
-                                    Text("AnimatablePair")
-                                        .font(.caption)
-                                }
-                                .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                                .shadow(radius: 1.5)
-                            }
-                            
-                        }
-                        
-                        NavigationLink(destination:
-                            AnimArcInsettableShapeViewEx()
-                        ) {
-                            VStack( alignment: .leading) {
-                                HStack {
-                                    Image(systemName: "wand.and.rays")
-                                    Text("AnimArcInsettable")
-                                        .font(.caption)
-                                }
-                                .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                                .shadow(radius: 1.5)
-                            }
-                            
-                        }
-                        
-                        
-                        
-                        NavigationLink(destination:
-                            AdvancedSwiftuiAnimations()
-                        ) {
-                            VStack( alignment: .leading) {
-                                HStack {
-                                    Image(systemName: "wand.and.rays.inverse")
-                                    Text("AdvancedSwiftuiAnimations by SwiftUI Lab")
-                                        .font(.caption)
-                                }
-                                .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                                .shadow(radius: 1.5)
-                            }
-                            
-                        }
-
-                    }
-                    Spacer()
                 }
-                .background(CommonUtils.cu_activity_light_theam_color)
                 
+                
+                NavigationLink(destination:
+                                TabSwiftUiView()
+                ) {
+                    VStack( alignment: .leading) {
+                        HStack {
+                            Image(systemName: "bed.double")
+                            Text("Tab View")
+                                .font(.caption)
+                        }
+                        .font(.body)
+                        .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                        .shadow(radius: 1.5)
+                        Divider()
+                    }
+                    
+                }
+                
+                NavigationLink(destination:
+                                PaymentSwiftUIView()
+                ) {
+                    VStack( alignment: .leading) {
+                        HStack {
+                            Image(systemName: "dollarsign.circle")
+                            Text("Apple Pay")
+                                .font(.caption)
+                        }
+                        .font(.body)
+                        .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                        .shadow(radius: 1.5)
+                        Divider()
+                    }
+                    
+                }
+                
+                
+                NavigationLink(destination:
+                                CheckShapesView()
+                ) {
+                    VStack( alignment: .leading) {
+                        HStack {
+                            Image(systemName: "cube.box")
+                            Text("Play with Shapes")
+                                .font(.caption)
+                        }
+                        .font(.body)
+                        .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                        .shadow(radius: 1.5)
+                        Divider()
+                    }
+                    
+                }
+                
+                
+                Group {
+                    NavigationLink(destination:
+                                    AnimatableSwiftUIViewEx()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                Image(systemName: "wand.and.stars")
+                                Text("Animatable")
+                                    .font(.caption)
+                            }
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
+                        }
+                        
+                    }
+                    
+                    NavigationLink(destination:
+                                    AnimatablePairSwiftUIViewEx()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                Image(systemName: "wand.and.stars.inverse")
+                                Text("AnimatablePair")
+                                    .font(.caption)
+                            }
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
+                        }
+                        
+                    }
+                    
+                    NavigationLink(destination:
+                                    AnimArcInsettableShapeViewEx()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                Image(systemName: "wand.and.rays")
+                                Text("AnimArcInsettable")
+                                    .font(.caption)
+                            }
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
+                        }
+                        
+                    }
+                    
+                    
+                    
+                    NavigationLink(destination:
+                                    AdvancedSwiftuiAnimations()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                Image(systemName: "wand.and.rays.inverse")
+                                Text("AdvancedSwiftuiAnimations by SwiftUI Lab")
+                                    .font(.caption)
+                            }
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
+                        }
+                        
+                    }
+                    Divider()
+                }
+                Spacer()
             }
-            .navigationBarTitle("Select your choice")
+            .background(CommonUtils.cu_activity_light_theam_color)
+            
+        }
+        .navigationBarTitle("Select your choice")
         
         //}
         //.padding(.top, 20)

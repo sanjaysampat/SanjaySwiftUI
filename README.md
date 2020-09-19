@@ -6,7 +6,7 @@ SwiftUI project creation to learn.
 
 ### Topics learned
 
-1. SwiftUI project.
+*. SwiftUI project.
     * Test code for ZStack
     * @State variables
         * on modification perform some tasks with the help of Hidden Toggle control
@@ -55,7 +55,7 @@ SwiftUI project creation to learn.
             * Manual Text alignment set as 'Trailing' to show in Right to Left in all ( This will be again error in Arabic language device settings, as it will make 'Left to Right' in case of Trailing setting. )
             * How to localize Label text in "LaunchScreen.storyboard"
                 * Refer: [Comment on developer.apple.com forums](https://developer.apple.com/forums/thread/86567?answerId=632317022#632317022)
-                * Still could not see text in Arabic in LaunchScreen.
+                * [Still could not see text in Arabic in LaunchScreen](https://feedbackassistant.apple.com/feedback/8714792)
     * Apple Pay test integration
         * Buy with various Landmark items. 
             * Saving Landmark data in document folder after buying, to store status of 'bought' 
@@ -72,25 +72,27 @@ SwiftUI project creation to learn.
         * used filteredLandMark and 'firstIndex' to find the index of record, to modify it.
         * It is always better to pass id's of struct array (insted of object). We can get index of it to modify the record.
     
-3. Animation test ( links added in 'Menuview' )
+*. Animation test ( links added in 'Menuview' )
     * Basic animation examples 
     * AdvancedSwiftuiAnimations by [SwiftUI Lab](https://swiftui-lab.com/swiftui-animations-part1/)
     
-2. GIT integration (Github)
+*. Play with Shapes
+    
+*. GIT integration (Github)
     * Added Project to GIT from XCode 11
     * Creation and Commit to master branch from XCode
     
-3. Build project from Github with [Bitrise](https://www.bitrise.io/) in cloud. ( concept is still not clear )
+*. Build project from Github with [Bitrise](https://www.bitrise.io/) in cloud. ( concept is still not clear )
 
-4. Coredata
+*. Coredata
     * usage of .xcdatamodeld
     * generation of coredataproperties and coredataclass with Editor -> Create NSManagedObject SubClass
     * @FetchRequest of entity
     * saveContext
 
-4. Markdown format for README.md
+*. Markdown format for README.md
 
-5. Use of SF Symbols for **systemImage** icons.
+*. Use of SF Symbols for **systemImage** icons.
     * [System Icons](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/system-icons/) (iOS12  and Earlier)
     * There are over 1,500 symbols text that can be used in apps running in iOS 13 and later. To browse the full set of symbols, download [the SF Symbols mac app](https://developer.apple.com/design/downloads/SF-Symbols.dmg). 
     
