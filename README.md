@@ -6,7 +6,7 @@ SwiftUI project creation to learn.
 
 ### Topics learned
 
-*. SwiftUI project.
+1. SwiftUI project.
     * Test code for ZStack
     * @State variables
         * on modification perform some tasks with the help of Hidden Toggle control
@@ -72,27 +72,27 @@ SwiftUI project creation to learn.
         * used filteredLandMark and 'firstIndex' to find the index of record, to modify it.
         * It is always better to pass id's of struct array (insted of object). We can get index of it to modify the record.
     
-*. Animation test ( links added in 'Menuview' )
+2. Animation test ( links added in 'Menuview' )
     * Basic animation examples 
     * AdvancedSwiftuiAnimations by [SwiftUI Lab](https://swiftui-lab.com/swiftui-animations-part1/)
     
-*. Play with Shapes
+3. Play with Shapes
     
-*. GIT integration (Github)
+4. GIT integration (Github)
     * Added Project to GIT from XCode 11
     * Creation and Commit to master branch from XCode
     
-*. Build project from Github with [Bitrise](https://www.bitrise.io/) in cloud. ( concept is still not clear )
+5. Build project from Github with [Bitrise](https://www.bitrise.io/) in cloud. ( concept is still not clear )
 
-*. Coredata
+6. Coredata
     * usage of .xcdatamodeld
     * generation of coredataproperties and coredataclass with Editor -> Create NSManagedObject SubClass
     * @FetchRequest of entity
     * saveContext
 
-*. Markdown format for README.md
+7. Markdown format for README.md
 
-*. Use of SF Symbols for **systemImage** icons.
+8. Use of SF Symbols for **systemImage** icons.
     * [System Icons](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/system-icons/) (iOS12  and Earlier)
     * There are over 1,500 symbols text that can be used in apps running in iOS 13 and later. To browse the full set of symbols, download [the SF Symbols mac app](https://developer.apple.com/design/downloads/SF-Symbols.dmg). 
     
