@@ -96,5 +96,7 @@ SwiftUI project creation to learn.
     * [System Icons](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/system-icons/) (iOS12  and Earlier)
     * There are over 1,500 symbols text that can be used in apps running in iOS 13 and later. To browse the full set of symbols, download [the SF Symbols mac app](https://developer.apple.com/design/downloads/SF-Symbols.dmg). 
     
+9. Last work Shape, Animation, Localization
+    
 ####### Note:- Replace 'PrivateCommit' with 'PublicCommit' to run. 
 
