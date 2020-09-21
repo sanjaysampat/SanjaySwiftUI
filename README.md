@@ -77,6 +77,7 @@ SwiftUI project creation to learn.
     * AdvancedSwiftuiAnimations by [SwiftUI Lab](https://swiftui-lab.com/swiftui-animations-part1/)
     
 3. Play with Shapes
+    * 'Effects with CGAffineTransform' continued..
     
 4. GIT integration (Github)
     * Added Project to GIT from XCode 11

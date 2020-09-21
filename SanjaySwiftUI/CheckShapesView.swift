@@ -20,6 +20,10 @@ struct CheckShapesView: View {
                     NavigationLink(destination: Shape2(), label: {
                         Text("Effects on Standard Types")
                     })
+                    
+                    NavigationLink(destination: Shape3(), label: {
+                        Text("Effects with CGAffineTransform")
+                    })
                 }
             }
         }.navigationBarTitle("Play with Shapes")
@@ -61,6 +65,8 @@ struct Shape1: View {
                 }
             }
         }
+        .navigationBarTitle("Standard Types").padding(.bottom, 20)
+        
     }
 }
 
@@ -74,15 +80,15 @@ struct Shape2: View {
             
             ScaledShape(shape: Rectangle(), scale: CGSize(width: 0.5, height: 0.5))
                 .overlay(Text("Scaled shape")
-                .foregroundColor(.white))
+                            .foregroundColor(.white))
                 .background(Color.yellow.opacity(0.4))
-
+            
             RotatedShape(shape: Rectangle(), angle: Angle(degrees: 45))
                 .frame(width: 125, height: 125)
                 .overlay(Text("Rotated shape")
-                .foregroundColor(.white))
+                            .foregroundColor(.white))
                 .background(Color.yellow.opacity(0.4))
-
+            
             Group {
                 OffsetShape(shape: Rectangle(), offset: CGSize(width: 110, height: 50))
                     .frame(width: 100, height: 100)
@@ -93,6 +99,60 @@ struct Shape2: View {
             
             Spacer()
         }
+        .navigationBarTitle("Effects on Rect").padding(.bottom, 20)
+    }
+}
+
+struct Shape3: View {
+    @State var steps = 0.0
+    @State var baseColor:UIColor = UIColor.systemBlue
+    
+    var body: some View {
+        VStack {
+            Stepper(value: $steps, in: 0.0...1.1, step:0.4) {
+                Text("steps: \(steps, specifier: "%.1f")")
+                    .foregroundColor(.black)
+            }
+            
+            ZStack {
+                if self.steps > 0.0 {
+                    TransformedShape(shape: Rectangle(), transform: complexTransformation(steps: steps))
+                        .foregroundColor(colorMixer2(c2: UIColor.systemRed, pct: CGFloat(self.steps) ))
+                        .opacity(steps)
+                        .animation(.default)
+                }
+            }
+        }
+        .navigationBarTitle("CGAffineTransform").padding(.bottom, 20)
+    }
+    
+    // This is a very basic implementation of a color interpolation
+    // between two values.
+    func colorMixer2(c2: UIColor, pct: CGFloat) -> Color {
+        guard let cc1 = baseColor.cgColor.components else { return Color(baseColor) }
+        guard let cc2 = c2.cgColor.components else { return Color(baseColor) }
+        
+        let r = (cc1[0] + (cc2[0] - cc1[0]) * pct)
+        let g = (cc1[1] + (cc2[1] - cc1[1]) * pct)
+        let b = (cc1[2] + (cc2[2] - cc1[2]) * pct)
+
+        return Color(red: Double(r), green: Double(g), blue: Double(b))
+    }
+
+    func complexTransformation(steps:Double = 3) -> CGAffineTransform {
+        var affineTransform = CGAffineTransform(translationX: 170, y: 50)
+        let st = ( steps > 1.0 ? 1.0 : ( steps > 0.5 ? 0.5 : steps ) )
+        switch st {
+        case 0.5 :
+            affineTransform = affineTransform.scaledBy(x: 0.4, y: 0.4)
+        case 1.0:
+            affineTransform = affineTransform.scaledBy(x: 0.4, y: 0.4)
+            affineTransform = affineTransform.rotated(by: 45)
+        default:
+            break
+        }
+        
+        return affineTransform
     }
 }
 
