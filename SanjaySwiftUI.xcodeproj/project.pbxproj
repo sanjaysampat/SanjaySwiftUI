@@ -13,6 +13,10 @@
 		7204277524DFFEB900DF4958 /* SwiftUIImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204277424DFFEB900DF4958 /* SwiftUIImageCache.swift */; };
 		7204277B24E01CC800DF4958 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204277924E01CC700DF4958 /* SCLAlertView.swift */; };
 		7204277C24E01CC800DF4958 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204277A24E01CC700DF4958 /* SCLExtensions.swift */; };
+		7210DD9E2518D77D0013DB94 /* GeometryOfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7210DD9D2518D77D0013DB94 /* GeometryOfView.swift */; };
+		7210DD9F2518D77D0013DB94 /* GeometryOfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7210DD9D2518D77D0013DB94 /* GeometryOfView.swift */; };
+		7210DDA52518E48C0013DB94 /* EnviornmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7210DDA42518E48C0013DB94 /* EnviornmentView.swift */; };
+		7210DDA62518E48C0013DB94 /* EnviornmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7210DDA42518E48C0013DB94 /* EnviornmentView.swift */; };
 		7216BB5C24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */; };
 		7216BB5E24D17BC30097AFA4 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */; };
 		723ACB30250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ACB2F250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift */; };
@@ -281,6 +285,8 @@
 		7204277424DFFEB900DF4958 /* SwiftUIImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIImageCache.swift; sourceTree = "<group>"; };
 		7204277924E01CC700DF4958 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
 		7204277A24E01CC700DF4958 /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
+		7210DD9D2518D77D0013DB94 /* GeometryOfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryOfView.swift; sourceTree = "<group>"; };
+		7210DDA42518E48C0013DB94 /* EnviornmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviornmentView.swift; sourceTree = "<group>"; };
 		7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPhotoImagePickerViewController.swift; sourceTree = "<group>"; };
 		7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		723ACB2F250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatablePairSwiftUIViewEx.swift; sourceTree = "<group>"; };
@@ -555,6 +561,8 @@
 				726763DC24FB76D00074715B /* TabSwiftUiView.swift */,
 				726763E124FB7FA40074715B /* LocalDemoView.swift */,
 				72A548612516200400CB82CD /* CheckShapesView.swift */,
+				7210DD9D2518D77D0013DB94 /* GeometryOfView.swift */,
+				7210DDA42518E48C0013DB94 /* EnviornmentView.swift */,
 			);
 			path = SanjaySwiftUI;
 			sourceTree = "<group>";
@@ -988,6 +996,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7210DDA52518E48C0013DB94 /* EnviornmentView.swift in Sources */,
 				72F0CBDD24F7F24600BE9DB0 /* Audio+CoreDataClass.swift in Sources */,
 				7216BB5C24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift in Sources */,
 				72BBAF1224DEBE5700CFC7D6 /* SigninFeatcher.swift in Sources */,
@@ -1048,6 +1057,7 @@
 				7204277B24E01CC800DF4958 /* SCLAlertView.swift in Sources */,
 				72735B8F24D034B0006B75C9 /* StickerCollectionViewCell.swift in Sources */,
 				72B551C924DD743E009A0014 /* Data.swift in Sources */,
+				7210DD9E2518D77D0013DB94 /* GeometryOfView.swift in Sources */,
 				7216BB5E24D17BC30097AFA4 /* Person+CoreDataProperties.swift in Sources */,
 				72735B9024D034B0006B75C9 /* CropViewController.swift in Sources */,
 				723ACB30250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift in Sources */,
@@ -1089,6 +1099,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7210DDA62518E48C0013DB94 /* EnviornmentView.swift in Sources */,
 				726763F024FBB27E0074715B /* Audio+CoreDataClass.swift in Sources */,
 				726763F124FBB27E0074715B /* PersonPhotoImagePickerViewController.swift in Sources */,
 				726763F224FBB27E0074715B /* SigninFeatcher.swift in Sources */,
@@ -1149,6 +1160,7 @@
 				7267642224FBB27E0074715B /* SCLAlertView.swift in Sources */,
 				7267642324FBB27E0074715B /* StickerCollectionViewCell.swift in Sources */,
 				7267642424FBB27E0074715B /* Data.swift in Sources */,
+				7210DD9F2518D77D0013DB94 /* GeometryOfView.swift in Sources */,
 				7267642524FBB27E0074715B /* Person+CoreDataProperties.swift in Sources */,
 				7267642624FBB27E0074715B /* CropViewController.swift in Sources */,
 				723ACB31250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift in Sources */,

@@ -248,11 +248,11 @@ struct ContentView: View {
                     }
                     .sheet(isPresented: $isPresentedStoryboardSanjay)
                     {
+                        // As we want to display the following view on top of the current view, so we are using .sheet to load this view.
                         CustomPersonPhotoImagePickerViewController(isPresentedStoryboardSanjay: self.$isPresentedStoryboardSanjay, photoChanged: self.$photoChanged,  photo: self.$personPhoto)
                    }
                     .foregroundColor(CommonUtils.cu_activity_foreground_color)
                     .padding(paddingSize)
-                    //.padding(.leading, paddingSize)
                 
                     Button(action: {
                         if self.currentPos >= 0 {

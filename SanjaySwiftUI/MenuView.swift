@@ -107,7 +107,6 @@ struct MenuView: View {
                     
                 }
                 
-                
                 NavigationLink(destination:
                                 CheckShapesView()
                 ) {
@@ -125,7 +124,46 @@ struct MenuView: View {
                     
                 }
                 
+                NavigationLink(destination:
+                                GeometryOfView()
+                ) {
+                    VStack( alignment: .leading) {
+                        HStack {
+                            ZStack {
+                                Image(systemName: "sum")
+                                Image(systemName: "function")
+                            }
+                            Text("Geometry")
+                                .font(.caption)
+                        }
+                        .font(.body)
+                        .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                        .shadow(radius: 1.5)
+                        Divider()
+                    }
+                    
+                }
                 
+                NavigationLink(destination:
+                                EnviornmentView()
+                ) {
+                    VStack( alignment: .leading) {
+                        HStack {
+                            ZStack {
+                                Image(systemName: "text.justify")
+                                //Image(systemName: "globe")
+                            }
+                            Text("Environment")
+                                .font(.caption)
+                        }
+                        .font(.body)
+                        .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                        .shadow(radius: 1.5)
+                        Divider()
+                    }
+                    
+                }
+
                 Group {
                     NavigationLink(destination:
                                     AnimatableSwiftUIViewEx()

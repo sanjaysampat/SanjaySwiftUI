@@ -24,6 +24,10 @@ struct CheckShapesView: View {
                     NavigationLink(destination: Shape3(), label: {
                         Text("Effects with CGAffineTransform")
                     })
+                    
+                    NavigationLink(destination: Shape4(), label: {
+                        Text("Gradient Rectangle")
+                    })
                 }
             }
         }.navigationBarTitle("Play with Shapes")
@@ -153,6 +157,51 @@ struct Shape3: View {
         }
         
         return affineTransform
+    }
+}
+
+struct Shape4: View {
+    let gradient = Gradient(colors: [.red, .orange, .yellow, .green, .blue])
+    var body: some View {
+        VStack {
+            ZStack {
+                Rectangle()
+                    .foregroundColor(.clear) .background(LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom))
+                TextOverlayView(string: "LinearGradient")
+            }
+            GeometryReader {
+                geometry in
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(.clear)
+                        .background(AngularGradient.init(gradient: self.gradient, center: .zero, angle: Angle(degrees: 180.0)))
+                    TextOverlayView(string: "AngularGradient")
+                }
+            }
+            GeometryReader {
+                geometry in
+                ZStack {
+                    Rectangle()
+                        .foregroundColor(.clear)
+                        .background(RadialGradient.init(gradient: self.gradient, center: .zero, startRadius: 45, endRadius: 500))
+                    TextOverlayView(string: "RadialGradient")
+                }
+            }
+        }
+        .navigationBarTitle("Gradient Rectangle").padding(.bottom, 20)
+    }
+}
+
+struct TextOverlayView : View {
+    let string: String
+    var body: some View {
+        VStack {
+            Spacer()
+            Text(string)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding()
+                .font(.title)
+        }
     }
 }
 
