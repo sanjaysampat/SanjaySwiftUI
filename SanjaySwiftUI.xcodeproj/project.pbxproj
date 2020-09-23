@@ -30,6 +30,10 @@
 		7249749024E4F112006F5C52 /* TonySectionFeatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7249748B24E4F112006F5C52 /* TonySectionFeatcher.swift */; };
 		7249749424E52684006F5C52 /* getHomeSliderCatRecordTony.json in Resources */ = {isa = PBXBuildFile; fileRef = 7249749324E52684006F5C52 /* getHomeSliderCatRecordTony.json */; };
 		7252639324D55633002C5ACA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7252639224D55633002C5ACA /* README.md */; };
+		7263AD51251B79910041A810 /* CheckGridsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7263AD50251B79900041A810 /* CheckGridsView.swift */; };
+		7263AD52251B79910041A810 /* CheckGridsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7263AD50251B79900041A810 /* CheckGridsView.swift */; };
+		7263AD58251B83200041A810 /* Notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7263AD57251B83200041A810 /* Notes.txt */; };
+		7263AD59251B83210041A810 /* Notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7263AD57251B83200041A810 /* Notes.txt */; };
 		72663AB324C5C7AC000596C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663AB224C5C7AC000596C9 /* AppDelegate.swift */; };
 		72663AB524C5C7AC000596C9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663AB424C5C7AC000596C9 /* SceneDelegate.swift */; };
 		72663AB824C5C7AC000596C9 /* SanjaySwiftUI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 72663AB624C5C7AC000596C9 /* SanjaySwiftUI.xcdatamodeld */; };
@@ -297,6 +301,8 @@
 		7249748B24E4F112006F5C52 /* TonySectionFeatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TonySectionFeatcher.swift; sourceTree = "<group>"; };
 		7249749324E52684006F5C52 /* getHomeSliderCatRecordTony.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getHomeSliderCatRecordTony.json; sourceTree = "<group>"; };
 		7252639224D55633002C5ACA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7263AD50251B79900041A810 /* CheckGridsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckGridsView.swift; sourceTree = "<group>"; };
+		7263AD57251B83200041A810 /* Notes.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Notes.txt; sourceTree = "<group>"; };
 		72663AAF24C5C7AC000596C9 /* SanjaySwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SanjaySwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72663AB224C5C7AC000596C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72663AB424C5C7AC000596C9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -511,6 +517,7 @@
 		72663AA624C5C7AC000596C9 = {
 			isa = PBXGroup;
 			children = (
+				7263AD57251B83200041A810 /* Notes.txt */,
 				7267646724FBB2D70074715B /* SanjaySwiftUIPay.entitlements */,
 				7252639224D55633002C5ACA /* README.md */,
 				72663AB124C5C7AC000596C9 /* SanjaySwiftUI */,
@@ -563,6 +570,7 @@
 				72A548612516200400CB82CD /* CheckShapesView.swift */,
 				7210DD9D2518D77D0013DB94 /* GeometryOfView.swift */,
 				7210DDA42518E48C0013DB94 /* EnviornmentView.swift */,
+				7263AD50251B79900041A810 /* CheckGridsView.swift */,
 			);
 			path = SanjaySwiftUI;
 			sourceTree = "<group>";
@@ -913,6 +921,7 @@
 				726763E524FB8C120074715B /* LocalMarathi.strings in Resources */,
 				728CBF392500D32C00EBEC9D /* LearningPython.jpg in Resources */,
 				72B551CC24DD743E009A0014 /* silversalmoncreek.jpg in Resources */,
+				7263AD58251B83200041A810 /* Notes.txt in Resources */,
 				7282060A24E5769600F5F8CB /* getnewMostLovedCatData.json in Resources */,
 				72B551D524DD743E009A0014 /* stmarylake.jpg in Resources */,
 				72663ABC24C5C7BD000596C9 /* Assets.xcassets in Resources */,
@@ -979,6 +988,7 @@
 				7267645924FBB27E0074715B /* LocalMarathi.strings in Resources */,
 				728CBF3A2500D32C00EBEC9D /* LearningPython.jpg in Resources */,
 				7267645A24FBB27E0074715B /* silversalmoncreek.jpg in Resources */,
+				7263AD59251B83210041A810 /* Notes.txt in Resources */,
 				7267645B24FBB27E0074715B /* getnewMostLovedCatData.json in Resources */,
 				7267645C24FBB27E0074715B /* stmarylake.jpg in Resources */,
 				7267645D24FBB27E0074715B /* Assets.xcassets in Resources */,
@@ -1055,6 +1065,7 @@
 				72D2498824FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift in Sources */,
 				72735B7924D034B0006B75C9 /* PhotoEditor+StickersViewController.swift in Sources */,
 				7204277B24E01CC800DF4958 /* SCLAlertView.swift in Sources */,
+				7263AD51251B79910041A810 /* CheckGridsView.swift in Sources */,
 				72735B8F24D034B0006B75C9 /* StickerCollectionViewCell.swift in Sources */,
 				72B551C924DD743E009A0014 /* Data.swift in Sources */,
 				7210DD9E2518D77D0013DB94 /* GeometryOfView.swift in Sources */,
@@ -1158,6 +1169,7 @@
 				72D2498924FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift in Sources */,
 				7267642124FBB27E0074715B /* PhotoEditor+StickersViewController.swift in Sources */,
 				7267642224FBB27E0074715B /* SCLAlertView.swift in Sources */,
+				7263AD52251B79910041A810 /* CheckGridsView.swift in Sources */,
 				7267642324FBB27E0074715B /* StickerCollectionViewCell.swift in Sources */,
 				7267642424FBB27E0074715B /* Data.swift in Sources */,
 				7210DD9F2518D77D0013DB94 /* GeometryOfView.swift in Sources */,

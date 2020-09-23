@@ -98,7 +98,7 @@ struct EnviornmentView: View {
     var body: some View {
         VStack {
             HStack {
-                EditButton()
+                EditButton()    // SSTODO this does not work, to check.
                 Button(action: {self.presented.toggle()}) {
                     Text("Present")
                 }

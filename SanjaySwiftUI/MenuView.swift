@@ -125,6 +125,23 @@ struct MenuView: View {
                 }
                 
                 NavigationLink(destination:
+                                CheckGridsView()
+                ) {
+                    VStack( alignment: .leading) {
+                        HStack {
+                            Image(systemName: "square.grid.3x2")
+                            Text("Play with Grids")
+                                .font(.caption)
+                        }
+                        .font(.body)
+                        .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                        .shadow(radius: 1.5)
+                        Divider()
+                    }
+                    
+                }
+
+                NavigationLink(destination:
                                 GeometryOfView()
                 ) {
                     VStack( alignment: .leading) {
@@ -237,7 +254,9 @@ struct MenuView: View {
             .background(CommonUtils.cu_activity_light_theam_color)
             
         }
-        .navigationBarTitle("Select your choice")
+        //.navigationBarTitle("")
+        //.navigationBarHidden(true)
+        //.navigationBarTitle("Select your choice")
         
         //}
         //.padding(.top, 20)

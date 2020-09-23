@@ -80,27 +80,29 @@ SwiftUI project creation to learn.
     * Effects with CGAffineTransform
     * Gradient Rectangles
     
-4. Geometry ( and Enviornment - Work in Progress ) 
+4. "Play with Grids" ( Work in Progress )
     
-5. GIT integration (Github)
+5. Geometry ( and Enviornment - Work in Progress ) 
+    
+6. GIT integration (Github)
     * Added Project to GIT from XCode 11
     * Creation and Commit to master branch from XCode
     
-6. Build project from Github with [Bitrise](https://www.bitrise.io/) in cloud. ( concept is still not clear )
+7. Build project from Github with [Bitrise](https://www.bitrise.io/) in cloud. ( concept is still not clear )
 
-7. Coredata
+8. Coredata
     * usage of .xcdatamodeld
     * generation of coredataproperties and coredataclass with Editor -> Create NSManagedObject SubClass
     * @FetchRequest of entity
     * saveContext
 
-8. Markdown format for README.md
+9. Markdown format for README.md
 
-9. Use of SF Symbols for **systemImage** icons.
+10 Use of SF Symbols for **systemImage** icons.
     * [System Icons](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/system-icons/) (iOS12  and Earlier)
     * There are over 1,500 symbols text that can be used in apps running in iOS 13 and later. To browse the full set of symbols, download [the SF Symbols mac app](https://developer.apple.com/design/downloads/SF-Symbols.dmg). 
     
-10. Last work Shape, Animation, Localization
+11. Last work Shape, Animation, Localization
     
 ####### Note:- Replace 'PrivateCommit' with 'PublicCommit' to run. 
 

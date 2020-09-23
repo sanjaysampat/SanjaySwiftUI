@@ -1204,6 +1204,9 @@ struct WaveText: View {
         func body(content: Content) -> some View {
             
             HStack(spacing: 0) {
+                // In arabic or right to left language,
+                // the following for each gives text in reverse.
+                // for eg. as "baL IUtfiwS ehT"
                 ForEach(Array(text.enumerated()), id: \.0) { (n, ch) in
                     Text(String(ch))
                         .font(Font.custom("Menlo", size: self.size).bold())
