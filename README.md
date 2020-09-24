@@ -80,7 +80,9 @@ SwiftUI project creation to learn.
     * Effects with CGAffineTransform
     * Gradient Rectangles
     
-4. "Play with Grids" ( Work in Progress )
+4. Play with Grids
+    * Honeycomb Grid
+    * Resizable Grid
     
 5. Geometry ( and Enviornment - Work in Progress ) 
     
@@ -102,7 +104,7 @@ SwiftUI project creation to learn.
     * [System Icons](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/system-icons/) (iOS12  and Earlier)
     * There are over 1,500 symbols text that can be used in apps running in iOS 13 and later. To browse the full set of symbols, download [the SF Symbols mac app](https://developer.apple.com/design/downloads/SF-Symbols.dmg). 
     
-11. Last work Shape, Animation, Localization
+11. Last work Shape, Animation, Localization, Grid
     
     
 <sub><sup>Note :-    
