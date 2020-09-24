@@ -107,6 +107,8 @@ SwiftUI project creation to learn.
     
 <sub><sup>
 Note :-    
+
 Replace 'PrivateCommit' with 'PublicCommit' to run. 
+
 Images of face belongs to their respective copyrights.
 </sub></sup>
