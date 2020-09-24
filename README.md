@@ -104,5 +104,9 @@ SwiftUI project creation to learn.
     
 11. Last work Shape, Animation, Localization
     
-####### Note:- Replace 'PrivateCommit' with 'PublicCommit' to run. 
-
+    
+<sub><sup>
+Note :-    
+Replace 'PrivateCommit' with 'PublicCommit' to run. 
+Images of face belongs to their respective copyrights.
+</sub></sup>
