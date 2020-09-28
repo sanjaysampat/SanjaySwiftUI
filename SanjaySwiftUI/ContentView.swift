@@ -258,6 +258,12 @@ struct ContentView: View {
                         if self.currentPos >= 0 {
                             self.menuSelection = 1
                             
+                        } else {
+                            // default add mode
+                            self.showingAlert = 1
+                            self.nameChanged = false
+                            self.isEditMode = false
+                            self.alertSS(title: "in your Heart", message: "What's name ?", text: "" )
                         }
                     }) {
                         VStack( alignment: .center) {

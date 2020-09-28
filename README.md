@@ -84,7 +84,7 @@ SwiftUI project creation to learn.
     * Honeycomb Grid
     * Resizable Grid
     
-5. Geometry ( and Enviornment - Work in Progress ) 
+5. Geometry and Enviornment ( Edit functionality pending ) 
     
 6. GIT integration (Github)
     * Added Project to GIT from XCode 11
@@ -104,9 +104,11 @@ SwiftUI project creation to learn.
     * [System Icons](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/system-icons/) (iOS12  and Earlier)
     * There are over 1,500 symbols text that can be used in apps running in iOS 13 and later. To browse the full set of symbols, download [the SF Symbols mac app](https://developer.apple.com/design/downloads/SF-Symbols.dmg). 
     
-11. Last work Shape, Animation, Localization, Grid
+11. Listing of conferance rooms example by Apple. (Work in Progress)
     
     
 <sub><sup>Note :-    
-<sub><sup>(1) Replace 'PrivateCommit' with 'PublicCommit' to run. (2) Images of face belongs to their respective copyrights.
+(1) Replace 'PrivateCommit' with 'PublicCommit' to run. 
+(2) Images of face belongs to their respective copyrights.
+(3) Images of 'conferance rooms example' by [Jan Zavrel](http://www.zavrel.net/swiftui-rooms-resources)
 </sub></sup>
