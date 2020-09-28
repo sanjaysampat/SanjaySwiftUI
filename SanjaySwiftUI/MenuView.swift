@@ -81,7 +81,7 @@ struct MenuView: View {
                                    Image(systemName: "person.3.fill")
                                         .scaleEffect(CGSize(width: 0.5, height: 0.5))
                                 }
-                                Text("Listing of conferance rooms")
+                                Text("List of conferance rooms")
                                     .font(.caption)
                             }
                             .font(.body)

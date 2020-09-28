@@ -10,17 +10,25 @@ import SwiftUI
 
 struct RoomListView: View {
     var rooms: [Room] = testData    //[]
-
+    
     var body: some View {
-        List(rooms) { room in
-            Image(systemName: "photo")
-            VStack(alignment: .leading) {
-                Text(room.name)
-                Text("20 people")
-                    .font(.subheadline)
-                    .foregroundColor(.secondary)
+        NavigationView {
+            List(rooms) { room in
+                NavigationLink(destination: Text(room.name)) {
+                    Image(room.imageName)
+                        .resizable()
+                        .frame(width: 50.0, height: 50.0)
+                        .cornerRadius(10)
+                    VStack(alignment: .leading) {
+                        Text(room.name)
+                        Text("\(room.capacity) people")
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                }
             }
         }
+        .navigationBarTitle("Rooms")
     }
 }
 
