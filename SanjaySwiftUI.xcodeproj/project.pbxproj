@@ -224,6 +224,8 @@
 		729CC9482521D32A0078A0CC /* RoomListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729CC9462521D32A0078A0CC /* RoomListView.swift */; };
 		729CC9522521E1240078A0CC /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729CC94F2521E1240078A0CC /* Room.swift */; };
 		729CC9532521E1240078A0CC /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729CC94F2521E1240078A0CC /* Room.swift */; };
+		729CC95D2521F0F40078A0CC /* Rooms.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729CC95C2521F0F40078A0CC /* Rooms.xcassets */; };
+		729CC95E2521F0F40078A0CC /* Rooms.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729CC95C2521F0F40078A0CC /* Rooms.xcassets */; };
 		72A548622516200400CB82CD /* CheckShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A548612516200400CB82CD /* CheckShapesView.swift */; };
 		72A548632516200400CB82CD /* CheckShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A548612516200400CB82CD /* CheckShapesView.swift */; };
 		72B551AF24DD1690009A0014 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B551AE24DD1690009A0014 /* ListView.swift */; };
@@ -389,6 +391,7 @@
 		729B0EF524C9B40E00054F9F /* Person+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataClass.swift"; sourceTree = "<group>"; };
 		729CC9462521D32A0078A0CC /* RoomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListView.swift; sourceTree = "<group>"; };
 		729CC94F2521E1240078A0CC /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
+		729CC95C2521F0F40078A0CC /* Rooms.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Rooms.xcassets; sourceTree = "<group>"; };
 		729EE34F250E500600E61CFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		72A548612516200400CB82CD /* CheckShapesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckShapesView.swift; sourceTree = "<group>"; };
 		72B551AE24DD1690009A0014 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -709,6 +712,7 @@
 			isa = PBXGroup;
 			children = (
 				729CC94F2521E1240078A0CC /* Room.swift */,
+				729CC95C2521F0F40078A0CC /* Rooms.xcassets */,
 			);
 			path = RoomListResources;
 			sourceTree = "<group>";
@@ -933,6 +937,7 @@
 				7249749424E52684006F5C52 /* getHomeSliderCatRecordTony.json in Resources */,
 				72EDF200250BA81F00879E40 /* LocalArabic.strings in Resources */,
 				72663ABF24C5C7BD000596C9 /* Preview Assets.xcassets in Resources */,
+				729CC95D2521F0F40078A0CC /* Rooms.xcassets in Resources */,
 				72EDF205250BC48800879E40 /* Localizable.strings in Resources */,
 				726763E524FB8C120074715B /* LocalMarathi.strings in Resources */,
 				728CBF392500D32C00EBEC9D /* LearningPython.jpg in Resources */,
@@ -1000,6 +1005,7 @@
 				7267645624FBB27E0074715B /* getHomeSliderCatRecordTony.json in Resources */,
 				72EDF201250BA81F00879E40 /* LocalArabic.strings in Resources */,
 				7267645724FBB27E0074715B /* Preview Assets.xcassets in Resources */,
+				729CC95E2521F0F40078A0CC /* Rooms.xcassets in Resources */,
 				72EDF206250BC48800879E40 /* Localizable.strings in Resources */,
 				7267645924FBB27E0074715B /* LocalMarathi.strings in Resources */,
 				728CBF3A2500D32C00EBEC9D /* LearningPython.jpg in Resources */,
