@@ -69,16 +69,37 @@ struct MenuView: View {
                         }
                         
                     }
+                    
+                    NavigationLink(destination:
+                                    RoomListView()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                ZStack {
+                                    Image(systemName: "rectangle")
+                                        .scaleEffect(CGSize(width: 1.0, height: 1.0))
+                                   Image(systemName: "person.3.fill")
+                                        .scaleEffect(CGSize(width: 0.5, height: 0.5))
+                                }
+                                Text("Listing of conferance rooms")
+                                    .font(.caption)
+                            }
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
+                        }
+                        
+                    }
                     Divider()
                 }
-                
                 
                 NavigationLink(destination:
                                 TabSwiftUiView()
                 ) {
                     VStack( alignment: .leading) {
                         HStack {
-                            Image(systemName: "bed.double")
+                            Image(systemName: "bed.double.fill")
+                                .scaleEffect(CGSize(width: 0.8, height: 1.4))
                             Text("Tab View")
                                 .font(.caption)
                         }
@@ -146,9 +167,10 @@ struct MenuView: View {
                 ) {
                     VStack( alignment: .leading) {
                         HStack {
-                            ZStack {
+                            ZStack(alignment: Alignment(horizontal: .leading, vertical: .center)) {
                                 Image(systemName: "sum")
                                 Image(systemName: "function")
+                                    .scaleEffect(CGSize(width: 0.8, height: 0.8))
                             }
                             Text("Geometry")
                                 .font(.caption)
