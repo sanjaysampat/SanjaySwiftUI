@@ -33,7 +33,7 @@ struct CheckGridsView: View {
         }
         //.navigationBarTitle("")
         //.navigationBarHidden(true)
-        .navigationBarTitle("Play with Grids")
+        .navigationBarTitle(Text("Play with Grids"), displayMode: .inline)
         // for navigationbar hide issue, please see the FULL answer
         // https://stackoverflow.com/a/57518324/2641380
         
@@ -49,7 +49,8 @@ struct Grid1: View {
                 Text("The example will work only on and above iOS 14.")
             }
         }
-        .navigationBarTitle("Regular Grids").padding(.bottom, 10)
+        .navigationBarTitle(Text("Regular Grids"), displayMode: .inline)
+        //.padding(.bottom, 10)
     }
 }
 
@@ -62,7 +63,8 @@ struct Grid2: View {
                 Text("The example will work only on and above iOS 14.")
             }
         }
-        .navigationBarTitle("Honeycomb Grid").padding(.bottom, 10)
+        .navigationBarTitle(Text("Honeycomb Grid"), displayMode: .inline)
+        //.padding(.bottom, 10)
     }
 }
 
@@ -75,7 +77,8 @@ struct Grid3: View {
                 Text("The example will work only on and above iOS 14.")
             }
         }
-        .navigationBarTitle("Resizable Grid").padding(.bottom, 10)
+        .navigationBarTitle(Text("Resizable Grid"), displayMode: .inline)
+        //.padding(.bottom, 10)
     }
 }
 

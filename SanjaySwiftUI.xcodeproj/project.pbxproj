@@ -226,6 +226,8 @@
 		729CC9532521E1240078A0CC /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729CC94F2521E1240078A0CC /* Room.swift */; };
 		729CC95D2521F0F40078A0CC /* Rooms.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729CC95C2521F0F40078A0CC /* Rooms.xcassets */; };
 		729CC95E2521F0F40078A0CC /* Rooms.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 729CC95C2521F0F40078A0CC /* Rooms.xcassets */; };
+		729CC9642521F36E0078A0CC /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729CC9632521F36E0078A0CC /* RoomDetailView.swift */; };
+		729CC9652521F36E0078A0CC /* RoomDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 729CC9632521F36E0078A0CC /* RoomDetailView.swift */; };
 		72A548622516200400CB82CD /* CheckShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A548612516200400CB82CD /* CheckShapesView.swift */; };
 		72A548632516200400CB82CD /* CheckShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A548612516200400CB82CD /* CheckShapesView.swift */; };
 		72B551AF24DD1690009A0014 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B551AE24DD1690009A0014 /* ListView.swift */; };
@@ -392,6 +394,7 @@
 		729CC9462521D32A0078A0CC /* RoomListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomListView.swift; sourceTree = "<group>"; };
 		729CC94F2521E1240078A0CC /* Room.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		729CC95C2521F0F40078A0CC /* Rooms.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Rooms.xcassets; sourceTree = "<group>"; };
+		729CC9632521F36E0078A0CC /* RoomDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomDetailView.swift; sourceTree = "<group>"; };
 		729EE34F250E500600E61CFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		72A548612516200400CB82CD /* CheckShapesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckShapesView.swift; sourceTree = "<group>"; };
 		72B551AE24DD1690009A0014 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
@@ -582,6 +585,7 @@
 				7210DDA42518E48C0013DB94 /* EnviornmentView.swift */,
 				7263AD50251B79900041A810 /* CheckGridsView.swift */,
 				729CC9462521D32A0078A0CC /* RoomListView.swift */,
+				729CC9632521F36E0078A0CC /* RoomDetailView.swift */,
 			);
 			path = SanjaySwiftUI;
 			sourceTree = "<group>";
@@ -1094,6 +1098,7 @@
 				72B551C924DD743E009A0014 /* Data.swift in Sources */,
 				7210DD9E2518D77D0013DB94 /* GeometryOfView.swift in Sources */,
 				7216BB5E24D17BC30097AFA4 /* Person+CoreDataProperties.swift in Sources */,
+				729CC9642521F36E0078A0CC /* RoomDetailView.swift in Sources */,
 				72735B9024D034B0006B75C9 /* CropViewController.swift in Sources */,
 				723ACB30250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift in Sources */,
 				72663ABA24C5C7AC000596C9 /* ContentView.swift in Sources */,
@@ -1200,6 +1205,7 @@
 				7267642424FBB27E0074715B /* Data.swift in Sources */,
 				7210DD9F2518D77D0013DB94 /* GeometryOfView.swift in Sources */,
 				7267642524FBB27E0074715B /* Person+CoreDataProperties.swift in Sources */,
+				729CC9652521F36E0078A0CC /* RoomDetailView.swift in Sources */,
 				7267642624FBB27E0074715B /* CropViewController.swift in Sources */,
 				723ACB31250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift in Sources */,
 				7267642724FBB27E0074715B /* ContentView.swift in Sources */,

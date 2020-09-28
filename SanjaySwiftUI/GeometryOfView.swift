@@ -59,7 +59,8 @@ struct GeometryOfView: View {
                 }
             }
             .background(Color.green)
-            .navigationBarTitle("Geometry").padding(.bottom, 5)
+            .navigationBarTitle(Text("Geometry"), displayMode: .inline)
+            //.padding(.bottom, 5)
 
         }
     }

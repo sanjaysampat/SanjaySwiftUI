@@ -17,7 +17,7 @@ struct RoomListView: View {
                 RoomCell(room: room)
             }
         }
-        .navigationBarTitle("Rooms")
+        .navigationBarTitle(Text("Rooms"), displayMode: .inline)
     }
 }
 
@@ -31,7 +31,7 @@ struct RoomCell: View {
     let room: Room
 
     var body: some View {
-        NavigationLink(destination: Text(room.name)) {
+        NavigationLink(destination: RoomDetailView(room: room)) {
             Image(room.imageName)
                 .resizable()
                 .frame(width: 50.0, height: 50.0)

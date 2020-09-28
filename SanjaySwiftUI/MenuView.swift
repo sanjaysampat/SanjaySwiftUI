@@ -278,7 +278,7 @@ struct MenuView: View {
         }
         //.navigationBarTitle("")
         //.navigationBarHidden(true)
-        //.navigationBarTitle("Select your choice")
+        .navigationBarTitle(Text("Select your choice"), displayMode: .inline)
         
         //}
         //.padding(.top, 20)

@@ -74,7 +74,7 @@ struct AdvancedSwiftuiAnimations: View {
 
                 }
 
-            }.navigationBarTitle("SwiftUI Lab")
+            }.navigationBarTitle(Text("SwiftUI Lab"), displayMode: .inline)
         }
     }
 }
@@ -136,7 +136,8 @@ struct Example1: View {
                     self.sides = 30.0
                 }
                 
-            }.navigationBarTitle("Example 1").padding(.bottom, 50)
+            }.navigationBarTitle(Text("Example 1"), displayMode: .inline)
+            //.padding(.bottom, 50)
         }
     }
 }
@@ -216,7 +217,8 @@ struct Example2: View {
                     self.sides = 30
                 }
                 
-            }.navigationBarTitle("Example 2").padding(.bottom, 50)
+            }.navigationBarTitle(Text("Example 2"), displayMode: .inline)
+            //.padding(.bottom, 50)
         }
     }
 }
@@ -309,7 +311,8 @@ struct Example3: View {
                 }
                 
             }
-        }.navigationBarTitle("Example 3").padding(.bottom, 50)
+        }.navigationBarTitle(Text("Example 3"), displayMode: .inline)
+        //.padding(.bottom, 50)
     }
 }
 
@@ -402,7 +405,8 @@ struct Example4: View {
                 }
                 
             }
-        }.navigationBarTitle("Example 4").padding(.bottom, 50)
+        }.navigationBarTitle(Text("Example 4"), displayMode: .inline)
+        //.padding(.bottom, 50)
     }
 }
 
@@ -507,7 +511,8 @@ struct Example5: View {
                 }
                 
             }
-        }.navigationBarTitle("Example 5").padding(.bottom, 50)
+        }.navigationBarTitle(Text("Example 5"), displayMode: .inline)
+        //.padding(.bottom, 50)
     }
     
 }
@@ -765,7 +770,7 @@ struct Example7: View {
             Button(action: { self.moveIt.toggle() }) { Text("Animate") }.padding(.top, 50)
         }
         .onTapGesture { self.moveIt.toggle() }
-        .navigationBarTitle("Example 7")
+        .navigationBarTitle(Text("Example 7"), displayMode: .inline)
 
     }
 }
@@ -829,7 +834,9 @@ struct Example8: View {
             Spacer()
             RotatingCard()
             Spacer()
-            }.background(Color.black).navigationBarTitle("Example 8")
+        }
+        .background(Color.black)
+        .navigationBarTitle(Text("Example 8"), displayMode: .inline)
     }
 }
 
@@ -933,7 +940,7 @@ struct Example9: View {
                 }.frame(alignment: .topLeading)
         }
         .padding(20)
-        .navigationBarTitle("Example 9")
+        .navigationBarTitle(Text("Example 9"), displayMode: .inline)
 
     }
 }
@@ -1029,7 +1036,7 @@ struct Example10: View {
 
                 MyButton(label: "100%", font: .headline) { withAnimation(.easeInOut(duration: 2.0)) { self.percent = 1.0 } }
             }
-        }.navigationBarTitle("Example 10")
+        }.navigationBarTitle(Text("Example 10"), displayMode: .inline)
     }
 }
 
@@ -1108,7 +1115,7 @@ struct Example11: View {
                     self.animate.toggle()
                 }
             }
-        }.navigationBarTitle("Example 11")
+        }.navigationBarTitle(Text("Example 11"), displayMode: .inline)
     }
 }
 
@@ -1169,7 +1176,7 @@ struct Example12: View {
             withAnimation(Animation.easeInOut(duration: 2.0).repeatForever()) {
                 self.flag.toggle()
             }
-        }.navigationBarTitle("Example 12")
+        }.navigationBarTitle(Text("Example 12"), displayMode: .inline)
     }
 }
 
@@ -1272,7 +1279,7 @@ struct Example13: View {
 
         }
         .overlay(MovingCounter(number: number))
-        .navigationBarTitle("Exampler 13")
+        .navigationBarTitle(Text("Exampler 13"), displayMode: .inline)
         
     }
 }
@@ -1404,7 +1411,7 @@ struct Example14: View {
                 }
             }
             Spacer()
-        }.navigationBarTitle("Example 14")
+        }.navigationBarTitle(Text("Example 14"), displayMode: .inline)
     }
 }
 

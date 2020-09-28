@@ -30,7 +30,7 @@ struct CheckShapesView: View {
                     })
                 }
             }
-        }.navigationBarTitle("Play with Shapes")
+        }.navigationBarTitle(Text("Play with Shapes"), displayMode: .inline)
     }
 }
 
@@ -69,7 +69,8 @@ struct Shape1: View {
                 }
             }
         }
-        .navigationBarTitle("Standard Types").padding(.bottom, 20)
+        .navigationBarTitle(Text("Standard Types"), displayMode: .inline)
+        //.padding(.bottom, 20)
         
     }
 }
