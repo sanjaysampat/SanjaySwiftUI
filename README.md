@@ -108,7 +108,7 @@ SwiftUI project creation to learn.
     
     
 <sub><sup>Note :-    
-1.  Replace 'PrivateCommit' with 'PublicCommit' to run. 
-2.  Images of face belongs to their respective copyrights.
-3.  Images of 'conferance rooms example' by [Jan Zavrel](http://www.zavrel.net/swiftui-rooms-resources)
+(1) Replace 'PrivateCommit' with 'PublicCommit' to run. 
+(2) Images of face belongs to their respective copyrights.
+(3) Images of 'conferance rooms example' by [Jan Zavrel](http://www.zavrel.net/swiftui-rooms-resources)
 </sub></sup>
