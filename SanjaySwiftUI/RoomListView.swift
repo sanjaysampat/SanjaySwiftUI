@@ -14,18 +14,7 @@ struct RoomListView: View {
     var body: some View {
         NavigationView {
             List(rooms) { room in
-                NavigationLink(destination: Text(room.name)) {
-                    Image(room.imageName)
-                        .resizable()
-                        .frame(width: 50.0, height: 50.0)
-                        .cornerRadius(10)
-                    VStack(alignment: .leading) {
-                        Text(room.name)
-                        Text("\(room.capacity) people")
-                            .font(.subheadline)
-                            .foregroundColor(.secondary)
-                    }
-                }
+                RoomCell(room: room)
             }
         }
         .navigationBarTitle("Rooms")
@@ -35,5 +24,24 @@ struct RoomListView: View {
 struct RoomListView_Previews: PreviewProvider {
     static var previews: some View {
         RoomListView(rooms: testData)
+    }
+}
+
+struct RoomCell: View {
+    let room: Room
+
+    var body: some View {
+        NavigationLink(destination: Text(room.name)) {
+            Image(room.imageName)
+                .resizable()
+                .frame(width: 50.0, height: 50.0)
+                .cornerRadius(10)
+            VStack(alignment: .leading) {
+                Text(room.name)
+                Text("\(room.capacity) people")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            }
+        }
     }
 }
