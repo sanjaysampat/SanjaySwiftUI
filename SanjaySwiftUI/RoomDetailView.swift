@@ -10,13 +10,21 @@ import SwiftUI
 
 struct RoomDetailView: View {
     let room: Room
+    @State private var zoomed = false
 
     var body: some View {
-        Image(room.imageName)
-            .resizable()
-            .aspectRatio(contentMode: .fit)
-            .navigationBarTitle(Text(room.name), displayMode: .inline)
-        
+        ZStack(alignment: .topLeading) {
+            Image(room.imageName)
+                .resizable()
+                .aspectRatio(contentMode: zoomed ? .fill : .fit)
+                .navigationBarTitle(Text(room.name), displayMode: .inline)
+                .onTapGesture {
+                    withAnimation { self.zoomed.toggle() }
+            }
+            Image(systemName: "video.fill")
+                .font(.title)
+                .padding(.all)
+        }
     }
 }
 
