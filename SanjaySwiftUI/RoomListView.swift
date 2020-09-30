@@ -27,15 +27,26 @@ struct RoomListView: View {
                     ForEach (store.rooms) { room in
                         RoomCell(room: room)
                     }
+                    .onDelete( perform: deleteRoom)
+                    .onMove(perform: moveRoom)
                 }
             }
+            .listStyle(GroupedListStyle())
+            .navigationBarTitle(Text("Rooms"), displayMode: .inline)
+            .navigationBarItems(trailing: EditButton()) // SSTODO this does not work.
         }
-        .navigationBarTitle(Text("Rooms"), displayMode: .inline)
-        .listStyle(GroupedListStyle())
     }
     
     func addRoom() {
         store.rooms.append(Room(name: "Hall 2", building: "A", floor: "3", capacity: 2000, hasVideo: false, imageName: "room10"))
+    }
+    
+    func deleteRoom(at offsets: IndexSet) {
+        store.rooms.remove(atOffsets: offsets)
+    }
+
+    func moveRoom(from source: IndexSet, to destination: Int) {
+        store.rooms.move(fromOffsets: source, toOffset: destination)
     }
 }
 
