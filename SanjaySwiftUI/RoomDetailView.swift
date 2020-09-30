@@ -14,16 +14,31 @@ struct RoomDetailView: View {
 
     var body: some View {
         ZStack(alignment: .topLeading) {
+            VStack{
+                Text("Building: \(room.building)")
+                    .bold()
+                    .frame(maxWidth: .infinity, alignment: .center)
+                
+                Text("Floor: \(room.floor)")
+                    .italic()
+                    .frame(maxWidth: .infinity, alignment: .center)
+            }
+            .padding(.all)
+            
             Image(room.imageName)
                 .resizable()
                 .aspectRatio(contentMode: zoomed ? .fill : .fit)
                 .navigationBarTitle(Text(room.name), displayMode: .inline)
                 .onTapGesture {
-                    withAnimation { self.zoomed.toggle() }
+                    withAnimation(.linear(duration: 1.5)) { self.zoomed.toggle() }
             }
-            Image(systemName: "video.fill")
-                .font(.title)
-                .padding(.all)
+            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)
+            if room.hasVideo && !zoomed {
+                Image(systemName: "video.fill")
+                    .font(.title)
+                    .padding(.all)
+                    .transition(.move(edge: .leading))
+            }
         }
     }
 }
