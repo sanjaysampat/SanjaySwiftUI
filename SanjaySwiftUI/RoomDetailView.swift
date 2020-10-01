@@ -45,7 +45,6 @@ struct RoomDetailView: View {
                 Image(systemName: "video.fill")
                     .font(.title)
                     .padding(.all)
-                    .foregroundColor(CommonUtils.cu_activity_foreground_color)
                     .transition(.move(edge: .leading))
             }
             
