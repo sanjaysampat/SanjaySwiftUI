@@ -100,11 +100,13 @@ SwiftUI project creation to learn.
 
 9. Markdown format for README.md
 
-10 Use of SF Symbols for **systemImage** icons.
+10. Use of SF Symbols for **systemImage** icons.
     * [System Icons](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/system-icons/) (iOS12  and Earlier)
     * There are over 1,500 symbols text that can be used in apps running in iOS 13 and later. To browse the full set of symbols, download [the SF Symbols mac app](https://developer.apple.com/design/downloads/SF-Symbols.dmg). 
     
-11. RoomList - Listing of conference rooms example by Apple. ( pending issue of Editmode )
+11. RoomList - Listing of conference rooms example by Apple. ( pending issue of Editmode ) ( Map view continued ... )
+    * List add sample room, delete list item
+    * Room detail view
     
     
 <sub><sup>Note :-    

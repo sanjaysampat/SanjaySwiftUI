@@ -38,7 +38,7 @@ struct RoomListView: View {
     }
     
     func addRoom() {
-        store.rooms.append(Room(name: "Hall 2", building: "A", floor: "3", capacity: 2000, hasVideo: false, imageName: "room10"))
+        store.rooms.append(Room(name: "Hall 2", building: "A", floor: "3", capacity: 2000, hasVideo: false, imageName: "room10", coordinates: Coordinates(latitude: 56.948889, longitude: 24.106389)))
     }
     
     func deleteRoom(at offsets: IndexSet) {

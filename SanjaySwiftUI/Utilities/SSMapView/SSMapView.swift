@@ -1,0 +1,78 @@
+//
+//  SSMapView.swift
+//  SanjaySwiftUI
+//
+//  Created by Sanjay Sampat on 01/10/20.
+//  Copyright © 2020 Sanjay Sampat. All rights reserved.
+//
+
+import MapKit
+import SwiftUI
+
+struct SSMapView: View {
+    @Binding var isPresentedSSMap: Bool
+    @Binding var coordinateRegion: MKCoordinateRegion
+    var annotaionItemPlaces : [SSAnnotaionItemPlace] = []
+
+    var body: some View {
+        ZStack(alignment: .topLeading) {
+            
+            if #available(iOS 14.0, *) {
+                if annotaionItemPlaces.count <= 0  {
+                    Map(coordinateRegion: $coordinateRegion)
+                } else {
+                    Map(coordinateRegion: $coordinateRegion,
+                        annotationItems: annotaionItemPlaces) { place in
+                        MapMarker(coordinate: place.coordinate, tint: .green)
+                    }
+                }
+            } else {
+                Text("The example will work only on and above iOS 14.")
+                    .padding()
+            }
+            
+            Button(action: {
+                withAnimation(.linear(duration:2)){
+                    self.isPresentedSSMap = false
+                }
+            }) {
+                HStack( alignment: .center) {
+                    Image(systemName: "chevron.left")
+                    Text("Back")
+                        .font(.body)
+                        .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                        .shadow(radius: 1.5)
+                    
+                }
+            }
+            .foregroundColor(CommonUtils.cu_activity_foreground_color)
+            .padding()
+            
+        }
+        .edgesIgnoringSafeArea(.all)
+        
+    }
+}
+
+struct SSMapView_Previews: PreviewProvider {
+    static var previews: some View {
+        SSMapView(isPresentedSSMap: .constant(true), coordinateRegion: .constant(MKCoordinateRegion(
+                                center: CLLocationCoordinate2D(latitude: 19.229497, longitude: 72.864994),
+                                span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))), annotaionItemPlaces: [
+                                    SSAnnotaionItemPlace(name: "Paratha Zone", latitude: 19.229932, longitude: 72.864297),
+                                    SSAnnotaionItemPlace(name: "Saffron", latitude:  19.229750, longitude: 72.864608),
+                                    SSAnnotaionItemPlace(name: "Greens Veg Restaurant", latitude: 19.230172, longitude: 72.862070)
+                                  ])
+    }
+}
+
+struct SSAnnotaionItemPlace: Identifiable {
+    var id = UUID()
+    let name: String
+    let latitude: Double
+    let longitude: Double
+    
+    var coordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
+}
