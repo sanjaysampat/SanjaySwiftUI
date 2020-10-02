@@ -21,10 +21,32 @@ struct SSMapView: View {
                 if annotaionItemPlaces.count <= 0  {
                     Map(coordinateRegion: $coordinateRegion)
                 } else {
+                    
                     Map(coordinateRegion: $coordinateRegion,
                         annotationItems: annotaionItemPlaces) { place in
-                        MapMarker(coordinate: place.coordinate, tint: .green)
+                        
+                        MapAnnotation(coordinate: place.coordinate) {
+                            VStack {
+                                Group {
+                                    Image(systemName: "mappin.circle.fill")
+                                        .resizable()
+                                        .frame(width: 25.0, height: 25.0)
+                                    Circle()
+                                        .frame(width: 8.0, height: 8.0)
+                                }
+                                .foregroundColor(.red)
+                                Text(place.name)
+                                    .font(.subheadline)
+                                    .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                    .shadow(radius: 1.5)
+                            }
+                        }
+                        /*
+                         MapMarker(coordinate: place.coordinate, tint: .green)
+                         MapPin(coordinate: location.coordinate)
+                         */
                     }
+                    
                 }
             } else {
                 Text("The example will work only on and above iOS 14.")
