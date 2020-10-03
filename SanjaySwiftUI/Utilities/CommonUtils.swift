@@ -19,7 +19,9 @@ struct CommonUtils {
     static let cu_activity_light_text_color :Color = Color(.sRGB, red: 242/255, green: 125/255, blue: 131/255, opacity: 255/255)
 
     static let cu_CornerRadius:CGFloat = 5
-
+    
+    static let cu_ResetEmitterNotification = "SSresetEmitterNotification"
+    
     // vars
     static var cu_APPVersionNumber              = "0.0"
 

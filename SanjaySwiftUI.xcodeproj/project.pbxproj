@@ -251,6 +251,16 @@
 		72B551D524DD743E009A0014 /* stmarylake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551C624DD743E009A0014 /* stmarylake.jpg */; };
 		72B551D624DD743E009A0014 /* chilkoottrail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551C724DD743E009A0014 /* chilkoottrail.jpg */; };
 		72B551D724DD743E009A0014 /* rainbowlake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551C824DD743E009A0014 /* rainbowlake.jpg */; };
+		72B88D2D25285B1C00321710 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B88D2C25285B1C00321710 /* SpriteKit.framework */; };
+		72B88D2E25285B2C00321710 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B88D2C25285B1C00321710 /* SpriteKit.framework */; };
+		72B88D3225285C4C00321710 /* MyParticleMagic.sks in Resources */ = {isa = PBXBuildFile; fileRef = 72B88D3025285C4C00321710 /* MyParticleMagic.sks */; };
+		72B88D3325285C4C00321710 /* MyParticleMagic.sks in Resources */ = {isa = PBXBuildFile; fileRef = 72B88D3025285C4C00321710 /* MyParticleMagic.sks */; };
+		72B88D3425285C4C00321710 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B88D3125285C4C00321710 /* Assets.xcassets */; };
+		72B88D3525285C4C00321710 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72B88D3125285C4C00321710 /* Assets.xcassets */; };
+		72B88D3B25285E2300321710 /* MySceneSanjay.sks in Resources */ = {isa = PBXBuildFile; fileRef = 72B88D3A25285E2300321710 /* MySceneSanjay.sks */; };
+		72B88D3C25285E2300321710 /* MySceneSanjay.sks in Resources */ = {isa = PBXBuildFile; fileRef = 72B88D3A25285E2300321710 /* MySceneSanjay.sks */; };
+		72B88D4225285F2C00321710 /* EmitterSpriteKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B88D4125285F2C00321710 /* EmitterSpriteKitView.swift */; };
+		72B88D4325285F2C00321710 /* EmitterSpriteKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B88D4125285F2C00321710 /* EmitterSpriteKitView.swift */; };
 		72BBAF0224DE694900CFC7D6 /* CommonUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BBAF0124DE694900CFC7D6 /* CommonUtils.swift */; };
 		72BBAF0824DE8AFB00CFC7D6 /* signin.json in Resources */ = {isa = PBXBuildFile; fileRef = 72BBAF0724DE8AFB00CFC7D6 /* signin.json */; };
 		72BBAF0C24DE8E3000CFC7D6 /* SigninSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BBAF0B24DE8E2F00CFC7D6 /* SigninSuccess.swift */; };
@@ -420,6 +430,11 @@
 		72B551C624DD743E009A0014 /* stmarylake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stmarylake.jpg; sourceTree = "<group>"; };
 		72B551C724DD743E009A0014 /* chilkoottrail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chilkoottrail.jpg; sourceTree = "<group>"; };
 		72B551C824DD743E009A0014 /* rainbowlake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rainbowlake.jpg; sourceTree = "<group>"; };
+		72B88D2C25285B1C00321710 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		72B88D3025285C4C00321710 /* MyParticleMagic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticleMagic.sks; sourceTree = "<group>"; };
+		72B88D3125285C4C00321710 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		72B88D3A25285E2300321710 /* MySceneSanjay.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MySceneSanjay.sks; sourceTree = "<group>"; };
+		72B88D4125285F2C00321710 /* EmitterSpriteKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmitterSpriteKitView.swift; sourceTree = "<group>"; };
 		72BBAF0124DE694900CFC7D6 /* CommonUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonUtils.swift; sourceTree = "<group>"; };
 		72BBAF0724DE8AFB00CFC7D6 /* signin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signin.json; sourceTree = "<group>"; };
 		72BBAF0B24DE8E2F00CFC7D6 /* SigninSuccess.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SigninSuccess.swift; sourceTree = "<group>"; };
@@ -453,6 +468,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72B88D2D25285B1C00321710 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -474,6 +490,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72B88D2E25285B2C00321710 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -543,6 +560,7 @@
 				72663AD624C5C7BE000596C9 /* SanjaySwiftUIUITests */,
 				72663AB024C5C7AC000596C9 /* Products */,
 				7267646624FBB2860074715B /* SanjaySwiftUI copy-Info.plist */,
+				72B88D2B25285B1A00321710 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -560,6 +578,7 @@
 		72663AB124C5C7AC000596C9 /* SanjaySwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				72B88D2F25285BE100321710 /* SpriteKitResources */,
 				729CC94D2521E1240078A0CC /* RoomListResources */,
 				723DE9E82508D5B0000E8C03 /* Animation */,
 				726763E724FBA1380074715B /* ApplePay */,
@@ -767,6 +786,25 @@
 			path = LandmarkResources;
 			sourceTree = "<group>";
 		};
+		72B88D2B25285B1A00321710 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				72B88D2C25285B1C00321710 /* SpriteKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72B88D2F25285BE100321710 /* SpriteKitResources */ = {
+			isa = PBXGroup;
+			children = (
+				72B88D3025285C4C00321710 /* MyParticleMagic.sks */,
+				72B88D3125285C4C00321710 /* Assets.xcassets */,
+				72B88D3A25285E2300321710 /* MySceneSanjay.sks */,
+				72B88D4125285F2C00321710 /* EmitterSpriteKitView.swift */,
+			);
+			path = SpriteKitResources;
+			sourceTree = "<group>";
+		};
 		72BBAF0424DE899C00CFC7D6 /* SignInJson */ = {
 			isa = PBXGroup;
 			children = (
@@ -931,11 +969,13 @@
 				72735B8E24D034B0006B75C9 /* StickerCollectionViewCell.xib in Resources */,
 				72735B8724D034B0006B75C9 /* PhotoCropEditorBorder.png in Resources */,
 				726763E624FB8C120074715B /* LocalGujarati.strings in Resources */,
+				72B88D3B25285E2300321710 /* MySceneSanjay.sks in Resources */,
 				7299E6A724E8046800704724 /* getnewCatRecsByUserPriority.json in Resources */,
 				72B551D324DD743E009A0014 /* chincoteague.jpg in Resources */,
 				72735B7C24D034B0006B75C9 /* ColorCollectionViewCell.xib in Resources */,
 				72BBAF0824DE8AFB00CFC7D6 /* signin.json in Resources */,
 				72B551D024DD743E009A0014 /* twinlake.jpg in Resources */,
+				72B88D3225285C4C00321710 /* MyParticleMagic.sks in Resources */,
 				72663AC224C5C7BD000596C9 /* LaunchScreen.storyboard in Resources */,
 				72735B7524D034B0006B75C9 /* StickersViewController.xib in Resources */,
 				7299E6A624E8046800704724 /* gettonyCategoryList.json in Resources */,
@@ -947,6 +987,7 @@
 				72735B4F24D01A86006B75C9 /* StoryboardSanjay.storyboard in Resources */,
 				72B551D224DD743E009A0014 /* landmarkData.json in Resources */,
 				7252639324D55633002C5ACA /* README.md in Resources */,
+				72B88D3425285C4C00321710 /* Assets.xcassets in Resources */,
 				7299E6A524E8046800704724 /* getdailyStory.json in Resources */,
 				72735B8624D034B0006B75C9 /* PhotoCropEditorBorder@3x.png in Resources */,
 				72B551CE24DD743E009A0014 /* lakemcdonald.jpg in Resources */,
@@ -999,11 +1040,13 @@
 				7267643C24FBB27E0074715B /* StickerCollectionViewCell.xib in Resources */,
 				7267643D24FBB27E0074715B /* PhotoCropEditorBorder.png in Resources */,
 				7267643E24FBB27E0074715B /* LocalGujarati.strings in Resources */,
+				72B88D3C25285E2300321710 /* MySceneSanjay.sks in Resources */,
 				7267643F24FBB27E0074715B /* getnewCatRecsByUserPriority.json in Resources */,
 				7267644024FBB27E0074715B /* chincoteague.jpg in Resources */,
 				7267644124FBB27E0074715B /* ColorCollectionViewCell.xib in Resources */,
 				7267644224FBB27E0074715B /* signin.json in Resources */,
 				7267644324FBB27E0074715B /* twinlake.jpg in Resources */,
+				72B88D3325285C4C00321710 /* MyParticleMagic.sks in Resources */,
 				7267644424FBB27E0074715B /* LaunchScreen.storyboard in Resources */,
 				7267644524FBB27E0074715B /* StickersViewController.xib in Resources */,
 				7267644624FBB27E0074715B /* gettonyCategoryList.json in Resources */,
@@ -1015,6 +1058,7 @@
 				7267644C24FBB27E0074715B /* StoryboardSanjay.storyboard in Resources */,
 				7267644D24FBB27E0074715B /* landmarkData.json in Resources */,
 				7267644E24FBB27E0074715B /* README.md in Resources */,
+				72B88D3525285C4C00321710 /* Assets.xcassets in Resources */,
 				7267644F24FBB27E0074715B /* getdailyStory.json in Resources */,
 				7267645024FBB27E0074715B /* PhotoCropEditorBorder@3x.png in Resources */,
 				7267645124FBB27E0074715B /* lakemcdonald.jpg in Resources */,
@@ -1094,6 +1138,7 @@
 				726763EB24FBA1710074715B /* PaymentSwiftUIView.swift in Sources */,
 				729CC9522521E1240078A0CC /* Room.swift in Sources */,
 				72735B8824D034B0006B75C9 /* EmojiCollectionViewCell.swift in Sources */,
+				72B88D4225285F2C00321710 /* EmitterSpriteKitView.swift in Sources */,
 				72735B9424D034B0006B75C9 /* CropRectView.swift in Sources */,
 				726763E924FBA1380074715B /* PaymentButton.swift in Sources */,
 				72663AB324C5C7AC000596C9 /* AppDelegate.swift in Sources */,
@@ -1203,6 +1248,7 @@
 				7267641424FBB27E0074715B /* PaymentSwiftUIView.swift in Sources */,
 				729CC9532521E1240078A0CC /* Room.swift in Sources */,
 				7267641524FBB27E0074715B /* EmojiCollectionViewCell.swift in Sources */,
+				72B88D4325285F2C00321710 /* EmitterSpriteKitView.swift in Sources */,
 				7267641624FBB27E0074715B /* CropRectView.swift in Sources */,
 				7267641724FBB27E0074715B /* PaymentButton.swift in Sources */,
 				7267641824FBB27E0074715B /* AppDelegate.swift in Sources */,

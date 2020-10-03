@@ -109,6 +109,8 @@ SwiftUI project creation to learn.
     * Room detail view
         * Map view with 'eat' annotations.
     
+12. Implementing SpriteKit with SwiftUI
+    * Demo SpriteKit - Scene and Particle effect  (SpriteKitResources)  
     
 <sub><sup>Note :-    
 (1) Replace 'PrivateCommit' with 'PublicCommit' to run. 
