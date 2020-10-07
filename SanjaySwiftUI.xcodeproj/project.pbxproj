@@ -19,6 +19,8 @@
 		7210DDA62518E48C0013DB94 /* EnviornmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7210DDA42518E48C0013DB94 /* EnviornmentView.swift */; };
 		7216BB5C24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */; };
 		7216BB5E24D17BC30097AFA4 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */; };
+		7225A43D252DEC830081A793 /* apple-pay-payment-service-providers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7225A43C252DEC810081A793 /* apple-pay-payment-service-providers.jpg */; };
+		7225A43E252DEC830081A793 /* apple-pay-payment-service-providers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7225A43C252DEC810081A793 /* apple-pay-payment-service-providers.jpg */; };
 		723ACB30250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ACB2F250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift */; };
 		723ACB31250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ACB2F250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift */; };
 		723ACB33250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ACB32250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift */; };
@@ -317,6 +319,7 @@
 		7210DDA42518E48C0013DB94 /* EnviornmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviornmentView.swift; sourceTree = "<group>"; };
 		7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPhotoImagePickerViewController.swift; sourceTree = "<group>"; };
 		7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7225A43C252DEC810081A793 /* apple-pay-payment-service-providers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "apple-pay-payment-service-providers.jpg"; sourceTree = "<group>"; };
 		723ACB2F250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatablePairSwiftUIViewEx.swift; sourceTree = "<group>"; };
 		723ACB32250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimArcInsettableShapeViewEx.swift; sourceTree = "<group>"; };
 		723DE9E92508D608000E8C03 /* AnimatableSwiftUIViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableSwiftUIViewEx.swift; sourceTree = "<group>"; };
@@ -762,6 +765,7 @@
 		729D987A252B3A12001AC519 /* Notes */ = {
 			isa = PBXGroup;
 			children = (
+				7225A43C252DEC810081A793 /* apple-pay-payment-service-providers.jpg */,
 				729D988D252B3C13001AC519 /* Flipclock_file_structure.png */,
 				729D987B252B3A12001AC519 /* NOTES.md */,
 			);
@@ -1008,6 +1012,7 @@
 				7299E6A924E8046800704724 /* getUserPurchaseDetail.json in Resources */,
 				7299E6AC24E8046800704724 /* getUsersRecord.json in Resources */,
 				72B551D624DD743E009A0014 /* chilkoottrail.jpg in Resources */,
+				7225A43D252DEC830081A793 /* apple-pay-payment-service-providers.jpg in Resources */,
 				7249749424E52684006F5C52 /* getHomeSliderCatRecordTony.json in Resources */,
 				72EDF200250BA81F00879E40 /* LocalArabic.strings in Resources */,
 				72663ABF24C5C7BD000596C9 /* Preview Assets.xcassets in Resources */,
@@ -1080,6 +1085,7 @@
 				7267645324FBB27E0074715B /* getUserPurchaseDetail.json in Resources */,
 				7267645424FBB27E0074715B /* getUsersRecord.json in Resources */,
 				7267645524FBB27E0074715B /* chilkoottrail.jpg in Resources */,
+				7225A43E252DEC830081A793 /* apple-pay-payment-service-providers.jpg in Resources */,
 				7267645624FBB27E0074715B /* getHomeSliderCatRecordTony.json in Resources */,
 				72EDF201250BA81F00879E40 /* LocalArabic.strings in Resources */,
 				7267645724FBB27E0074715B /* Preview Assets.xcassets in Resources */,
