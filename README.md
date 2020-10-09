@@ -37,7 +37,7 @@ SwiftUI project creation to learn.
         * Use Coordinator to handle delegates
         * to pass .constant as @Binding vars for SwiftUI PreviewProvider
         
-            ![CustomPersonPhotoImagePickerViewController](CustomPersonPhotoImagePickerViewController.jpg)
+            ![CustomPersonPhotoImagePickerViewController](readmeResource/CustomPersonPhotoImagePickerViewController.jpg)
         
     * PersonPhotoImagePickerViewController from camera and gallery via UIViewControllerRepresentable. This is creating UI with code using UIKit
     * Add custom storyboard in SwiftUI project and communication with it via UIViewControllerRepresentable
@@ -60,7 +60,7 @@ SwiftUI project creation to learn.
                 * Auto alignment as per device language settings
                 * Manual Text alignment set as 'Trailing' to show in Right to Left in all ( This will be again error in Arabic language device settings, as it will make 'Left to Right' in case of Trailing setting. )
             
-                ![localizationLanguges](localizationLanguges.jpg)
+                ![localizationLanguges](readmeResource/localizationLanguges.jpg)
             
             * How to localize Label text in "LaunchScreen.storyboard"
                 * Refer: [Comment on developer.apple.com forums](https://developer.apple.com/forums/thread/86567?answerId=632317022#632317022)
@@ -125,7 +125,7 @@ SwiftUI project creation to learn.
 12. Implementing SpriteKit with SwiftUI
     * Demo SpriteKit - Scene and Particle effect  (SpriteKitResources)  
 
-        ![SpriteSceneParticleEffect](SpriteSceneParticleEffect.jpg)
+        ![SpriteSceneParticleEffect](readmeResource/SpriteSceneParticleEffect.jpg)
         
 13.
     * Work in Progress
