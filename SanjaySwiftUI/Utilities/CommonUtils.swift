@@ -9,6 +9,54 @@
 import Foundation
 import SwiftUI
 
+// Global functions
+
+// This set up it can act as a placeholder to make your code compile when you’re part-way through your work and don’t want to fill in all the various parts just yet. The magic of gUndefined() is that it will crash as soon as it’s touched – it will work only at compile time (HackingWithSwift - https://www.hackingwithswift.com/)
+// eg. usage
+// 1) let name: String = gUndefined("Example string")
+// 2) func userID(for username: String) -> Int? {
+//      gUndefined(username)
+//    }
+// 3) let timer = Timer(timeInterval: gUndefined(), target: gUndefined(), selector: gUndefined(), userInfo: gUndefined(), repeats: gUndefined())
+func gUndefined<T>(_ message: String = "") -> T {
+    fatalError("gUndefined: \(message)")
+}
+
+// Using memoization to speed up slow functions (HackingWithSwift - https://www.hackingwithswift.com/plus/high-performance-apps/using-memoization-to-speed-up-slow-functions)
+func gMemoize<Input: Hashable, Output>(_ function: @escaping (Input) -> Output) -> (Input) -> Output {
+    // our item cache
+    var storage = [ Input: Output]()
+
+    // send back a new closure that does our calculation
+    return { input in
+        if let cached = storage[input] {
+            return cached
+        }
+
+        let result = function(input)
+        storage[input] = result
+        return result
+    }
+}
+// Recursive memoization
+func gRecursiveMemoize<Input: Hashable, Output>(_ function: @escaping ((Input) -> Output, Input) -> Output) -> (Input) -> Output {
+    // our item cache
+    var storage = [Input: Output]()
+
+    var memo: ((Input) -> Output)!
+    memo = { input in
+        if let cached = storage[input] {
+            return cached
+        }
+
+        let result = function(memo, input)
+        storage[input] = result
+        return result
+    }
+    return memo
+}
+
+
 struct CommonUtils {
 
     static let cu_AppBundleId = "com.sanjay.SanjaySwiftUI"

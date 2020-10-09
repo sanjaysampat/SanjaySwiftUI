@@ -107,16 +107,20 @@ struct RegularGrid: View {
 }
 
 // MARK:- Grid2
+fileprivate let honeycombGridCols: Int = 4
 
 @available(iOS 14.0, *)
 struct HoneycombGrid: View {
-    let cols: Int = 4
     let spacing: CGFloat = 4
     let imgsize = CGSize(width: 140, height: 140)
     var hexagonWidth: CGFloat { (imgsize.width / 2) * cos(.pi / 6) * 2 }
     
+    // global function gMemoize defined in 'CommonUtils.swift'
+    let memoizedisToAddDummy = gMemoize( isToAddDummy )
+    let memoizedIsOddRow = gMemoize( isOddRow )
+
     var body: some View {
-        let gridItems = Array(repeating: GridItem(.fixed(hexagonWidth), spacing: spacing), count: cols)
+        let gridItems = Array(repeating: GridItem(.fixed(hexagonWidth), spacing: spacing), count: honeycombGridCols)
         
         ScrollView(.vertical) {
             LazyVGrid(columns: gridItems, spacing: spacing) {
@@ -128,17 +132,17 @@ struct HoneycombGrid: View {
                             .scaledToFit()
                             .frame(width: imgsize.width, height: imgsize.height)
                             .clipShape(PolygonShape(sides: 6).rotation(Angle.degrees(90)))
-                            .offset(x: isOddRow(idx) ? 0 : hexagonWidth / 2 + (spacing/2))
+                            .offset(x: memoizedIsOddRow(idx) ? 0 : hexagonWidth / 2 + (spacing/2))
                     }
                     .frame(width: hexagonWidth, height: imgsize.height * 0.75)
                     
-                    if isToAddDummy(idx) {
+                    if memoizedisToAddDummy(idx) {
                         // TO add one dummy image here to skip hidden image in even row.
                         VStack(spacing: 0) {
                             EmptyView()
                                 .frame(width: imgsize.width, height: imgsize.height)
                                 .clipShape(PolygonShape(sides: 6).rotation(Angle.degrees(90)))
-                                .offset(x: isOddRow(idx) ? 0 : hexagonWidth / 2 + (spacing/2))
+                                .offset(x: memoizedIsOddRow(idx) ? 0 : hexagonWidth / 2 + (spacing/2))
                         }
                         .frame(width: hexagonWidth, height: imgsize.height * 0.75)
                         
@@ -146,28 +150,30 @@ struct HoneycombGrid: View {
                     
                 }
             }
-            .frame(width: (hexagonWidth + spacing) * CGFloat(cols-1))
+            .frame(width: (hexagonWidth + spacing) * CGFloat(honeycombGridCols-1))
         }
     }
     
-    func isOddRow(_ idx: Int) -> Bool {
-        for i in idx ... idx + (cols-2)  {
-            if isToAddDummy(i) {
-                //print("isEVENRow id=\(idx) ")
-                return false
-            }
-        }
-        return true
-    }
- 
-    func isToAddDummy(_ idx: Int) -> Bool {
-        let ireturn = (idx > 0) && (idx+1) % ((cols*2)-1) == 0
-        if ireturn {
-            //print("isToAddDummy id=\(idx)")
-        }
-        return ireturn
-    }
 }
+
+func isOddRow(_ idx: Int) -> Bool {
+    for i in idx ... idx + (honeycombGridCols-2)  {
+        if isToAddDummy(i) {
+            //print("isEVENRow id=\(idx) ")
+            return false
+        }
+    }
+    return true
+}
+
+func isToAddDummy(_ idx: Int) -> Bool {
+    let ireturn = (idx > 0) && (idx+1) % ((honeycombGridCols*2)-1) == 0
+    if ireturn {
+        //print("isToAddDummy id=\(idx)")
+    }
+    return ireturn
+}
+
 
 struct PolygonShape: Shape {
     var sides: Int

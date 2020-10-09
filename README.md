@@ -82,6 +82,8 @@ SwiftUI project creation to learn.
     
 4. Play with Grids
     * Honeycomb Grid
+    ![Honeycomb Grid](readmeResource/honeycombGrid.jpg)
+        * modified example [Using memoization to speed up slow functions](https://www.hackingwithswift.com/plus/high-performance-apps/using-memoization-to-speed-up-slow-functions)
     * Resizable Grid
     
 5. Geometry and Enviornment ( Edit functionality pending ) 
@@ -108,8 +110,11 @@ SwiftUI project creation to learn.
     * List add sample room, delete list item
     * Room detail view
         * Map view with 'eat' annotations.
+        
+12.
+    * Work in Progress
     
-12. Implementing SpriteKit with SwiftUI
+13. Implementing SpriteKit with SwiftUI
     * Demo SpriteKit - Scene and Particle effect  (SpriteKitResources)  
     
 <sub><sup>Note :-    
