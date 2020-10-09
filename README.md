@@ -86,7 +86,7 @@ SwiftUI project creation to learn.
     
     ![Honeycomb Grid](readmeResource/honeycombGrid.jpg)
     
-    * Resizable Grid
+    * Resizable Grid 
     
 5. Geometry and Enviornment ( Edit functionality pending ) 
     
