@@ -82,6 +82,7 @@ SwiftUI project creation to learn.
     
 4. Play with Grids
     * Honeycomb Grid
+    
     ![Honeycomb Grid](readmeResource/honeycombGrid.jpg)
         * modified example [Using memoization to speed up slow functions](https://www.hackingwithswift.com/plus/high-performance-apps/using-memoization-to-speed-up-slow-functions)
     * Resizable Grid

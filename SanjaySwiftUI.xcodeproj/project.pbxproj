@@ -210,8 +210,8 @@
 		727E111224F6A994007231F7 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E111124F6A994007231F7 /* MenuView.swift */; };
 		727E111424F6C092007231F7 /* PublicCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E111324F6C091007231F7 /* PublicCommit.swift */; };
 		7282060A24E5769600F5F8CB /* getnewMostLovedCatData.json in Resources */ = {isa = PBXBuildFile; fileRef = 7282060924E5769500F5F8CB /* getnewMostLovedCatData.json */; };
-		7284456A2530879600338F55 /* honeycombGrid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 728445692530879500338F55 /* honeycombGrid.jpg */; };
-		7284456B2530879600338F55 /* honeycombGrid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 728445692530879500338F55 /* honeycombGrid.jpg */; };
+		7284458025308A5200338F55 /* honeycombGrid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7284457F25308A5200338F55 /* honeycombGrid.jpg */; };
+		7284458125308A5200338F55 /* honeycombGrid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7284457F25308A5200338F55 /* honeycombGrid.jpg */; };
 		728CBF392500D32C00EBEC9D /* LearningPython.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 728CBF382500D32C00EBEC9D /* LearningPython.jpg */; };
 		728CBF3A2500D32C00EBEC9D /* LearningPython.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 728CBF382500D32C00EBEC9D /* LearningPython.jpg */; };
 		7299E6A324E8046800704724 /* getDailyQuote.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69924E8046300704724 /* getDailyQuote.json */; };
@@ -400,7 +400,7 @@
 		727E111124F6A994007231F7 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		727E111324F6C091007231F7 /* PublicCommit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicCommit.swift; sourceTree = "<group>"; };
 		7282060924E5769500F5F8CB /* getnewMostLovedCatData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getnewMostLovedCatData.json; sourceTree = "<group>"; };
-		728445692530879500338F55 /* honeycombGrid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = honeycombGrid.jpg; sourceTree = "<group>"; };
+		7284457F25308A5200338F55 /* honeycombGrid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = honeycombGrid.jpg; sourceTree = "<group>"; };
 		728CBF382500D32C00EBEC9D /* LearningPython.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LearningPython.jpg; sourceTree = "<group>"; };
 		7299E69924E8046300704724 /* getDailyQuote.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getDailyQuote.json; sourceTree = "<group>"; };
 		7299E69A24E8046500704724 /* getnewpriorityFreedomsbyuser.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getnewpriorityFreedomsbyuser.json; sourceTree = "<group>"; };
@@ -727,7 +727,7 @@
 		728445682530879500338F55 /* readmeResource */ = {
 			isa = PBXGroup;
 			children = (
-				728445692530879500338F55 /* honeycombGrid.jpg */,
+				7284457F25308A5200338F55 /* honeycombGrid.jpg */,
 			);
 			path = readmeResource;
 			sourceTree = "<group>";
@@ -1005,7 +1005,7 @@
 				72BBAF0824DE8AFB00CFC7D6 /* signin.json in Resources */,
 				72B551D024DD743E009A0014 /* twinlake.jpg in Resources */,
 				72B88D3225285C4C00321710 /* MyParticleMagic.sks in Resources */,
-				7284456A2530879600338F55 /* honeycombGrid.jpg in Resources */,
+				7284458025308A5200338F55 /* honeycombGrid.jpg in Resources */,
 				72663AC224C5C7BD000596C9 /* LaunchScreen.storyboard in Resources */,
 				72735B7524D034B0006B75C9 /* StickersViewController.xib in Resources */,
 				7299E6A624E8046800704724 /* gettonyCategoryList.json in Resources */,
@@ -1079,7 +1079,7 @@
 				7267644224FBB27E0074715B /* signin.json in Resources */,
 				7267644324FBB27E0074715B /* twinlake.jpg in Resources */,
 				72B88D3325285C4C00321710 /* MyParticleMagic.sks in Resources */,
-				7284456B2530879600338F55 /* honeycombGrid.jpg in Resources */,
+				7284458125308A5200338F55 /* honeycombGrid.jpg in Resources */,
 				7267644424FBB27E0074715B /* LaunchScreen.storyboard in Resources */,
 				7267644524FBB27E0074715B /* StickersViewController.xib in Resources */,
 				7267644624FBB27E0074715B /* gettonyCategoryList.json in Resources */,
