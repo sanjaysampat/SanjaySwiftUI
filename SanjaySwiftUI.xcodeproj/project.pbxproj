@@ -212,6 +212,14 @@
 		7282060A24E5769600F5F8CB /* getnewMostLovedCatData.json in Resources */ = {isa = PBXBuildFile; fileRef = 7282060924E5769500F5F8CB /* getnewMostLovedCatData.json */; };
 		7284458025308A5200338F55 /* honeycombGrid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7284457F25308A5200338F55 /* honeycombGrid.jpg */; };
 		7284458125308A5200338F55 /* honeycombGrid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7284457F25308A5200338F55 /* honeycombGrid.jpg */; };
+		7284458725308DB500338F55 /* vstackRotation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7284458625308DB500338F55 /* vstackRotation.jpg */; };
+		7284458825308DB500338F55 /* vstackRotation.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7284458625308DB500338F55 /* vstackRotation.jpg */; };
+		7284458E25308FCA00338F55 /* CustomPersonPhotoImagePickerViewController.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7284458D25308FCA00338F55 /* CustomPersonPhotoImagePickerViewController.jpg */; };
+		7284458F25308FCA00338F55 /* CustomPersonPhotoImagePickerViewController.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7284458D25308FCA00338F55 /* CustomPersonPhotoImagePickerViewController.jpg */; };
+		72844595253096A300338F55 /* localizationLanguges.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72844594253096A300338F55 /* localizationLanguges.jpg */; };
+		72844596253096A300338F55 /* localizationLanguges.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72844594253096A300338F55 /* localizationLanguges.jpg */; };
+		7284459C25309B0B00338F55 /* SpriteSceneParticleEffect.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7284459B25309B0B00338F55 /* SpriteSceneParticleEffect.jpg */; };
+		7284459D25309B0B00338F55 /* SpriteSceneParticleEffect.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7284459B25309B0B00338F55 /* SpriteSceneParticleEffect.jpg */; };
 		728CBF392500D32C00EBEC9D /* LearningPython.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 728CBF382500D32C00EBEC9D /* LearningPython.jpg */; };
 		728CBF3A2500D32C00EBEC9D /* LearningPython.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 728CBF382500D32C00EBEC9D /* LearningPython.jpg */; };
 		7299E6A324E8046800704724 /* getDailyQuote.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69924E8046300704724 /* getDailyQuote.json */; };
@@ -401,6 +409,10 @@
 		727E111324F6C091007231F7 /* PublicCommit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicCommit.swift; sourceTree = "<group>"; };
 		7282060924E5769500F5F8CB /* getnewMostLovedCatData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getnewMostLovedCatData.json; sourceTree = "<group>"; };
 		7284457F25308A5200338F55 /* honeycombGrid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = honeycombGrid.jpg; sourceTree = "<group>"; };
+		7284458625308DB500338F55 /* vstackRotation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vstackRotation.jpg; sourceTree = "<group>"; };
+		7284458D25308FCA00338F55 /* CustomPersonPhotoImagePickerViewController.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CustomPersonPhotoImagePickerViewController.jpg; sourceTree = "<group>"; };
+		72844594253096A300338F55 /* localizationLanguges.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localizationLanguges.jpg; sourceTree = "<group>"; };
+		7284459B25309B0B00338F55 /* SpriteSceneParticleEffect.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SpriteSceneParticleEffect.jpg; sourceTree = "<group>"; };
 		728CBF382500D32C00EBEC9D /* LearningPython.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LearningPython.jpg; sourceTree = "<group>"; };
 		7299E69924E8046300704724 /* getDailyQuote.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getDailyQuote.json; sourceTree = "<group>"; };
 		7299E69A24E8046500704724 /* getnewpriorityFreedomsbyuser.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getnewpriorityFreedomsbyuser.json; sourceTree = "<group>"; };
@@ -727,6 +739,10 @@
 		728445682530879500338F55 /* readmeResource */ = {
 			isa = PBXGroup;
 			children = (
+				7284459B25309B0B00338F55 /* SpriteSceneParticleEffect.jpg */,
+				72844594253096A300338F55 /* localizationLanguges.jpg */,
+				7284458D25308FCA00338F55 /* CustomPersonPhotoImagePickerViewController.jpg */,
+				7284458625308DB500338F55 /* vstackRotation.jpg */,
 				7284457F25308A5200338F55 /* honeycombGrid.jpg */,
 			);
 			path = readmeResource;
@@ -1017,6 +1033,7 @@
 				72735B4F24D01A86006B75C9 /* StoryboardSanjay.storyboard in Resources */,
 				72B551D224DD743E009A0014 /* landmarkData.json in Resources */,
 				7252639324D55633002C5ACA /* README.md in Resources */,
+				7284459C25309B0B00338F55 /* SpriteSceneParticleEffect.jpg in Resources */,
 				72B88D3425285C4C00321710 /* Assets.xcassets in Resources */,
 				7299E6A524E8046800704724 /* getdailyStory.json in Resources */,
 				72735B8624D034B0006B75C9 /* PhotoCropEditorBorder@3x.png in Resources */,
@@ -1024,6 +1041,7 @@
 				72B551CD24DD743E009A0014 /* icybay.jpg in Resources */,
 				7299E6A924E8046800704724 /* getUserPurchaseDetail.json in Resources */,
 				7299E6AC24E8046800704724 /* getUsersRecord.json in Resources */,
+				7284458725308DB500338F55 /* vstackRotation.jpg in Resources */,
 				72B551D624DD743E009A0014 /* chilkoottrail.jpg in Resources */,
 				7225A43D252DEC830081A793 /* apple-pay-payment-service-providers.jpg in Resources */,
 				7249749424E52684006F5C52 /* getHomeSliderCatRecordTony.json in Resources */,
@@ -1037,10 +1055,12 @@
 				72B551CC24DD743E009A0014 /* silversalmoncreek.jpg in Resources */,
 				7282060A24E5769600F5F8CB /* getnewMostLovedCatData.json in Resources */,
 				72B551D524DD743E009A0014 /* stmarylake.jpg in Resources */,
+				7284458E25308FCA00338F55 /* CustomPersonPhotoImagePickerViewController.jpg in Resources */,
 				72663ABC24C5C7BD000596C9 /* Assets.xcassets in Resources */,
 				72B551D424DD743E009A0014 /* yukon_charleyrivers.jpg in Resources */,
 				72B551D724DD743E009A0014 /* rainbowlake.jpg in Resources */,
 				72B551CB24DD743E009A0014 /* turtlerock.jpg in Resources */,
+				72844595253096A300338F55 /* localizationLanguges.jpg in Resources */,
 				7299E6AA24E8046800704724 /* getQuestionLockValue.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1091,6 +1111,7 @@
 				7267644C24FBB27E0074715B /* StoryboardSanjay.storyboard in Resources */,
 				7267644D24FBB27E0074715B /* landmarkData.json in Resources */,
 				7267644E24FBB27E0074715B /* README.md in Resources */,
+				7284459D25309B0B00338F55 /* SpriteSceneParticleEffect.jpg in Resources */,
 				72B88D3525285C4C00321710 /* Assets.xcassets in Resources */,
 				7267644F24FBB27E0074715B /* getdailyStory.json in Resources */,
 				7267645024FBB27E0074715B /* PhotoCropEditorBorder@3x.png in Resources */,
@@ -1098,6 +1119,7 @@
 				7267645224FBB27E0074715B /* icybay.jpg in Resources */,
 				7267645324FBB27E0074715B /* getUserPurchaseDetail.json in Resources */,
 				7267645424FBB27E0074715B /* getUsersRecord.json in Resources */,
+				7284458825308DB500338F55 /* vstackRotation.jpg in Resources */,
 				7267645524FBB27E0074715B /* chilkoottrail.jpg in Resources */,
 				7225A43E252DEC830081A793 /* apple-pay-payment-service-providers.jpg in Resources */,
 				7267645624FBB27E0074715B /* getHomeSliderCatRecordTony.json in Resources */,
@@ -1111,10 +1133,12 @@
 				7267645A24FBB27E0074715B /* silversalmoncreek.jpg in Resources */,
 				7267645B24FBB27E0074715B /* getnewMostLovedCatData.json in Resources */,
 				7267645C24FBB27E0074715B /* stmarylake.jpg in Resources */,
+				7284458F25308FCA00338F55 /* CustomPersonPhotoImagePickerViewController.jpg in Resources */,
 				7267645D24FBB27E0074715B /* Assets.xcassets in Resources */,
 				7267645E24FBB27E0074715B /* yukon_charleyrivers.jpg in Resources */,
 				7267645F24FBB27E0074715B /* rainbowlake.jpg in Resources */,
 				7267646024FBB27E0074715B /* turtlerock.jpg in Resources */,
+				72844596253096A300338F55 /* localizationLanguges.jpg in Resources */,
 				7267646124FBB27E0074715B /* getQuestionLockValue.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

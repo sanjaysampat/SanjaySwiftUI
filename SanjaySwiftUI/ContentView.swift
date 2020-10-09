@@ -303,11 +303,11 @@ struct ContentView: View {
                     isEmmitorCalled = false
                 }
                 /*
-                .onAppear {
-                   NotificationCenter.default.addObserver(forName: Utils.callEmitterNotification, object: nil, queue: nil, using: self.userDidBuyCoffee(_:))
-                   NotificationCenter.default.addObserver(forName: Utils.resetEmitterNotification, object: nil, queue: nil, using: self.resetCoffee(_:))
-                }
-                */
+                 .onAppear {
+                 NotificationCenter.default.addObserver(forName: Utils.callEmitterNotification, object: nil, queue: nil, using: self.userDidBuyCoffee(_:))
+                 NotificationCenter.default.addObserver(forName: Utils.resetEmitterNotification, object: nil, queue: nil, using: self.resetCoffee(_:))
+                 }
+                 */
             } else {
                 MenuView(menuSelection: $menuSelection, currentPos: $currentPos)
             }

@@ -7,13 +7,16 @@ SwiftUI project creation to learn.
 ### Topics learned
 
 1. SwiftUI project.
-    * Test code for ZStack
     * @State variables
         * on modification perform some tasks with the help of Hidden Toggle control
         * on modification change another @State variable
         * the modified @State variables should not run in recursive loops.
     * controls 
+        * ZStack
         * VStack with rotation effect
+        
+            ![vstackRotation](readmeResource/vstackRotation.jpg)
+        
         * HStack
         * Button with padding, forgroundColor, logic in 'action', open new view with 'sheet'
         * Rectangle with rotation and scale
@@ -29,17 +32,20 @@ SwiftUI project creation to learn.
         * **Pending to make for nested JSON**
         * Saving json in document folder
         * Loading again the same from document folder, so no flicker on screen
-        * Testing by loading jsons with multiple image urls to test loading and background saving ( continued )
+        * Testing by loading jsons with multiple image urls to test loading and background saving
     * Loading UIViewControllers via UIViewControllerRepresentable in SwiftUI
         * Use Coordinator to handle delegates
         * to pass .constant as @Binding vars for SwiftUI PreviewProvider
-    * Add custom storyboard in SwiftUI project and communication with it via UIViewControllerRepresentable
+        
+            ![CustomPersonPhotoImagePickerViewController](CustomPersonPhotoImagePickerViewController.jpg)
+        
     * PersonPhotoImagePickerViewController from camera and gallery via UIViewControllerRepresentable. This is creating UI with code using UIKit
-    * Use Photo Editor ( earlier version swift ) via UIViewControllerRepresentable. This is using UI with storyboard
+    * Add custom storyboard in SwiftUI project and communication with it via UIViewControllerRepresentable
+        * Use Photo Editor ( earlier version swift ). This is using UI with custom storyboard
     * ~~Custom AlertControlView via UIViewControllerRepresentable for getting 'name' text from user.~~ (not in use)
     * 'alertSS' functions to call custom alerts with textfield.
     * 'View' extension to print debug messages with PrintView method.
-    * Integration / modification of Views created by 'Chris Mash' project [AVPlayer-SwiftUI](https://github.com/ChrisMash/AVPlayer-SwiftUI) for Audio play functionality integration at bottom of LIstView
+    * Integration / modification of Views created by 'Chris Mash' project [AVPlayer-SwiftUI](https://github.com/ChrisMash/AVPlayer-SwiftUI) for Audio/Video List View
         * List refill on shuffle array of songs.
         * Add/delete single item to core data in second audio list.
         * Added play/pause button in Audio
@@ -50,9 +56,12 @@ SwiftUI project creation to learn.
     * TabSwiftUiView added with Localizable Strings files for "ગુજરાતી" and "मराठी" display in tab. 
         * Refer: [Support multiple languages by localizing your iOS apps](https://zonneveld.dev/localize-your-ios-apps-to-support-multiple-languages/)
         * Added hardcode files LocalArabic, LocalGujarati and LocalMarathi .strings files to manually show strings in selected languages in tab
-        * Added files for "عربى" to check Right to Left alignment.
-            * Auto alignment as per device language settings
-            * Manual Text alignment set as 'Trailing' to show in Right to Left in all ( This will be again error in Arabic language device settings, as it will make 'Left to Right' in case of Trailing setting. )
+            * Added files for "عربى" to check Right to Left alignment.
+                * Auto alignment as per device language settings
+                * Manual Text alignment set as 'Trailing' to show in Right to Left in all ( This will be again error in Arabic language device settings, as it will make 'Left to Right' in case of Trailing setting. )
+            
+                ![localizationLanguges](localizationLanguges.jpg)
+            
             * How to localize Label text in "LaunchScreen.storyboard"
                 * Refer: [Comment on developer.apple.com forums](https://developer.apple.com/forums/thread/86567?answerId=632317022#632317022)
                 * [Still could not see text in Arabic in LaunchScreen](https://feedbackassistant.apple.com/feedback/8714792)
@@ -112,12 +121,15 @@ SwiftUI project creation to learn.
     * List add sample room, delete list item
     * Room detail view
         * Map view with 'eat' annotations.
+    
+12. Implementing SpriteKit with SwiftUI
+    * Demo SpriteKit - Scene and Particle effect  (SpriteKitResources)  
+
+        ![SpriteSceneParticleEffect](SpriteSceneParticleEffect.jpg)
         
-12.
+13.
     * Work in Progress
     
-13. Implementing SpriteKit with SwiftUI
-    * Demo SpriteKit - Scene and Particle effect  (SpriteKitResources)  
     
 <sub><sup>Note :-    
 (1) Replace 'PrivateCommit' with 'PublicCommit' to run. 
