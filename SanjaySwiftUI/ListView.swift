@@ -8,6 +8,18 @@
 
 import SwiftUI
 
+enum ViewNames: String {
+    case shuffle = "Shuffle"
+    case person = "Persons in Heart"
+    case allpersons = "All persons in Heart"
+    case signinFeatcher = "Demo signin user"
+    case lakes = "Landmark lakes"
+    case featured = "Landmark featured (single)"
+    case rivers = "Landmark revers"
+}
+
+let allViews: [MultiSelectorGoal] = [MultiSelectorGoal(name: ViewNames.shuffle.rawValue), MultiSelectorGoal(name: ViewNames.person.rawValue), MultiSelectorGoal(name: ViewNames.allpersons.rawValue), MultiSelectorGoal(name: ViewNames.signinFeatcher.rawValue), MultiSelectorGoal(name: ViewNames.lakes.rawValue), MultiSelectorGoal(name: ViewNames.featured.rawValue), MultiSelectorGoal(name: ViewNames.rivers.rawValue), MultiSelectorGoal(name: "Selection error check")]
+
 struct ListView: View {
     @EnvironmentObject  var  userAuth: UserAuth
     
@@ -27,6 +39,8 @@ struct ListView: View {
     
     let myCornerRadius = CommonUtils.cu_CornerRadius
     
+    @State var multiSelecterTask = MultiSelectorTask(name: "", servingGoals: [allViews[0], allViews[1], allViews[4], allViews[5], allViews[6]])
+
     @State var viewArray:[(id:String, anyView:AnyView)] = [
         (UUID().uuidString,
         AnyView(
@@ -64,47 +78,64 @@ struct ListView: View {
                 
                 ScrollView(.vertical) {
                     
+                    // SSTODO - FORM inside ScrollView can create issue in scrolling to check.
+                    Form {
+                        Section(header: Text("Multiselect Views")) {
+                            MultiSelector(
+                                label: Text("Select"),
+                                options: allViews,
+                                optionToString: { $0.name },
+                                selected: $multiSelecterTask.servingGoals
+                            )
+                        }
+                    }
+
                     Text("Start")
                         .foregroundColor(CommonUtils.cu_activity_light_text_color)
                         .shadow(radius: 1.5)
                         .padding()
                     
-                    Group {
-                        // SSTODO array shuffle working
-                        // we need to add UUID and views in tuple.
-                        Button(action: {
-                            // simple animation
-                            withAnimation{
-                                self.viewArray.shuffle()
+                    if multiSelecterTask.servingGoals.contains( MultiSelectorGoal(name: ViewNames.shuffle.rawValue) ) {
+                        Group {
+                            // SSTODO array shuffle working
+                            // we need to add UUID and views in tuple.
+                            Button(action: {
+                                // simple animation
+                                withAnimation{
+                                    self.viewArray.shuffle()
+                                }
+                                //print(self.viewArray)
+                            }) {
+                                Text("Shuffle views")
+                                Text("(Following is array of AnyViews)")
+                                    .font(.caption)
                             }
-                            //print(self.viewArray)
-                        }) {
-                            Text("Shuffle views")
-                            Text("(Following is array of AnyViews)")
-                                .font(.caption)
-                        }
-                        
-                        ForEach(viewArray, id: \.id) { viewTuple in
-                            viewTuple.anyView
-                        }
-                        
-                        /*
-                        // but following way views are not refreshed
-                        ForEach( 0..<viewArray.count ) {
-                            index in
                             
-                            self.viewArray[index].anyView
-                            self.PrintinView(self.viewArray[index].anyView)
+                            ForEach(viewArray, id: \.id) { viewTuple in
+                                viewTuple.anyView
+                            }
                             
+                            /*
+                             // but following way views are not refreshed
+                             ForEach( 0..<viewArray.count ) {
+                             index in
+                             
+                             self.viewArray[index].anyView
+                             self.PrintinView(self.viewArray[index].anyView)
+                             
+                             }
+                             */
+                            
+                            Text("Shuffle views End")
+                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                .shadow(radius: 1.5)
+                                .padding()
                         }
-                        */
-                        
-                        Text("Shuffle views End")
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                            .shadow(radius: 1.5)
-                            .padding()
+                    } else {
+                        MultiselectorOptionTextMessageView(selectionText: ViewNames.shuffle.rawValue)
                     }
                     
+                    if multiSelecterTask.servingGoals.contains( MultiSelectorGoal(name: ViewNames.allpersons.rawValue) ) {
                     Group {
                         if self.persons.count > 0 && self.currentPos >= 0 && self.currentPos < self.persons.count {
                             ZStack {
@@ -122,104 +153,135 @@ struct ListView: View {
                             .padding(10)
                             
                         }
-                        
-                        //SigninViewer(signinFetcher: SigninFetcher(userEmail: userAuth.userEmail), photoFrame: $photoFrame )
-                        //.padding(10)
                     }
-                    
+                    } else {
+                        MultiselectorOptionTextMessageView(selectionText: ViewNames.allpersons.rawValue)
+                    }
+
+                    if multiSelecterTask.servingGoals.contains( MultiSelectorGoal(name: ViewNames.signinFeatcher.rawValue) ) {
+                    Group {
+                            
+                        SigninViewer(signinFetcher: SigninFetcher(userEmail: userAuth.userEmail), photoFrame: $photoFrame )
+                        .padding(10)
+                        
+                    }
+                    } else {
+                        MultiselectorOptionTextMessageView(selectionText: ViewNames.signinFeatcher.rawValue)
+                    }
+
                     Group {
                         ScrollView(.horizontal) {
                             HStack(spacing: myPaddingSpace) {
-                                /*
-                                 ForEach(persons, id: \.datetime) { person in
-                                 ZStack {
-                                 Image(uiImage: self.personPhoto, placeholderSystemName: "person")
-                                 .resizable()
-                                 .scaledToFit()
-                                 .frame(width: 400, height: 200)
-                                 
-                                 Text("Name is \(person.name ?? "")")
-                                 .foregroundColor(CommonUtils.cu_activity_background_color)
-                                 .shadow(radius: 1.5)
-                                 .frame(width: 400, height: 200, alignment: .bottom)
-                                 }
-                                 
-                                 }
-                                 */
-                                ForEach(landmarkData) { landmark in
-                                    ZStack {
-                                        landmark.image
-                                            .resizable()
-                                            .scaledToFit()
-                                            .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 100, idealHeight: 200, maxHeight: 200, alignment: .center)
-                                            .cornerRadius(self.myCornerRadius)
-                                        
-                                        Text(landmark.name)
-                                            .foregroundColor(CommonUtils.cu_activity_background_color)
-                                            .shadow(radius: 1.5)
-                                            .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 200, idealHeight: 200, maxHeight: 200, alignment: .bottom)
-                                    }
-                                }
-                            }
-                            .padding(10)
-                            
-                        }
-                        
-                        ScrollView(.horizontal) {
-                            HStack(spacing: myPaddingSpace) {
-                                ForEach(landmarkData.filter {$0.category == .lakes }) { landmark in
-                                    ZStack {
-                                        landmark.image
-                                            .resizable(resizingMode: .stretch)
-                                            .scaledToFit()
-                                            .frame(width: 400, height: 400, alignment: .center)
-                                            .cornerRadius(self.myCornerRadius)
-                                        
-                                        Text(landmark.name)
-                                            .foregroundColor(CommonUtils.cu_activity_background_color)
-                                            .shadow(radius: 1.5)
-                                            .frame(width: 400, height: 400, alignment: .bottom)
-                                    }
-                                }
-                            }
-                            .padding(10)
-                            
-                        }
-                        ForEach(landmarkData.filter {$0.category == .featured }) { landmark in
-                            ZStack {
-                                landmark.image
-                                    .resizable(resizingMode: .stretch)
-                                    .scaledToFit()
-                                    .cornerRadius(self.myCornerRadius)
                                 
-                                Text(landmark.name)
-                                    .foregroundColor(CommonUtils.cu_activity_background_color)
-                                    .shadow(radius: 1.5)
-                            }
-                            .padding(10)
-                            
-                        }
-                        
-                        ScrollView(.horizontal) {
-                            HStack(spacing: myPaddingSpace) {
-                                ForEach(landmarkData.filter {$0.category == .rivers }) { landmark in
-                                    ZStack {
-                                        landmark.image
-                                            .resizable(resizingMode: .stretch)
-                                            .scaledToFit()
-                                            .frame(width: 400, height: 400, alignment: .center)
-                                            .cornerRadius(self.myCornerRadius)
-                                        
-                                        Text(landmark.name)
-                                            .foregroundColor(CommonUtils.cu_activity_background_color)
-                                            .shadow(radius: 1.5)
-                                            .frame(width: 400, height: 400, alignment: .bottom)
+                                if multiSelecterTask.servingGoals.contains( MultiSelectorGoal(name: ViewNames.person.rawValue) ) {
+                                    
+                                    ForEach(persons, id: \.datetime) { person in
+                                        ZStack {
+                                            Image(uiImage: UIImage(data: person.photo ?? Data()), placeholderSystemName: "person")
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(width: 400, height: 200)
+                                            
+                                            Text("Name is \(person.name ?? "")")
+                                                .foregroundColor(CommonUtils.cu_activity_background_color)
+                                                .shadow(radius: 1.5)
+                                                .frame(width: 400, height: 200, alignment: .bottom)
+                                        }
                                     }
+                                    
+                                } else {
+                                    
+                                    ForEach(landmarkData) { landmark in
+                                        ZStack {
+                                            landmark.image
+                                                .resizable()
+                                                .scaledToFit()
+                                                .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 100, idealHeight: 200, maxHeight: 200, alignment: .center)
+                                                .cornerRadius(self.myCornerRadius)
+                                            
+                                            Text(landmark.name)
+                                                .foregroundColor(CommonUtils.cu_activity_background_color)
+                                                .shadow(radius: 1.5)
+                                                .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 200, idealHeight: 200, maxHeight: 200, alignment: .bottom)
+                                        }
+                                    }
+                                    
                                 }
                             }
                             .padding(10)
                             
                         }
+                        
+                        
+                        if multiSelecterTask.servingGoals.contains( MultiSelectorGoal(name: ViewNames.lakes.rawValue) ) {
+                            ScrollView(.horizontal) {
+                                HStack(spacing: myPaddingSpace) {
+                                    ForEach(landmarkData.filter {$0.category == .lakes }) { landmark in
+                                        ZStack {
+                                            landmark.image
+                                                .resizable(resizingMode: .stretch)
+                                                .scaledToFit()
+                                                .frame(width: 400, height: 400, alignment: .center)
+                                                .cornerRadius(self.myCornerRadius)
+                                            
+                                            Text(landmark.name)
+                                                .foregroundColor(CommonUtils.cu_activity_background_color)
+                                                .shadow(radius: 1.5)
+                                                .frame(width: 400, height: 400, alignment: .bottom)
+                                        }
+                                    }
+                                }
+                                .padding(10)
+                                
+                            }
+                        } else {
+                            MultiselectorOptionTextMessageView(selectionText: ViewNames.lakes.rawValue)
+                        }
+                        
+                        if multiSelecterTask.servingGoals.contains( MultiSelectorGoal(name: ViewNames.featured.rawValue) ) {
+                            ForEach(landmarkData.filter {$0.category == .featured }) { landmark in
+                                ZStack {
+                                    landmark.image
+                                        .resizable(resizingMode: .stretch)
+                                        .scaledToFit()
+                                        .cornerRadius(self.myCornerRadius)
+                                    
+                                    Text(landmark.name)
+                                        .foregroundColor(CommonUtils.cu_activity_background_color)
+                                        .shadow(radius: 1.5)
+                                }
+                                .padding(10)
+                                
+                            }
+                        } else {
+                            MultiselectorOptionTextMessageView(selectionText: ViewNames.featured.rawValue)
+                        }
+                        
+                        if multiSelecterTask.servingGoals.contains( MultiSelectorGoal(name: ViewNames.rivers.rawValue) ) {
+                            ScrollView(.horizontal) {
+                                HStack(spacing: myPaddingSpace) {
+                                    ForEach(landmarkData.filter {$0.category == .rivers }) { landmark in
+                                        ZStack {
+                                            landmark.image
+                                                .resizable(resizingMode: .stretch)
+                                                .scaledToFit()
+                                                .frame(width: 400, height: 400, alignment: .center)
+                                                .cornerRadius(self.myCornerRadius)
+                                            
+                                            Text(landmark.name)
+                                                .foregroundColor(CommonUtils.cu_activity_background_color)
+                                                .shadow(radius: 1.5)
+                                                .frame(width: 400, height: 400, alignment: .bottom)
+                                        }
+                                    }
+                                }
+                                .padding(10)
+                                
+                            }
+                        } else {
+                            MultiselectorOptionTextMessageView(selectionText: ViewNames.rivers.rawValue)
+                        }
+                        
                     }
                     
                     Group {
@@ -244,6 +306,18 @@ struct ListView: View {
         .background(CommonUtils.cu_activity_background_color)
         //.edgesIgnoringSafeArea(.all)
     }
+}
+
+struct MultiselectorOptionTextMessageView: View {
+    var selectionText:String = ""
+
+    var body: some View {
+        Text("Select '\(selectionText)' from Multiselector")
+            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+            .shadow(radius: 1.5)
+            .padding()
+    }
+    
 }
 
 struct ListView_Previews: PreviewProvider {

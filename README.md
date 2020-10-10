@@ -127,8 +127,9 @@ SwiftUI project creation to learn.
 
         ![SpriteSceneParticleEffect](readmeResource/SpriteSceneParticleEffect.jpg)
         
-13.
-    * Work in Progress
+13. MultiSelector picker
+    * [developed by Cihat Gündüz (Jeehut)](https://dev.to/jeehut/multi-selector-in-swiftui-5heg)
+    * Implementing in 'List View' to display user selected views - Work in Progress
     
     
 <sub><sup>Note :-    

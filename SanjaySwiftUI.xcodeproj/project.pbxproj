@@ -299,6 +299,16 @@
 		72EDF206250BC48800879E40 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72EDF208250BC48800879E40 /* Localizable.strings */; };
 		72F0CBDD24F7F24600BE9DB0 /* Audio+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0CBDB24F7F24600BE9DB0 /* Audio+CoreDataClass.swift */; };
 		72F0CBDE24F7F24600BE9DB0 /* Audio+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F0CBDC24F7F24600BE9DB0 /* Audio+CoreDataProperties.swift */; };
+		72F2EBE72531F2F700AA8454 /* MultiSelectorTaskEditExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2EBE02531F2F700AA8454 /* MultiSelectorTaskEditExampleView.swift */; };
+		72F2EBE82531F2F700AA8454 /* MultiSelectorTaskEditExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2EBE02531F2F700AA8454 /* MultiSelectorTaskEditExampleView.swift */; };
+		72F2EBE92531F2F700AA8454 /* MultiSelectorGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2EBE22531F2F700AA8454 /* MultiSelectorGoal.swift */; };
+		72F2EBEA2531F2F700AA8454 /* MultiSelectorGoal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2EBE22531F2F700AA8454 /* MultiSelectorGoal.swift */; };
+		72F2EBEB2531F2F700AA8454 /* MultiSelectorTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2EBE32531F2F700AA8454 /* MultiSelectorTask.swift */; };
+		72F2EBEC2531F2F700AA8454 /* MultiSelectorTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2EBE32531F2F700AA8454 /* MultiSelectorTask.swift */; };
+		72F2EBED2531F2F700AA8454 /* MultiSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2EBE52531F2F700AA8454 /* MultiSelector.swift */; };
+		72F2EBEE2531F2F700AA8454 /* MultiSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2EBE52531F2F700AA8454 /* MultiSelector.swift */; };
+		72F2EBEF2531F2F700AA8454 /* MultiSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2EBE62531F2F700AA8454 /* MultiSelectionView.swift */; };
+		72F2EBF02531F2F700AA8454 /* MultiSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2EBE62531F2F700AA8454 /* MultiSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -482,6 +492,11 @@
 		72EDF20B250BC4C600879E40 /* mr-IN */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "mr-IN"; path = "mr-IN.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		72F0CBDB24F7F24600BE9DB0 /* Audio+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Audio+CoreDataClass.swift"; sourceTree = "<group>"; };
 		72F0CBDC24F7F24600BE9DB0 /* Audio+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Audio+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		72F2EBE02531F2F700AA8454 /* MultiSelectorTaskEditExampleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectorTaskEditExampleView.swift; sourceTree = "<group>"; };
+		72F2EBE22531F2F700AA8454 /* MultiSelectorGoal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectorGoal.swift; sourceTree = "<group>"; };
+		72F2EBE32531F2F700AA8454 /* MultiSelectorTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectorTask.swift; sourceTree = "<group>"; };
+		72F2EBE52531F2F700AA8454 /* MultiSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelector.swift; sourceTree = "<group>"; };
+		72F2EBE62531F2F700AA8454 /* MultiSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -600,6 +615,7 @@
 		72663AB124C5C7AC000596C9 /* SanjaySwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				72F2EBDF2531F2F700AA8454 /* MultiSelector */,
 				72B88D2F25285BE100321710 /* SpriteKitResources */,
 				729CC94D2521E1240078A0CC /* RoomListResources */,
 				723DE9E82508D5B0000E8C03 /* Animation */,
@@ -878,6 +894,34 @@
 				72BD188724EEAA600032E3B7 /* AudioView.swift */,
 			);
 			path = PlayerView;
+			sourceTree = "<group>";
+		};
+		72F2EBDF2531F2F700AA8454 /* MultiSelector */ = {
+			isa = PBXGroup;
+			children = (
+				72F2EBE02531F2F700AA8454 /* MultiSelectorTaskEditExampleView.swift */,
+				72F2EBE12531F2F700AA8454 /* Models */,
+				72F2EBE42531F2F700AA8454 /* MultiSelector */,
+			);
+			path = MultiSelector;
+			sourceTree = "<group>";
+		};
+		72F2EBE12531F2F700AA8454 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				72F2EBE22531F2F700AA8454 /* MultiSelectorGoal.swift */,
+				72F2EBE32531F2F700AA8454 /* MultiSelectorTask.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		72F2EBE42531F2F700AA8454 /* MultiSelector */ = {
+			isa = PBXGroup;
+			children = (
+				72F2EBE52531F2F700AA8454 /* MultiSelector.swift */,
+				72F2EBE62531F2F700AA8454 /* MultiSelectionView.swift */,
+			);
+			path = MultiSelector;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1166,9 +1210,11 @@
 				72B551CA24DD743E009A0014 /* Landmark.swift in Sources */,
 				72735B9124D034B0006B75C9 /* PhotoEditor+Crop.swift in Sources */,
 				72F0CBDE24F7F24600BE9DB0 /* Audio+CoreDataProperties.swift in Sources */,
+				72F2EBED2531F2F700AA8454 /* MultiSelector.swift in Sources */,
 				72735B9324D034B0006B75C9 /* GradientView.swift in Sources */,
 				72735B5124D02872006B75C9 /* CustomImagePickerViewController.swift in Sources */,
 				726763DD24FB76D00074715B /* TabSwiftUiView.swift in Sources */,
+				72F2EBEB2531F2F700AA8454 /* MultiSelectorTask.swift in Sources */,
 				7267646A24FBD7DA0074715B /* Configuration.swift in Sources */,
 				72E42CD82511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift in Sources */,
 				72BD188A24EEAA600032E3B7 /* AudioView.swift in Sources */,
@@ -1176,6 +1222,7 @@
 				7249748E24E4F112006F5C52 /* TonySectionCat.swift in Sources */,
 				72BD188924EEAA600032E3B7 /* PlayerUtility.swift in Sources */,
 				72B551B124DD1C8A009A0014 /* UserAuth.swift in Sources */,
+				72F2EBE92531F2F700AA8454 /* MultiSelectorGoal.swift in Sources */,
 				72735B8524D034B0006B75C9 /* PhotoEditor+Drawing.swift in Sources */,
 				7249749024E4F112006F5C52 /* TonySectionFeatcher.swift in Sources */,
 				72735B8C24D034B0006B75C9 /* PhotoEditor+Gestures.swift in Sources */,
@@ -1187,6 +1234,7 @@
 				72BBAF1024DE8F9700CFC7D6 /* SignInUser.swift in Sources */,
 				72BBAF1424DEC8EA00CFC7D6 /* SigninViewer.swift in Sources */,
 				72CEEB4F24F8F8BC00A1AFE9 /* AudioPlayerControlsView.swift in Sources */,
+				72F2EBE72531F2F700AA8454 /* MultiSelectorTaskEditExampleView.swift in Sources */,
 				727E111424F6C092007231F7 /* PublicCommit.swift in Sources */,
 				72BBAF0224DE694900CFC7D6 /* CommonUtils.swift in Sources */,
 				7204277524DFFEB900DF4958 /* SwiftUIImageCache.swift in Sources */,
@@ -1237,6 +1285,7 @@
 				72735B9A24D048C7006B75C9 /* UIImage+Extra.swift in Sources */,
 				72735B9224D034B0006B75C9 /* ColorCollectionViewCell.swift in Sources */,
 				727E111224F6A994007231F7 /* MenuView.swift in Sources */,
+				72F2EBEF2531F2F700AA8454 /* MultiSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1276,9 +1325,11 @@
 				726763FA24FBB27E0074715B /* Landmark.swift in Sources */,
 				726763FB24FBB27E0074715B /* PhotoEditor+Crop.swift in Sources */,
 				726763FC24FBB27E0074715B /* Audio+CoreDataProperties.swift in Sources */,
+				72F2EBEE2531F2F700AA8454 /* MultiSelector.swift in Sources */,
 				726763FD24FBB27E0074715B /* GradientView.swift in Sources */,
 				726763FE24FBB27E0074715B /* CustomImagePickerViewController.swift in Sources */,
 				726763FF24FBB27E0074715B /* TabSwiftUiView.swift in Sources */,
+				72F2EBEC2531F2F700AA8454 /* MultiSelectorTask.swift in Sources */,
 				7267646B24FBD7DA0074715B /* Configuration.swift in Sources */,
 				72E42CD92511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift in Sources */,
 				7267640024FBB27E0074715B /* AudioView.swift in Sources */,
@@ -1286,6 +1337,7 @@
 				7267640224FBB27E0074715B /* TonySectionCat.swift in Sources */,
 				7267640324FBB27E0074715B /* PlayerUtility.swift in Sources */,
 				7267640424FBB27E0074715B /* UserAuth.swift in Sources */,
+				72F2EBEA2531F2F700AA8454 /* MultiSelectorGoal.swift in Sources */,
 				7267640524FBB27E0074715B /* PhotoEditor+Drawing.swift in Sources */,
 				7267640624FBB27E0074715B /* TonySectionFeatcher.swift in Sources */,
 				7267640724FBB27E0074715B /* PhotoEditor+Gestures.swift in Sources */,
@@ -1297,6 +1349,7 @@
 				7267640C24FBB27E0074715B /* SignInUser.swift in Sources */,
 				7267640D24FBB27E0074715B /* SigninViewer.swift in Sources */,
 				7267640E24FBB27E0074715B /* AudioPlayerControlsView.swift in Sources */,
+				72F2EBE82531F2F700AA8454 /* MultiSelectorTaskEditExampleView.swift in Sources */,
 				7267640F24FBB27E0074715B /* PublicCommit.swift in Sources */,
 				7267641024FBB27E0074715B /* CommonUtils.swift in Sources */,
 				7267641124FBB27E0074715B /* SwiftUIImageCache.swift in Sources */,
@@ -1347,6 +1400,7 @@
 				7267643224FBB27E0074715B /* UIImage+Extra.swift in Sources */,
 				7267643324FBB27E0074715B /* ColorCollectionViewCell.swift in Sources */,
 				7267643424FBB27E0074715B /* MenuView.swift in Sources */,
+				72F2EBF02531F2F700AA8454 /* MultiSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
