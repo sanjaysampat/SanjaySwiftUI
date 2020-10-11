@@ -25,7 +25,7 @@ struct SigninViewer: View {
             else if !signinFetcher.signinSuccess.ErrorCode.isEmpty {
                 ErrorView(signinSuccess: signinFetcher.signinSuccess)
             }
-                
+            
             else {
                 VStack (alignment: .leading) {
                     ForEach(0 ..< 6) {_ in
@@ -82,16 +82,20 @@ extension SigninViewer {
                     
                     VStack {
                         VStack (alignment: .leading) {
-                            
-                            Text("\(self.signinSuccess.users[number].profileData.UserFirstName) \(self.signinSuccess.users[number].profileData.UserLastName)")
-                            Text(self.signinSuccess.users[number].profileData.UserEmail)
-                            Text(self.signinSuccess.users[number].profileData.UserMobile)
-                            Text(self.signinSuccess.users[number].profileData.UserDateOfBirth)
-                            Text("RollId : \(self.signinSuccess.users[number].profileData.UserRoleId) | Roll :  \(self.signinSuccess.users[number].profileData.UserRole) | IsPrimaryUser : \(self.signinSuccess.users[number].profileData.UserIsPrimaryUser) ")
-                            
-                            Text(self.signinSuccess.users[number].profileData.UserProfileImagePathActual)
+                            Group {
+                                Text("\(self.signinSuccess.users[number].profileData.UserFirstName) \(self.signinSuccess.users[number].profileData.UserLastName)")
+                                Text(self.signinSuccess.users[number].profileData.UserEmail)
+                                Text(self.signinSuccess.users[number].profileData.UserMobile)
+                                Text(self.signinSuccess.users[number].profileData.UserDateOfBirth)
+                                Text("RollId : \(self.signinSuccess.users[number].profileData.UserRoleId) | Roll :  \(self.signinSuccess.users[number].profileData.UserRole) | IsPrimaryUser : \(self.signinSuccess.users[number].profileData.UserIsPrimaryUser) ")
+                                
+                                Text(self.signinSuccess.users[number].profileData.UserProfileImagePathActual)
+                            }
+                            .lineLimit(nil)
+                            .multilineTextAlignment(.leading)
+
                         }
-                        
+
                         SwiftUIAsyncImageView(url: URL(string: self.signinSuccess.users[number].profileData.UserProfileImagePathActual), placeholder: Text("Loading ..."), cache: self.cache)
                             .frame(width: self.photoFrame.width, height: self.photoFrame.height, alignment: .center)
                             .cornerRadius(CommonUtils.cu_CornerRadius)
@@ -100,19 +104,19 @@ extension SigninViewer {
                         //SSTODO  how to do following and
                         //let user = self.signinSuccess.users[number]
                         /*
-                        if !self.userAuth.userEmail.elementsEqual(self.signinSuccess.users[number].profileData.UserEmail) {
-                            self.userAuth.userEmail = self.signinSuccess.users[number].profileData.UserEmail
+                         if !self.userAuth.userEmail.elementsEqual(self.signinSuccess.users[number].profileData.UserEmail) {
+                         self.userAuth.userEmail = self.signinSuccess.users[number].profileData.UserEmail
+                         }
+                         */
+                    }
+                    .onAppear(perform: {
+                        let user = self.signinSuccess.users[number]
+                        
+                        if !self.userAuth.userEmail.elementsEqual(user.profileData.UserEmail) {
+                            self.userAuth.userEmail = user.profileData.UserEmail
                         }
-                        */
-                    }
-                .onAppear(perform: {
-                    let user = self.signinSuccess.users[number]
-                    
-                    if !self.userAuth.userEmail.elementsEqual(user.profileData.UserEmail) {
-                        self.userAuth.userEmail = user.profileData.UserEmail
-                    }
-
-                })
+                        
+                    })
                 }
             }
         }
