@@ -9,19 +9,19 @@
 struct SigninUser: Codable, Identifiable {
     public var id: String = ""
     public var token: String = ""
-    public var profileData : ProfileData = ProfileData()
-    //public var companyData : CompanyData = CompanyData()
-    
+    public var companyData : UserCompanyData = UserCompanyData()
+    public var profileData : UserProfileData = UserProfileData()
+
     enum CodingKeys: String, CodingKey {
         case id = "UserId"
         case token = "UserToken"
+        case companyData = "Company_Data"
         case profileData = "Profile_Data"
-        //case copmanyData = "Company_Data"
     }
     
 }
 
-struct CompanyData: Codable {
+struct UserCompanyData: Codable {
     public var UserCompanyEmail: String = ""
     public var UserCompanyWebsite: String = ""
     public var UserCompanyLogo: String = ""
@@ -29,7 +29,7 @@ struct CompanyData: Codable {
     
 }
 
-struct ProfileData: Codable {
+struct UserProfileData: Codable {
     public var UserFirstName : String = ""
     public var UserLastName : String = ""
     public var UserEmail : String = ""

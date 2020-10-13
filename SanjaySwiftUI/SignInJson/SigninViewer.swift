@@ -83,24 +83,46 @@ extension SigninViewer {
                     VStack {
                         VStack (alignment: .leading) {
                             Group {
-                                Text("\(self.signinSuccess.users[number].profileData.UserFirstName) \(self.signinSuccess.users[number].profileData.UserLastName)")
-                                Text(self.signinSuccess.users[number].profileData.UserEmail)
-                                Text(self.signinSuccess.users[number].profileData.UserMobile)
-                                Text(self.signinSuccess.users[number].profileData.UserDateOfBirth)
-                                Text("RollId : \(self.signinSuccess.users[number].profileData.UserRoleId) | Roll :  \(self.signinSuccess.users[number].profileData.UserRole) | IsPrimaryUser : \(self.signinSuccess.users[number].profileData.UserIsPrimaryUser) ")
+                                Group {
+                                    Text("\(self.signinSuccess.users[number].profileData.UserFirstName) \(self.signinSuccess.users[number].profileData.UserLastName)")
+                                    Text(self.signinSuccess.users[number].profileData.UserEmail)
+                                    Text(self.signinSuccess.users[number].profileData.UserMobile)
+                                    Text(self.signinSuccess.users[number].profileData.UserDateOfBirth)
+                                    Text("RollId : \(self.signinSuccess.users[number].profileData.UserRoleId) | Roll :  \(self.signinSuccess.users[number].profileData.UserRole) | IsPrimaryUser : \(self.signinSuccess.users[number].profileData.UserIsPrimaryUser) ")
+                                }
                                 
-                                Text(self.signinSuccess.users[number].profileData.UserProfileImagePathActual)
+                                Group {
+                                    Text("Company Details :")
+                                    Text("Email : \(self.signinSuccess.users[number].companyData.UserCompanyEmail)")
+                                    Text("Website : \(self.signinSuccess.users[number].companyData.UserCompanyWebsite)")
+                                    Text("Address : \(self.signinSuccess.users[number].companyData.UserCompanyAddress)")
+                                }
+                                
                             }
                             .lineLimit(nil)
                             .multilineTextAlignment(.leading)
-
+                            
                         }
+                        
+                        Group {
+                            
+                            Text(self.signinSuccess.users[number].profileData.UserProfileImagePathActual)
+                                .lineLimit(nil)
 
-                        SwiftUIAsyncImageView(url: URL(string: self.signinSuccess.users[number].profileData.UserProfileImagePathActual), placeholder: Text("Loading ..."), cache: self.cache)
-                            .frame(width: self.photoFrame.width, height: self.photoFrame.height, alignment: .center)
-                            .cornerRadius(CommonUtils.cu_CornerRadius)
-                        
-                        
+                            SwiftUIAsyncImageView(url: URL(string: self.signinSuccess.users[number].profileData.UserProfileImagePathActual), placeholder: Text("User Photo"), cache: self.cache)
+                                .frame(width: self.photoFrame.width, height: self.photoFrame.height, alignment: .center)
+                                .cornerRadius(CommonUtils.cu_CornerRadius)
+                            
+                            Text("Company Logo:")
+                                .padding(.top, 10)
+                            Text(self.signinSuccess.users[number].companyData.UserCompanyLogo)
+                                .lineLimit(nil)
+
+                            SwiftUIAsyncImageView(url: URL(string: self.signinSuccess.users[number].companyData.UserCompanyLogo), placeholder: Text("Company Logo"), cache: self.cache)
+                                .frame(width: self.photoFrame.width, height: self.photoFrame.height, alignment: .top)
+                                .cornerRadius(CommonUtils.cu_CornerRadius)
+                            
+                        }
                         //SSTODO  how to do following and
                         //let user = self.signinSuccess.users[number]
                         /*

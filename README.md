@@ -29,7 +29,6 @@ SwiftUI project creation to learn.
     * Multiple SwiftUI views loading from contentView
     * JSON service with Codable protocol
         * Loading and updating JSON service response. 
-        * **Pending to make for nested JSON**
         * Saving json in document folder
         * Loading again the same from document folder, so no flicker on screen
         * Testing by loading jsons with multiple image urls to test loading and background saving
