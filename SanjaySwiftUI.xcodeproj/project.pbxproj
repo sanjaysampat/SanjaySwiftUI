@@ -285,6 +285,8 @@
 		72BD188824EEAA600032E3B7 /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BD188524EEAA600032E3B7 /* VideoView.swift */; };
 		72BD188924EEAA600032E3B7 /* PlayerUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BD188624EEAA600032E3B7 /* PlayerUtility.swift */; };
 		72BD188A24EEAA600032E3B7 /* AudioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72BD188724EEAA600032E3B7 /* AudioView.swift */; };
+		72C29E9025373D900051E936 /* ScreenRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C29E8F25373D900051E936 /* ScreenRecorder.swift */; };
+		72C29E9125373D900051E936 /* ScreenRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72C29E8F25373D900051E936 /* ScreenRecorder.swift */; };
 		72CEEB4F24F8F8BC00A1AFE9 /* AudioPlayerControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CEEB4E24F8F8BC00A1AFE9 /* AudioPlayerControlsView.swift */; };
 		72CEEB5124F92EBE00A1AFE9 /* AVListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72CEEB5024F92EBE00A1AFE9 /* AVListView.swift */; };
 		72D2498824FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D2498724FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift */; };
@@ -476,6 +478,7 @@
 		72BD188524EEAA600032E3B7 /* VideoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
 		72BD188624EEAA600032E3B7 /* PlayerUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerUtility.swift; sourceTree = "<group>"; };
 		72BD188724EEAA600032E3B7 /* AudioView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioView.swift; sourceTree = "<group>"; };
+		72C29E8F25373D900051E936 /* ScreenRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenRecorder.swift; sourceTree = "<group>"; };
 		72CEEB4E24F8F8BC00A1AFE9 /* AudioPlayerControlsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioPlayerControlsView.swift; sourceTree = "<group>"; };
 		72CEEB5024F92EBE00A1AFE9 /* AVListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVListView.swift; sourceTree = "<group>"; };
 		72D2498724FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLandmarkSwiftUIView.swift; sourceTree = "<group>"; };
@@ -767,6 +770,7 @@
 		729B0EF024C979FD00054F9F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				72C29E8F25373D900051E936 /* ScreenRecorder.swift */,
 				727BF0CA2525EE810061BD7F /* SSMapView */,
 				726763EC24FBA27E0074715B /* VisualEffectBlur.swift */,
 				727E111324F6C091007231F7 /* PublicCommit.swift */,
@@ -1280,6 +1284,7 @@
 				723ACB33250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift in Sources */,
 				72CEEB5124F92EBE00A1AFE9 /* AVListView.swift in Sources */,
 				72735B8224D034B0006B75C9 /* UIImage+Crop.swift in Sources */,
+				72C29E9025373D900051E936 /* ScreenRecorder.swift in Sources */,
 				72663AB524C5C7AC000596C9 /* SceneDelegate.swift in Sources */,
 				72735B7E24D034B0006B75C9 /* PhotoEditor+Font.swift in Sources */,
 				72735B9A24D048C7006B75C9 /* UIImage+Extra.swift in Sources */,
@@ -1395,6 +1400,7 @@
 				723ACB34250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift in Sources */,
 				7267642E24FBB27E0074715B /* AVListView.swift in Sources */,
 				7267642F24FBB27E0074715B /* UIImage+Crop.swift in Sources */,
+				72C29E9125373D900051E936 /* ScreenRecorder.swift in Sources */,
 				7267643024FBB27E0074715B /* SceneDelegate.swift in Sources */,
 				7267643124FBB27E0074715B /* PhotoEditor+Font.swift in Sources */,
 				7267643224FBB27E0074715B /* UIImage+Extra.swift in Sources */,

@@ -29,6 +29,15 @@
 1. Example from hackingwithswift to create project from start. [SwiftUI tutorial: Building a complete project](https://www.hackingwithswift.com/quick-start/swiftui/swiftui-tutorial-building-a-complete-project) by [Paul Hudson](https://www.hackingwithswift.com/about)
 
 
+### Libraries
+
+1. Screen Recorder in app - Wyler - Output as a video file. It is using ReplayKit with iOS 11 SDK methods.
+
+    * [Blog link](https://medium.com/flawless-app-stories/wyler-screen-recording-made-easy-on-ios-b6451511a715)
+
+    * [Github link](https://github.com/toupper/Wyler)
+
+
 ### Stackoverflow
 
 1. [SwiftUI - Button - How to pass a function request to parent](https://stackoverflow.com/a/59861463/2641380) - how to pass a closure to your child view which then calls a function of the parent.

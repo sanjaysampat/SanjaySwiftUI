@@ -47,6 +47,10 @@ struct ContentView: View {
     
     var body: some View {
         ZStack() {
+            /**
+             - **SSTODO**
+             We need to create a button to record audio/video of app for all screens. Desire to create button as button flotting on screen, so we can move or hide it when required. Start button could be showing menu to move(Left,Right,Top,Bottom). Stop button showing time and single click to stop recording
+            */
             
             if menuSelection == 0 {
                 // isEmmitorCalled is a @State var, so the emitter view will only be rendered
