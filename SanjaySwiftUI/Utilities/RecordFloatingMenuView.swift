@@ -18,14 +18,22 @@ struct RecordFloatingMenuView: View {
         case record = "dot.square"
     }
     
+    // if we need to pass menu buttons and closure from calling view.
     //let buttonArray: [String]
     //let onClick: (String)->()
+    
     @State var buttonsPos:UnitPoint = .bottomTrailing
     @State var showButtons = false
     @State var isRecording = false
+    @State var recordAlertShown = false
+    @State var recordErrorShown = false
+    
+    @State var animateFrame = false
     
     fileprivate let buttonArray:[ButtonImages] = [ButtonImages.arrowUpLeft, ButtonImages.arrowUpRight, ButtonImages.arrowDownLeft, ButtonImages.arrowDownRight, ButtonImages.record]
-
+    
+    private let screenRecorder = ScreenRecorder()
+    
     var body: some View {
         HStack {
             if buttonsPos == .bottomTrailing || buttonsPos == .topTrailing {
@@ -53,7 +61,7 @@ struct RecordFloatingMenuView: View {
             if showButtons && !isRecording {
                 ForEach(buttonArray, id: \.self) { buttonImage in
                     Button(action: {
-                       
+                        
                         switch buttonImage {
                         case .arrowUpLeft:
                             buttonsPos = .topLeading
@@ -64,9 +72,9 @@ struct RecordFloatingMenuView: View {
                         case .arrowDownRight:
                             buttonsPos = .bottomTrailing
                         case .record:
-                            askToStartScreenRecord()
+                            self.recordAlertShown = true
                         }
-
+                        
                     }, label: {
                         Image(systemName: buttonImage.rawValue)
                             .foregroundColor(.white)
@@ -75,7 +83,7 @@ struct RecordFloatingMenuView: View {
                     .background(CommonUtils.cu_activity_foreground_color)
                     .opacity(0.75)
                     .clipShape(Circle())
-                    .padding(.all, 2.5)
+                    .padding(.all, 1)
                     .transition(
                         .move(
                             edge: (buttonsPos == .bottomTrailing || buttonsPos == .topTrailing) ? .trailing : .leading
@@ -83,54 +91,93 @@ struct RecordFloatingMenuView: View {
                     )
                 }
             }
-            //else {
-                //EmptyView()
-            //}
         }
     }
     
     var menuButton: some View {
-        /* SSTODO
-         when recording start continuing transation of .scale for the button
-         change the button color to Red
-        */
-        
-        Button(action: {
+        Group {
             if isRecording {
-                isRecording.toggle()
-            } else
-            {
-                withAnimation {
-                    showButtons.toggle()
+                Button(action: {
+                    toggleScreenRecord()
+                }, label: {
+                    Image(systemName: "dot.square.fill")
+                        .foregroundColor(.white)
+                        .font(.headline)
+                        .frame(width: self.animateFrame ? 40 : 30 , height: self.animateFrame ? 40 : 30)
+                    
+                })
+                .background(CommonUtils.cu_activity_foreground_color)
+                .clipShape(Circle())
+                .padding(5)
+                .onAppear {
+                    withAnimation(Animation.easeInOut(duration: 1.5).repeatForever(autoreverses: true)) {
+                        self.animateFrame.toggle()
+                    }
                 }
+
+            } else {
+                Button(action: {
+                    withAnimation {
+                        showButtons.toggle()
+                    }
+                }, label: {
+                    Image(systemName: showButtons ? "minus" : "plus" )
+                        .foregroundColor(.white)
+                        .font(.headline)
+                        .frame(width: 40, height: 40)
+                })
+                .background(CommonUtils.cu_activity_foreground_color)
+                .opacity(0.75)
+                .clipShape(Circle())
+                .padding(5)
+                .alert(isPresented: $recordAlertShown) {
+                    Alert(
+                        title: Text("Record"), message: Text("Do you want to record the screen video?"),
+                        primaryButton: Alert.Button.destructive(Text("Record")) {
+                            toggleScreenRecord()
+                        }, secondaryButton: .cancel()
+                    )
+                }/*
+                 //// SSTODO we can not call more then one alert in one view.
+                 //// we need to use different approach
+                .alert(isPresented: $recordErrorShown) {
+                    Alert(
+                        title: Text("Error"), message: Text("Error recording the screen video."), dismissButton: Alert.Button.default(Text("OK")) {self.isRecording = false}
+                    )
+                }*/
             }
-        }, label: {
-            Image(systemName: isRecording ? "dot.square.fill" : ( showButtons ? "minus" : "plus" ) )
-                .foregroundColor(.white)
-                .font(.headline)
-                .frame(width: 40, height: 40)
-        })
-        .background(CommonUtils.cu_activity_foreground_color)
-        .opacity(0.75)
-        .clipShape(Circle())
-        .padding(10)
+        }
     }
     
-    func askToStartScreenRecord() {
-        isRecording.toggle()
+    func toggleScreenRecord() {
         
-        /*  SSTODO
-        screenRecorder.stoprecording(errorHandler: { error in
-          debugPrint("Error when stop recording \(error)")
-        })
-
-         // SSTODO to save recording in document folder, will show the list in ListView in LazyHStack
-        screenRecorder.startRecording(saveToCameraRoll: false, errorHandler: { error in
-          debugPrint("Error when recording \(error)")
-        })
-        */
+        if isRecording {
+            self.isRecording = false
+            
+            // SSTODO pending due to error in simulator
+            //screenRecorder.stoprecording(errorHandler: { error in
+            //    debugPrint("Error when stop recording \(error)")
+            //})
+            
+        } else {
+            let formatter3 = DateFormatter()
+            formatter3.dateFormat = "yyyyMMddHHmmss"
+            let dateTimeString = formatter3.string(from: Date())
+            let fileUrl = URL(fileURLWithPath: CommonUtils.cuScreenRecordFolder.stringByAppendingPathComponent(path: "\(dateTimeString).mp4"))
+            // SSTODO to save recording in document folder, will show the list in ListView in LazyHStack
+            self.isRecording = true
+            
+            // SSTODO pending due to error in simulator
+            //screenRecorder.startRecording(to:fileUrl, saveToCameraRoll: false, //errorHandler: { error in
+                //debugPrint("Error when recording \(error)")
+                //self.isRecording = false
+                //self.recordErrorShown = true
+            //}
+            //)
+            
+        }
     }
-
+    
 }
 
 
@@ -139,6 +186,7 @@ struct RecordFloatingMenuView: View {
 struct RecordFloatingMenuView_Previews: PreviewProvider {
     static var previews: some View {
         RecordFloatingMenuView()
+        // if we need to pass menu buttons and closure from calling view.
         //RecordFloatingMenuView(buttonArray: [], onClick: { buttonObject in
         //    print("\(buttonObject) Clicked")
         //})

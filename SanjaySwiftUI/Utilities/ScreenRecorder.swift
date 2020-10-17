@@ -60,9 +60,10 @@ final public class ScreenRecorder {
     if let passedVideoOutput = outputURL {
       self.videoOutputURL = passedVideoOutput
       newVideoOutputURL = passedVideoOutput
+        print("SSTODO newVideoOutputURL=\(newVideoOutputURL.absoluteString)")
     } else {
       let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
-      newVideoOutputURL = URL(fileURLWithPath: documentsPath.appendingPathComponent("WylerNewVideo.mp4"))
+      newVideoOutputURL = URL(fileURLWithPath: documentsPath.appendingPathComponent("ScreenVideo.mp4"))
       self.videoOutputURL = newVideoOutputURL
     }
 
@@ -112,6 +113,8 @@ final public class ScreenRecorder {
   private func startCapture(error: @escaping (Error) -> Void) {
     recorder.startCapture(handler: { (sampleBuffer, sampleType, passedError) in
       if let passedError = passedError {
+        print("SSTODO passedError=\(passedError.localizedDescription)")
+
         error(passedError)
         return
       }
@@ -126,7 +129,16 @@ final public class ScreenRecorder {
       default:
         break
       }
-    })
+    }, completionHandler: {(passedError) in
+        if let passedError = passedError {
+          print("SSTODO completionHandler passedError=\(passedError.localizedDescription)")
+
+          error(passedError)
+          return
+        }
+        
+    }
+    )
   }
 
   private func handleSampleBuffer(sampleBuffer: CMSampleBuffer) {
@@ -157,11 +169,14 @@ final public class ScreenRecorder {
       }
     })
 
+    // SSTODO error on next line
+    //SanjaySwiftUIPay[3788:227830] *** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '*** -[AVAssetWriterInput markAsFinished] Cannot call method when status is 0'
+    
     self.videoWriterInput?.markAsFinished()
     self.micAudioWriterInput?.markAsFinished()
     self.appAudioWriterInput?.markAsFinished()
     self.videoWriter?.finishWriting {
-      self.saveVideoToCameraRollAfterAuthorized(errorHandler: errorHandler)
+        self.saveVideoToCameraRollAfterAuthorized(errorHandler: errorHandler)
     }
   }
 

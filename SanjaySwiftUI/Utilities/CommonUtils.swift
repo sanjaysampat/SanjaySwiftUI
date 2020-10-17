@@ -75,6 +75,7 @@ struct CommonUtils {
 
     static var cuDocumentFolderPath             = ""
     static var cuApplicationSupportFolder       = ""
+    static var cuScreenRecordFolder             = ""
     
     
     static func createRequiredFolders() -> Bool {
@@ -103,6 +104,18 @@ struct CommonUtils {
         //let data:Data = Data()
         //let isSaved = CommonUtils.writeFileToSupportFolder(folderName:"FolderName", fileName:"MyFile.test", fileData:data, atomicWrite:true)
         
+        // Screen record folder
+        CommonUtils.cuScreenRecordFolder = CommonUtils.cuDocumentFolderPath.stringByAppendingPathComponent(path: "ScreenRecord")
+        print(CommonUtils.cuScreenRecordFolder)
+        // /Users/sanjaysampat/Library/Developer/CoreSimulator/Devices/8A6FB310-2A14-4D03-A307-28B0706B1C52/data/Containers/Data/Application/821F54CD-8E06-4FCA-9A27-EFE37F6B6B70/Documents/ScreenRecord
+        if !fileManager.fileExists(atPath: CommonUtils.cuScreenRecordFolder) {
+            do {
+                try fileManager .createDirectory(atPath: CommonUtils.cuScreenRecordFolder, withIntermediateDirectories: false, attributes: nil)
+            } catch _ as NSError {
+                return false
+            }
+        }
+
 
         return true
     }
