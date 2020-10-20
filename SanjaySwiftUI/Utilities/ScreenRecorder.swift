@@ -169,7 +169,7 @@ final public class ScreenRecorder {
       }
     })
 
-    // SSTODO error on next line
+    // SSTODO error on next line when recording is not started.
     //SanjaySwiftUIPay[3788:227830] *** Terminating app due to uncaught exception 'NSInternalInconsistencyException', reason: '*** -[AVAssetWriterInput markAsFinished] Cannot call method when status is 0'
     
     self.videoWriterInput?.markAsFinished()

@@ -31,8 +31,10 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>App use Camera access to get full sized photo.</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>App uses Audio recording for screen recording.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>App uses Photo Library access to get selected original full sized photos</string>
+	<string>App uses Photo Library access to get selected original full sized photos and save recorded video to gallery</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

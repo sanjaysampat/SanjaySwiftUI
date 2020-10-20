@@ -130,7 +130,11 @@ SwiftUI project creation to learn.
     * [developed by Cihat Gündüz (Jeehut)](https://dev.to/jeehut/multi-selector-in-swiftui-5heg)
     * Implementing in 'List View' to display user selected views - Work in Progress
     
-14. Work in Progress    
+14. RecordFloatingMenuView - floating menu button to record video of the screen in mp4 file, in decoument folder. (ReplayKit)
+    * This button can be moved to any of four corners before starting of recording.
+    * This feature does not work for app in Simulator, but works on actual devices.
+    * Issues - does not create proper mpeg file when we change the view or popup appears, while recording.
+    * Work in Progress - show list of these recording files and view.
     
     
 <sub><sup>Note :-    

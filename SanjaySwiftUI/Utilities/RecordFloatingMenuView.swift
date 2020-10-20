@@ -154,10 +154,10 @@ struct RecordFloatingMenuView: View {
         if isRecording {
             self.isRecording = false
             
-            // SSTODO pending due to error in simulator
-            //screenRecorder.stoprecording(errorHandler: { error in
-            //    debugPrint("Error when stop recording \(error)")
-            //})
+            // SSTODO This does not work in simulator, but works in actual device.
+            screenRecorder.stoprecording(errorHandler: { error in
+                debugPrint("Error when stop recording \(error)")
+            })
             
         } else {
             let formatter3 = DateFormatter()
@@ -167,13 +167,13 @@ struct RecordFloatingMenuView: View {
             // SSTODO to save recording in document folder, will show the list in ListView in LazyHStack
             self.isRecording = true
             
-            // SSTODO pending due to error in simulator
-            //screenRecorder.startRecording(to:fileUrl, saveToCameraRoll: false, //errorHandler: { error in
-                //debugPrint("Error when recording \(error)")
-                //self.isRecording = false
-                //self.recordErrorShown = true
-            //}
-            //)
+            // SSTODO This does not work in simulator, but works in actual device.
+            screenRecorder.startRecording(to:fileUrl, saveToCameraRoll: true, errorHandler: { error in
+                debugPrint("Error when recording \(error)")
+                self.isRecording = false
+                self.recordErrorShown = true
+            }
+            )
             
         }
     }
