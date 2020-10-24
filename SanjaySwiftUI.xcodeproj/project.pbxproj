@@ -169,6 +169,8 @@
 		7267646D24FBD7DA0074715B /* PaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267646924FBD7DA0074715B /* PaymentHandler.swift */; };
 		7267646F24FBE3E50074715B /* ApplePayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267646E24FBE3E50074715B /* ApplePayController.swift */; };
 		7267647024FBE3E50074715B /* ApplePayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267646E24FBE3E50074715B /* ApplePayController.swift */; };
+		7267B250254417DE00822C61 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267B24F254417DE00822C61 /* MainContentView.swift */; };
+		7267B251254417DE00822C61 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267B24F254417DE00822C61 /* MainContentView.swift */; };
 		72735B4F24D01A86006B75C9 /* StoryboardSanjay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72735B4E24D01A86006B75C9 /* StoryboardSanjay.storyboard */; };
 		72735B5124D02872006B75C9 /* CustomImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B5024D02872006B75C9 /* CustomImagePickerViewController.swift */; };
 		72735B7424D034B0006B75C9 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72735B5324D034B0006B75C9 /* icomoon.ttf */; };
@@ -382,6 +384,7 @@
 		7267646824FBD7D90074715B /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		7267646924FBD7DA0074715B /* PaymentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentHandler.swift; sourceTree = "<group>"; };
 		7267646E24FBE3E50074715B /* ApplePayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayController.swift; sourceTree = "<group>"; };
+		7267B24F254417DE00822C61 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		72735B4E24D01A86006B75C9 /* StoryboardSanjay.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryboardSanjay.storyboard; sourceTree = "<group>"; };
 		72735B5024D02872006B75C9 /* CustomImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImagePickerViewController.swift; sourceTree = "<group>"; };
 		72735B5324D034B0006B75C9 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
@@ -635,6 +638,7 @@
 				729B0EF024C979FD00054F9F /* Utilities */,
 				72663AB224C5C7AC000596C9 /* AppDelegate.swift */,
 				72663AB424C5C7AC000596C9 /* SceneDelegate.swift */,
+				7267B24F254417DE00822C61 /* MainContentView.swift */,
 				72663AB924C5C7AC000596C9 /* ContentView.swift */,
 				72663ABB24C5C7BD000596C9 /* Assets.xcassets */,
 				72663AC024C5C7BD000596C9 /* LaunchScreen.storyboard */,
@@ -1264,6 +1268,7 @@
 				72735B7624D034B0006B75C9 /* ColorsCollectionViewDelegate.swift in Sources */,
 				72D9779F24E1116E0044754C /* CommonExtensions.swift in Sources */,
 				72735B8A24D034B0006B75C9 /* CropView.swift in Sources */,
+				7267B250254417DE00822C61 /* MainContentView.swift in Sources */,
 				72BD188824EEAA600032E3B7 /* VideoView.swift in Sources */,
 				72735B7A24D034B0006B75C9 /* PhotoEditor+UITextView.swift in Sources */,
 				72D2498824FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift in Sources */,
@@ -1381,6 +1386,7 @@
 				7267641C24FBB27E0074715B /* ColorsCollectionViewDelegate.swift in Sources */,
 				7267641D24FBB27E0074715B /* CommonExtensions.swift in Sources */,
 				7267641E24FBB27E0074715B /* CropView.swift in Sources */,
+				7267B251254417DE00822C61 /* MainContentView.swift in Sources */,
 				7267641F24FBB27E0074715B /* VideoView.swift in Sources */,
 				7267642024FBB27E0074715B /* PhotoEditor+UITextView.swift in Sources */,
 				72D2498924FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift in Sources */,

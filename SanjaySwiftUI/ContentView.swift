@@ -10,6 +10,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @Binding var showContentView:Bool
+
     @Environment(\.managedObjectContext) var managedObjectContext
     @EnvironmentObject  var  userAuth: UserAuth
     
@@ -312,12 +314,6 @@ struct ContentView: View {
             } else {
                 MenuView(menuSelection: $menuSelection, currentPos: $currentPos)
             }
-            
-            /**
-             - **SSTODO**
-             We need to create a button to record audio/video of app for all screens. Desire to create button as button flotting on screen, so we can move or hide it when required. Start button could be showing menu to move(Left,Right,Top,Bottom). Stop button showing time and single click to stop recording
-            */
-            RecordFloatingMenuView()
 
         }
         .background(CommonUtils.cu_activity_background_color)

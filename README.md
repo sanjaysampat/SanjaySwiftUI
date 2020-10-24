@@ -135,7 +135,11 @@ SwiftUI project creation to learn.
     * This feature does not work for app in Simulator, but works on actual devices.
     * Issues - does not create proper mpeg file when we change the view or popup appears, while recording.
     * Work in Progress - show list of these recording files and view.
-    
+
+15. When SwiftUI does not have many views in a screen, the loading of App is faster. ( SwiftUI only loads views when they are seen on screen )
+    * we should create small and multiple views in a screen, each view with single responsibility ( **S**OLID )
+    * Each app screen should not be cluttered with many functionalities. 
+    * The visibility of options and data should be easy to see for users. 
     
 <sub><sup>Note :-    
 (1) Replace 'PrivateCommit' with 'PublicCommit' to run. 
