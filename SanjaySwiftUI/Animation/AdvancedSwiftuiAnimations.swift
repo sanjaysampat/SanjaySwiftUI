@@ -49,6 +49,10 @@ struct AdvancedSwiftuiAnimations: View {
                     NavigationLink(destination: Example9(), label: {
                         Text("Example 9 (follow path)")
                     })
+                    
+                    NavigationLink(destination: Example21(), label: {
+                        Text("Example 21 (show card)")
+                    })
                 }
                 
                 Section(header: Text("Part 3: Animatable Modifier")) {
@@ -849,6 +853,7 @@ struct RotatingCard: View {
     let images = ["diamonds-7", "clubs-8", "diamonds-6", "clubs-b", "hearts-2", "diamonds-b"]
     
     var body: some View {
+        // SSTODO (1) dynamic binding of array elements (2) on value change getter and setter functionality.
         let binding = Binding<Bool>(get: { self.flipped }, set: { self.updateBinding($0) })
         
         return VStack {
@@ -1458,3 +1463,124 @@ struct AnimatableColorText: View {
 
     }
 }
+
+// MARK: - Example 21 - Show Cards
+struct Example21: View {
+    var body: some View {
+        HStack {
+            Spacer()
+            RotatingShowCard()
+            Spacer()
+        }
+        .background(Color.black)
+        .navigationBarTitle(Text("Example 21"), displayMode: .inline)
+    }
+}
+
+struct RotatingShowCard: View {
+    @State private var flipped = false
+    @State private var animate3d = false
+    @State private var rotate = false
+    
+    @State private var images = ["diamonds-7", "clubs-8", "diamonds-6", "clubs-b", "hearts-2", "diamonds-b"]
+
+
+    var body: some View {
+        
+        let cardDimention = 120 // full
+        let myCardDimention = images.count * 6 // compact
+        let cardDegree = cardDimention/(images.count-1)
+        let myCardDegree = myCardDimention/(images.count-1)
+
+        return VStack {
+            
+            ZStack {
+                // other player cards
+                ForEach(0..<images.count) { i in
+                    RotatingSingleCard(0, Double(-(cardDimention/2)+(i*cardDegree)), i, "back")
+                }
+            }
+            
+            Spacer()
+
+            Spacer()
+
+            ZStack {
+                // my cards
+                ForEach(0..<images.count) { i in
+                    RotatingSingleCard(0, Double(-(myCardDimention/2)+(i*myCardDegree)), i, images[i])
+               }
+            }
+            .onAppear() {
+                self.images.shuffle()
+            }
+        }
+    }
+}
+
+struct RotatingSingleCard: View {
+    var rotateDegreeFrom:Double = 0
+    var rotateDegreeto:Double = 45
+    var imageName:String = "back"
+
+    @State private var rotate = false
+    
+    // Initializer
+    init(_ rf: Double, _ rt: Double, _ i: Int, _ n: String ) {
+        self.rotateDegreeFrom = rf
+        self.rotateDegreeto = rt
+        self.imageName = n
+    }
+
+    var body: some View {
+    Image(imageName).resizable()
+        .frame(width: 106, height: 160)
+        .rotationEffect(Angle(degrees:  rotate ? Double(rotateDegreeto) : rotateDegreeFrom), anchor: .bottom)
+        .onAppear {
+            withAnimation(Animation.linear(duration: 1.0)
+            )
+            {
+                self.rotate = true
+            }
+        }
+    }
+
+}
+
+
+
+struct FlipEffectShowCard: GeometryEffect {
+    
+    var animatableData: Double {
+        get { angle }
+        set { angle = newValue }
+    }
+    
+    @Binding var flipped: Bool
+    var angle: Double
+    let axis: (x: CGFloat, y: CGFloat)
+    
+    func effectValue(size: CGSize) -> ProjectionTransform {
+        
+        // We schedule the change to be done after the view has finished drawing,
+        // otherwise, we would receive a runtime error, indicating we are changing
+        // the state while the view is being drawn.
+        DispatchQueue.main.async {
+            self.flipped = self.angle >= 90 && self.angle < 270
+        }
+        
+        let a = CGFloat(Angle(degrees: angle).radians)
+        
+        var transform3d = CATransform3DIdentity;
+        transform3d.m34 = -1/max(size.width, size.height)
+        
+        transform3d = CATransform3DRotate(transform3d, a, axis.x, axis.y, 0)
+        transform3d = CATransform3DTranslate(transform3d, -size.width/2.0, -size.height/2.0, 0)
+        
+        let affineTransform = ProjectionTransform(CGAffineTransform(translationX: size.width/2.0, y: size.height / 2.0))
+        
+        return ProjectionTransform(transform3d).concatenating(affineTransform)
+    }
+}
+
+
