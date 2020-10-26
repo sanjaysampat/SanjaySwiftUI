@@ -21,6 +21,8 @@
 		7216BB5E24D17BC30097AFA4 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */; };
 		7225A43D252DEC830081A793 /* apple-pay-payment-service-providers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7225A43C252DEC810081A793 /* apple-pay-payment-service-providers.jpg */; };
 		7225A43E252DEC830081A793 /* apple-pay-payment-service-providers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7225A43C252DEC810081A793 /* apple-pay-payment-service-providers.jpg */; };
+		7232FABD2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7232FABC2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift */; };
+		7232FABE2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7232FABC2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift */; };
 		723ACB30250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ACB2F250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift */; };
 		723ACB31250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ACB2F250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift */; };
 		723ACB33250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ACB32250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift */; };
@@ -346,6 +348,7 @@
 		7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPhotoImagePickerViewController.swift; sourceTree = "<group>"; };
 		7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7225A43C252DEC810081A793 /* apple-pay-payment-service-providers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "apple-pay-payment-service-providers.jpg"; sourceTree = "<group>"; };
+		7232FABC2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SanjaySwiftuiAnimations.swift; sourceTree = "<group>"; };
 		723ACB2F250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatablePairSwiftUIViewEx.swift; sourceTree = "<group>"; };
 		723ACB32250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimArcInsettableShapeViewEx.swift; sourceTree = "<group>"; };
 		723DE9E92508D608000E8C03 /* AnimatableSwiftUIViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableSwiftUIViewEx.swift; sourceTree = "<group>"; };
@@ -564,6 +567,7 @@
 		723DE9E82508D5B0000E8C03 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
+				7232FABC2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift */,
 				72E42CD72511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift */,
 				723ACB32250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift */,
 				723DE9E92508D608000E8C03 /* AnimatableSwiftUIViewEx.swift */,
@@ -1266,6 +1270,7 @@
 				72735B8124D034B0006B75C9 /* UIImage+Size.swift in Sources */,
 				72B551AF24DD1690009A0014 /* ListView.swift in Sources */,
 				72735B7624D034B0006B75C9 /* ColorsCollectionViewDelegate.swift in Sources */,
+				7232FABD2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift in Sources */,
 				72D9779F24E1116E0044754C /* CommonExtensions.swift in Sources */,
 				72735B8A24D034B0006B75C9 /* CropView.swift in Sources */,
 				7267B250254417DE00822C61 /* MainContentView.swift in Sources */,
@@ -1384,6 +1389,7 @@
 				7267641A24FBB27E0074715B /* UIImage+Size.swift in Sources */,
 				7267641B24FBB27E0074715B /* ListView.swift in Sources */,
 				7267641C24FBB27E0074715B /* ColorsCollectionViewDelegate.swift in Sources */,
+				7232FABE2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift in Sources */,
 				7267641D24FBB27E0074715B /* CommonExtensions.swift in Sources */,
 				7267641E24FBB27E0074715B /* CropView.swift in Sources */,
 				7267B251254417DE00822C61 /* MainContentView.swift in Sources */,

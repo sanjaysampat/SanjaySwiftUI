@@ -43,6 +43,10 @@
 1. [SwiftUI - Button - How to pass a function request to parent](https://stackoverflow.com/a/59861463/2641380) - how to pass a closure to your child view which then calls a function of the parent.
 
 
+### Resources
+
+1. [The Atlasnye playing cards deck laid out, in SVG vector format. The picture card images are based on A.I.Charlemagne's original sketches (which are in the public domain themselves due to old age)](https://en.wikipedia.org/wiki/File:Atlasnye_playing_cards_deck.svg)
+
 -- End --
 
 

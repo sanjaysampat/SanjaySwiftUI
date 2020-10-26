@@ -83,7 +83,9 @@ SwiftUI project creation to learn.
 2. Animation test ( links added in 'Menuview' )
     * Basic animation examples 
     * AdvancedSwiftuiAnimations by [SwiftUI Lab](https://swiftui-lab.com/swiftui-animations-part1/)
-        * Created Example 21 to show cards.
+    * SanjaySwiftuiAnimatuions for my experiments
+        * Created Example 21 to show player wise cards.
+        * Work-in-progress - pending to change options
     
 3. Play with Shapes
     * Effects with CGAffineTransform

@@ -252,8 +252,6 @@ struct MenuView: View {
                         
                     }
                     
-                    
-                    
                     NavigationLink(destination:
                                     AdvancedSwiftuiAnimations()
                     ) {
@@ -261,6 +259,27 @@ struct MenuView: View {
                             HStack {
                                 Image(systemName: "wand.and.rays.inverse")
                                 Text("AdvancedSwiftuiAnimations by SwiftUI Lab")
+                                    .font(.caption)
+                            }
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
+                        }
+                        
+                    }
+                    
+                    NavigationLink(destination:
+                        SanjaySwiftuiAnimations()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                ZStack {
+                                    Image(systemName: "square")
+                                        .scaleEffect(CGSize(width: 1.2, height: 1.2))
+                                    Image(systemName: "staroflife")
+                                        .scaleEffect(CGSize(width: 1.0, height: 1.0))
+                                }
+                                 Text("Sanjay Animation Experiments")
                                     .font(.caption)
                             }
                             .font(.body)

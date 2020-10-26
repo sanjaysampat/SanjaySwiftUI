@@ -9,13 +9,10 @@
 import Foundation
 import SwiftUI
 
+// Alphabetically kept
 
-extension View {
-    // useful to print messages in Debug area from SwiftUI View
-    func PrintinView(_ vars: Any...) -> some View {
-        for v in vars { print(v) }
-        return EmptyView()
-    }
+extension Collection {
+    func choose(_ n: Int) -> ArraySlice<Element> { shuffled().prefix(n) }
 }
 
 extension Image {
@@ -27,5 +24,13 @@ extension Image {
             return
         }
         self = Image(uiImage: uiImage)
+    }
+}
+
+extension View {
+    // useful to print messages in Debug area from SwiftUI View
+    func PrintinView(_ vars: Any...) -> some View {
+        for v in vars { print(v) }
+        return EmptyView()
     }
 }
