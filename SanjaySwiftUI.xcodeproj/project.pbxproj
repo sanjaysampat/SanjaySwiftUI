@@ -250,6 +250,14 @@
 		729D987D252B3A12001AC519 /* NOTES.md in Resources */ = {isa = PBXBuildFile; fileRef = 729D987B252B3A12001AC519 /* NOTES.md */; };
 		729D988E252B3C13001AC519 /* Flipclock_file_structure.png in Resources */ = {isa = PBXBuildFile; fileRef = 729D988D252B3C13001AC519 /* Flipclock_file_structure.png */; };
 		729D988F252B3C13001AC519 /* Flipclock_file_structure.png in Resources */ = {isa = PBXBuildFile; fileRef = 729D988D252B3C13001AC519 /* Flipclock_file_structure.png */; };
+		72A42D4C2547EC83002201DF /* SanjaySwiftUIOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A42D4B2547EC83002201DF /* SanjaySwiftUIOptions.swift */; };
+		72A42D4D2547EC83002201DF /* SanjaySwiftUIOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A42D4B2547EC83002201DF /* SanjaySwiftUIOptions.swift */; };
+		72A42D532547F044002201DF /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A42D522547F044002201DF /* UserSettings.swift */; };
+		72A42D542547F044002201DF /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A42D522547F044002201DF /* UserSettings.swift */; };
+		72A42D5F254861B4002201DF /* Example21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72A42D5D254861B4002201DF /* Example21.jpg */; };
+		72A42D60254861B4002201DF /* Example21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72A42D5D254861B4002201DF /* Example21.jpg */; };
+		72A42D61254861B4002201DF /* UserSettings21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72A42D5E254861B4002201DF /* UserSettings21.jpg */; };
+		72A42D62254861B4002201DF /* UserSettings21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72A42D5E254861B4002201DF /* UserSettings21.jpg */; };
 		72A548622516200400CB82CD /* CheckShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A548612516200400CB82CD /* CheckShapesView.swift */; };
 		72A548632516200400CB82CD /* CheckShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A548612516200400CB82CD /* CheckShapesView.swift */; };
 		72B551AF24DD1690009A0014 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B551AE24DD1690009A0014 /* ListView.swift */; };
@@ -453,6 +461,10 @@
 		729D987B252B3A12001AC519 /* NOTES.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = NOTES.md; sourceTree = "<group>"; };
 		729D988D252B3C13001AC519 /* Flipclock_file_structure.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Flipclock_file_structure.png; sourceTree = "<group>"; };
 		729EE34F250E500600E61CFE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		72A42D4B2547EC83002201DF /* SanjaySwiftUIOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SanjaySwiftUIOptions.swift; sourceTree = "<group>"; };
+		72A42D522547F044002201DF /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		72A42D5D254861B4002201DF /* Example21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Example21.jpg; sourceTree = "<group>"; };
+		72A42D5E254861B4002201DF /* UserSettings21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = UserSettings21.jpg; sourceTree = "<group>"; };
 		72A548612516200400CB82CD /* CheckShapesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckShapesView.swift; sourceTree = "<group>"; };
 		72B551AE24DD1690009A0014 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		72B551B024DD1C8A009A0014 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
@@ -572,6 +584,7 @@
 				723ACB32250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift */,
 				723DE9E92508D608000E8C03 /* AnimatableSwiftUIViewEx.swift */,
 				723ACB2F250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift */,
+				72A42D4B2547EC83002201DF /* SanjaySwiftUIOptions.swift */,
 			);
 			path = Animation;
 			sourceTree = "<group>";
@@ -653,6 +666,7 @@
 				72735B5024D02872006B75C9 /* CustomImagePickerViewController.swift */,
 				72B551AE24DD1690009A0014 /* ListView.swift */,
 				72B551B024DD1C8A009A0014 /* UserAuth.swift */,
+				72A42D522547F044002201DF /* UserSettings.swift */,
 				727E111124F6A994007231F7 /* MenuView.swift */,
 				72CEEB5024F92EBE00A1AFE9 /* AVListView.swift */,
 				726763DC24FB76D00074715B /* TabSwiftUiView.swift */,
@@ -769,6 +783,8 @@
 		728445682530879500338F55 /* readmeResource */ = {
 			isa = PBXGroup;
 			children = (
+				72A42D5D254861B4002201DF /* Example21.jpg */,
+				72A42D5E254861B4002201DF /* UserSettings21.jpg */,
 				7284459B25309B0B00338F55 /* SpriteSceneParticleEffect.jpg */,
 				72844594253096A300338F55 /* localizationLanguges.jpg */,
 				7284458D25308FCA00338F55 /* CustomPersonPhotoImagePickerViewController.jpg */,
@@ -1086,6 +1102,7 @@
 				72735B7524D034B0006B75C9 /* StickersViewController.xib in Resources */,
 				7299E6A624E8046800704724 /* gettonyCategoryList.json in Resources */,
 				7299E6A424E8046800704724 /* getnewpriorityFreedomsbyuser.json in Resources */,
+				72A42D61254861B4002201DF /* UserSettings21.jpg in Resources */,
 				7299E6AB24E8046800704724 /* getHomeSliderCatRecord.json in Resources */,
 				72B551D124DD743E009A0014 /* umbagog.jpg in Resources */,
 				72B551CF24DD743E009A0014 /* hiddenlake.jpg in Resources */,
@@ -1120,6 +1137,7 @@
 				72B551D424DD743E009A0014 /* yukon_charleyrivers.jpg in Resources */,
 				72B551D724DD743E009A0014 /* rainbowlake.jpg in Resources */,
 				72B551CB24DD743E009A0014 /* turtlerock.jpg in Resources */,
+				72A42D5F254861B4002201DF /* Example21.jpg in Resources */,
 				72844595253096A300338F55 /* localizationLanguges.jpg in Resources */,
 				7299E6AA24E8046800704724 /* getQuestionLockValue.json in Resources */,
 			);
@@ -1164,6 +1182,7 @@
 				7267644524FBB27E0074715B /* StickersViewController.xib in Resources */,
 				7267644624FBB27E0074715B /* gettonyCategoryList.json in Resources */,
 				7267644724FBB27E0074715B /* getnewpriorityFreedomsbyuser.json in Resources */,
+				72A42D62254861B4002201DF /* UserSettings21.jpg in Resources */,
 				7267644824FBB27E0074715B /* getHomeSliderCatRecord.json in Resources */,
 				7267644924FBB27E0074715B /* umbagog.jpg in Resources */,
 				7267644A24FBB27E0074715B /* hiddenlake.jpg in Resources */,
@@ -1198,6 +1217,7 @@
 				7267645E24FBB27E0074715B /* yukon_charleyrivers.jpg in Resources */,
 				7267645F24FBB27E0074715B /* rainbowlake.jpg in Resources */,
 				7267646024FBB27E0074715B /* turtlerock.jpg in Resources */,
+				72A42D60254861B4002201DF /* Example21.jpg in Resources */,
 				72844596253096A300338F55 /* localizationLanguges.jpg in Resources */,
 				7267646124FBB27E0074715B /* getQuestionLockValue.json in Resources */,
 			);
@@ -1217,9 +1237,11 @@
 				7267646F24FBE3E50074715B /* ApplePayController.swift in Sources */,
 				729CC9472521D32A0078A0CC /* RoomListView.swift in Sources */,
 				7204277C24E01CC800DF4958 /* SCLExtensions.swift in Sources */,
+				72A42D4C2547EC83002201DF /* SanjaySwiftUIOptions.swift in Sources */,
 				7249748F24E4F112006F5C52 /* TonySectionViewer.swift in Sources */,
 				72735B9824D03BE5006B75C9 /* SSPhotoEditorViewController.swift in Sources */,
 				72BBAF1724DED16100CFC7D6 /* SwiftyJSON.swift in Sources */,
+				72A42D532547F044002201DF /* UserSettings.swift in Sources */,
 				7204276924DFD4A200DF4958 /* SwiftUIImageLoader.swift in Sources */,
 				72663AB824C5C7AC000596C9 /* SanjaySwiftUI.xcdatamodeld in Sources */,
 				7204276724DFD43D00DF4958 /* SwiftUIAsyncImageView.swift in Sources */,
@@ -1336,9 +1358,11 @@
 				7267647024FBE3E50074715B /* ApplePayController.swift in Sources */,
 				729CC9482521D32A0078A0CC /* RoomListView.swift in Sources */,
 				726763F324FBB27E0074715B /* SCLExtensions.swift in Sources */,
+				72A42D4D2547EC83002201DF /* SanjaySwiftUIOptions.swift in Sources */,
 				726763F424FBB27E0074715B /* TonySectionViewer.swift in Sources */,
 				726763F524FBB27E0074715B /* SSPhotoEditorViewController.swift in Sources */,
 				726763F624FBB27E0074715B /* SwiftyJSON.swift in Sources */,
+				72A42D542547F044002201DF /* UserSettings.swift in Sources */,
 				726763F724FBB27E0074715B /* SwiftUIImageLoader.swift in Sources */,
 				726763F824FBB27E0074715B /* SanjaySwiftUI.xcdatamodeld in Sources */,
 				726763F924FBB27E0074715B /* SwiftUIAsyncImageView.swift in Sources */,

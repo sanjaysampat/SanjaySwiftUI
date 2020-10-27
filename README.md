@@ -85,8 +85,14 @@ SwiftUI project creation to learn.
     * AdvancedSwiftuiAnimations by [SwiftUI Lab](https://swiftui-lab.com/swiftui-animations-part1/)
     * SanjaySwiftuiAnimatuions for my experiments
         * Created Example 21 to show player wise cards.
-        * Work-in-progress - pending to change options
-    
+        
+            ![Example 21](readmeResource/Example21.jpg)
+        
+        * User Settings options to change view options for above view.
+        
+            ![User Settings](readmeResource/UserSettings21.jpg)
+        
+   
 3. Play with Shapes
     * Effects with CGAffineTransform
     * Gradient Rectangles

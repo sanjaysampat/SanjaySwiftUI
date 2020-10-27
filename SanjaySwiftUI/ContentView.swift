@@ -13,7 +13,7 @@ struct ContentView: View {
     @Binding var showContentView:Bool
 
     @Environment(\.managedObjectContext) var managedObjectContext
-    @EnvironmentObject  var  userAuth: UserAuth
+    //@EnvironmentObject  var  userAuth: UserAuth
     
     @FetchRequest(
         entity: Person.entity(),
@@ -74,7 +74,7 @@ struct ContentView: View {
                         //print("New value nameChanged is: \(value)")
                         //print( "SSPrint - Toggle - Showing Alert \(self.showingAlert) and self.nameChanged=\(self.nameChanged)   self.isEditmode=\(self.isEditMode) self.currentPos=\(self.currentPos) self.name=\(self.name)" )
                         if self.currentPos < 0 {
-                            print( "SSPrint - persons.count = \(self.persons.count)" )
+                            //print( "SSPrint - persons.count = \(self.persons.count)" )
                             self.currentPos = self.persons.count-1
                         }
                         if self.nameChanged {

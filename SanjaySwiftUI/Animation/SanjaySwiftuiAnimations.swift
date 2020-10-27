@@ -8,23 +8,14 @@ fileprivate let cardPrefix = "cards-"
 fileprivate let cardTypes:[String] = ["S","C","H","D"]
 fileprivate let cardOfColor = 1...13
 
-// SSTODO :- start user options
-// this will be differnt depending on each Example
-fileprivate let pickCardsCount = 26 // 1 to 52 divided between total players
-fileprivate let totalPlayers = 2
-// player options
-//      show player - Bool
-//      show back of cards of player - Bool
-//      show cards in maximum spread view - Bool
-// end user options
-
-
 struct SanjaySwiftuiAnimations: View {
+    @EnvironmentObject  var  userSettings : UserSettings
+    
     var body: some View {
         return NavigationView {
             List {
                 Section(header: Text("Geometry Effect")) {
-                    NavigationLink(destination: Example21(), label: {
+                    NavigationLink(destination: Example21(cardsCount: userSettings.e21PickCardsCount), label: {
                         Text("Example 21 (playing cards)")
                     })
                 }
@@ -36,12 +27,11 @@ struct SanjaySwiftuiAnimations: View {
 // MARK: Geometry Effects
 // MARK: Exmaple 21 (playing cards)
 struct Example21: View {
-
     @State var playingCards:[PlayingCard] = []
     
-    init() {
+    init( cardsCount:Int ) {
         // SSNote :- initialize the state array variable as under.
-        self._playingCards = State(initialValue:fillCardsData())
+        self._playingCards = State(initialValue:fillCardsData(cardsCount: cardsCount))
     }
 
     var body: some View {
@@ -55,7 +45,7 @@ struct Example21: View {
         .navigationBarTitle(Text("Example 21"), displayMode: .inline)
     }
     
-    func fillCardsData() -> [PlayingCard] {
+    func fillCardsData( cardsCount:Int ) -> [PlayingCard] {
         var newDeck:[PlayingCard] = []
         cardTypes.forEach{ type in
             for number in cardOfColor {
@@ -67,20 +57,16 @@ struct Example21: View {
             
         }
         newDeck.shuffle()
-        if pickCardsCount > 0 {
-            newDeck = Array(newDeck.choose(pickCardsCount))
+        if cardsCount > 0 {
+            newDeck = Array(newDeck.choose( cardsCount ))
         }
         return newDeck
     }
 }
 
-enum CardsSpreadView:Double {
-    case fullFixed = 140
-    case closedFixed = 10
-    case compactMultiply = 6
-}
-
 struct RotatingShowCard: View {
+    @EnvironmentObject  var  userSettings : UserSettings
+    
     @Binding var playingCards:[PlayingCard]
     
     @State private var flipped = false
@@ -88,22 +74,33 @@ struct RotatingShowCard: View {
     @State private var rotate = false
 
     var body: some View {
-        let totalCards = Double(playingCards.count) / Double(totalPlayers)
-        let minCardDimention:Double = CardsSpreadView.compactMultiply.rawValue * totalCards
-        let fixedCardDimention:Double = CardsSpreadView.fullFixed.rawValue
-        let fixedCardDegree = fixedCardDimention/totalCards
-        let minCardDegree = minCardDimention/totalCards
-        //print("minCardDegree=\(minCardDegree) minCardDimention=\(minCardDimention)")
-        //print("fixedCardDegree=\(fixedCardDegree) fixedCardDimention=\(fixedCardDimention)")
+        let totalCards = Double(playingCards.count) / Double( userSettings.e21TotalPlayers )
         
         
+        var player1CardDimention:Double = userSettings.e21P1FixedModeDegree
+        if userSettings.e21P1ShowMode == "Compact" {
+            player1CardDimention = userSettings.e21P1CompactModeDegree * totalCards
+        }
+        let player1CardDegree = player1CardDimention/totalCards
+        
+        var player2CardDimention:Double = userSettings.e21P2FixedModeDegree
+        let player2CompactCardDimention:Double = userSettings.e21P2CompactModeDegree * totalCards
+        if userSettings.e21P2ShowMode == "Compact" {
+            player2CardDimention = player2CompactCardDimention
+        }
+        let player2CardDegree = player2CardDimention/totalCards
+        //let player2CompactCardDegree = player2CompactCardDimention/totalCards
+        
+        //_ = PrintinView("SSPrint - player1CardDimention=\(player1CardDimention)  player1CardDegree=\(player1CardDegree)")
+        //_ = PrintinView("SSPrint - player2CardDimention=\(player2CardDimention)  player2CardDegree=\(player2CardDegree)")
+
         return VStack {
             ZStack {
                 // other player cards
                 ForEach(0..<playingCards.count) { i in
-                    if i % totalPlayers == 0 {
+                    if i % userSettings.e21TotalPlayers == 0 {
                     // Player 1
-                    RotatingSingleCard(0, -(fixedCardDimention/2)+(Double(i/totalPlayers)*fixedCardDegree), i, playingCards[i].id)//"cards-BK") // SSTODO
+                        RotatingSingleCard(0, -(player1CardDimention/2)+(Double(i / userSettings.e21TotalPlayers )*player1CardDegree), i, userSettings.e21P1ShowCards ? playingCards[i].id : "cards-BK")
                     }
                 }
             }
@@ -115,16 +112,18 @@ struct RotatingShowCard: View {
             ZStack {
                 // my cards
                 ForEach(0..<playingCards.count) { i in
-                    if i % totalPlayers > 0 {
+                    if i % userSettings.e21TotalPlayers > 0 {
                     // Player 2
-                    RotatingSingleCard(0, -(minCardDimention/2)+(Double(i/totalPlayers)*minCardDegree), i, playingCards[i].id)
+                        RotatingSingleCard(0, -(player2CardDimention/2)+(Double(i / userSettings.e21TotalPlayers )*player2CardDegree), i, userSettings.e21P2ShowCards ? playingCards[i].id : "cards-BK")
                     }
                }
             }
             
-            if fixedCardDegree < minCardDegree {
+            
+            if player2CardDegree < 6 {
                 Spacer(minLength: cardHeight)
             }
+            
         }
     }
 }

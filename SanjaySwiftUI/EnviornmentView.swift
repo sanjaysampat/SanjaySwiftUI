@@ -98,7 +98,7 @@ struct EnviornmentView: View {
     var body: some View {
         VStack {
             HStack {
-                EditButton()    // SSTODO this does not work, to check.
+                EditButton()    // SSTODO this does not work, to check. To check if FORM is required here.
                 Button(action: {self.presented.toggle()}) {
                     Text("Present")
                 }

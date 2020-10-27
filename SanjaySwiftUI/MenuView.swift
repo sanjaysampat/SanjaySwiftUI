@@ -183,24 +183,46 @@ struct MenuView: View {
                     
                 }
                 
-                NavigationLink(destination:
-                                EnviornmentView()
-                ) {
-                    VStack( alignment: .leading) {
-                        HStack {
-                            ZStack {
-                                Image(systemName: "text.justify")
-                                //Image(systemName: "globe")
+                Group {
+                    NavigationLink(destination:
+                                    EnviornmentView()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                ZStack {
+                                    Image(systemName: "text.justify")
+                                    //Image(systemName: "globe")
+                                }
+                                Text("Environment")
+                                    .font(.caption)
                             }
-                            Text("Environment")
-                                .font(.caption)
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
                         }
-                        .font(.body)
-                        .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                        .shadow(radius: 1.5)
-                        Divider()
+                        
                     }
+                    .padding(.bottom, 5)
                     
+                    NavigationLink(destination:
+                                    SanjaySwiftUIOptions()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                ZStack {
+                                    Image(systemName: "text.justify")
+                                    //Image(systemName: "globe")
+                                }
+                                Text("User Settings")
+                                    .font(.caption)
+                            }
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
+                        }
+                        
+                    }
+                    Divider()
                 }
 
                 Group {
@@ -290,6 +312,7 @@ struct MenuView: View {
                     }
                     Divider()
                 }
+
                 Spacer()
             }
             .background(CommonUtils.cu_activity_light_theam_color)
