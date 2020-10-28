@@ -72,6 +72,7 @@ struct RecordFloatingMenuView: View {
                         case .arrowDownRight:
                             buttonsPos = .bottomTrailing
                         case .record:
+                            //// SSTODO for test - direct record//// self.toggleScreenRecord()
                             self.recordAlertShown = true
                         }
                         

@@ -147,7 +147,7 @@ struct RotatingSingleCard: View {
         .frame(width: cardWidth, height: cardHeight)
         .rotationEffect(Angle(degrees:  rotate ? Double(rotateDegreeto) : rotateDegreeFrom), anchor: .bottom)
         .onAppear {
-            withAnimation(Animation.linear(duration: 1.0)
+            withAnimation(Animation.linear(duration: 1.0).delay(0.5)
             )
             {
                 self.rotate = true

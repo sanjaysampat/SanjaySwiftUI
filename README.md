@@ -137,7 +137,7 @@ SwiftUI project creation to learn.
         
 13. MultiSelector picker
     * [developed by Cihat Gündüz (Jeehut)](https://dev.to/jeehut/multi-selector-in-swiftui-5heg)
-    * Implementing in 'List View' to display user selected views - Work in Progress
+    * Implementing in 'List View' to display user selected views
     
 14. RecordFloatingMenuView - floating menu button to record video of the screen in mp4 file, in decoument folder. (ReplayKit)
     * This button can be moved to any of four corners before starting of recording.
