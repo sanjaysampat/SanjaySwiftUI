@@ -19,6 +19,8 @@
 		7210DDA62518E48C0013DB94 /* EnviornmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7210DDA42518E48C0013DB94 /* EnviornmentView.swift */; };
 		7216BB5C24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */; };
 		7216BB5E24D17BC30097AFA4 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */; };
+		72196C412549483800634438 /* Example21.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 72196C402549483800634438 /* Example21.mp4 */; };
+		72196C422549483800634438 /* Example21.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 72196C402549483800634438 /* Example21.mp4 */; };
 		7225A43D252DEC830081A793 /* apple-pay-payment-service-providers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7225A43C252DEC810081A793 /* apple-pay-payment-service-providers.jpg */; };
 		7225A43E252DEC830081A793 /* apple-pay-payment-service-providers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7225A43C252DEC810081A793 /* apple-pay-payment-service-providers.jpg */; };
 		7232FABD2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7232FABC2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift */; };
@@ -355,6 +357,7 @@
 		7210DDA42518E48C0013DB94 /* EnviornmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviornmentView.swift; sourceTree = "<group>"; };
 		7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPhotoImagePickerViewController.swift; sourceTree = "<group>"; };
 		7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		72196C402549483800634438 /* Example21.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Example21.mp4; sourceTree = "<group>"; };
 		7225A43C252DEC810081A793 /* apple-pay-payment-service-providers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "apple-pay-payment-service-providers.jpg"; sourceTree = "<group>"; };
 		7232FABC2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SanjaySwiftuiAnimations.swift; sourceTree = "<group>"; };
 		723ACB2F250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatablePairSwiftUIViewEx.swift; sourceTree = "<group>"; };
@@ -783,6 +786,7 @@
 		728445682530879500338F55 /* readmeResource */ = {
 			isa = PBXGroup;
 			children = (
+				72196C402549483800634438 /* Example21.mp4 */,
 				72A42D5D254861B4002201DF /* Example21.jpg */,
 				72A42D5E254861B4002201DF /* UserSettings21.jpg */,
 				7284459B25309B0B00338F55 /* SpriteSceneParticleEffect.jpg */,
@@ -1116,6 +1120,7 @@
 				72735B8624D034B0006B75C9 /* PhotoCropEditorBorder@3x.png in Resources */,
 				72B551CE24DD743E009A0014 /* lakemcdonald.jpg in Resources */,
 				72B551CD24DD743E009A0014 /* icybay.jpg in Resources */,
+				72196C412549483800634438 /* Example21.mp4 in Resources */,
 				7299E6A924E8046800704724 /* getUserPurchaseDetail.json in Resources */,
 				7299E6AC24E8046800704724 /* getUsersRecord.json in Resources */,
 				7284458725308DB500338F55 /* vstackRotation.jpg in Resources */,
@@ -1196,6 +1201,7 @@
 				7267645024FBB27E0074715B /* PhotoCropEditorBorder@3x.png in Resources */,
 				7267645124FBB27E0074715B /* lakemcdonald.jpg in Resources */,
 				7267645224FBB27E0074715B /* icybay.jpg in Resources */,
+				72196C422549483800634438 /* Example21.mp4 in Resources */,
 				7267645324FBB27E0074715B /* getUserPurchaseDetail.json in Resources */,
 				7267645424FBB27E0074715B /* getUsersRecord.json in Resources */,
 				7284458825308DB500338F55 /* vstackRotation.jpg in Resources */,
