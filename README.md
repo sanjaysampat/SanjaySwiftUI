@@ -86,7 +86,7 @@ SwiftUI project creation to learn.
     * SanjaySwiftuiAnimatuions for my experiments
         * Created Example 21 to show player wise cards.
         
-            ![Example 21](readmeResource/Example21.mp4)
+            ![Example 21](readmeResource/Example21.gif)
         
         * User Settings options to change view options for above view.
         

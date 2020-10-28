@@ -21,6 +21,8 @@
 		7216BB5E24D17BC30097AFA4 /* Person+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */; };
 		72196C412549483800634438 /* Example21.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 72196C402549483800634438 /* Example21.mp4 */; };
 		72196C422549483800634438 /* Example21.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 72196C402549483800634438 /* Example21.mp4 */; };
+		72196C4825494C3F00634438 /* Example21.gif in Resources */ = {isa = PBXBuildFile; fileRef = 72196C4725494C3F00634438 /* Example21.gif */; };
+		72196C4925494C3F00634438 /* Example21.gif in Resources */ = {isa = PBXBuildFile; fileRef = 72196C4725494C3F00634438 /* Example21.gif */; };
 		7225A43D252DEC830081A793 /* apple-pay-payment-service-providers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7225A43C252DEC810081A793 /* apple-pay-payment-service-providers.jpg */; };
 		7225A43E252DEC830081A793 /* apple-pay-payment-service-providers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7225A43C252DEC810081A793 /* apple-pay-payment-service-providers.jpg */; };
 		7232FABD2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7232FABC2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift */; };
@@ -358,6 +360,7 @@
 		7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPhotoImagePickerViewController.swift; sourceTree = "<group>"; };
 		7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Person+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		72196C402549483800634438 /* Example21.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Example21.mp4; sourceTree = "<group>"; };
+		72196C4725494C3F00634438 /* Example21.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Example21.gif; sourceTree = "<group>"; };
 		7225A43C252DEC810081A793 /* apple-pay-payment-service-providers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "apple-pay-payment-service-providers.jpg"; sourceTree = "<group>"; };
 		7232FABC2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SanjaySwiftuiAnimations.swift; sourceTree = "<group>"; };
 		723ACB2F250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatablePairSwiftUIViewEx.swift; sourceTree = "<group>"; };
@@ -786,6 +789,7 @@
 		728445682530879500338F55 /* readmeResource */ = {
 			isa = PBXGroup;
 			children = (
+				72196C4725494C3F00634438 /* Example21.gif */,
 				72196C402549483800634438 /* Example21.mp4 */,
 				72A42D5D254861B4002201DF /* Example21.jpg */,
 				72A42D5E254861B4002201DF /* UserSettings21.jpg */,
@@ -1114,6 +1118,7 @@
 				72735B4F24D01A86006B75C9 /* StoryboardSanjay.storyboard in Resources */,
 				72B551D224DD743E009A0014 /* landmarkData.json in Resources */,
 				7252639324D55633002C5ACA /* README.md in Resources */,
+				72196C4825494C3F00634438 /* Example21.gif in Resources */,
 				7284459C25309B0B00338F55 /* SpriteSceneParticleEffect.jpg in Resources */,
 				72B88D3425285C4C00321710 /* Assets.xcassets in Resources */,
 				7299E6A524E8046800704724 /* getdailyStory.json in Resources */,
@@ -1195,6 +1200,7 @@
 				7267644C24FBB27E0074715B /* StoryboardSanjay.storyboard in Resources */,
 				7267644D24FBB27E0074715B /* landmarkData.json in Resources */,
 				7267644E24FBB27E0074715B /* README.md in Resources */,
+				72196C4925494C3F00634438 /* Example21.gif in Resources */,
 				7284459D25309B0B00338F55 /* SpriteSceneParticleEffect.jpg in Resources */,
 				72B88D3525285C4C00321710 /* Assets.xcassets in Resources */,
 				7267644F24FBB27E0074715B /* getdailyStory.json in Resources */,
