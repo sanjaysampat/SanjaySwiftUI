@@ -30,7 +30,8 @@ struct CheckShapesView: View {
                     })
                 }
             }
-        }.navigationBarTitle(Text("Play with Shapes"), displayMode: .inline)
+        }
+        .navigationBarTitle(Text("Play with Shapes"), displayMode: .inline)
     }
 }
 

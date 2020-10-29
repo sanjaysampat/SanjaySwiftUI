@@ -12,30 +12,13 @@ struct MenuView: View {
     @Binding var menuSelection: Int?
     @Binding var currentPos:Int
     
+    @State var presentedSettings = false
+    private let whoAmI:CallingViews = CallingViews.main
+    
     var body: some View {
         //VStack {
         NavigationView {
             VStack(alignment: .leading) {
-                HStack {
-                    Button(action: {
-                        withAnimation(.linear(duration:2)){
-                            self.menuSelection = 0
-                        }
-                    }) {
-                        HStack( alignment: .center) {
-                            Image(systemName: "chevron.left")
-                            Text("Back")
-                                .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                                .shadow(radius: 1.5)
-                            
-                        }
-                    }
-                    .foregroundColor(CommonUtils.cu_activity_foreground_color)
-                    //.padding()
-                    
-                    Spacer()
-                }
                 
                 Group {
                     NavigationLink(destination:
@@ -51,7 +34,7 @@ struct MenuView: View {
                             .foregroundColor(CommonUtils.cu_activity_light_text_color)
                             .shadow(radius: 1.5)
                         }
-                        
+                        .padding(.vertical, 5)
                     }
                     
                     NavigationLink(destination:
@@ -67,6 +50,7 @@ struct MenuView: View {
                             .foregroundColor(CommonUtils.cu_activity_light_text_color)
                             .shadow(radius: 1.5)
                         }
+                        .padding(.bottom, 5)
                         
                     }
                     
@@ -78,7 +62,7 @@ struct MenuView: View {
                                 ZStack {
                                     Image(systemName: "rectangle")
                                         .scaleEffect(CGSize(width: 1.0, height: 1.0))
-                                   Image(systemName: "person.3.fill")
+                                    Image(systemName: "person.3.fill")
                                         .scaleEffect(CGSize(width: 0.5, height: 0.5))
                                 }
                                 Text("List of conferance rooms")
@@ -161,7 +145,7 @@ struct MenuView: View {
                     }
                     
                 }
-
+                
                 NavigationLink(destination:
                                 GeometryOfView()
                 ) {
@@ -204,27 +188,9 @@ struct MenuView: View {
                     }
                     .padding(.bottom, 5)
                     
-                    NavigationLink(destination:
-                                    SanjaySwiftUIOptions()
-                    ) {
-                        VStack( alignment: .leading) {
-                            HStack {
-                                ZStack {
-                                    Image(systemName: "text.justify")
-                                    //Image(systemName: "globe")
-                                }
-                                Text("User Settings")
-                                    .font(.caption)
-                            }
-                            .font(.body)
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                            .shadow(radius: 1.5)
-                        }
-                        
-                    }
                     Divider()
                 }
-
+                
                 Group {
                     NavigationLink(destination:
                                     AnimatableSwiftUIViewEx()
@@ -239,6 +205,7 @@ struct MenuView: View {
                             .foregroundColor(CommonUtils.cu_activity_light_text_color)
                             .shadow(radius: 1.5)
                         }
+                        .padding(.bottom, 5)
                         
                     }
                     
@@ -255,6 +222,7 @@ struct MenuView: View {
                             .foregroundColor(CommonUtils.cu_activity_light_text_color)
                             .shadow(radius: 1.5)
                         }
+                        .padding(.bottom, 5)
                         
                     }
                     
@@ -271,6 +239,7 @@ struct MenuView: View {
                             .foregroundColor(CommonUtils.cu_activity_light_text_color)
                             .shadow(radius: 1.5)
                         }
+                        .padding(.bottom, 5)
                         
                     }
                     
@@ -287,11 +256,12 @@ struct MenuView: View {
                             .foregroundColor(CommonUtils.cu_activity_light_text_color)
                             .shadow(radius: 1.5)
                         }
+                        .padding(.bottom, 5)
                         
                     }
                     
                     NavigationLink(destination:
-                        SanjaySwiftuiAnimations()
+                                    SanjaySwiftuiAnimations()
                     ) {
                         VStack( alignment: .leading) {
                             HStack {
@@ -301,7 +271,7 @@ struct MenuView: View {
                                     Image(systemName: "staroflife")
                                         .scaleEffect(CGSize(width: 1.0, height: 1.0))
                                 }
-                                 Text("Sanjay Animation Experiments")
+                                Text("Sanjay Animation Experiments")
                                     .font(.caption)
                             }
                             .font(.body)
@@ -312,18 +282,34 @@ struct MenuView: View {
                     }
                     Divider()
                 }
-
+                
                 Spacer()
             }
-            .background(CommonUtils.cu_activity_light_theam_color)
+            .padding(5)
+            //.background(CommonUtils.cu_activity_light_theam_color)
+            //.navigationBarTitle("")
+            //.navigationBarHidden(true)
+            .navigationBarTitle(Text("Menu"), displayMode: .inline)
+            .navigationBarItems(leading:
+                                    Button(action: {
+                                        withAnimation(.linear){
+                                            self.menuSelection = 0
+                                        }
+                                    }, label: {
+                                        Image(systemName: "chevron.left")
+                                            .padding(.vertical, 5)
+                                    })
+                                , trailing:
+                                    Button(action: {
+                                        presentedSettings.toggle()
+                                    }, label: {
+                                        Image(systemName: "text.justify")
+                                            .padding(.vertical,5)
+                                    })
+            )
             
         }
-        //.navigationBarTitle("")
-        //.navigationBarHidden(true)
-        .navigationBarTitle(Text("Select your choice"), displayMode: .inline)
-        
-        //}
-        //.padding(.top, 20)
+        .sheet(isPresented: $presentedSettings, content: {SanjaySwiftUIOptions(self.whoAmI)})
         
     }
 }

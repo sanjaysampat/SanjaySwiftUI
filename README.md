@@ -51,7 +51,7 @@ SwiftUI project creation to learn.
         * Continuing how to create proper observers of AVPlayer.
             * Issue while adding more observers.
             * 'SourceKitService" and/or 'Swift' process on mac taking max memory, so xcode and all mac proccesses slogs to halt ( macOS Catalina 10.15.6, tried on XCode 11.6 and 11.5). The issue was solved after update of XCode 11.7.
-    * Added Navigation view - 'Menu' option in content view.
+    * Added Navigation view - 'Menu' option in content view. Now back and User Settings button on navigation bar.
     * TabSwiftUiView added with Localizable Strings files for "ગુજરાતી" and "मराठी" display in tab. 
         * Refer: [Support multiple languages by localizing your iOS apps](https://zonneveld.dev/localize-your-ios-apps-to-support-multiple-languages/)
         * Added hardcode files LocalArabic, LocalGujarati and LocalMarathi .strings files to manually show strings in selected languages in tab
@@ -88,7 +88,7 @@ SwiftUI project creation to learn.
         
             ![Example 21](readmeResource/Example21.gif)
         
-        * User Settings options to change view options for above view.
+        * User Settings options to change view options for above view. user Settings view is changed to presentable view, which cane be opened from multiple places.
         
             ![User Settings](readmeResource/UserSettings21.jpg)
         
@@ -125,7 +125,7 @@ SwiftUI project creation to learn.
     * [System Icons](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/system-icons/) (iOS12  and Earlier)
     * There are over 1,500 symbols text that can be used in apps running in iOS 13 and later. To browse the full set of symbols, download [the SF Symbols mac app](https://developer.apple.com/design/downloads/SF-Symbols.dmg). 
     
-11. RoomList - Listing of conference rooms example by Apple. ( pending issue of Editmode ) 
+11. RoomList - Listing of conference rooms example by Apple. 
     * List add sample room, delete list item
     * Room detail view
         * Map view with 'eat' annotations.

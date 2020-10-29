@@ -11,16 +11,35 @@ fileprivate let cardOfColor = 1...13
 struct SanjaySwiftuiAnimations: View {
     @EnvironmentObject  var  userSettings : UserSettings
     
+    @State var presentedSettings = false
+    private let whoAmI:CallingViews = CallingViews.sanjayExperiment
+    
     var body: some View {
         return NavigationView {
             List {
                 Section(header: Text("Geometry Effect")) {
+                    
                     NavigationLink(destination: Example21(cardsCount: userSettings.e21PickCardsCount), label: {
                         Text("Example 21 (playing cards)")
                     })
+                    
+                    NavigationLink(destination: Example22(cardsCount: userSettings.e21PickCardsCount), label: {
+                        Text("Example 22 (new animation todo)")
+                    })
+                    
                 }
-            }.navigationBarTitle(Text("Animation Experiments"), displayMode: .inline)
+            }
+            .navigationBarTitle(Text("Animation Experiments"), displayMode: .inline)
+            .navigationBarItems(trailing:
+                                    Button(action: {
+                                        presentedSettings.toggle()
+                                    }, label: {
+                                        Image(systemName: "text.justify")
+                                            .padding(.vertical, 5)
+                                    })
+            )
         }
+        .sheet(isPresented: $presentedSettings, content: {SanjaySwiftUIOptions(self.whoAmI)})
     }
 }
 
@@ -29,6 +48,9 @@ struct SanjaySwiftuiAnimations: View {
 struct Example21: View {
     @State var playingCards:[PlayingCard] = []
     
+    @State var presentedSettings = false
+    private let whoAmI:CallingViews = CallingViews.example21
+
     init( cardsCount:Int ) {
         // SSNote :- initialize the state array variable as under.
         self._playingCards = State(initialValue:fillCardsData(cardsCount: cardsCount))
@@ -43,6 +65,15 @@ struct Example21: View {
         }
         .background(Color.black)
         .navigationBarTitle(Text("Example 21"), displayMode: .inline)
+        .navigationBarItems(trailing:
+                                Button(action: {
+                                    presentedSettings.toggle()
+                                }, label: {
+                                    Image(systemName: "text.justify")
+                                        .padding(.vertical, 5)
+                                })
+        )
+        .sheet(isPresented: $presentedSettings, content: {SanjaySwiftUIOptions(self.whoAmI)})
     }
     
     func fillCardsData( cardsCount:Int ) -> [PlayingCard] {
@@ -191,6 +222,61 @@ struct FlipEffectShowCard: GeometryEffect {
     }
 }
 
+// MARK: Exmaple 22 ( new animation todo )
+struct Example22: View {
+    @State var playingCards:[PlayingCard] = []
+    
+    @State var presentedSettings = false
+    private let whoAmI:CallingViews = CallingViews.example22
+
+    init( cardsCount:Int ) {
+        // SSNote :- initialize the state array variable as under.
+        self._playingCards = State(initialValue:fillCardsData(cardsCount: cardsCount))
+    }
+
+    var body: some View {
+        
+        return HStack {
+            Spacer()
+            Text("new animation todo")
+                .foregroundColor(.white)
+            
+            //RotatingShowCard(playingCards: $playingCards)
+            Spacer()
+        }
+        .background(Color.black)
+        .navigationBarTitle(Text("Example 22"), displayMode: .inline)
+        .navigationBarItems(trailing:
+                                Button(action: {
+                                    presentedSettings.toggle()
+                                }, label: {
+                                    Image(systemName: "text.justify")
+                                        .padding(.vertical, 5)
+                                })
+        )
+        .sheet(isPresented: $presentedSettings, content: {SanjaySwiftUIOptions(self.whoAmI)})
+        
+    }
+    
+    func fillCardsData( cardsCount:Int ) -> [PlayingCard] {
+        var newDeck:[PlayingCard] = []
+        cardTypes.forEach{ type in
+            for number in cardOfColor {
+                let hexString = String(number, radix: 16, uppercase: true)
+                let fileName = "\(cardPrefix)\(type)\(hexString)"
+                //print("SSTODO - \(fileName)")
+                newDeck.append(PlayingCard(id: fileName, weight: number))
+            }
+            
+        }
+        newDeck.shuffle()
+        if cardsCount > 0 {
+            newDeck = Array(newDeck.choose( cardsCount ))
+        }
+        return newDeck
+    }
+    
+}
 
 // MARK: Models
 struct PlayingCard: Identifiable {

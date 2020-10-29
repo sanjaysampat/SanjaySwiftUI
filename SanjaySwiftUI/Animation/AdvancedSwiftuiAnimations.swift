@@ -74,7 +74,8 @@ struct AdvancedSwiftuiAnimations: View {
 
                 }
 
-            }.navigationBarTitle(Text("SwiftUI Lab"), displayMode: .inline)
+            }
+            .navigationBarTitle(Text("SwiftUI Lab"), displayMode: .inline)
         }
     }
 }
