@@ -86,15 +86,7 @@ SwiftUI project creation to learn.
     * SanjaySwiftuiAnimatuions for my experiments
         * Created Example 21 to show player wise cards.
         
-            {::comment}
             ![Example 21](readmeResource/Example21.gif)
-            {::/comment}
-            
-            <figure class="video_container">
-              <video controls="true" allowfullscreen="true" poster="readmeResource/Example21.jpg">
-                <source src="readmeResource/Example21.mp4" type="video/mp4">
-              </video>
-            </figure>
         
         * User Settings options to change view options for above view.
         
