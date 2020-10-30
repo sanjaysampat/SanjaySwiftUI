@@ -84,13 +84,16 @@ SwiftUI project creation to learn.
     * Basic animation examples 
     * AdvancedSwiftuiAnimations by [SwiftUI Lab](https://swiftui-lab.com/swiftui-animations-part1/)
     * SanjaySwiftuiAnimatuions for my experiments
-        * Created Example 21 to show player wise cards.
+        * Example 21 to show player wise cards.
         
             ![Example 21](readmeResource/Example21.gif)
         
         * User Settings options to change view options for above view. user Settings view is changed to presentable view, which cane be opened from multiple places.
         
             ![User Settings](readmeResource/UserSettings21.jpg)
+            
+        * Example 22 Card game of War ( Work in progress )
+        
         
    
 3. Play with Shapes

@@ -113,6 +113,8 @@ struct SanjaySwiftUIOptions: View {
                             }.padding(.bottom, 10)
                         }
                         
+                        // SSTODO the following "Total cards to deal" will only be enabled in container calling views.
+                        // self.calledBy != CallingViews.example21
                         HStack {
                             Text("Total cards to deal to all players:")
                             Picker("",selection: $userSettings.e21PickCardsCount) {
@@ -124,12 +126,15 @@ struct SanjaySwiftUIOptions: View {
                             .frame(width: 100)
                             .clipped(antialiased: true)
                         }.frame(height: 100)
+                        
                     }
                 }
                 if checkShow(whoAmI: CallingViews.example22) {
                     
                     Section(header: Text("Example 22 settings pending ...")) {
-                        
+                        // 1) total cards slider selection from 2 to 52 - only even numbers
+                        // SSTODO "total cards slider selection" will only be enabled in container calling views.
+                        // self.calledBy != CallingViews.example22
                     }
                 }
             }

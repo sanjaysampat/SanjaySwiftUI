@@ -23,8 +23,8 @@ struct SanjaySwiftuiAnimations: View {
                         Text("Example 21 (playing cards)")
                     })
                     
-                    NavigationLink(destination: Example22(cardsCount: userSettings.e21PickCardsCount), label: {
-                        Text("Example 22 (new animation todo)")
+                    NavigationLink(destination: Example22(cardsCount: userSettings.e22PickCardsCount), label: {
+                        Text("Example 22 (Card game of War)")
                     })
                     
                 }
@@ -222,26 +222,26 @@ struct FlipEffectShowCard: GeometryEffect {
     }
 }
 
-// MARK: Exmaple 22 ( new animation todo )
+// MARK: Exmaple 22 ( Card game War )
 struct Example22: View {
     @State var playingCards:[PlayingCard] = []
     
     @State var presentedSettings = false
     private let whoAmI:CallingViews = CallingViews.example22
 
+    @State var openCard:Int = -1
+    
     init( cardsCount:Int ) {
         // SSNote :- initialize the state array variable as under.
         self._playingCards = State(initialValue:fillCardsData(cardsCount: cardsCount))
+        self._openCard = State(initialValue: self.playingCards.count)
     }
 
     var body: some View {
         
         return HStack {
             Spacer()
-            Text("new animation todo")
-                .foregroundColor(.white)
-            
-            //RotatingShowCard(playingCards: $playingCards)
+            DealWarCards(playingCards: $playingCards, openCard: $openCard)
             Spacer()
         }
         .background(Color.black)
@@ -254,7 +254,12 @@ struct Example22: View {
                                         .padding(.vertical, 5)
                                 })
         )
-        .sheet(isPresented: $presentedSettings, content: {SanjaySwiftUIOptions(self.whoAmI)})
+        .sheet(isPresented: $presentedSettings, onDismiss: {
+            playingCards.shuffle()
+            openCard = playingCards.count
+        }, content: {
+            SanjaySwiftUIOptions(self.whoAmI)
+        })
         
     }
     
@@ -264,7 +269,6 @@ struct Example22: View {
             for number in cardOfColor {
                 let hexString = String(number, radix: 16, uppercase: true)
                 let fileName = "\(cardPrefix)\(type)\(hexString)"
-                //print("SSTODO - \(fileName)")
                 newDeck.append(PlayingCard(id: fileName, weight: number))
             }
             
@@ -276,6 +280,106 @@ struct Example22: View {
         return newDeck
     }
     
+}
+
+struct DealWarCards: View {
+    @EnvironmentObject  var  userSettings : UserSettings
+    
+    @Binding var playingCards:[PlayingCard]
+    
+    @Binding var openCard:Int
+    
+    @State private var myPoints:Int = 0
+    @State private var myPhonePoints:Int = 0
+    
+    @State private var alertPresented:Bool = false
+    
+    var body: some View {
+        
+        return VStack {
+            Spacer()
+            Text("WAR").font(.title).foregroundColor(.yellow)
+            HStack {
+                if openCard >= 0 && openCard < playingCards.count {
+                    SingleWarCard(whoAmI:"Me", imageName: playingCards[openCard].id, pointsStr:"\(myPoints)")
+                    Spacer()
+                    SingleWarCard(whoAmI:"My phone", imageName: playingCards[openCard+1].id, pointsStr:"\(myPhonePoints)")
+                } else {
+                    SingleWarCard(whoAmI:"Me", imageName: "cards-BK", pointsStr:"--")
+                    Spacer()
+                    SingleWarCard(whoAmI:"My phone", imageName: "cards-BK", pointsStr:"--")
+                }
+            }
+            Button(action: {
+                if openCard > 1 {
+                    openCard = openCard - 2
+                    // calculation method
+                    switch whoWin() {
+                    case 1:
+                        myPoints = myPoints + 1
+                    case 2:
+                        myPhonePoints = myPhonePoints + 1
+                    default:
+                        break
+                    }
+                } else {
+                    self.alertPresented = true
+                }
+            }, label: {
+                VStack {
+                    Image("cards-BK").resizable()
+                        .frame(width: cardWidth/3, height: cardHeight/3)
+                        .rotationEffect(Angle(degrees: 90), anchor: .center)
+                    Text("Pick").foregroundColor(.white)
+                }
+            })
+            .alert(isPresented: $alertPresented) {
+                Alert(title: Text("Winner"), message: Text("\( myPoints == myPhonePoints ? "NOBODY" : myPoints > myPhonePoints ? "I" : "My phone") won the WAR. Replay."), dismissButton: Alert.Button.default(Text("OK")) {
+                    
+                    playingCards.shuffle()
+                    openCard = playingCards.count
+                    myPoints = 0
+                    myPhonePoints = 0
+
+                })
+            }
+
+            Spacer()
+        }
+    }
+    
+    func whoWin() -> Int {
+        let myPoint = Int(playingCards[openCard].id.suffix(1), radix: 16) ?? 0
+        let myPhonePoint = Int(playingCards[openCard+1].id.suffix(1), radix: 16) ?? 0
+        return myPoint == myPhonePoint ? 0 : myPoint == 1 || (myPhonePoint != 1 &&  myPoint > myPhonePoint) ? 1 : 2
+    }
+}
+
+struct SingleWarCard: View {
+    var whoAmI:String = ""
+    var imageName:String = "cards-BK"
+    var pointsStr:String = ""
+    
+    @State private var show = false
+    
+    var body: some View {
+        VStack{
+            Image(imageName).resizable()
+                .frame(width: cardWidth, height: cardHeight)
+                .onAppear {
+                    withAnimation(Animation.linear(duration: 1.0).delay(0.5)
+                    )
+                    {
+                        self.show = true
+                    }
+                }
+            
+            VStack{
+                Text(whoAmI).foregroundColor(.white)
+                Text(pointsStr).foregroundColor(.yellow).bold()
+            }
+        }
+    }
 }
 
 // MARK: Models

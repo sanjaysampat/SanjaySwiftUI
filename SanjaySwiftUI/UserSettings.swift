@@ -23,6 +23,10 @@ class UserSettings: ObservableObject {
     @Published var e21P2ShowMode:String = "Compact"
     @Published var e21P2FixedModeDegree:Double = 100.0
     @Published var e21P2CompactModeDegree:Double = 6
+    
+    // e22
+    @Published var e22PickCardsCount:Int = 52 // 1 to 52 divided between total players
+
 
     func setDefaultValues() {
         // e21
@@ -36,7 +40,8 @@ class UserSettings: ObservableObject {
         self.e21P2FixedModeDegree = 100.0
         self.e21P2CompactModeDegree = 6
         self.e21PickCardsCount = 26
-        //
+        // e22
+        self.e22PickCardsCount = 52
     }
     
 }
