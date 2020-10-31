@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct MenuView: View {
+    @EnvironmentObject  var  userSettings : UserSettings
+    
     @Binding var menuSelection: Int?
     @Binding var currentPos:Int
     

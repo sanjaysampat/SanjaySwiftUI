@@ -46,7 +46,10 @@ struct SanjaySwiftuiAnimations: View {
 // MARK: Geometry Effects
 // MARK: Exmaple 21 (playing cards)
 struct Example21: View {
+    @EnvironmentObject  var  userSettings : UserSettings
+    
     @State var playingCards:[PlayingCard] = []
+    @State var cardsCount:Int = 0
     
     @State var presentedSettings = false
     private let whoAmI:CallingViews = CallingViews.example21
@@ -54,13 +57,14 @@ struct Example21: View {
     init( cardsCount:Int ) {
         // SSNote :- initialize the state array variable as under.
         self._playingCards = State(initialValue:fillCardsData(cardsCount: cardsCount))
+        self._cardsCount = State(initialValue: self.playingCards.count)
     }
 
     var body: some View {
         
         return HStack {
             Spacer()
-            RotatingShowCard(playingCards: $playingCards)
+            RotatingShowCard(playingCards: $playingCards, cardsCount: $cardsCount)
             Spacer()
         }
         .background(Color.black)
@@ -73,7 +77,10 @@ struct Example21: View {
                                         .padding(.vertical, 5)
                                 })
         )
-        .sheet(isPresented: $presentedSettings, content: {SanjaySwiftUIOptions(self.whoAmI)})
+        .sheet(isPresented: $presentedSettings, onDismiss: {
+            //self.playingCards = fillCardsData(cardsCount: userSettings.e21PickCardsCount)
+            //self.cardsCount = self.playingCards.count
+        }, content: {SanjaySwiftUIOptions(self.whoAmI)})
     }
     
     func fillCardsData( cardsCount:Int ) -> [PlayingCard] {
@@ -99,13 +106,14 @@ struct RotatingShowCard: View {
     @EnvironmentObject  var  userSettings : UserSettings
     
     @Binding var playingCards:[PlayingCard]
+    @Binding var cardsCount:Int
     
     @State private var flipped = false
     @State private var animate3d = false
     @State private var rotate = false
 
     var body: some View {
-        let totalCards = Double(playingCards.count) / Double( userSettings.e21TotalPlayers )
+        let totalCards = Double(cardsCount) / Double( userSettings.e21TotalPlayers )
         
         
         var player1CardDimention:Double = userSettings.e21P1FixedModeDegree
@@ -128,7 +136,7 @@ struct RotatingShowCard: View {
         return VStack {
             ZStack {
                 // other player cards
-                ForEach(0..<playingCards.count) { i in
+                ForEach(0..<cardsCount) { i in
                     if i % userSettings.e21TotalPlayers == 0 {
                     // Player 1
                         RotatingSingleCard(0, -(player1CardDimention/2)+(Double(i / userSettings.e21TotalPlayers )*player1CardDegree), i, userSettings.e21P1ShowCards ? playingCards[i].id : "cards-BK")
@@ -142,7 +150,7 @@ struct RotatingShowCard: View {
             
             ZStack {
                 // my cards
-                ForEach(0..<playingCards.count) { i in
+                ForEach(0..<cardsCount) { i in
                     if i % userSettings.e21TotalPlayers > 0 {
                     // Player 2
                         RotatingSingleCard(0, -(player2CardDimention/2)+(Double(i / userSettings.e21TotalPlayers )*player2CardDegree), i, userSettings.e21P2ShowCards ? playingCards[i].id : "cards-BK")
@@ -224,13 +232,17 @@ struct FlipEffectShowCard: GeometryEffect {
 
 // MARK: Exmaple 22 ( Card game War )
 struct Example22: View {
+    @EnvironmentObject  var  userSettings : UserSettings
+    
     @State var playingCards:[PlayingCard] = []
     
     @State var presentedSettings = false
     private let whoAmI:CallingViews = CallingViews.example22
 
-    @State var openCard:Int = -1
-    
+    @State private var openCard:Int = -1
+    @State private var myPoints:Int = 0
+    @State private var myPhonePoints:Int = 0
+
     init( cardsCount:Int ) {
         // SSNote :- initialize the state array variable as under.
         self._playingCards = State(initialValue:fillCardsData(cardsCount: cardsCount))
@@ -241,7 +253,7 @@ struct Example22: View {
         
         return HStack {
             Spacer()
-            DealWarCards(playingCards: $playingCards, openCard: $openCard)
+            DealWarCards(playingCards: $playingCards, openCard: $openCard, myPoints: $myPoints, myPhonePoints: $myPhonePoints)
             Spacer()
         }
         .background(Color.black)
@@ -255,8 +267,10 @@ struct Example22: View {
                                 })
         )
         .sheet(isPresented: $presentedSettings, onDismiss: {
-            playingCards.shuffle()
-            openCard = playingCards.count
+            self.playingCards = fillCardsData(cardsCount: userSettings.e22PickCardsCount)
+            self.openCard = playingCards.count
+            self.myPoints = 0
+            self.myPhonePoints = 0
         }, content: {
             SanjaySwiftUIOptions(self.whoAmI)
         })
@@ -289,8 +303,8 @@ struct DealWarCards: View {
     
     @Binding var openCard:Int
     
-    @State private var myPoints:Int = 0
-    @State private var myPhonePoints:Int = 0
+    @Binding var myPoints:Int
+    @Binding var myPhonePoints:Int
     
     @State private var alertPresented:Bool = false
     
@@ -305,22 +319,25 @@ struct DealWarCards: View {
                     Spacer()
                     SingleWarCard(whoAmI:"My phone", imageName: playingCards[openCard+1].id, pointsStr:"\(myPhonePoints)")
                 } else {
-                    SingleWarCard(whoAmI:"Me", imageName: "cards-BK", pointsStr:"--")
+                    SingleWarCard(whoAmI:"Me", imageName: "cards-BK", pointsStr:"\(myPoints)")
                     Spacer()
-                    SingleWarCard(whoAmI:"My phone", imageName: "cards-BK", pointsStr:"--")
+                    SingleWarCard(whoAmI:"My phone", imageName: "cards-BK", pointsStr:"\(myPhonePoints)")
                 }
             }
             Button(action: {
-                if openCard > 1 {
-                    openCard = openCard - 2
+                if self.openCard > 1 {
+                    self.openCard = self.openCard - 2
                     // calculation method
                     switch whoWin() {
                     case 1:
-                        myPoints = myPoints + 1
+                        self.myPoints = myPoints + 1
                     case 2:
-                        myPhonePoints = myPhonePoints + 1
+                        self.myPhonePoints = myPhonePoints + 1
                     default:
                         break
+                    }
+                    if self.openCard <= 1 {
+                        self.alertPresented = true
                     }
                 } else {
                     self.alertPresented = true
@@ -336,10 +353,10 @@ struct DealWarCards: View {
             .alert(isPresented: $alertPresented) {
                 Alert(title: Text("Winner"), message: Text("\( myPoints == myPhonePoints ? "NOBODY" : myPoints > myPhonePoints ? "I" : "My phone") won the WAR. Replay."), dismissButton: Alert.Button.default(Text("OK")) {
                     
-                    playingCards.shuffle()
-                    openCard = playingCards.count
-                    myPoints = 0
-                    myPhonePoints = 0
+                    self.playingCards.shuffle()
+                    self.openCard = self.playingCards.count
+                    self.myPoints = 0
+                    self.myPhonePoints = 0
 
                 })
             }

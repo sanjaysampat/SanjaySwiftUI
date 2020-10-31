@@ -113,29 +113,44 @@ struct SanjaySwiftUIOptions: View {
                             }.padding(.bottom, 10)
                         }
                         
-                        // SSTODO the following "Total cards to deal" will only be enabled in container calling views.
-                        // self.calledBy != CallingViews.example21
-                        HStack {
-                            Text("Total cards to deal to all players:")
-                            Picker("",selection: $userSettings.e21PickCardsCount) {
-                                ForEach((1...52), id: \.self) { index in
-                                    Text("\(index)")
+                        // The following "Total cards to deal" will only be enabled in container calling views.
+                        if self.calledBy != CallingViews.example21 {
+                            HStack {
+                                Text("Total cards to deal to all players:")
+                                Picker("",selection: $userSettings.e21PickCardsCount) {
+                                    ForEach((1...52), id: \.self) { index in
+                                        Text("\(index)")
+                                    }
                                 }
-                            }
-                            .pickerStyle(WheelPickerStyle())
-                            .frame(width: 100)
-                            .clipped(antialiased: true)
-                        }.frame(height: 100)
-                        
+                                .pickerStyle(WheelPickerStyle())
+                                .frame(width: 100)
+                                .clipped(antialiased: true)
+                            }.frame(height: 100)
+                        }
                     }
                 }
                 if checkShow(whoAmI: CallingViews.example22) {
                     
                     Section(header: Text("Example 22 settings pending ...")) {
-                        // 1) total cards slider selection from 2 to 52 - only even numbers
-                        // SSTODO "total cards slider selection" will only be enabled in container calling views.
-                        // self.calledBy != CallingViews.example22
-                    }
+                        //if self.calledBy != CallingViews.example22 {
+                            // 1) total cards slider selection from 2 to 52 - only even numbers
+                            // "total cards slider selection" will only be enabled in container calling views.
+                            // SSTODO
+                            HStack {
+                                Text("Total cards to deal to players:")
+                                Picker("",selection: $userSettings.e22PickCardsCount) {
+                                    ForEach((2...52), id: \.self) { index in
+                                        if index % 2 == 0 {
+                                            Text("\(index)")
+                                        }
+                                    }
+                                }
+                                .pickerStyle(WheelPickerStyle())
+                                .frame(width: 100)
+                                .clipped(antialiased: true)
+                            }.frame(height: 100)
+                        //}
+                   }
                 }
             }
             
@@ -146,14 +161,15 @@ struct SanjaySwiftUIOptions: View {
                 }
             }
             
-        }.navigationBarTitle(Text("User Settings"), displayMode: .inline)
+        }
+        .navigationBarTitle(Text("User Settings"), displayMode: .inline)
     }
     
     func checkShow( whoAmI:CallingViews, isContainer:Bool = false ) -> Bool {
         var iShow = false
         let askedByStr:String = self.calledBy.rawValue
         let whoAmIStr:String = whoAmI.rawValue
-        print("SSTODO - whoAmIStr:\(whoAmIStr)  askedByStr:\(askedByStr)")
+        //print("SSTODO - whoAmIStr:\(whoAmIStr)  askedByStr:\(askedByStr)")
         if askedByStr.starts(with: whoAmIStr) || whoAmIStr.contains(askedByStr) || ( isContainer && askedByStr.hasSuffix(whoAmIStr) ) {
             iShow = true
         }
