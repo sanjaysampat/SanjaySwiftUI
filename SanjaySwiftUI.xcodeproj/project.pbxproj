@@ -25,6 +25,10 @@
 		72196C4925494C3F00634438 /* Example21.gif in Resources */ = {isa = PBXBuildFile; fileRef = 72196C4725494C3F00634438 /* Example21.gif */; };
 		7225A43D252DEC830081A793 /* apple-pay-payment-service-providers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7225A43C252DEC810081A793 /* apple-pay-payment-service-providers.jpg */; };
 		7225A43E252DEC830081A793 /* apple-pay-payment-service-providers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7225A43C252DEC810081A793 /* apple-pay-payment-service-providers.jpg */; };
+		722801222550541100D34AFD /* ReachabilityDg.m in Sources */ = {isa = PBXBuildFile; fileRef = 722801212550541100D34AFD /* ReachabilityDg.m */; };
+		722801232550541100D34AFD /* ReachabilityDg.m in Sources */ = {isa = PBXBuildFile; fileRef = 722801212550541100D34AFD /* ReachabilityDg.m */; };
+		7228012D2550547000D34AFD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228012C2550547000D34AFD /* Reachability.swift */; };
+		7228012E2550547000D34AFD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228012C2550547000D34AFD /* Reachability.swift */; };
 		7232FABD2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7232FABC2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift */; };
 		7232FABE2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7232FABC2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift */; };
 		723ACB30250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ACB2F250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift */; };
@@ -362,6 +366,11 @@
 		72196C402549483800634438 /* Example21.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Example21.mp4; sourceTree = "<group>"; };
 		72196C4725494C3F00634438 /* Example21.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = Example21.gif; sourceTree = "<group>"; };
 		7225A43C252DEC810081A793 /* apple-pay-payment-service-providers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "apple-pay-payment-service-providers.jpg"; sourceTree = "<group>"; };
+		7228010B2550532500D34AFD /* SanjaySwiftUI-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SanjaySwiftUI-Bridging-Header.h"; sourceTree = "<group>"; };
+		7228010C2550533400D34AFD /* SanjaySwiftUIPay-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SanjaySwiftUIPay-Bridging-Header.h"; sourceTree = "<group>"; };
+		722801202550541100D34AFD /* ReachabilityDg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReachabilityDg.h; sourceTree = "<group>"; };
+		722801212550541100D34AFD /* ReachabilityDg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReachabilityDg.m; sourceTree = "<group>"; };
+		7228012C2550547000D34AFD /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		7232FABC2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SanjaySwiftuiAnimations.swift; sourceTree = "<group>"; };
 		723ACB2F250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatablePairSwiftUIViewEx.swift; sourceTree = "<group>"; };
 		723ACB32250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimArcInsettableShapeViewEx.swift; sourceTree = "<group>"; };
@@ -582,6 +591,24 @@
 			path = SCLAlertView;
 			sourceTree = "<group>";
 		};
+		7228011E255053F000D34AFD /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				7228012C2550547000D34AFD /* Reachability.swift */,
+				7228011F255053F000D34AFD /* ReachabilityDg */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
+		7228011F255053F000D34AFD /* ReachabilityDg */ = {
+			isa = PBXGroup;
+			children = (
+				722801202550541100D34AFD /* ReachabilityDg.h */,
+				722801212550541100D34AFD /* ReachabilityDg.m */,
+			);
+			path = ReachabilityDg;
+			sourceTree = "<group>";
+		};
 		723DE9E82508D5B0000E8C03 /* Animation */ = {
 			isa = PBXGroup;
 			children = (
@@ -620,6 +647,8 @@
 		72663AA624C5C7AC000596C9 = {
 			isa = PBXGroup;
 			children = (
+				7228010C2550533400D34AFD /* SanjaySwiftUIPay-Bridging-Header.h */,
+				7228010B2550532500D34AFD /* SanjaySwiftUI-Bridging-Header.h */,
 				729D987A252B3A12001AC519 /* Notes */,
 				7267646724FBB2D70074715B /* SanjaySwiftUIPay.entitlements */,
 				7252639224D55633002C5ACA /* README.md */,
@@ -805,6 +834,7 @@
 		729B0EF024C979FD00054F9F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				7228011E255053F000D34AFD /* Reachability */,
 				72C29E8F25373D900051E936 /* ScreenRecorder.swift */,
 				727BF0CA2525EE810061BD7F /* SSMapView */,
 				726763EC24FBA27E0074715B /* VisualEffectBlur.swift */,
@@ -1049,6 +1079,7 @@
 				TargetAttributes = {
 					72663AAE24C5C7AC000596C9 = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1210;
 					};
 					72663AC724C5C7BD000596C9 = {
 						CreatedOnToolsVersion = 11.6;
@@ -1057,6 +1088,9 @@
 					72663AD224C5C7BE000596C9 = {
 						CreatedOnToolsVersion = 11.6;
 						TestTargetID = 72663AAE24C5C7AC000596C9;
+					};
+					726763EE24FBB27E0074715B = {
+						LastSwiftMigration = 1210;
 					};
 				};
 			};
@@ -1310,6 +1344,7 @@
 				7267B250254417DE00822C61 /* MainContentView.swift in Sources */,
 				72BD188824EEAA600032E3B7 /* VideoView.swift in Sources */,
 				72735B7A24D034B0006B75C9 /* PhotoEditor+UITextView.swift in Sources */,
+				722801222550541100D34AFD /* ReachabilityDg.m in Sources */,
 				72D2498824FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift in Sources */,
 				72735B7924D034B0006B75C9 /* PhotoEditor+StickersViewController.swift in Sources */,
 				7204277B24E01CC800DF4958 /* SCLAlertView.swift in Sources */,
@@ -1339,6 +1374,7 @@
 				72735B9A24D048C7006B75C9 /* UIImage+Extra.swift in Sources */,
 				72735B9224D034B0006B75C9 /* ColorCollectionViewCell.swift in Sources */,
 				727E111224F6A994007231F7 /* MenuView.swift in Sources */,
+				7228012D2550547000D34AFD /* Reachability.swift in Sources */,
 				72F2EBEF2531F2F700AA8454 /* MultiSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1431,6 +1467,7 @@
 				7267B251254417DE00822C61 /* MainContentView.swift in Sources */,
 				7267641F24FBB27E0074715B /* VideoView.swift in Sources */,
 				7267642024FBB27E0074715B /* PhotoEditor+UITextView.swift in Sources */,
+				722801232550541100D34AFD /* ReachabilityDg.m in Sources */,
 				72D2498924FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift in Sources */,
 				7267642124FBB27E0074715B /* PhotoEditor+StickersViewController.swift in Sources */,
 				7267642224FBB27E0074715B /* SCLAlertView.swift in Sources */,
@@ -1460,6 +1497,7 @@
 				7267643224FBB27E0074715B /* UIImage+Extra.swift in Sources */,
 				7267643324FBB27E0074715B /* ColorCollectionViewCell.swift in Sources */,
 				7267643424FBB27E0074715B /* MenuView.swift in Sources */,
+				7228012E2550547000D34AFD /* Reachability.swift in Sources */,
 				72F2EBF02531F2F700AA8454 /* MultiSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1628,6 +1666,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SanjaySwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = XH9Q2X3CYJ;
@@ -1640,6 +1679,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sanjay.SanjaySwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SanjaySwiftUI-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1649,6 +1690,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SanjaySwiftUI/Preview Content\"";
 				DEVELOPMENT_TEAM = XH9Q2X3CYJ;
@@ -1661,6 +1703,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sanjay.SanjaySwiftUI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SanjaySwiftUI-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1754,6 +1797,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SanjaySwiftUIPay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SanjaySwiftUI/Preview Content\"";
@@ -1768,6 +1812,8 @@
 				OFFERING_APPLE_PAY_BUNDLE_PREFIX = com.dgflick.SanjaySwiftUIPay;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dgflick.SanjaySwiftUIPay;
 				PRODUCT_NAME = SanjaySwiftUIPay;
+				SWIFT_OBJC_BRIDGING_HEADER = "SanjaySwiftUIPay-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1777,6 +1823,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = SanjaySwiftUIPay.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SanjaySwiftUI/Preview Content\"";
@@ -1791,6 +1838,7 @@
 				OFFERING_APPLE_PAY_BUNDLE_PREFIX = com.dgflick.SanjaySwiftUIPay;
 				PRODUCT_BUNDLE_IDENTIFIER = com.dgflick.SanjaySwiftUIPay;
 				PRODUCT_NAME = SanjaySwiftUIPay;
+				SWIFT_OBJC_BRIDGING_HEADER = "SanjaySwiftUIPay-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

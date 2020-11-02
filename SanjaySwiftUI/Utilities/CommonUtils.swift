@@ -68,6 +68,7 @@ struct CommonUtils {
 
     static let cu_CornerRadius:CGFloat = 5
     
+    static let cu_NotificationDataAlertKey = "SSNotificationData"
     static let cu_ResetEmitterNotification = "SSresetEmitterNotification"
     
     // vars
