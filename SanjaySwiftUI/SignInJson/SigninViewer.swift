@@ -64,11 +64,11 @@ extension SigninViewer {
     }
     
     struct UserView: View {
-        @Environment(\.imageCache) var cache: ImageCache
         @EnvironmentObject  var  userAuth: UserAuth
-        
-        private let signinSuccess: SigninSuccess
-        private var photoFrame : (width:CGFloat, height:CGFloat)
+        @Environment(\.imageCache) var cache: ImageCache
+
+        let signinSuccess: SigninSuccess
+        let photoFrame : (width:CGFloat, height:CGFloat)
         
         init(signinSuccess: SigninSuccess, photoFrame:(width:CGFloat, height:CGFloat) ) {
             self.signinSuccess = signinSuccess
@@ -80,68 +80,88 @@ extension SigninViewer {
                 
                 ForEach( 0 ..< self.signinSuccess.users.count) { number in
                     
-                    VStack {
-                        VStack (alignment: .leading) {
-                            Group {
-                                Group {
-                                    Text("\(self.signinSuccess.users[number].profileData.UserFirstName) \(self.signinSuccess.users[number].profileData.UserLastName)")
-                                    Text(self.signinSuccess.users[number].profileData.UserEmail)
-                                    Text(self.signinSuccess.users[number].profileData.UserMobile)
-                                    Text(self.signinSuccess.users[number].profileData.UserDateOfBirth)
-                                    Text("RollId : \(self.signinSuccess.users[number].profileData.UserRoleId) | Roll :  \(self.signinSuccess.users[number].profileData.UserRole) | IsPrimaryUser : \(self.signinSuccess.users[number].profileData.UserIsPrimaryUser) ")
-                                }
-                                
-                                Group {
-                                    Text("Company Details :")
-                                    Text("Email : \(self.signinSuccess.users[number].companyData.UserCompanyEmail)")
-                                    Text("Website : \(self.signinSuccess.users[number].companyData.UserCompanyWebsite)")
-                                    Text("Address : \(self.signinSuccess.users[number].companyData.UserCompanyAddress)")
-                                }
-                                
-                            }
-                            .lineLimit(nil)
-                            .multilineTextAlignment(.leading)
-                            
-                        }
-                        
-                        Group {
-                            
-                            Text(self.signinSuccess.users[number].profileData.UserProfileImagePathActual)
-                                .lineLimit(nil)
-
-                            SwiftUIAsyncImageView(url: URL(string: self.signinSuccess.users[number].profileData.UserProfileImagePathActual), placeholder: Text("User Photo"), cache: self.cache)
-                                .frame(width: self.photoFrame.width, height: self.photoFrame.height, alignment: .center)
-                                .cornerRadius(CommonUtils.cu_CornerRadius)
-                            
-                            Text("Company Logo:")
-                                .padding(.top, 10)
-                            Text(self.signinSuccess.users[number].companyData.UserCompanyLogo)
-                                .lineLimit(nil)
-
-                            SwiftUIAsyncImageView(url: URL(string: self.signinSuccess.users[number].companyData.UserCompanyLogo), placeholder: Text("Company Logo"), cache: self.cache)
-                                .frame(width: self.photoFrame.width, height: self.photoFrame.height, alignment: .top)
-                                .cornerRadius(CommonUtils.cu_CornerRadius)
-                            
-                        }
-                        //SSTODO  how to do following and
-                        //let user = self.signinSuccess.users[number]
-                        /*
-                         if !self.userAuth.userEmail.elementsEqual(self.signinSuccess.users[number].profileData.UserEmail) {
-                         self.userAuth.userEmail = self.signinSuccess.users[number].profileData.UserEmail
-                         }
-                         */
-                    }
-                    .onAppear(perform: {
-                        let user = self.signinSuccess.users[number]
-                        
-                        if !self.userAuth.userEmail.elementsEqual(user.profileData.UserEmail) {
-                            self.userAuth.userEmail = user.profileData.UserEmail
-                        }
-                        
-                    })
+                    ExtractedView(signinSuccess: signinSuccess, photoFrame: photoFrame, number: number)
                 }
             }
         }
     }
     
+}
+
+struct ExtractedView: View {
+    
+    @EnvironmentObject  var  userAuth: UserAuth
+    @Environment(\.imageCache) var cache: ImageCache
+
+    let signinSuccess: SigninSuccess
+    let photoFrame : (width:CGFloat, height:CGFloat)
+    let recordNumber:Int
+    
+    init( signinSuccess: SigninSuccess, photoFrame:(width:CGFloat, height:CGFloat), number:Int ) {
+        self.signinSuccess = signinSuccess
+        self.recordNumber = number
+        self.photoFrame = photoFrame
+    }
+    
+    var body: some View {
+        VStack {
+            VStack (alignment: .leading) {
+                Group {
+                    Group {
+                        Text("\(self.signinSuccess.users[recordNumber].profileData.UserFirstName) \(self.signinSuccess.users[recordNumber].profileData.UserLastName)")
+                        Text(self.signinSuccess.users[recordNumber].profileData.UserEmail)
+                        Text(self.signinSuccess.users[recordNumber].profileData.UserMobile)
+                        Text(self.signinSuccess.users[recordNumber].profileData.UserDateOfBirth)
+                        Text("RollId : \(self.signinSuccess.users[recordNumber].profileData.UserRoleId) | Roll :  \(self.signinSuccess.users[recordNumber].profileData.UserRole) | IsPrimaryUser : \(self.signinSuccess.users[recordNumber].profileData.UserIsPrimaryUser) ")
+                    }
+                    
+                    Group {
+                        Text("Company Details :")
+                        Text("Email : \(self.signinSuccess.users[recordNumber].companyData.UserCompanyEmail)")
+                        Text("Website : \(self.signinSuccess.users[recordNumber].companyData.UserCompanyWebsite)")
+                        Text("Address : \(self.signinSuccess.users[recordNumber].companyData.UserCompanyAddress)")
+                    }
+                    
+                }
+                .lineLimit(nil)
+                .multilineTextAlignment(.leading)
+                
+            }
+            
+            Group {
+                
+                Text(self.signinSuccess.users[recordNumber].profileData.UserProfileImagePathActual)
+                    .lineLimit(nil)
+                
+                SwiftUIAsyncImageView(url: URL(string: self.signinSuccess.users[recordNumber].profileData.UserProfileImagePathActual), placeholder: Text("User Photo"), cache: self.cache)
+                    .frame(width: self.photoFrame.width, height: self.photoFrame.height, alignment: .center)
+                    .cornerRadius(CommonUtils.cu_CornerRadius)
+                
+                Text("Company Logo:")
+                    .padding(.top, 10)
+                Text(self.signinSuccess.users[recordNumber].companyData.UserCompanyLogo)
+                    .lineLimit(nil)
+                
+                SwiftUIAsyncImageView(url: URL(string: self.signinSuccess.users[recordNumber].companyData.UserCompanyLogo), placeholder: Text("Company Logo"), cache: self.cache)
+                    .frame(width: self.photoFrame.width, height: self.photoFrame.height, alignment: .top)
+                    .cornerRadius(CommonUtils.cu_CornerRadius)
+                
+            }
+            //SSTODO  how to do following and
+            //let user = self.signinSuccess.users[number]
+            /*
+             if !self.userAuth.userEmail.elementsEqual(self.signinSuccess.users[number].profileData.UserEmail) {
+             self.userAuth.userEmail = self.signinSuccess.users[number].profileData.UserEmail
+             }
+             */
+        }
+        .onAppear(perform: {
+            let user = self.signinSuccess.users[recordNumber]
+            
+            if !self.userAuth.userEmail.elementsEqual(user.profileData.UserEmail) {
+                self.userAuth.userEmail = user.profileData.UserEmail
+            }
+            
+        })
+    }
 }

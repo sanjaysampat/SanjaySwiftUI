@@ -5,22 +5,28 @@
 //  Created by Sanjay Sampat on 20/07/20.
 //  Copyright © 2020 Sanjay Sampat. All rights reserved.
 //
-//  test
+
 
 import UIKit
 import CoreData
 
+// start
+/*
+ // old iOS 13 implementation
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
-
-
+*/
+// new iOS 14 implementation
+class AppDelegate: NSObject, UIApplicationDelegate {
+// end
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         _ = CommonUtils.createRequiredFolders()
         return true
     }
 
+    /*
+     // old iOS 13 implementation
     // MARK: UISceneSession Lifecycle
 
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
@@ -79,6 +85,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+     */
 }
 

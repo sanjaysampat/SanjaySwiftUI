@@ -333,6 +333,10 @@
 		72F2EBEE2531F2F700AA8454 /* MultiSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2EBE52531F2F700AA8454 /* MultiSelector.swift */; };
 		72F2EBEF2531F2F700AA8454 /* MultiSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2EBE62531F2F700AA8454 /* MultiSelectionView.swift */; };
 		72F2EBF02531F2F700AA8454 /* MultiSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F2EBE62531F2F700AA8454 /* MultiSelectionView.swift */; };
+		72FEEA9F255130400054AA79 /* SwiftUIViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FEEA9E255130400054AA79 /* SwiftUIViewApp.swift */; };
+		72FEEAA0255130400054AA79 /* SwiftUIViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FEEA9E255130400054AA79 /* SwiftUIViewApp.swift */; };
+		72FEEAA6255133920054AA79 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FEEAA5255133920054AA79 /* Persistence.swift */; };
+		72FEEAA7255133920054AA79 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FEEAA5255133920054AA79 /* Persistence.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -536,6 +540,8 @@
 		72F2EBE32531F2F700AA8454 /* MultiSelectorTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectorTask.swift; sourceTree = "<group>"; };
 		72F2EBE52531F2F700AA8454 /* MultiSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelector.swift; sourceTree = "<group>"; };
 		72F2EBE62531F2F700AA8454 /* MultiSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectionView.swift; sourceTree = "<group>"; };
+		72FEEA9E255130400054AA79 /* SwiftUIViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewApp.swift; sourceTree = "<group>"; };
+		72FEEAA5255133920054AA79 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -690,6 +696,8 @@
 				729B0EF024C979FD00054F9F /* Utilities */,
 				72663AB224C5C7AC000596C9 /* AppDelegate.swift */,
 				72663AB424C5C7AC000596C9 /* SceneDelegate.swift */,
+				72FEEA9E255130400054AA79 /* SwiftUIViewApp.swift */,
+				72FEEAA5255133920054AA79 /* Persistence.swift */,
 				7267B24F254417DE00822C61 /* MainContentView.swift */,
 				72663AB924C5C7AC000596C9 /* ContentView.swift */,
 				72663ABB24C5C7BD000596C9 /* Assets.xcassets */,
@@ -1281,6 +1289,7 @@
 				7216BB5C24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift in Sources */,
 				72BBAF1224DEBE5700CFC7D6 /* SigninFeatcher.swift in Sources */,
 				7267646F24FBE3E50074715B /* ApplePayController.swift in Sources */,
+				72FEEA9F255130400054AA79 /* SwiftUIViewApp.swift in Sources */,
 				729CC9472521D32A0078A0CC /* RoomListView.swift in Sources */,
 				7204277C24E01CC800DF4958 /* SCLExtensions.swift in Sources */,
 				72A42D4C2547EC83002201DF /* SanjaySwiftUIOptions.swift in Sources */,
@@ -1362,6 +1371,7 @@
 				72735B8024D034B0006B75C9 /* UIView+Image.swift in Sources */,
 				72735B7724D034B0006B75C9 /* PhotoEditor+Keyboard.swift in Sources */,
 				72D977A124E120AC0044754C /* String+Extra.swift in Sources */,
+				72FEEAA6255133920054AA79 /* Persistence.swift in Sources */,
 				72735B8924D034B0006B75C9 /* EmojisCollectionViewDelegate.swift in Sources */,
 				72735B8B24D034B0006B75C9 /* ResizeControl.swift in Sources */,
 				7204276F24DFFA3600DF4958 /* PrivateCommit.swift in Sources */,
@@ -1404,6 +1414,7 @@
 				726763F124FBB27E0074715B /* PersonPhotoImagePickerViewController.swift in Sources */,
 				726763F224FBB27E0074715B /* SigninFeatcher.swift in Sources */,
 				7267647024FBE3E50074715B /* ApplePayController.swift in Sources */,
+				72FEEAA0255130400054AA79 /* SwiftUIViewApp.swift in Sources */,
 				729CC9482521D32A0078A0CC /* RoomListView.swift in Sources */,
 				726763F324FBB27E0074715B /* SCLExtensions.swift in Sources */,
 				72A42D4D2547EC83002201DF /* SanjaySwiftUIOptions.swift in Sources */,
@@ -1485,6 +1496,7 @@
 				7267642824FBB27E0074715B /* UIView+Image.swift in Sources */,
 				7267642924FBB27E0074715B /* PhotoEditor+Keyboard.swift in Sources */,
 				7267642A24FBB27E0074715B /* String+Extra.swift in Sources */,
+				72FEEAA7255133920054AA79 /* Persistence.swift in Sources */,
 				7267642B24FBB27E0074715B /* EmojisCollectionViewDelegate.swift in Sources */,
 				7267642C24FBB27E0074715B /* ResizeControl.swift in Sources */,
 				7267642D24FBB27E0074715B /* PrivateCommit.swift in Sources */,
@@ -1672,7 +1684,7 @@
 				DEVELOPMENT_TEAM = XH9Q2X3CYJ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SanjaySwiftUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1696,7 +1708,7 @@
 				DEVELOPMENT_TEAM = XH9Q2X3CYJ;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SanjaySwiftUI/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1804,7 +1816,7 @@
 				DEVELOPMENT_TEAM = H83M7E9Y5U;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SanjaySwiftUI copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1830,7 +1842,7 @@
 				DEVELOPMENT_TEAM = H83M7E9Y5U;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "SanjaySwiftUI copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
