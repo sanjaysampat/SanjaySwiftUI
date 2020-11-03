@@ -10,6 +10,8 @@
 import UIKit
 import CoreData
 
+var reachDg: ReachabilityDg?
+
 // start
 /*
  // old iOS 13 implementation
@@ -21,8 +23,56 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 // end
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        //Reachability
+        callReachabilityConnection()
+        _ = AppDelegate.checkReachabilty()
+        
         _ = CommonUtils.createRequiredFolders()
+        
         return true
+    }
+    
+    // MARK: Reachability
+    
+    func callReachabilityConnection() {
+        
+        // SSTODO to check properly, as NO Blocks of reachDg are called.
+        
+        // Allocate a reachability object
+        reachDg = ReachabilityDg.reachabilityForInternetConnection()
+        // Set the blocks
+        reachDg!.reachableBlock = {
+            (reach: ReachabilityDg?) -> Void in
+            
+            // keep in mind this is called on a background thread
+            // and if you are updating the UI it needs to happen
+            // on the main thread, like this:
+            DispatchQueue.main.async {
+                print("REACHABLE!")
+                //self.present(self.createAlertController(message: "REACHABLE!"), animated: true, completion: nil);
+                CommonUtils.cuIsReachabilityThere = true
+            }
+        }
+        
+        reachDg!.unreachableBlock = {
+            (reach: ReachabilityDg?) -> Void in
+            print("UNREACHABLE!")
+            //self.present(self.createAlertController(message: "UNREACHABLE!"), animated: true, completion: nil);
+            CommonUtils.cuIsReachabilityThere = false
+        }
+        
+        reachDg!.startNotifier()
+    }
+    
+    class func checkReachabilty() -> Bool {
+        if let localReachDg = reachDg
+        {
+            CommonUtils.cuIsReachabilityThere = localReachDg.isReachable()
+            return CommonUtils.cuIsReachabilityThere
+        }
+        
+        return false
     }
 
     /*

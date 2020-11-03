@@ -73,6 +73,10 @@ struct CommonUtils {
     
     // vars
     static var cu_APPVersionNumber              = "0.0"
+    static var cuDeviceTokenId                  = ""
+
+    //network Reachability Variable
+    static var cuIsReachabilityThere            = true
 
     static var cuDocumentFolderPath             = ""
     static var cuApplicationSupportFolder       = ""

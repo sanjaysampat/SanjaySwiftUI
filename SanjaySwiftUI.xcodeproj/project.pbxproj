@@ -337,6 +337,8 @@
 		72FEEAA0255130400054AA79 /* SwiftUIViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FEEA9E255130400054AA79 /* SwiftUIViewApp.swift */; };
 		72FEEAA6255133920054AA79 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FEEAA5255133920054AA79 /* Persistence.swift */; };
 		72FEEAA7255133920054AA79 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FEEAA5255133920054AA79 /* Persistence.swift */; };
+		72FEEAC125517D9D0054AA79 /* UIViewController+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FEEAC025517D9D0054AA79 /* UIViewController+Extra.swift */; };
+		72FEEAC225517D9D0054AA79 /* UIViewController+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72FEEAC025517D9D0054AA79 /* UIViewController+Extra.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -542,6 +544,7 @@
 		72F2EBE62531F2F700AA8454 /* MultiSelectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiSelectionView.swift; sourceTree = "<group>"; };
 		72FEEA9E255130400054AA79 /* SwiftUIViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIViewApp.swift; sourceTree = "<group>"; };
 		72FEEAA5255133920054AA79 /* Persistence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		72FEEAC025517D9D0054AA79 /* UIViewController+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extra.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -848,7 +851,6 @@
 				726763EC24FBA27E0074715B /* VisualEffectBlur.swift */,
 				727E111324F6C091007231F7 /* PublicCommit.swift */,
 				72BD188424EEAA600032E3B7 /* PlayerView */,
-				72D977A024E120AB0044754C /* String+Extra.swift */,
 				7204277824E01CC700DF4958 /* SCLAlertView */,
 				7204276E24DFFA3600DF4958 /* PrivateCommit.swift */,
 				7204276324DFD34300DF4958 /* SwiftUIAsyncImageView */,
@@ -857,6 +859,8 @@
 				72735B5224D034B0006B75C9 /* Photo_Editor */,
 				729B0EF324C99FCF00054F9F /* AlertControlView.swift */,
 				72BBAF0124DE694900CFC7D6 /* CommonUtils.swift */,
+				72D977A024E120AB0044754C /* String+Extra.swift */,
+				72FEEAC025517D9D0054AA79 /* UIViewController+Extra.swift */,
 				72D9779E24E1116E0044754C /* CommonExtensions.swift */,
 				72BCAD412538454E00AD427D /* RecordFloatingMenuView.swift */,
 			);
@@ -1320,6 +1324,7 @@
 				7249749024E4F112006F5C52 /* TonySectionFeatcher.swift in Sources */,
 				72735B8C24D034B0006B75C9 /* PhotoEditor+Gestures.swift in Sources */,
 				729B0EF424C99FCF00054F9F /* AlertControlView.swift in Sources */,
+				72FEEAC125517D9D0054AA79 /* UIViewController+Extra.swift in Sources */,
 				723DE9EA2508D608000E8C03 /* AnimatableSwiftUIViewEx.swift in Sources */,
 				72735B8424D034B0006B75C9 /* Protocols.swift in Sources */,
 				72735B7B24D034B0006B75C9 /* UIImageView+Alpha.swift in Sources */,
@@ -1445,6 +1450,7 @@
 				7267640624FBB27E0074715B /* TonySectionFeatcher.swift in Sources */,
 				7267640724FBB27E0074715B /* PhotoEditor+Gestures.swift in Sources */,
 				7267640824FBB27E0074715B /* AlertControlView.swift in Sources */,
+				72FEEAC225517D9D0054AA79 /* UIViewController+Extra.swift in Sources */,
 				723DE9EB2508D608000E8C03 /* AnimatableSwiftUIViewEx.swift in Sources */,
 				7267640924FBB27E0074715B /* Protocols.swift in Sources */,
 				7267640A24FBB27E0074715B /* UIImageView+Alpha.swift in Sources */,

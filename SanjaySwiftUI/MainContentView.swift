@@ -38,3 +38,73 @@ struct mainContentView_Previews: PreviewProvider {
         MainContentView()
     }
 }
+
+
+/*
+ // SSTODO
+ Show progress with - ProgressView("Text", value: 10, total: 100)
+ 
+ to use image as background
+ Text("Hello World")
+     .font(.largeTitle)
+     .background(
+         Image("hello_world")
+             .resizable()
+             .frame(width: 100, height: 100)
+     )
+ 
+ or gradiant background
+ .background(
+     LinearGradient(
+         gradient: Gradient(colors: [.white, .red, .black]),
+         startPoint: .leading,
+         endPoint: .trailing
+     ),
+     cornerRadius: 0
+ )
+ 
+ for single or double tap gesture
+ Text("Tap me!")
+     .onTapGesture {
+         print("Tapped!")
+     }
+ 
+ Text("Tap me!")
+     .onTapGesture(count: 2) {
+         print("Tapped!")
+     }
+ 
+ Other gestures Tap, Drag, LongPress
+ Text("Tap")
+     .gesture(
+         TapGesture()
+             .onEnded { _ in
+                 // do something
+             }
+     )
+
+ Text("Drag Me")
+     .gesture(
+         DragGesture(minimumDistance: 50)
+             .onEnded { _ in
+                 // do something
+             }
+     )
+
+ Text("Long Press")
+     .gesture(
+         LongPressGesture(minimumDuration: 2)
+             .onEnded { _ in
+                 // do something
+             }
+     )
+ 
+ onChange - listen to state changes and perform actions on a view accordingly.
+ TextEditor(text: $currentText)
+                 .onChange(of: clearText) { value in
+                     if clearText{
+                         currentText = ""
+                     }
+                 }
+ 
+ */
