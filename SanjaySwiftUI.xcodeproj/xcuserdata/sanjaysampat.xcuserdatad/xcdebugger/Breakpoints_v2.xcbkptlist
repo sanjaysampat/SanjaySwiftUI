@@ -55,17 +55,17 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "547CCD53-05BA-48B8-B7A7-09AD9C8DB5F5"
+            uuid = "8A7C9A98-1715-42F3-9FB4-7F4E060784E5"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "SanjaySwiftUI/Utilities/PersonPhotoImagePickerViewController.swift"
+            filePath = "SanjaySwiftUI/RecordedStore.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "PersonPhotoImagePickerViewControllerDelegate"
-            landmarkType = "5">
+            startingLineNumber = "53"
+            endingLineNumber = "53"
+            landmarkName = "fillRecordedFilesList()"
+            landmarkType = "9">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

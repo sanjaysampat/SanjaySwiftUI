@@ -135,7 +135,7 @@ struct SanjaySwiftUIOptions: View {
                         //if self.calledBy != CallingViews.example22 {
                             // 1) total cards slider selection from 2 to 52 - only even numbers
                             // "total cards slider selection" will only be enabled in container calling views.
-                            // SSTODO
+                            // Above is not required
                             HStack {
                                 Text("Total cards to deal to players:")
                                 Picker("",selection: $userSettings.e22PickCardsCount) {

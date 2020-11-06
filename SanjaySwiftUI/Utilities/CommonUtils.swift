@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AVFoundation
 import SwiftUI
 
 // Global functions
@@ -70,6 +71,9 @@ struct CommonUtils {
     
     static let cu_NotificationDataAlertKey = "SSNotificationData"
     static let cu_ResetEmitterNotification = "SSresetEmitterNotification"
+    
+    static let cu_myVideoThumbImageWidth = 150
+
     
     // vars
     static var cu_APPVersionNumber              = "0.0"
@@ -219,6 +223,31 @@ struct CommonUtils {
             print("An error occured \(error)")
         }
         return false
+    }
+    
+    // MARK: - Image Methods
+    
+    static func thumbnailForVideoAtURL(url: URL, maxWidth: Int = 0) -> UIImage? {
+        var returnImageOptional:UIImage? // = UIImage(named: "delete_selection_gray")  // default image if required.
+        let asset = AVAsset(url: url)
+        let assetImageGenerator = AVAssetImageGenerator(asset: asset)
+        
+        var time = asset.duration
+        time.value = min(time.value, 2)
+        
+        do {
+            let imageRef = try assetImageGenerator.copyCGImage(at: time, actualTime: nil)
+            returnImageOptional = UIImage.init(cgImage: imageRef)
+            returnImageOptional = returnImageOptional?.normalizedImage()
+            //return UIImage.init(cgImage: imageRef, scale: 1.0 , orientation: UIImageOrientation.Right)
+        } catch {
+            print("error")
+        }
+        if ( maxWidth > 0 ) {
+            let resultCGSize = CGSize(width: maxWidth, height: maxWidth)
+            returnImageOptional = returnImageOptional?.RBResizeImage(targetSize: resultCGSize)
+        }
+        return returnImageOptional
     }
 
 }

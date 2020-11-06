@@ -44,6 +44,10 @@
 		724D6DCE2524943500BC301F /* RoomStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724D6DCD2524943500BC301F /* RoomStore.swift */; };
 		724D6DCF2524943500BC301F /* RoomStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724D6DCD2524943500BC301F /* RoomStore.swift */; };
 		7252639324D55633002C5ACA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7252639224D55633002C5ACA /* README.md */; };
+		7252C17E255541B1005C1B4F /* RecordedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7252C17D255541B1005C1B4F /* RecordedListView.swift */; };
+		7252C17F255541B1005C1B4F /* RecordedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7252C17D255541B1005C1B4F /* RecordedListView.swift */; };
+		7252C1852555445E005C1B4F /* RecordedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7252C1842555445E005C1B4F /* RecordedStore.swift */; };
+		7252C1862555445E005C1B4F /* RecordedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7252C1842555445E005C1B4F /* RecordedStore.swift */; };
 		7263AD51251B79910041A810 /* CheckGridsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7263AD50251B79900041A810 /* CheckGridsView.swift */; };
 		7263AD52251B79910041A810 /* CheckGridsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7263AD50251B79900041A810 /* CheckGridsView.swift */; };
 		72663AB324C5C7AC000596C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663AB224C5C7AC000596C9 /* AppDelegate.swift */; };
@@ -387,6 +391,8 @@
 		7249749324E52684006F5C52 /* getHomeSliderCatRecordTony.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getHomeSliderCatRecordTony.json; sourceTree = "<group>"; };
 		724D6DCD2524943500BC301F /* RoomStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomStore.swift; sourceTree = "<group>"; };
 		7252639224D55633002C5ACA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7252C17D255541B1005C1B4F /* RecordedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedListView.swift; sourceTree = "<group>"; };
+		7252C1842555445E005C1B4F /* RecordedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedStore.swift; sourceTree = "<group>"; };
 		7263AD50251B79900041A810 /* CheckGridsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckGridsView.swift; sourceTree = "<group>"; };
 		72663AAF24C5C7AC000596C9 /* SanjaySwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SanjaySwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72663AB224C5C7AC000596C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -723,6 +729,8 @@
 				7263AD50251B79900041A810 /* CheckGridsView.swift */,
 				729CC9462521D32A0078A0CC /* RoomListView.swift */,
 				729CC9632521F36E0078A0CC /* RoomDetailView.swift */,
+				7252C17D255541B1005C1B4F /* RecordedListView.swift */,
+				7252C1842555445E005C1B4F /* RecordedStore.swift */,
 			);
 			path = SanjaySwiftUI;
 			sourceTree = "<group>";
@@ -846,7 +854,6 @@
 			isa = PBXGroup;
 			children = (
 				7228011E255053F000D34AFD /* Reachability */,
-				72C29E8F25373D900051E936 /* ScreenRecorder.swift */,
 				727BF0CA2525EE810061BD7F /* SSMapView */,
 				726763EC24FBA27E0074715B /* VisualEffectBlur.swift */,
 				727E111324F6C091007231F7 /* PublicCommit.swift */,
@@ -862,6 +869,7 @@
 				72D977A024E120AB0044754C /* String+Extra.swift */,
 				72FEEAC025517D9D0054AA79 /* UIViewController+Extra.swift */,
 				72D9779E24E1116E0044754C /* CommonExtensions.swift */,
+				72C29E8F25373D900051E936 /* ScreenRecorder.swift */,
 				72BCAD412538454E00AD427D /* RecordFloatingMenuView.swift */,
 			);
 			path = Utilities;
@@ -1336,6 +1344,7 @@
 				727E111424F6C092007231F7 /* PublicCommit.swift in Sources */,
 				72BBAF0224DE694900CFC7D6 /* CommonUtils.swift in Sources */,
 				7204277524DFFEB900DF4958 /* SwiftUIImageCache.swift in Sources */,
+				7252C17E255541B1005C1B4F /* RecordedListView.swift in Sources */,
 				724D6DCE2524943500BC301F /* RoomStore.swift in Sources */,
 				729B0EF724C9B40E00054F9F /* Person+CoreDataClass.swift in Sources */,
 				72BBAF0C24DE8E3000CFC7D6 /* SigninSuccess.swift in Sources */,
@@ -1374,6 +1383,7 @@
 				727BF0CC2525EEAA0061BD7F /* SSMapView.swift in Sources */,
 				72BCAD422538455000AD427D /* RecordFloatingMenuView.swift in Sources */,
 				72735B8024D034B0006B75C9 /* UIView+Image.swift in Sources */,
+				7252C1852555445E005C1B4F /* RecordedStore.swift in Sources */,
 				72735B7724D034B0006B75C9 /* PhotoEditor+Keyboard.swift in Sources */,
 				72D977A124E120AC0044754C /* String+Extra.swift in Sources */,
 				72FEEAA6255133920054AA79 /* Persistence.swift in Sources */,
@@ -1462,6 +1472,7 @@
 				7267640F24FBB27E0074715B /* PublicCommit.swift in Sources */,
 				7267641024FBB27E0074715B /* CommonUtils.swift in Sources */,
 				7267641124FBB27E0074715B /* SwiftUIImageCache.swift in Sources */,
+				7252C17F255541B1005C1B4F /* RecordedListView.swift in Sources */,
 				724D6DCF2524943500BC301F /* RoomStore.swift in Sources */,
 				7267641224FBB27E0074715B /* Person+CoreDataClass.swift in Sources */,
 				7267641324FBB27E0074715B /* SigninSuccess.swift in Sources */,
@@ -1500,6 +1511,7 @@
 				727BF0CD2525EEAA0061BD7F /* SSMapView.swift in Sources */,
 				72BCAD432538455000AD427D /* RecordFloatingMenuView.swift in Sources */,
 				7267642824FBB27E0074715B /* UIView+Image.swift in Sources */,
+				7252C1862555445E005C1B4F /* RecordedStore.swift in Sources */,
 				7267642924FBB27E0074715B /* PhotoEditor+Keyboard.swift in Sources */,
 				7267642A24FBB27E0074715B /* String+Extra.swift in Sources */,
 				72FEEAA7255133920054AA79 /* Persistence.swift in Sources */,
