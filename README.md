@@ -146,7 +146,8 @@ SwiftUI project creation to learn.
     * This button can be moved to any of four corners before starting of recording.
     * This feature does not work for app in Simulator, but works on actual devices.
     * Issues - does not create proper mpeg file when we change the view or popup appears, while recording.
-    * Show list of these recording files and view with mpeg file thumbnail. ( Work In Progress )
+    * 'Screen Recording List' - Show list of these recording files with mpeg file thumbnail. 
+        * On click open the mpeg file to play it.
     
 15. Changed from AppDelegate and SceneDelegate to App protocol introduced in XCode 12.
 

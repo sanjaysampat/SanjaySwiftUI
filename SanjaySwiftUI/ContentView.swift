@@ -79,7 +79,7 @@ struct ContentView: View {
                         }
                         if self.nameChanged {
                             let formatter3 = DateFormatter()
-                            formatter3.dateFormat = "yyyyMMddHHmmss"
+                            formatter3.dateFormat = CommonUtils.cu_VideoFileNameDateFormat
                             let dateTimeString = formatter3.string(from: Date())
                             if self.persons.count <= 0 || !self.isEditMode {
                                 let newPerson = Person(context: self.managedObjectContext)

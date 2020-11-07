@@ -61,7 +61,7 @@ final public class ScreenRecorder {
         if let passedVideoOutput = outputURL {
             self.videoOutputURL = passedVideoOutput
             newVideoOutputURL = passedVideoOutput
-            print("SSTODO newVideoOutputURL=\(newVideoOutputURL.absoluteString)")
+            //print("SSTODO newVideoOutputURL=\(newVideoOutputURL.absoluteString)")
         } else {
             let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0] as NSString
             newVideoOutputURL = URL(fileURLWithPath: documentsPath.appendingPathComponent("ScreenVideo.mp4"))

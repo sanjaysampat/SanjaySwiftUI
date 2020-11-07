@@ -171,7 +171,7 @@ struct AudioView: View {
     func insert() {
         
         let formatter3 = DateFormatter()
-        formatter3.dateFormat = "yyyyMMddHHmmss"
+        formatter3.dateFormat = CommonUtils.cu_VideoFileNameDateFormat
         let dateTimeString = formatter3.string(from: Date())
 
         // itemsToAdd.forEach { item in

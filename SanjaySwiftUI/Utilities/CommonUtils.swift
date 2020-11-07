@@ -73,6 +73,7 @@ struct CommonUtils {
     static let cu_ResetEmitterNotification = "SSresetEmitterNotification"
     
     static let cu_myVideoThumbImageWidth = 150
+    static let cu_VideoFileNameDateFormat = "yyyyMMddHHmmss"
 
     
     // vars

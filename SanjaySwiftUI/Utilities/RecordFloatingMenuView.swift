@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct RecordFloatingMenuView: View {
-    
+    @ObservedObject var store = RecordedStore()
+
     enum ButtonImages : String {
         case arrowUpLeft = "arrow.turn.up.left"
         case arrowUpRight = "arrow.turn.up.right"
@@ -25,6 +26,7 @@ struct RecordFloatingMenuView: View {
     @State var buttonsPos:UnitPoint = .bottomTrailing
     @State var showButtons = false
     @State var isRecording = false
+    @State var currentRecordingFileName:String = ""
     @State var recordAlertShown = false
     @State var recordErrorShown = false
     
@@ -33,6 +35,7 @@ struct RecordFloatingMenuView: View {
     fileprivate let buttonArray:[ButtonImages] = [ButtonImages.arrowUpLeft, ButtonImages.arrowUpRight, ButtonImages.arrowDownLeft, ButtonImages.arrowDownRight, ButtonImages.record]
     
     private let screenRecorder = ScreenRecorder()
+    
     
     var body: some View {
         HStack {
@@ -160,12 +163,21 @@ struct RecordFloatingMenuView: View {
                 debugPrint("Error when stop recording \(error)")
             })
             
+            /*
+             // SSTODO to check following
+            //addToRecordedStore()
+            DispatchQueue.main.async {
+                store.reloadFileList()
+            }
+            */
         } else {
             let formatter3 = DateFormatter()
-            formatter3.dateFormat = "yyyyMMddHHmmss"
+            formatter3.dateFormat = CommonUtils.cu_VideoFileNameDateFormat
             let dateTimeString = formatter3.string(from: Date())
-            let fileUrl = URL(fileURLWithPath: CommonUtils.cuScreenRecordFolder.stringByAppendingPathComponent(path: "\(dateTimeString).mp4"))
-            // SSTODO to save recording in document folder, will show the list in ListView in LazyHStack
+            self.currentRecordingFileName = "\(dateTimeString).mp4"
+            let fileUrl = URL(fileURLWithPath: CommonUtils.cuScreenRecordFolder.stringByAppendingPathComponent(path: self.currentRecordingFileName))
+            //print("SSTODO before recording : currentRecordingFileName=\(self.currentRecordingFileName)")
+            // save recording in document folder, show the list in ListView
             self.isRecording = true
             
             // SSTODO This does not work in simulator, but works in actual device.
@@ -173,9 +185,29 @@ struct RecordFloatingMenuView: View {
                 debugPrint("Error when recording \(error)")
                 self.isRecording = false
                 self.recordErrorShown = true
+                self.currentRecordingFileName = ""
             }
             )
             
+        }
+    }
+    
+    // SSTODO to check following
+    func addToRecordedStore() {
+        //print("SSTODO before addToRecordedStore : currentRecordingFileName=\(self.currentRecordingFileName)")
+        let fileNameFormatter = DateFormatter()
+        fileNameFormatter.dateFormat = CommonUtils.cu_VideoFileNameDateFormat
+        let displayDateFormatter = DateFormatter()
+        displayDateFormatter.dateFormat = "dd-MMM-yyyy HH:mm:ss"
+        if self.currentRecordingFileName.hasSuffix(".mp4") {
+            var name = ""
+            if let fileDate = fileNameFormatter.date(from: String(self.currentRecordingFileName.prefix(14))) {
+                name = displayDateFormatter.string(from: fileDate)
+            }
+            let imageName = "\(String(self.currentRecordingFileName.prefix(14))).jpg"
+            
+            store.recordedFiles.append( Recorded(name: name, fileName: self.currentRecordingFileName, imageName: "\(imageName)"))
+            //print("SSTODO after store.recordedFiles.append : currentRecordingFileName=\(self.currentRecordingFileName)")
         }
     }
     

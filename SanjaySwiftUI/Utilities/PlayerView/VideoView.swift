@@ -27,7 +27,7 @@ class VideoPlayerUIView: UIView {
         
         super.init(frame: .zero)
     
-        backgroundColor = .lightGray
+        //backgroundColor = .lightGray
         playerLayer.player = player
         layer.addSublayer(playerLayer)
         
@@ -114,6 +114,8 @@ struct VideoPlayerControlsView : View {
     
     let player: AVPlayer
     
+    let startPlay: Bool
+    
     @State private var playerPaused = true
     
     var body: some View {
@@ -132,6 +134,9 @@ struct VideoPlayerControlsView : View {
         }
         .padding(.leading, 10)
         .padding(.trailing, 10)
+        .onAppear {
+            playerPaused = !startPlay
+        }
     }
     
     private func togglePlayPause() {
@@ -179,9 +184,15 @@ struct VideoPlayerContainerView : View {
     @State private var seeking = false
     
     private let player: AVPlayer
+    
+    private let startPlay:Bool
   
-    init(url: URL) {
+    init(url: URL, theStartPlay:Bool = false) {
         player = AVPlayer(url: url)
+        startPlay = theStartPlay
+        if theStartPlay {
+            player.play()
+        }
     }
   
     var body: some View {
@@ -193,11 +204,16 @@ struct VideoPlayerContainerView : View {
             VideoPlayerControlsView(videoPos: $videoPos,
                                     videoDuration: $videoDuration,
                                     seeking: $seeking,
-                                    player: player)
+                                    player: player,
+                                    startPlay: startPlay
+            )
         }
         .onDisappear {
             // When this View isn't being shown anymore stop the player
             self.player.replaceCurrentItem(with: nil)
+        }
+        .onAppear {
+            
         }
     }
 }

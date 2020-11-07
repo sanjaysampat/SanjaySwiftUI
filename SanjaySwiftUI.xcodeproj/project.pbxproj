@@ -48,6 +48,8 @@
 		7252C17F255541B1005C1B4F /* RecordedListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7252C17D255541B1005C1B4F /* RecordedListView.swift */; };
 		7252C1852555445E005C1B4F /* RecordedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7252C1842555445E005C1B4F /* RecordedStore.swift */; };
 		7252C1862555445E005C1B4F /* RecordedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7252C1842555445E005C1B4F /* RecordedStore.swift */; };
+		7252C192255583F2005C1B4F /* RecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7252C191255583F2005C1B4F /* RecordDetailView.swift */; };
+		7252C193255583F2005C1B4F /* RecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7252C191255583F2005C1B4F /* RecordDetailView.swift */; };
 		7263AD51251B79910041A810 /* CheckGridsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7263AD50251B79900041A810 /* CheckGridsView.swift */; };
 		7263AD52251B79910041A810 /* CheckGridsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7263AD50251B79900041A810 /* CheckGridsView.swift */; };
 		72663AB324C5C7AC000596C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663AB224C5C7AC000596C9 /* AppDelegate.swift */; };
@@ -393,6 +395,7 @@
 		7252639224D55633002C5ACA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7252C17D255541B1005C1B4F /* RecordedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedListView.swift; sourceTree = "<group>"; };
 		7252C1842555445E005C1B4F /* RecordedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedStore.swift; sourceTree = "<group>"; };
+		7252C191255583F2005C1B4F /* RecordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailView.swift; sourceTree = "<group>"; };
 		7263AD50251B79900041A810 /* CheckGridsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckGridsView.swift; sourceTree = "<group>"; };
 		72663AAF24C5C7AC000596C9 /* SanjaySwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SanjaySwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72663AB224C5C7AC000596C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -731,6 +734,7 @@
 				729CC9632521F36E0078A0CC /* RoomDetailView.swift */,
 				7252C17D255541B1005C1B4F /* RecordedListView.swift */,
 				7252C1842555445E005C1B4F /* RecordedStore.swift */,
+				7252C191255583F2005C1B4F /* RecordDetailView.swift */,
 			);
 			path = SanjaySwiftUI;
 			sourceTree = "<group>";
@@ -1386,6 +1390,7 @@
 				7252C1852555445E005C1B4F /* RecordedStore.swift in Sources */,
 				72735B7724D034B0006B75C9 /* PhotoEditor+Keyboard.swift in Sources */,
 				72D977A124E120AC0044754C /* String+Extra.swift in Sources */,
+				7252C192255583F2005C1B4F /* RecordDetailView.swift in Sources */,
 				72FEEAA6255133920054AA79 /* Persistence.swift in Sources */,
 				72735B8924D034B0006B75C9 /* EmojisCollectionViewDelegate.swift in Sources */,
 				72735B8B24D034B0006B75C9 /* ResizeControl.swift in Sources */,
@@ -1514,6 +1519,7 @@
 				7252C1862555445E005C1B4F /* RecordedStore.swift in Sources */,
 				7267642924FBB27E0074715B /* PhotoEditor+Keyboard.swift in Sources */,
 				7267642A24FBB27E0074715B /* String+Extra.swift in Sources */,
+				7252C193255583F2005C1B4F /* RecordDetailView.swift in Sources */,
 				72FEEAA7255133920054AA79 /* Persistence.swift in Sources */,
 				7267642B24FBB27E0074715B /* EmojisCollectionViewDelegate.swift in Sources */,
 				7267642C24FBB27E0074715B /* ResizeControl.swift in Sources */,

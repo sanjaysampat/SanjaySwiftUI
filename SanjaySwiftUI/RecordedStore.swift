@@ -18,15 +18,31 @@ class RecordedStore: ObservableObject {
         recordedFiles = fillRecordedFilesList()
     }
     
+    func reloadFileList() {
+        recordedFiles = fillRecordedFilesList()
+    }
+    
     let objectWillChange = PassthroughSubject<Void, Never>()
     
     func deleteRecording( at offsets: IndexSet ) {
         for (n, iset) in offsets.enumerated() {
-            print("\(n): '\(iset)'")
+            print("SSTODO \(n): '\(iset)'")
+            let recorded = recordedFiles[iset]
+            if !recorded.fileName.isEmpty {
+                do
+                {
+                    let recordedURL = URL(fileURLWithPath: CommonUtils.cuScreenRecordFolder.stringByAppendingPathComponent(path: recorded.fileName))
+                    try FileManager.default.removeItem(at: recordedURL)
+                    recordedFiles.remove(atOffsets: offsets)
+                    let recordedJpgURL = URL(fileURLWithPath: CommonUtils.cuScreenRecordFolder.stringByAppendingPathComponent(path: recorded.imageName))
+                    try FileManager.default.removeItem(at: recordedJpgURL)
+                }
+                catch
+                {
+                    print("An error occured \(error)")
+                }
+            }
         }
-        // SSTODO to delete the actual file
-        //CommonUtils.cuScreenRecordFolder.stringByAppendingPathComponent(path: "\(fileName)")
-        //recordedFiles.remove(atOffsets: offsets)
     }
     
 }
@@ -37,7 +53,7 @@ fileprivate func fillRecordedFilesList() -> [Recorded] {
     let fileListOptional = (try? fileManager.contentsOfDirectory(atPath: CommonUtils.cuScreenRecordFolder))
     if let fileList = fileListOptional {
         let fileNameFormatter = DateFormatter()
-        fileNameFormatter.dateFormat = "yyyyMMddHHmmss"
+        fileNameFormatter.dateFormat = CommonUtils.cu_VideoFileNameDateFormat
         let displayDateFormatter = DateFormatter()
         displayDateFormatter.dateFormat = "dd-MMM-yyyy HH:mm:ss"
         for fileName in fileList {

@@ -49,8 +49,8 @@ struct RecordedCell: View {
     let recorded: Recorded
     
     var body: some View {
-        NavigationLink(destination: RoomDetailView(room: testData[0])) {
-            PrintinView("\(CommonUtils.cuScreenRecordFolder.stringByAppendingPathComponent(path: recorded.imageName))")
+        NavigationLink(destination: RecordDetailView(recorded: recorded)) {
+            //PrintinView("SSPrint - \(CommonUtils.cuScreenRecordFolder.stringByAppendingPathComponent(path: recorded.imageName))")
             Image(uiImage: UIImage(contentsOfFile: "\(CommonUtils.cuScreenRecordFolder.stringByAppendingPathComponent(path: recorded.imageName))"), placeholderSystemName: "square.stack.3d.down.dottedline")
                 .resizable()
                 .scaledToFit()
