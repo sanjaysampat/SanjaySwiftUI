@@ -93,7 +93,7 @@ SwiftUI project creation to learn.
             ![User Settings](readmeResource/UserSettings21.jpg)
             
         * Example 22 Card game of War 
-        
+        * Exmaple 23 Skew effect with Tap and Gestures
         
    
 3. Play with Shapes

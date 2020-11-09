@@ -27,6 +27,11 @@ struct SanjaySwiftuiAnimations: View {
                         Text("Example 22 (Card game of War)")
                     })
                     
+                    NavigationLink(destination: Example23(), label: {
+                        Text("Exmaple 23 - Skew with Tap and Gestures")
+                    })
+
+                    
                 }
             }
             .navigationBarTitle(Text("Animation Experiments"), displayMode: .inline)
@@ -396,6 +401,115 @@ struct SingleWarCard: View {
                 Text(pointsStr).foregroundColor(.yellow).bold()
             }
         }
+    }
+}
+
+// MARK: Exmaple 23 - Skew with Tap and Gestures
+struct Example23: View {
+    @State private var moveSingleTap = false
+    @State private var moveSingleTapGesture = false
+    @State private var moveDoubleTap = false
+    @State private var moveWithDragGesture = false
+    @State private var moveWithLongPress = false
+    @State private var moveWithMagnification = false
+    @GestureState private var magnifyBy = CGFloat(1.0)
+    
+    var body: some View {
+        let animation = Animation.easeInOut(duration: 1.0)
+
+        return VStack {
+
+            CircleView(text: "Single onTap", offset: moveSingleTap ? 120 : -120, pct: moveSingleTap ? 1 : 0, backgroundColor: .red)
+                .animation(animation)
+                .onTapGesture {
+                    self.moveSingleTap.toggle()
+                }
+            
+            CircleView(text: "Single tap", offset: moveSingleTapGesture ? 120 : -120, pct: moveSingleTapGesture ? 1 : 0, backgroundColor: .orange)
+                .animation(animation)
+                .gesture(
+                    TapGesture()
+                        .onEnded { _ in
+                            self.moveSingleTapGesture.toggle()
+                        }
+                )
+            
+            CircleView(text: "Double onTap", offset: moveDoubleTap ? 120 : -120, pct: moveDoubleTap ? 1 : 0, backgroundColor: .yellow)
+                .animation(animation)
+                .onTapGesture(count: 2) {
+                    self.moveDoubleTap.toggle()
+                }
+            
+            CircleView(text: "Drag Gesture", offset: moveWithDragGesture ? 120 : -120, pct: moveWithDragGesture ? 1 : 0, backgroundColor: .green)
+                .animation(animation)
+                .gesture(
+                    DragGesture(minimumDistance: 50)
+                        .onEnded { _ in
+                            self.moveWithDragGesture.toggle()
+                        }
+                )
+            
+            CircleView(text: "Long Press", offset: moveWithLongPress ? 120 : -120, pct: moveWithLongPress ? 1 : 0, backgroundColor: .blue)
+                .animation(animation)
+                .gesture(
+                    LongPressGesture(minimumDuration: 1)
+                        .onEnded { _ in
+                            self.moveWithLongPress.toggle()
+                        }
+                )
+            /* // SSTODO
+            CircleView(text: "Magnification", offset: moveWithMagnification ? 120 : -120, pct: moveWithMagnification ? 1 : 0, backgroundColor: .purple)
+                .animation(animation)
+                .gesture(
+                    MagnificationGesture()
+                        .updating($magnifyBy) { currentState, gestureState, transaction in
+                            gestureState = currentState
+                        }
+                        .onEnded { _ in
+                            self.moveWithMagnification.toggle()
+                        }
+                )
+            */
+
+            /*
+            LabelView(text: "The SwiftUI Lab", offset: moveIt ? 120 : -120, pct: moveIt ? 1 : 0, backgroundColor: .pink)
+            .animation(animation.delay(0.6))
+            */
+
+            Text("Skew with Tap and Gestures")
+                .font(.headline).italic()
+                .padding(5)
+                .background(RoundedRectangle(cornerRadius: 5).foregroundColor(.white))
+                .foregroundColor(Color.black)
+            
+        }
+        .navigationBarTitle(Text("Example 23"), displayMode: .inline)
+
+    }
+}
+
+struct CircleView: View {
+    let text: String
+    var offset: CGFloat
+    var pct: CGFloat
+    let backgroundColor: Color
+    
+    var body: some View {
+        ZStack {
+            Ellipse()
+                .frame(width: 130, height: 70)
+                .foregroundColor(.clear)
+            Text(text)
+                .font(.headline)
+                .padding(5)
+                .background(Ellipse()
+                                .frame(width: 130, height: 85)
+                                .foregroundColor(backgroundColor)
+                )
+                .foregroundColor(Color.black)
+        }
+        .modifier(SkewedOffset(offset: offset, pct: pct, goingRight: offset > 0))
+        
     }
 }
 

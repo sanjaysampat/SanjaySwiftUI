@@ -63,41 +63,6 @@ struct mainContentView_Previews: PreviewProvider {
      cornerRadius: 0
  )
  
- for single or double tap gesture
- Text("Tap me!")
-     .onTapGesture {
-         print("Tapped!")
-     }
- 
- Text("Tap me!")
-     .onTapGesture(count: 2) {
-         print("Tapped!")
-     }
- 
- Other gestures Tap, Drag, LongPress
- Text("Tap")
-     .gesture(
-         TapGesture()
-             .onEnded { _ in
-                 // do something
-             }
-     )
-
- Text("Drag Me")
-     .gesture(
-         DragGesture(minimumDistance: 50)
-             .onEnded { _ in
-                 // do something
-             }
-     )
-
- Text("Long Press")
-     .gesture(
-         LongPressGesture(minimumDuration: 2)
-             .onEnded { _ in
-                 // do something
-             }
-     )
  
  onChange - listen to state changes and perform actions on a view accordingly.
  TextEditor(text: $currentText)
