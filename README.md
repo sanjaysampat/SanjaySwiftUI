@@ -97,7 +97,7 @@ SwiftUI project creation to learn.
             * SSOffsetData - custom data struct conforming to VectorArithmetic
             * SkewedOffsetToAnySide GeometryEffect created using CGAffineTransform
             
-            [![Exmaple 23 Skew effect with Tap and Gestures]({image-url})]({readmeResource/Example23.mp4} "Exmaple 23 Skew effect with Tap and Gestures")
+            [![Exmaple 23 Skew effect with Tap and Gestures](readmeResource/Example23.jpg)](readmeResource/Example23.mp4 "Exmaple 23 Skew effect with Tap and Gestures")
         
    
 3. Play with Shapes
