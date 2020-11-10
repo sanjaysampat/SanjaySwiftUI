@@ -41,6 +41,8 @@
 		7249748F24E4F112006F5C52 /* TonySectionViewer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7249748A24E4F112006F5C52 /* TonySectionViewer.swift */; };
 		7249749024E4F112006F5C52 /* TonySectionFeatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7249748B24E4F112006F5C52 /* TonySectionFeatcher.swift */; };
 		7249749424E52684006F5C52 /* getHomeSliderCatRecordTony.json in Resources */ = {isa = PBXBuildFile; fileRef = 7249749324E52684006F5C52 /* getHomeSliderCatRecordTony.json */; };
+		7249C424255AC9CA00BD17B1 /* Example23.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7249C423255AC9C900BD17B1 /* Example23.mp4 */; };
+		7249C425255AC9CA00BD17B1 /* Example23.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 7249C423255AC9C900BD17B1 /* Example23.mp4 */; };
 		724D6DCE2524943500BC301F /* RoomStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724D6DCD2524943500BC301F /* RoomStore.swift */; };
 		724D6DCF2524943500BC301F /* RoomStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724D6DCD2524943500BC301F /* RoomStore.swift */; };
 		7252639324D55633002C5ACA /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 7252639224D55633002C5ACA /* README.md */; };
@@ -391,6 +393,7 @@
 		7249748A24E4F112006F5C52 /* TonySectionViewer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TonySectionViewer.swift; sourceTree = "<group>"; };
 		7249748B24E4F112006F5C52 /* TonySectionFeatcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TonySectionFeatcher.swift; sourceTree = "<group>"; };
 		7249749324E52684006F5C52 /* getHomeSliderCatRecordTony.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getHomeSliderCatRecordTony.json; sourceTree = "<group>"; };
+		7249C423255AC9C900BD17B1 /* Example23.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Example23.mp4; sourceTree = "<group>"; };
 		724D6DCD2524943500BC301F /* RoomStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomStore.swift; sourceTree = "<group>"; };
 		7252639224D55633002C5ACA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7252C17D255541B1005C1B4F /* RecordedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedListView.swift; sourceTree = "<group>"; };
@@ -841,6 +844,7 @@
 		728445682530879500338F55 /* readmeResource */ = {
 			isa = PBXGroup;
 			children = (
+				7249C423255AC9C900BD17B1 /* Example23.mp4 */,
 				72196C4725494C3F00634438 /* Example21.gif */,
 				72196C402549483800634438 /* Example21.mp4 */,
 				72A42D5D254861B4002201DF /* Example21.jpg */,
@@ -1202,6 +1206,7 @@
 				72B551D524DD743E009A0014 /* stmarylake.jpg in Resources */,
 				7284458E25308FCA00338F55 /* CustomPersonPhotoImagePickerViewController.jpg in Resources */,
 				72663ABC24C5C7BD000596C9 /* Assets.xcassets in Resources */,
+				7249C424255AC9CA00BD17B1 /* Example23.mp4 in Resources */,
 				72B551D424DD743E009A0014 /* yukon_charleyrivers.jpg in Resources */,
 				72B551D724DD743E009A0014 /* rainbowlake.jpg in Resources */,
 				72B551CB24DD743E009A0014 /* turtlerock.jpg in Resources */,
@@ -1284,6 +1289,7 @@
 				7267645C24FBB27E0074715B /* stmarylake.jpg in Resources */,
 				7284458F25308FCA00338F55 /* CustomPersonPhotoImagePickerViewController.jpg in Resources */,
 				7267645D24FBB27E0074715B /* Assets.xcassets in Resources */,
+				7249C425255AC9CA00BD17B1 /* Example23.mp4 in Resources */,
 				7267645E24FBB27E0074715B /* yukon_charleyrivers.jpg in Resources */,
 				7267645F24FBB27E0074715B /* rainbowlake.jpg in Resources */,
 				7267646024FBB27E0074715B /* turtlerock.jpg in Resources */,
