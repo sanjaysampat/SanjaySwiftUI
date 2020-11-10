@@ -94,6 +94,8 @@ SwiftUI project creation to learn.
             
         * Example 22 Card game of War 
         * Exmaple 23 Skew effect with Tap and Gestures
+            * SSOffsetData - custom data struct conforming to VectorArithmetic
+            * SkewedOffsetToAnySide GeometryEffect created using CGAffineTransform
         
    
 3. Play with Shapes

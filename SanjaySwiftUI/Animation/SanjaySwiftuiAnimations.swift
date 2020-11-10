@@ -120,7 +120,6 @@ struct RotatingShowCard: View {
     var body: some View {
         let totalCards = Double(cardsCount) / Double( userSettings.e21TotalPlayers )
         
-        
         var player1CardDimention:Double = userSettings.e21P1FixedModeDegree
         if userSettings.e21P1ShowMode == "Compact" {
             player1CardDimention = userSettings.e21P1CompactModeDegree * totalCards
@@ -406,26 +405,37 @@ struct SingleWarCard: View {
 
 // MARK: Exmaple 23 - Skew with Tap and Gestures
 struct Example23: View {
-    @State private var moveSingleTap = false
+    @State private var moveForHorizontal = false
+    @State private var moveForVertical = false
     @State private var moveSingleTapGesture = false
     @State private var moveDoubleTap = false
     @State private var moveWithDragGesture = false
     @State private var moveWithLongPress = false
+    @State private var moveRandomX = false
+    @State private var moveRandomY = false
+    
     @State private var moveWithMagnification = false
     @GestureState private var magnifyBy = CGFloat(1.0)
     
     var body: some View {
         let animation = Animation.easeInOut(duration: 1.0)
-
+        
         return VStack {
-
-            CircleView(text: "Single onTap", offset: moveSingleTap ? 120 : -120, pct: moveSingleTap ? 1 : 0, backgroundColor: .red)
-                .animation(animation)
-                .onTapGesture {
-                    self.moveSingleTap.toggle()
-                }
-            
-            CircleView(text: "Single tap", offset: moveSingleTapGesture ? 120 : -120, pct: moveSingleTapGesture ? 1 : 0, backgroundColor: .orange)
+            ZStack {
+                SSCircleView(text: "Vertical", offsetRandomData: SSOffsetData(offsetX: 0, offsetY: moveForVertical ? 390 : -1, pctX: 0, pctY: moveForVertical ? 1 : 0), backgroundColor: Color.pink.opacity(0.5) )
+                    .animation(animation)
+                    .onTapGesture {
+                        self.moveForVertical.toggle()
+                    }
+                
+                SSCircleView(text: "Horizontal", offsetRandomData: SSOffsetData(offsetX: moveForHorizontal ? 120 : -120, offsetY: 0, pctX: moveForHorizontal ? 1 : 0, pctY: 0), backgroundColor: .red)
+                    .animation(animation)
+                    .onTapGesture {
+                        self.moveForHorizontal.toggle()
+                    }
+                
+            }
+            SSCircleView(text: "Single tap", offsetRandomData: SSOffsetData(offsetX: moveSingleTapGesture ? 120 : -120, offsetY: 0, pctX: moveSingleTapGesture ? 1 : 0, pctY: 0), backgroundColor: .orange)
                 .animation(animation)
                 .gesture(
                     TapGesture()
@@ -434,13 +444,13 @@ struct Example23: View {
                         }
                 )
             
-            CircleView(text: "Double onTap", offset: moveDoubleTap ? 120 : -120, pct: moveDoubleTap ? 1 : 0, backgroundColor: .yellow)
+            SSCircleView(text: "Double onTap", offsetRandomData: SSOffsetData(offsetX: moveDoubleTap ? 120 : -120, offsetY: 0, pctX: moveDoubleTap ? 1 : 0, pctY: 0), backgroundColor: .yellow)
                 .animation(animation)
                 .onTapGesture(count: 2) {
                     self.moveDoubleTap.toggle()
                 }
             
-            CircleView(text: "Drag Gesture", offset: moveWithDragGesture ? 120 : -120, pct: moveWithDragGesture ? 1 : 0, backgroundColor: .green)
+            SSCircleView(text: "Drag Gesture", offsetRandomData: SSOffsetData(offsetX: moveWithDragGesture ? 120 : -120, offsetY: 0, pctX: moveWithDragGesture ? 1 : 0, pctY: 0), backgroundColor: .green)
                 .animation(animation)
                 .gesture(
                     DragGesture(minimumDistance: 50)
@@ -449,7 +459,8 @@ struct Example23: View {
                         }
                 )
             
-            CircleView(text: "Long Press", offset: moveWithLongPress ? 120 : -120, pct: moveWithLongPress ? 1 : 0, backgroundColor: .blue)
+            
+            SSCircleView(text: "Long Press", offsetRandomData: SSOffsetData(offsetX: moveWithLongPress ? 120 : -120, offsetY: 0, pctX: moveWithLongPress ? 1 : 0, pctY: 0), backgroundColor: .blue)
                 .animation(animation)
                 .gesture(
                     LongPressGesture(minimumDuration: 1)
@@ -457,25 +468,37 @@ struct Example23: View {
                             self.moveWithLongPress.toggle()
                         }
                 )
-            /* // SSTODO
-            CircleView(text: "Magnification", offset: moveWithMagnification ? 120 : -120, pct: moveWithMagnification ? 1 : 0, backgroundColor: .purple)
+            
+            SSCircleView(text: "Tap to Random", offsetRandomData: SSOffsetData(offsetX: moveRandomX ? 120 : -120, offsetY: moveRandomY ? -390 : 0, pctX: moveRandomX ? 1 : 0, pctY: moveRandomY ? 0 : 1), backgroundColor: .purple)
                 .animation(animation)
-                .gesture(
-                    MagnificationGesture()
-                        .updating($magnifyBy) { currentState, gestureState, transaction in
-                            gestureState = currentState
+                .onTapGesture {
+                    var toMove = true
+                    while toMove {
+                        if Bool.random() {
+                            self.moveRandomX.toggle()
+                            toMove = false
                         }
-                        .onEnded { _ in
-                            self.moveWithMagnification.toggle()
+                        if Bool.random() {
+                            self.moveRandomY.toggle()
+                            toMove = false
                         }
-                )
-            */
-
-            /*
-            LabelView(text: "The SwiftUI Lab", offset: moveIt ? 120 : -120, pct: moveIt ? 1 : 0, backgroundColor: .pink)
-            .animation(animation.delay(0.6))
-            */
-
+                    }
+                }
+            
+            /* // SSTODO pending
+             SSCircleView(text: "Magnification", offset: moveWithMagnification ? 120 : -120, pct: moveWithMagnification ? 1 : 0, backgroundColor: .purple)
+             .animation(animation)
+             .gesture(
+             MagnificationGesture()
+             .updating($magnifyBy) { currentState, gestureState, transaction in
+             gestureState = currentState
+             }
+             .onEnded { _ in
+             self.moveWithMagnification.toggle()
+             }
+             )
+             */
+            
             Text("Skew with Tap and Gestures")
                 .font(.headline).italic()
                 .padding(5)
@@ -484,14 +507,13 @@ struct Example23: View {
             
         }
         .navigationBarTitle(Text("Example 23"), displayMode: .inline)
-
+        
     }
 }
 
-struct CircleView: View {
+struct SSCircleView: View {
     let text: String
-    var offset: CGFloat
-    var pct: CGFloat
+    var offsetRandomData: SSOffsetData
     let backgroundColor: Color
     
     var body: some View {
@@ -508,9 +530,100 @@ struct CircleView: View {
                 )
                 .foregroundColor(Color.black)
         }
-        .modifier(SkewedOffset(offset: offset, pct: pct, goingRight: offset > 0))
+        .modifier(SkewedOffsetToAnySide(offsetRandomData: offsetRandomData, goingRight: offsetRandomData.offsetX > 0, goingTop: offsetRandomData.offsetY < 0))
+
         
     }
+}
+
+struct SkewedOffsetToAnySide: GeometryEffect {
+    
+    var offsetRandomData: SSOffsetData
+    let goingRight: Bool
+    let goingTop: Bool
+
+    var animatableData: SSOffsetData {
+        get { offsetRandomData }
+        set { offsetRandomData = newValue }
+    }
+
+    func effectValue(size: CGSize) -> ProjectionTransform {
+        var skewH: CGFloat
+        var skewV: CGFloat
+        
+        if offsetRandomData.pctX < 0.2 {
+            skewH = (offsetRandomData.pctX * 5) * 0.5 * (goingRight ? -1 : 1)
+        } else if offsetRandomData.pctX > 0.8 {
+            skewH = ((1 - offsetRandomData.pctX) * 5) * 0.5 * (goingRight ? -1 : 1)
+        } else {
+            skewH = 0.5 * (goingRight ? -1 : 1)
+        }
+        
+        if offsetRandomData.pctY < 0.2 {
+            skewV = (offsetRandomData.pctY * 5) * 0.5 * (goingTop != goingRight ? 1 : -1)
+        } else if offsetRandomData.pctY > 0.8 {
+            skewV = ((1 - offsetRandomData.pctY) * 5) * 0.5 * (goingTop != goingRight ? 1 : -1)
+        } else {
+            skewV = 0.5 * (goingTop != goingRight ? 1 : -1)
+        }
+        return ProjectionTransform(CGAffineTransform(a: 1, b: skewV, c: skewH, d: 1, tx: offsetRandomData.offsetX, ty: offsetRandomData.offsetY))
+    }
+    
+}
+
+struct SSOffsetData {
+    var offsetX: CGFloat
+    var offsetY: CGFloat
+    var pctX: CGFloat
+    var pctY: CGFloat
+
+    // Initializer
+    init(offsetX: CGFloat = 0, offsetY: CGFloat = 0, pctX: CGFloat = 0, pctY: CGFloat = 0) {
+        self.offsetX = offsetX
+        self.offsetY = offsetY
+        self.pctX = pctX
+        self.pctY = pctY
+    }
+
+}
+
+extension SSOffsetData : VectorArithmetic {
+    // created class extension which conform to VectorArithmetic, which is requirement for animatableData
+    
+    static func + (lhs: SSOffsetData, rhs: SSOffsetData) -> SSOffsetData {
+        SSOffsetData(offsetX: lhs.offsetX + rhs.offsetX, offsetY: lhs.offsetY + rhs.offsetY, pctX: lhs.pctX + rhs.pctX, pctY: lhs.pctY + rhs.pctY)
+    }
+    
+    static func - (lhs: SSOffsetData, rhs: SSOffsetData) -> SSOffsetData {
+        SSOffsetData(offsetX: lhs.offsetX - rhs.offsetX, offsetY: lhs.offsetY - rhs.offsetY, pctX: lhs.pctX - rhs.pctX, pctY: lhs.pctY - rhs.pctY)
+    }
+    
+    mutating func scale(by rhs: Double) {
+        var oX = self.offsetX
+        oX.scale(by: rhs)
+        var oY = self.offsetY
+        oY.scale(by: rhs)
+        var pX = self.pctX
+        pX.scale(by: rhs)
+        var pY = self.pctY
+        pY.scale(by: rhs)
+
+        self.offsetX = oX
+        self.offsetY = oY
+        self.pctX = pX
+        self.pctY = pY
+    }
+    
+    var magnitudeSquared: Double {
+        return Double( self.offsetX * self.offsetX )
+        // SSTODO
+    }
+    
+    static var zero: SSOffsetData {
+        SSOffsetData()
+    }
+    
+    
 }
 
 // MARK: Models
