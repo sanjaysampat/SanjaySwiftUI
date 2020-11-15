@@ -114,8 +114,7 @@ struct ListView: View {
                         
                         if multiSelecterTask.servingGoals.contains( MultiSelectorGoal(name: ViewNames.shuffle.rawValue) ) {
                             Group {
-                                // SSTODO array shuffle working
-                                // we need to add UUID and views in tuple.
+                                // SSNote array shuffle working
                                 Button(action: {
                                     // simple animation
                                     withAnimation{

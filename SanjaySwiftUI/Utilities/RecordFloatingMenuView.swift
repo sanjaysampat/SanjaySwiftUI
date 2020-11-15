@@ -192,7 +192,6 @@ struct RecordFloatingMenuView: View {
         }
     }
     
-    // SSTODO to check following
     func addToRecordedStore() {
         //print("SSTODO before addToRecordedStore : currentRecordingFileName=\(self.currentRecordingFileName)")
         let fileNameFormatter = DateFormatter()

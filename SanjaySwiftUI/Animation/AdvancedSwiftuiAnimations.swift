@@ -850,7 +850,7 @@ struct RotatingCard: View {
     let images = ["cards-D7", "cards-C8", "cards-D6", "cards-CB", "cards-H2", "cards-DB"]
     
     var body: some View {
-        // SSTODO (1) dynamic binding of array elements (2) on value change getter and setter functionality.
+        // SSNote (1) dynamic binding of array elements (2) on value change getter and setter functionality.
         let binding = Binding<Bool>(get: { self.flipped }, set: { self.updateBinding($0) })
         
         return VStack {

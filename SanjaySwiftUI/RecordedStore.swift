@@ -56,7 +56,8 @@ fileprivate func fillRecordedFilesList() -> [Recorded] {
         fileNameFormatter.dateFormat = CommonUtils.cu_VideoFileNameDateFormat
         let displayDateFormatter = DateFormatter()
         displayDateFormatter.dateFormat = "dd-MMM-yyyy HH:mm:ss"
-        for fileName in fileList {
+        let sortedFileList = fileList.sorted().reversed()
+        for fileName in sortedFileList {
             if fileName.hasSuffix(".mp4") {
             var name = ""
             if let fileDate = fileNameFormatter.date(from: String(fileName.prefix(14))) {

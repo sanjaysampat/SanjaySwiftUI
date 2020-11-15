@@ -24,7 +24,7 @@ struct RecordedListView: View {
             }
             .listStyle(GroupedListStyle())
             .navigationBarTitle(Text("Recording"), displayMode: .inline)
-            .navigationBarItems(trailing: EditButton()) // SSTODO this does not work.
+            .navigationBarItems(trailing: EditButton())
 
         }
     }
