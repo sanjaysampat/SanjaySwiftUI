@@ -61,6 +61,8 @@ SwiftUI project creation to learn.
             
                 ![localizationLanguges](readmeResource/localizationLanguges.jpg)
             
+                * Used NLTokenizer of NaturalLanguage to tokanize words from localized 'address' string.
+                    [Ref: Tokenizing Natural Language into Semantic Units in iOS](https://www.andyibanez.com/posts/tokenizing-nltokenizer/)
             * How to localize Label text in "LaunchScreen.storyboard"
                 * Refer: [Comment on developer.apple.com forums](https://developer.apple.com/forums/thread/86567?answerId=632317022#632317022)
                 * [Still could not see text in Arabic in LaunchScreen](https://feedbackassistant.apple.com/feedback/8714792)

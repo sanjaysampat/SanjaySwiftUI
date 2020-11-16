@@ -422,20 +422,20 @@ struct Example23: View {
         
         return VStack {
             ZStack {
-                SSCircleView(text: "Vertical", offsetRandomData: SSOffsetData(offsetX: 0, offsetY: moveForVertical ? 390 : -1, pctX: 0, pctY: moveForVertical ? 1 : 0), backgroundColor: Color.pink.opacity(0.5) )
+                SSCircleView(text: "Vertical", ssOffsetData: SSOffsetData(offsetX: 0, offsetY: moveForVertical ? 390 : -1, pctX: 0, pctY: moveForVertical ? 1 : 0), backgroundColor: Color.pink.opacity(0.5) )
                     .animation(animation)
                     .onTapGesture {
                         self.moveForVertical.toggle()
                     }
                 
-                SSCircleView(text: "Horizontal", offsetRandomData: SSOffsetData(offsetX: moveForHorizontal ? 120 : -120, offsetY: 0, pctX: moveForHorizontal ? 1 : 0, pctY: 0), backgroundColor: .red)
+                SSCircleView(text: "Horizontal", ssOffsetData: SSOffsetData(offsetX: moveForHorizontal ? 120 : -120, offsetY: 0, pctX: moveForHorizontal ? 1 : 0, pctY: 0), backgroundColor: .red)
                     .animation(animation)
                     .onTapGesture {
                         self.moveForHorizontal.toggle()
                     }
                 
             }
-            SSCircleView(text: "Single tap", offsetRandomData: SSOffsetData(offsetX: moveSingleTapGesture ? 120 : -120, offsetY: 0, pctX: moveSingleTapGesture ? 1 : 0, pctY: 0), backgroundColor: .orange)
+            SSCircleView(text: "Single tap", ssOffsetData: SSOffsetData(offsetX: moveSingleTapGesture ? 120 : -120, offsetY: 0, pctX: moveSingleTapGesture ? 1 : 0, pctY: 0), backgroundColor: .orange)
                 .animation(animation)
                 .gesture(
                     TapGesture()
@@ -444,13 +444,13 @@ struct Example23: View {
                         }
                 )
             
-            SSCircleView(text: "Double onTap", offsetRandomData: SSOffsetData(offsetX: moveDoubleTap ? 120 : -120, offsetY: 0, pctX: moveDoubleTap ? 1 : 0, pctY: 0), backgroundColor: .yellow)
+            SSCircleView(text: "Double onTap", ssOffsetData: SSOffsetData(offsetX: moveDoubleTap ? 120 : -120, offsetY: 0, pctX: moveDoubleTap ? 1 : 0, pctY: 0), backgroundColor: .yellow)
                 .animation(animation)
                 .onTapGesture(count: 2) {
                     self.moveDoubleTap.toggle()
                 }
             
-            SSCircleView(text: "Drag Gesture", offsetRandomData: SSOffsetData(offsetX: moveWithDragGesture ? 120 : -120, offsetY: 0, pctX: moveWithDragGesture ? 1 : 0, pctY: 0), backgroundColor: .green)
+            SSCircleView(text: "Drag Gesture", ssOffsetData: SSOffsetData(offsetX: moveWithDragGesture ? 120 : -120, offsetY: 0, pctX: moveWithDragGesture ? 1 : 0, pctY: 0), backgroundColor: .green)
                 .animation(animation)
                 .gesture(
                     DragGesture(minimumDistance: 50)
@@ -460,7 +460,7 @@ struct Example23: View {
                 )
             
             
-            SSCircleView(text: "Long Press", offsetRandomData: SSOffsetData(offsetX: moveWithLongPress ? 120 : -120, offsetY: 0, pctX: moveWithLongPress ? 1 : 0, pctY: 0), backgroundColor: .blue)
+            SSCircleView(text: "Long Press", ssOffsetData: SSOffsetData(offsetX: moveWithLongPress ? 120 : -120, offsetY: 0, pctX: moveWithLongPress ? 1 : 0, pctY: 0), backgroundColor: .blue)
                 .animation(animation)
                 .gesture(
                     LongPressGesture(minimumDuration: 1)
@@ -469,7 +469,7 @@ struct Example23: View {
                         }
                 )
             
-            SSCircleView(text: "Tap to Random", offsetRandomData: SSOffsetData(offsetX: moveRandomX ? 120 : -120, offsetY: moveRandomY ? -390 : 0, pctX: moveRandomX ? 1 : 0, pctY: moveRandomY ? 0 : 1), backgroundColor: .purple)
+            SSCircleView(text: "Tap to Random", ssOffsetData: SSOffsetData(offsetX: moveRandomX ? 120 : -120, offsetY: moveRandomY ? -390 : 0, pctX: moveRandomX ? 1 : 0, pctY: moveRandomY ? 0 : 1), backgroundColor: .purple)
                 .animation(animation)
                 .onTapGesture {
                     var toMove = true
@@ -513,7 +513,7 @@ struct Example23: View {
 
 struct SSCircleView: View {
     let text: String
-    var offsetRandomData: SSOffsetData
+    var ssOffsetData: SSOffsetData
     let backgroundColor: Color
     
     var body: some View {
@@ -530,7 +530,7 @@ struct SSCircleView: View {
                 )
                 .foregroundColor(Color.black)
         }
-        .modifier(SkewedOffsetToAnySide(offsetRandomData: offsetRandomData, goingRight: offsetRandomData.offsetX > 0, goingTop: offsetRandomData.offsetY < 0))
+        .modifier(SkewedOffsetToAnySide(ssOffsetData: ssOffsetData, goingRight: ssOffsetData.offsetX > 0, goingTop: ssOffsetData.offsetY < 0))
 
         
     }
@@ -538,35 +538,35 @@ struct SSCircleView: View {
 
 struct SkewedOffsetToAnySide: GeometryEffect {
     
-    var offsetRandomData: SSOffsetData
+    var ssOffsetData: SSOffsetData
     let goingRight: Bool
     let goingTop: Bool
 
     var animatableData: SSOffsetData {
-        get { offsetRandomData }
-        set { offsetRandomData = newValue }
+        get { ssOffsetData }
+        set { ssOffsetData = newValue }
     }
 
     func effectValue(size: CGSize) -> ProjectionTransform {
         var skewH: CGFloat
         var skewV: CGFloat
         
-        if offsetRandomData.pctX < 0.2 {
-            skewH = (offsetRandomData.pctX * 5) * 0.5 * (goingRight ? -1 : 1)
-        } else if offsetRandomData.pctX > 0.8 {
-            skewH = ((1 - offsetRandomData.pctX) * 5) * 0.5 * (goingRight ? -1 : 1)
+        if ssOffsetData.pctX < 0.2 {
+            skewH = (ssOffsetData.pctX * 5) * 0.5 * (goingRight ? -1 : 1)
+        } else if ssOffsetData.pctX > 0.8 {
+            skewH = ((1 - ssOffsetData.pctX) * 5) * 0.5 * (goingRight ? -1 : 1)
         } else {
             skewH = 0.5 * (goingRight ? -1 : 1)
         }
         
-        if offsetRandomData.pctY < 0.2 {
-            skewV = (offsetRandomData.pctY * 5) * 0.5 * (goingTop != goingRight ? 1 : -1)
-        } else if offsetRandomData.pctY > 0.8 {
-            skewV = ((1 - offsetRandomData.pctY) * 5) * 0.5 * (goingTop != goingRight ? 1 : -1)
+        if ssOffsetData.pctY < 0.2 {
+            skewV = (ssOffsetData.pctY * 5) * 0.5 * (goingTop != goingRight ? 1 : -1)
+        } else if ssOffsetData.pctY > 0.8 {
+            skewV = ((1 - ssOffsetData.pctY) * 5) * 0.5 * (goingTop != goingRight ? 1 : -1)
         } else {
             skewV = 0.5 * (goingTop != goingRight ? 1 : -1)
         }
-        return ProjectionTransform(CGAffineTransform(a: 1, b: skewV, c: skewH, d: 1, tx: offsetRandomData.offsetX, ty: offsetRandomData.offsetY))
+        return ProjectionTransform(CGAffineTransform(a: 1, b: skewV, c: skewH, d: 1, tx: ssOffsetData.offsetX, ty: ssOffsetData.offsetY))
     }
     
 }

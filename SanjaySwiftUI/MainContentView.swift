@@ -41,7 +41,8 @@ struct mainContentView_Previews: PreviewProvider {
 
 
 /*
- // SSTODO
+ // SSTODO in SwiftUI project.
+ 
  Show progress with - ProgressView("Text", value: 10, total: 100)
  
  to use image as background
@@ -72,4 +73,17 @@ struct mainContentView_Previews: PreviewProvider {
                      }
                  }
  
+ pushnotifications, localnotifications in SwiftUIViewApp
+ 
+ use new Views lazy grid/stack
+ 
+ how to create App clip
+ 
+ edit photos via system photo library
+ 
+ long running background tasks
+ 
+ use of example swift package
+ 
+  
  */
