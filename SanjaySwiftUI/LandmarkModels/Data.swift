@@ -9,22 +9,39 @@ import UIKit
 import SwiftUI
 import CoreLocation
 
+/// Landmark
 fileprivate let landmarkDocumentFolder = "landmark"
 fileprivate let landmarkFilename = "landmarkData.json"
 
-var landmarkData: [Landmark] = load(landmarkFilename)
+var landmarkData: [Landmark] = loadJsonFile(landmarkFilename, landmarkDocumentFolder)
 
 let isLandmarkDataSaved:Bool = CommonUtils.storeJsonToDocumentFile(landmarkData, to: landmarkDocumentFolder, as: landmarkFilename)
 
 let isLandmarkDataFileDeleted:Bool = CommonUtils.removeFileFromDocument(folderName: landmarkDocumentFolder, fileName: landmarkFilename)
 
 func reloadLandmarkData() {
-    landmarkData = load(landmarkFilename)
+    landmarkData = loadJsonFile(landmarkFilename, landmarkDocumentFolder)
 }
 
-func load<T: Decodable>(_ filename: String) -> T {
+/// Signatures
+fileprivate let signaturesDocumentFolder = "signatures"
+fileprivate let signaturesFilename = "signaturesData.json"
+
+var signaturesData: [Signature] = loadJsonFile(signaturesFilename, signaturesDocumentFolder)
+
+let isSignatuesDataSaved:Bool = CommonUtils.storeJsonToDocumentFile(signaturesData, to: signaturesDocumentFolder, as: signaturesFilename)
+
+let isSignaturesDataFileDeleted:Bool = CommonUtils.removeFileFromDocument(folderName: signaturesDocumentFolder, fileName: signaturesFilename)
+
+func reloadSignaturesDataWithShuffle() {
+    signaturesData = loadJsonFile(signaturesFilename, signaturesDocumentFolder)
+    signaturesData.shuffle()
+}
+
+
+func loadJsonFile<T: Decodable>(_ filename: String, _ folderName: String) -> T {
     // SSNote - to search first in local folder then load from Bundle
-    let folderPath = CommonUtils.cuDocumentFolderPath.stringByAppendingPathComponent(path: landmarkDocumentFolder)
+    let folderPath = CommonUtils.cuDocumentFolderPath.stringByAppendingPathComponent(path: folderName)
     let documentURL = URL(fileURLWithPath: folderPath.stringByAppendingPathComponent(path: filename))
     do {
         let data:Data = try Data(contentsOf: documentURL)

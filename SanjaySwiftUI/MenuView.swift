@@ -148,28 +148,28 @@ struct MenuView: View {
                     
                 }
                 
-                NavigationLink(destination:
-                                GeometryOfView()
-                ) {
-                    VStack( alignment: .leading) {
-                        HStack {
-                            ZStack(alignment: Alignment(horizontal: .leading, vertical: .center)) {
-                                Image(systemName: "sum")
-                                Image(systemName: "function")
-                                    .scaleEffect(CGSize(width: 0.8, height: 0.8))
+                Group {
+                    NavigationLink(destination:
+                                    GeometryOfView()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                ZStack(alignment: Alignment(horizontal: .leading, vertical: .center)) {
+                                    Image(systemName: "sum")
+                                    Image(systemName: "function")
+                                        .scaleEffect(CGSize(width: 0.8, height: 0.8))
+                                }
+                                Text("Geometry")
+                                    .font(.caption)
                             }
-                            Text("Geometry")
-                                .font(.caption)
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
+                            Divider()
                         }
-                        .font(.body)
-                        .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                        .shadow(radius: 1.5)
-                        Divider()
+                        
                     }
                     
-                }
-                
-                Group {
                     NavigationLink(destination:
                                     EnviornmentView()
                     ) {
@@ -287,6 +287,29 @@ struct MenuView: View {
                 
                 Group {
                 NavigationLink(destination:
+                                SignatureListView()
+                ) {
+                    VStack( alignment: .leading) {
+                        HStack {
+                            ZStack {
+                                Image(systemName: "signature")
+                                //    .scaleEffect(CGSize(width: 1.2, height: 1.2))
+                                //Image(systemName: "staroflife")
+                                //    .scaleEffect(CGSize(width: 1.0, height: 1.0))
+                            }
+                            Text("Signature List")
+                                .font(.caption)
+                        }
+                        .font(.body)
+                        .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                        .shadow(radius: 1.5)
+                    }
+                }
+                    Divider()
+                }
+
+                Group {
+                NavigationLink(destination:
                                 RecordedListView()
                 ) {
                     VStack( alignment: .leading) {
@@ -307,6 +330,7 @@ struct MenuView: View {
                 }
                     Divider()
                 }
+                
                 Spacer()
             }
             .padding(5)

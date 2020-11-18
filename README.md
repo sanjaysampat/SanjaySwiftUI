@@ -154,10 +154,13 @@ SwiftUI project creation to learn.
     * Issues - does not create proper mpeg file when we change the view or popup appears, while recording.
     * 'Screen Recording List' - Show list of these recording files with mpeg file thumbnail. 
         * On click open the mpeg file to play it.
+        
+15. SignatureListView - Usage of .svg files from assets.
+    * Work-In-Progress - Will develop a puzzle game to match Name with Signatures and Photos.
     
-15. Changed from AppDelegate and SceneDelegate to App protocol introduced in XCode 12.
+16. Changed from AppDelegate and SceneDelegate to App protocol introduced in XCode 12.
 
-16. When SwiftUI does not have many views in a screen, the loading of App is faster. ( SwiftUI only loads views when they are seen on screen )
+17. When SwiftUI does not have many views in a screen, the loading of App is faster. ( SwiftUI only loads views when they are seen on screen )
     * we should create small and multiple views in a screen, each view with single responsibility ( **S**OLID )
     * Each app screen should not be cluttered with many functionalities. 
     * The visibility of options and data should be easy to see for users. 
@@ -166,4 +169,5 @@ SwiftUI project creation to learn.
 (1) Replace 'PrivateCommit' with 'PublicCommit' to run. 
 (2) Images of face belongs to their respective copyrights.
 (3) Images of RoomList by [Jan Zavrel](http://www.zavrel.net/swiftui-rooms-resources)
+(4) Signature images and respective photo images and weblinks are used from Wikimedia Commons - commons.wikimedia.org and Wikipedia - www.wikipedia.org
 </sub></sup>

@@ -85,5 +85,7 @@ struct mainContentView_Previews: PreviewProvider {
  
  use of example swift package
  
-  
+ to check
+  https://www.raywenderlich.com/1484288-preventing-man-in-the-middle-attacks-in-ios-with-ssl-pinning
+ 
  */

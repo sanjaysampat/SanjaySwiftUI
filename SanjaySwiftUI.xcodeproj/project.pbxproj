@@ -244,6 +244,12 @@
 		7284459D25309B0B00338F55 /* SpriteSceneParticleEffect.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7284459B25309B0B00338F55 /* SpriteSceneParticleEffect.jpg */; };
 		728CBF392500D32C00EBEC9D /* LearningPython.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 728CBF382500D32C00EBEC9D /* LearningPython.jpg */; };
 		728CBF3A2500D32C00EBEC9D /* LearningPython.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 728CBF382500D32C00EBEC9D /* LearningPython.jpg */; };
+		72978392256538A9009DE59D /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72978391256538A9009DE59D /* Signature.swift */; };
+		72978393256538A9009DE59D /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72978391256538A9009DE59D /* Signature.swift */; };
+		7297839925653931009DE59D /* signaturesData.json in Resources */ = {isa = PBXBuildFile; fileRef = 7297839825653931009DE59D /* signaturesData.json */; };
+		7297839A25653931009DE59D /* signaturesData.json in Resources */ = {isa = PBXBuildFile; fileRef = 7297839825653931009DE59D /* signaturesData.json */; };
+		729783A025654DC7009DE59D /* SignatureListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7297839F25654DC7009DE59D /* SignatureListView.swift */; };
+		729783A125654DC7009DE59D /* SignatureListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7297839F25654DC7009DE59D /* SignatureListView.swift */; };
 		7299E6A324E8046800704724 /* getDailyQuote.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69924E8046300704724 /* getDailyQuote.json */; };
 		7299E6A424E8046800704724 /* getnewpriorityFreedomsbyuser.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69A24E8046500704724 /* getnewpriorityFreedomsbyuser.json */; };
 		7299E6A524E8046800704724 /* getdailyStory.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69B24E8046500704724 /* getdailyStory.json */; };
@@ -478,6 +484,9 @@
 		72844594253096A300338F55 /* localizationLanguges.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localizationLanguges.jpg; sourceTree = "<group>"; };
 		7284459B25309B0B00338F55 /* SpriteSceneParticleEffect.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SpriteSceneParticleEffect.jpg; sourceTree = "<group>"; };
 		728CBF382500D32C00EBEC9D /* LearningPython.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LearningPython.jpg; sourceTree = "<group>"; };
+		72978391256538A9009DE59D /* Signature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
+		7297839825653931009DE59D /* signaturesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signaturesData.json; sourceTree = "<group>"; };
+		7297839F25654DC7009DE59D /* SignatureListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureListView.swift; sourceTree = "<group>"; };
 		7299E69924E8046300704724 /* getDailyQuote.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getDailyQuote.json; sourceTree = "<group>"; };
 		7299E69A24E8046500704724 /* getnewpriorityFreedomsbyuser.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getnewpriorityFreedomsbyuser.json; sourceTree = "<group>"; };
 		7299E69B24E8046500704724 /* getdailyStory.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getdailyStory.json; sourceTree = "<group>"; };
@@ -708,6 +717,7 @@
 				726763DE24FB7E830074715B /* Localization */,
 				7249748824E4F112006F5C52 /* TonySectionJson */,
 				72BBAF0424DE899C00CFC7D6 /* SignInJson */,
+				729783902565382A009DE59D /* SignatureModels */,
 				72B551B824DD743E009A0014 /* LandmarkModels */,
 				72B551BB24DD743E009A0014 /* LandmarkResources */,
 				729B0EF924C9B41600054F9F /* Model */,
@@ -741,6 +751,7 @@
 				7252C17D255541B1005C1B4F /* RecordedListView.swift */,
 				7252C1842555445E005C1B4F /* RecordedStore.swift */,
 				7252C191255583F2005C1B4F /* RecordDetailView.swift */,
+				7297839F25654DC7009DE59D /* SignatureListView.swift */,
 			);
 			path = SanjaySwiftUI;
 			sourceTree = "<group>";
@@ -860,6 +871,15 @@
 				7284457F25308A5200338F55 /* honeycombGrid.jpg */,
 			);
 			path = readmeResource;
+			sourceTree = "<group>";
+		};
+		729783902565382A009DE59D /* SignatureModels */ = {
+			isa = PBXGroup;
+			children = (
+				7297839825653931009DE59D /* signaturesData.json */,
+				72978391256538A9009DE59D /* Signature.swift */,
+			);
+			path = SignatureModels;
 			sourceTree = "<group>";
 		};
 		729B0EF024C979FD00054F9F /* Utilities */ = {
@@ -1213,6 +1233,7 @@
 				72663ABC24C5C7BD000596C9 /* Assets.xcassets in Resources */,
 				7249C424255AC9CA00BD17B1 /* Example23.mp4 in Resources */,
 				72B551D424DD743E009A0014 /* yukon_charleyrivers.jpg in Resources */,
+				7297839925653931009DE59D /* signaturesData.json in Resources */,
 				72B551D724DD743E009A0014 /* rainbowlake.jpg in Resources */,
 				72B551CB24DD743E009A0014 /* turtlerock.jpg in Resources */,
 				72A42D5F254861B4002201DF /* Example21.jpg in Resources */,
@@ -1297,6 +1318,7 @@
 				7267645D24FBB27E0074715B /* Assets.xcassets in Resources */,
 				7249C425255AC9CA00BD17B1 /* Example23.mp4 in Resources */,
 				7267645E24FBB27E0074715B /* yukon_charleyrivers.jpg in Resources */,
+				7297839A25653931009DE59D /* signaturesData.json in Resources */,
 				7267645F24FBB27E0074715B /* rainbowlake.jpg in Resources */,
 				7267646024FBB27E0074715B /* turtlerock.jpg in Resources */,
 				72A42D60254861B4002201DF /* Example21.jpg in Resources */,
@@ -1340,6 +1362,7 @@
 				72E42CD82511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift in Sources */,
 				72BD188A24EEAA600032E3B7 /* AudioView.swift in Sources */,
 				726763E224FB7FA40074715B /* LocalDemoView.swift in Sources */,
+				72978392256538A9009DE59D /* Signature.swift in Sources */,
 				7249748E24E4F112006F5C52 /* TonySectionCat.swift in Sources */,
 				72BD188924EEAA600032E3B7 /* PlayerUtility.swift in Sources */,
 				72B551B124DD1C8A009A0014 /* UserAuth.swift in Sources */,
@@ -1410,6 +1433,7 @@
 				723ACB33250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift in Sources */,
 				72CEEB5124F92EBE00A1AFE9 /* AVListView.swift in Sources */,
 				72735B8224D034B0006B75C9 /* UIImage+Crop.swift in Sources */,
+				729783A025654DC7009DE59D /* SignatureListView.swift in Sources */,
 				72C29E9025373D900051E936 /* ScreenRecorder.swift in Sources */,
 				72663AB524C5C7AC000596C9 /* SceneDelegate.swift in Sources */,
 				72735B7E24D034B0006B75C9 /* PhotoEditor+Font.swift in Sources */,
@@ -1469,6 +1493,7 @@
 				72E42CD92511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift in Sources */,
 				7267640024FBB27E0074715B /* AudioView.swift in Sources */,
 				7267640124FBB27E0074715B /* LocalDemoView.swift in Sources */,
+				72978393256538A9009DE59D /* Signature.swift in Sources */,
 				7267640224FBB27E0074715B /* TonySectionCat.swift in Sources */,
 				7267640324FBB27E0074715B /* PlayerUtility.swift in Sources */,
 				7267640424FBB27E0074715B /* UserAuth.swift in Sources */,
@@ -1539,6 +1564,7 @@
 				723ACB34250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift in Sources */,
 				7267642E24FBB27E0074715B /* AVListView.swift in Sources */,
 				7267642F24FBB27E0074715B /* UIImage+Crop.swift in Sources */,
+				729783A125654DC7009DE59D /* SignatureListView.swift in Sources */,
 				72C29E9125373D900051E936 /* ScreenRecorder.swift in Sources */,
 				7267643024FBB27E0074715B /* SceneDelegate.swift in Sources */,
 				7267643124FBB27E0074715B /* PhotoEditor+Font.swift in Sources */,
