@@ -36,9 +36,17 @@ struct Signature: Hashable, Codable, Identifiable {
 
 extension Signature {
     var signatureImage: Image {
-        Image(signatureName)
+        if signatureName.isEmpty {
+            return Image(systemName: "signature")
+        } else {
+            return Image(signatureName)
+        }
     }
     var photoImage: Image {
-        Image(imageName)
+        if imageName.isEmpty {
+            return Image(systemName: "person")
+        } else {
+            return Image(imageName)
+        }
     }
 }

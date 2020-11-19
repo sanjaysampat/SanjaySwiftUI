@@ -96,7 +96,7 @@ struct RegularGrid: View {
         ScrollView(.vertical) {
             LazyVGrid(columns: gridItems, spacing: spacing) {
                 ForEach(0..<200) { idx in
-                    Image("img-\(idx % 27)")
+                    Image("img-\(idx % 42)")
                         .resizable()
                         .scaledToFit()
                         .frame(width: imgsize.width, height: imgsize.height)
@@ -127,7 +127,7 @@ struct HoneycombGrid: View {
                 ForEach(0..<200) { idx in
                     
                     VStack(spacing: 0) {
-                        Image("img-\(idx % 27)")
+                        Image("img-\(idx % 41)")
                             .resizable()
                             .scaledToFit()
                             .frame(width: imgsize.width, height: imgsize.height)
@@ -218,7 +218,7 @@ struct ResizableGrid: View {
                 LazyVGrid(columns: gridItems, spacing: spacing, pinnedViews: .sectionHeaders) {
                     Section(header: HeaderView(info: self.info)) {
                         ForEach(0..<200) { idx in
-                            Image("img-\(idx % 27)")
+                            Image("img-\(idx % 42)")
                                 .resizable()
                                 //.scaledToFit() // Not working here TODO
                                 .frame(height: info.cellWidth(idx))

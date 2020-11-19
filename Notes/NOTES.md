@@ -9,6 +9,15 @@
 ![Flip clock](Flipclock_file_structure.png)
 
 
+### SOLID principles
+
+1. [SOLID Principles Applied To Swift](https://marcosantadev.com/solid-principles-applied-swift/) at marcosantadev
+
+2. [S O L I D Principle with Swift](https://medium.com/flawless-app-stories/s-o-l-i-d-principle-with-swift-b42f597ba7e2) at Flawless iOS (medium)
+
+3. [I → Interface segregation principle (ISP) - simple example](https://stackoverflow.com/a/35382190/2641380) at stackoverflow
+
+
 ### Apple Pay
 
 1. [Guide by Apple](https://developer.apple.com/library/archive/ApplePay_Guide/)

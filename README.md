@@ -155,7 +155,7 @@ SwiftUI project creation to learn.
     * 'Screen Recording List' - Show list of these recording files with mpeg file thumbnail. 
         * On click open the mpeg file to play it.
         
-15. SignatureListView - Usage of .svg files from assets.
+15. SignatureListView - Usage of .svg files from assets (with photos and weblink to wikipedia.org)
     * Work-In-Progress - Will develop a puzzle game to match Name with Signatures and Photos.
     
 16. Changed from AppDelegate and SceneDelegate to App protocol introduced in XCode 12.
