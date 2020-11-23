@@ -18,14 +18,18 @@ struct MainContentView: View {
                 //MenuView(menuSelection: $menuSelection, currentPos: $currentPos)
                 ContentView(showContentView: $showContentView)
             } else {
-                Button(action: {
-                    // simple animation
-                    withAnimation{
-                        self.showContentView.toggle()
+                VStack {
+                    Button(action: {
+                        // simple animation
+                        withAnimation{
+                            self.showContentView.toggle()
+                        }
+                    }) {
+                        Text("Start the SwiftUI")
                     }
-                }) {
-                    Text("Start the SwiftUI")
+
                 }
+                
             }
             
             RecordFloatingMenuView()
@@ -44,6 +48,8 @@ struct mainContentView_Previews: PreviewProvider {
  // SSTODO in SwiftUI project.
  
  Show progress with - ProgressView("Text", value: 10, total: 100)
+ different progressview indicators - https://stackoverflow.com/a/59056440/2641380
+ 
  
  to use image as background
  Text("Hello World")
@@ -73,7 +79,8 @@ struct mainContentView_Previews: PreviewProvider {
                      }
                  }
  
- pushnotifications, localnotifications in SwiftUIViewApp
+ pushnotifications
+ // SSTODO (MenuView) to create views to show list of local notifications and to create new local notification
  
  use new Views lazy grid/stack
  
@@ -87,5 +94,14 @@ struct mainContentView_Previews: PreviewProvider {
  
  to check
   https://www.raywenderlich.com/1484288-preventing-man-in-the-middle-attacks-in-ios-with-ssl-pinning
+ 
+ Round specific corners for any side
+ https://stackoverflow.com/a/58606176/2641380
+ 
+ MKPointAnnotation - Map - How to call a function or tell if Annotation Point is clicked on.
+ https://stackoverflow.com/q/64950827/2641380
+ 
+ iOS Charts - How to get highlighted value
+ https://stackoverflow.com/q/64948971/2641380
  
  */

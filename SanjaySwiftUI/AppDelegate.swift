@@ -33,6 +33,17 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         return true
     }
     
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        print("Successfully registered for notifications!")
+        //print( deviceToken )
+        CommonUtils.cuDeviceTokenId = deviceToken.base64EncodedString() // SSTODO to check
+        print( "base64 = \(deviceToken.base64EncodedString())" )
+    }
+    
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Failed to register for notifications: \(error.localizedDescription)")
+    }
+    
     // MARK: Reachability
     
     func callReachabilityConnection() {

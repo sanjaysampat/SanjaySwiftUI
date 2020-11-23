@@ -13,6 +13,8 @@
 		7204277524DFFEB900DF4958 /* SwiftUIImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204277424DFFEB900DF4958 /* SwiftUIImageCache.swift */; };
 		7204277B24E01CC800DF4958 /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204277924E01CC700DF4958 /* SCLAlertView.swift */; };
 		7204277C24E01CC800DF4958 /* SCLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7204277A24E01CC700DF4958 /* SCLExtensions.swift */; };
+		72066E52256BD98500D16AE7 /* NotificationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72066E51256BD98400D16AE7 /* NotificationListView.swift */; };
+		72066E53256BD98600D16AE7 /* NotificationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72066E51256BD98400D16AE7 /* NotificationListView.swift */; };
 		7210DD9E2518D77D0013DB94 /* GeometryOfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7210DD9D2518D77D0013DB94 /* GeometryOfView.swift */; };
 		7210DD9F2518D77D0013DB94 /* GeometryOfView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7210DD9D2518D77D0013DB94 /* GeometryOfView.swift */; };
 		7210DDA52518E48C0013DB94 /* EnviornmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7210DDA42518E48C0013DB94 /* EnviornmentView.swift */; };
@@ -227,6 +229,10 @@
 		72735B9424D034B0006B75C9 /* CropRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B7324D034B0006B75C9 /* CropRectView.swift */; };
 		72735B9824D03BE5006B75C9 /* SSPhotoEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B9724D03BE5006B75C9 /* SSPhotoEditorViewController.swift */; };
 		72735B9A24D048C7006B75C9 /* UIImage+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B9924D048C7006B75C9 /* UIImage+Extra.swift */; };
+		727ACC28256B86E300FD7711 /* LocalNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727ACC27256B86E300FD7711 /* LocalNotificationCenter.swift */; };
+		727ACC29256B86E300FD7711 /* LocalNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727ACC27256B86E300FD7711 /* LocalNotificationCenter.swift */; };
+		727ACC2F256B89DD00FD7711 /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727ACC2E256B89DD00FD7711 /* LocalNotification.swift */; };
+		727ACC30256B89DD00FD7711 /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727ACC2E256B89DD00FD7711 /* LocalNotification.swift */; };
 		727BF0CC2525EEAA0061BD7F /* SSMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727BF0CB2525EEA90061BD7F /* SSMapView.swift */; };
 		727BF0CD2525EEAA0061BD7F /* SSMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727BF0CB2525EEA90061BD7F /* SSMapView.swift */; };
 		727E111224F6A994007231F7 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E111124F6A994007231F7 /* MenuView.swift */; };
@@ -381,6 +387,7 @@
 		7204277424DFFEB900DF4958 /* SwiftUIImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIImageCache.swift; sourceTree = "<group>"; };
 		7204277924E01CC700DF4958 /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
 		7204277A24E01CC700DF4958 /* SCLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLExtensions.swift; sourceTree = "<group>"; };
+		72066E51256BD98400D16AE7 /* NotificationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationListView.swift; sourceTree = "<group>"; };
 		7210DD9D2518D77D0013DB94 /* GeometryOfView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeometryOfView.swift; sourceTree = "<group>"; };
 		7210DDA42518E48C0013DB94 /* EnviornmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviornmentView.swift; sourceTree = "<group>"; };
 		7216BB5B24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonPhotoImagePickerViewController.swift; sourceTree = "<group>"; };
@@ -474,6 +481,8 @@
 		72735B7324D034B0006B75C9 /* CropRectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropRectView.swift; sourceTree = "<group>"; };
 		72735B9724D03BE5006B75C9 /* SSPhotoEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSPhotoEditorViewController.swift; sourceTree = "<group>"; };
 		72735B9924D048C7006B75C9 /* UIImage+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extra.swift"; sourceTree = "<group>"; };
+		727ACC27256B86E300FD7711 /* LocalNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationCenter.swift; sourceTree = "<group>"; };
+		727ACC2E256B89DD00FD7711 /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
 		727BF0CB2525EEA90061BD7F /* SSMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSMapView.swift; sourceTree = "<group>"; };
 		727E111124F6A994007231F7 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		727E111324F6C091007231F7 /* PublicCommit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicCommit.swift; sourceTree = "<group>"; };
@@ -752,6 +761,7 @@
 				7252C1842555445E005C1B4F /* RecordedStore.swift */,
 				7252C191255583F2005C1B4F /* RecordDetailView.swift */,
 				7297839F25654DC7009DE59D /* SignatureListView.swift */,
+				72066E51256BD98400D16AE7 /* NotificationListView.swift */,
 			);
 			path = SanjaySwiftUI;
 			sourceTree = "<group>";
@@ -847,6 +857,15 @@
 			path = Photo_Editor;
 			sourceTree = "<group>";
 		};
+		727ACC26256B869600FD7711 /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				727ACC27256B86E300FD7711 /* LocalNotificationCenter.swift */,
+				727ACC2E256B89DD00FD7711 /* LocalNotification.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
 		727BF0CA2525EE810061BD7F /* SSMapView */ = {
 			isa = PBXGroup;
 			children = (
@@ -885,6 +904,7 @@
 		729B0EF024C979FD00054F9F /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				727ACC26256B869600FD7711 /* Notifications */,
 				7228011E255053F000D34AFD /* Reachability */,
 				727BF0CA2525EE810061BD7F /* SSMapView */,
 				726763EC24FBA27E0074715B /* VisualEffectBlur.swift */,
@@ -1348,6 +1368,7 @@
 				72BBAF1724DED16100CFC7D6 /* SwiftyJSON.swift in Sources */,
 				72A42D532547F044002201DF /* UserSettings.swift in Sources */,
 				7204276924DFD4A200DF4958 /* SwiftUIImageLoader.swift in Sources */,
+				72066E52256BD98500D16AE7 /* NotificationListView.swift in Sources */,
 				72663AB824C5C7AC000596C9 /* SanjaySwiftUI.xcdatamodeld in Sources */,
 				7204276724DFD43D00DF4958 /* SwiftUIAsyncImageView.swift in Sources */,
 				72B551CA24DD743E009A0014 /* Landmark.swift in Sources */,
@@ -1437,10 +1458,12 @@
 				72C29E9025373D900051E936 /* ScreenRecorder.swift in Sources */,
 				72663AB524C5C7AC000596C9 /* SceneDelegate.swift in Sources */,
 				72735B7E24D034B0006B75C9 /* PhotoEditor+Font.swift in Sources */,
+				727ACC28256B86E300FD7711 /* LocalNotificationCenter.swift in Sources */,
 				72735B9A24D048C7006B75C9 /* UIImage+Extra.swift in Sources */,
 				72735B9224D034B0006B75C9 /* ColorCollectionViewCell.swift in Sources */,
 				727E111224F6A994007231F7 /* MenuView.swift in Sources */,
 				7228012D2550547000D34AFD /* Reachability.swift in Sources */,
+				727ACC2F256B89DD00FD7711 /* LocalNotification.swift in Sources */,
 				72F2EBEF2531F2F700AA8454 /* MultiSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1479,6 +1502,7 @@
 				726763F624FBB27E0074715B /* SwiftyJSON.swift in Sources */,
 				72A42D542547F044002201DF /* UserSettings.swift in Sources */,
 				726763F724FBB27E0074715B /* SwiftUIImageLoader.swift in Sources */,
+				72066E53256BD98600D16AE7 /* NotificationListView.swift in Sources */,
 				726763F824FBB27E0074715B /* SanjaySwiftUI.xcdatamodeld in Sources */,
 				726763F924FBB27E0074715B /* SwiftUIAsyncImageView.swift in Sources */,
 				726763FA24FBB27E0074715B /* Landmark.swift in Sources */,
@@ -1568,10 +1592,12 @@
 				72C29E9125373D900051E936 /* ScreenRecorder.swift in Sources */,
 				7267643024FBB27E0074715B /* SceneDelegate.swift in Sources */,
 				7267643124FBB27E0074715B /* PhotoEditor+Font.swift in Sources */,
+				727ACC29256B86E300FD7711 /* LocalNotificationCenter.swift in Sources */,
 				7267643224FBB27E0074715B /* UIImage+Extra.swift in Sources */,
 				7267643324FBB27E0074715B /* ColorCollectionViewCell.swift in Sources */,
 				7267643424FBB27E0074715B /* MenuView.swift in Sources */,
 				7228012E2550547000D34AFD /* Reachability.swift in Sources */,
+				727ACC30256B89DD00FD7711 /* LocalNotification.swift in Sources */,
 				72F2EBF02531F2F700AA8454 /* MultiSelectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

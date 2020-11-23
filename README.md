@@ -160,10 +160,17 @@ SwiftUI project creation to learn.
     
 16. Changed from AppDelegate and SceneDelegate to App protocol introduced in XCode 12.
 
-17. When SwiftUI does not have many views in a screen, the loading of App is faster. ( SwiftUI only loads views when they are seen on screen )
-    * we should create small and multiple views in a screen, each view with single responsibility ( **S**OLID )
-    * Each app screen should not be cluttered with many functionalities. 
-    * The visibility of options and data should be easy to see for users. 
+17. PushNotifications :
+    * MenuView - Create and present Local Notification after 10 seconds, Show Last Presented and Received Notification.
+    * Remote Notification error when calling 'UIApplication.shared.registerForRemoteNotifications()'
+        * Failed to register for notifications: no valid “aps-environment” entitlement string found for application
+            * To resolve add "Push Notifications" capability at - Project Settings - targets - Signing and Capabilities.
+
+Important Note :-
+    (1) When SwiftUI does not have many views in a screen, the loading of App is faster. ( SwiftUI only loads views when they are seen on screen )
+        * we should create small and multiple views in a screen, each view with single responsibility ( **S**OLID )
+        * Each app screen should not be cluttered with many functionalities. 
+        * The visibility of options and data should be easy to see for users. 
     
 <sub><sup>Note :-    
 (1) Replace 'PrivateCommit' with 'PublicCommit' to run. 

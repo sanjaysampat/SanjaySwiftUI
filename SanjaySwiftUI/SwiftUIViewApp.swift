@@ -32,7 +32,9 @@ struct SwiftUIViewApp: App {
     var body: some Scene {
         WindowGroup {
             MainContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext).environmentObject(UserSettings()).environmentObject(UserAuth())
+                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+                .environmentObject(UserSettings())
+                .environmentObject(UserAuth())
         }
         .onChange(of: scenePhase) { (newScenePhase) in
             switch newScenePhase {
