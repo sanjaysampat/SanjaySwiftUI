@@ -52,6 +52,9 @@ SwiftUI project creation to learn.
             * Issue while adding more observers.
             * 'SourceKitService" and/or 'Swift' process on mac taking max memory, so xcode and all mac proccesses slogs to halt ( macOS Catalina 10.15.6, tried on XCode 11.6 and 11.5). The issue was solved after update of XCode 11.7.
     * Added Navigation view - 'Menu' option in content view. Now back and User Settings button on navigation bar.
+    
+        ![localizationLanguges](readmeResource/Menu.jpg)
+    
     * TabSwiftUiView added with Localizable Strings files for "ગુજરાતી" and "मराठी" display in tab. 
         * Refer: [Support multiple languages by localizing your iOS apps](https://zonneveld.dev/localize-your-ios-apps-to-support-multiple-languages/)
         * Added hardcode files LocalArabic, LocalGujarati and LocalMarathi .strings files to manually show strings in selected languages in tab
@@ -156,6 +159,9 @@ SwiftUI project creation to learn.
         * On click open the mpeg file to play it.
         
 15. SignatureListView - Usage of .svg files from assets (with photos and weblink to wikipedia.org)
+
+    ![localizationLanguges](readmeResource/signaturesList.jpg)
+
     * Work-In-Progress - Will develop a puzzle game to match Name with Signatures and Photos.
     
 16. Changed from AppDelegate and SceneDelegate to App protocol introduced in XCode 12.
