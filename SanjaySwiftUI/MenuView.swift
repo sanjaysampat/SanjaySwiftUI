@@ -15,14 +15,13 @@ struct MenuView: View {
     @Binding var currentPos:Int
     
     @StateObject var localNotification = LocalNotification()
-    
+    @StateObject var localNotificationCenter = LocalNotificationCenter.shared
+
     @State var showNotification:Bool = false
-    @State var createLocalNotification:Bool = false
     
     @State var presentedSettings:Bool = false
     
     private let whoAmI:CallingViews = CallingViews.main
-    private let localNotificationCenter = LocalNotificationCenter.shared
 
     var body: some View {
         NavigationView {
@@ -338,7 +337,7 @@ struct MenuView: View {
                                         Image(systemName: "bell")
                                             .scaleEffect(CGSize(width: 1.0, height: 1.0))
                                     }
-                                    Text("Create Local Notificaiton")
+                                    Text("Create Local Notificaiton in 10 seconds")
                                         .font(.caption)
                                 }
                                 .font(.body)
@@ -360,7 +359,7 @@ struct MenuView: View {
                                         Image(systemName: "bell")
                                             .scaleEffect(CGSize(width: 0.7, height: 0.7))
                                     }
-                                    Text("Show Last Notification")
+                                    Text("Show Notification List")
                                         .font(.caption)
                                 }
                                 .font(.body)

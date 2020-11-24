@@ -13,15 +13,15 @@ struct CheckGridsView: View {
         NavigationView {
             List {
                 NavigationLink(destination: Grid1(), label: {
-                    Text("Regular Grids")
+                    Text("Regular Lazy Grid")
                 })
                 
                 NavigationLink(destination: Grid2(), label: {
-                    Text("Honeycomb Grid")
+                    Text("Honeycomb Lazy Grid")
                 })
                 
                 NavigationLink(destination: Grid3(), label: {
-                    Text("Resizable Grid")
+                    Text("Resizable Lazy Grid")
                 })
                 
                 /*
@@ -49,7 +49,7 @@ struct Grid1: View {
                 Text("The example will work only on and above iOS 14.")
             }
         }
-        .navigationBarTitle(Text("Regular Grids"), displayMode: .inline)
+        .navigationBarTitle(Text("Regular Lazy Grid"), displayMode: .inline)
         //.padding(.bottom, 10)
     }
 }
@@ -63,7 +63,7 @@ struct Grid2: View {
                 Text("The example will work only on and above iOS 14.")
             }
         }
-        .navigationBarTitle(Text("Honeycomb Grid"), displayMode: .inline)
+        .navigationBarTitle(Text("Honeycomb Lazy Grid"), displayMode: .inline)
         //.padding(.bottom, 10)
     }
 }
@@ -77,7 +77,7 @@ struct Grid3: View {
                 Text("The example will work only on and above iOS 14.")
             }
         }
-        .navigationBarTitle(Text("Resizable Grid"), displayMode: .inline)
+        .navigationBarTitle(Text("Resizable Lazy Grid"), displayMode: .inline)
         //.padding(.bottom, 10)
     }
 }
@@ -87,15 +87,15 @@ struct Grid3: View {
 @available(iOS 14.0, *)
 struct RegularGrid: View {
     let cols: Int = 3
-    let spacing: CGFloat = 4
-    let imgsize = CGSize(width: 150, height: 150)
+    let spacing: CGFloat = 2
+    let imgsize = CGSize(width: 135, height: 135)
     
     var body: some View {
         let gridItems = Array(repeating: GridItem(.fixed(imgsize.width), spacing: spacing), count: cols)
         
         ScrollView(.vertical) {
             LazyVGrid(columns: gridItems, spacing: spacing) {
-                ForEach(0..<200) { idx in
+                ForEach(0..<210) { idx in
                     Image("img-\(idx % 42)")
                         .resizable()
                         .scaledToFit()
@@ -124,7 +124,7 @@ struct HoneycombGrid: View {
         
         ScrollView(.vertical) {
             LazyVGrid(columns: gridItems, spacing: spacing) {
-                ForEach(0..<200) { idx in
+                ForEach(0..<205) { idx in
                     
                     VStack(spacing: 0) {
                         Image("img-\(idx % 41)")
@@ -217,7 +217,7 @@ struct ResizableGrid: View {
             ScrollView(.vertical) {
                 LazyVGrid(columns: gridItems, spacing: spacing, pinnedViews: .sectionHeaders) {
                     Section(header: HeaderView(info: self.info)) {
-                        ForEach(0..<200) { idx in
+                        ForEach(0..<210) { idx in
                             Image("img-\(idx % 42)")
                                 .resizable()
                                 //.scaledToFit() // Not working here TODO

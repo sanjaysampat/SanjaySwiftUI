@@ -9,35 +9,24 @@
 import SwiftUI
 
 struct NotificationListView: View {
+    @Environment(\.managedObjectContext) var managedObjectContext
+
+    @FetchRequest(
+        entity: LocalNotificationData.entity(),
+        sortDescriptors: [
+            NSSortDescriptor(keyPath: \LocalNotificationData.datetime, ascending: false)
+        ]
+    ) var localNotifications: FetchedResults<LocalNotificationData>
+
     @Binding var showNotification:Bool
 
     @StateObject var localNotificationCenter = LocalNotificationCenter.shared
 
     var body: some View {
         VStack {
-            //if self.showNotification {
-            Text("Last Notification:")
-                .padding(.bottom, 5)
-
-            if let notificationWillPresent = localNotificationCenter.notificationWillPresent  {
-                Text("Presented")
-                    .underline()
-                Text(verbatim: notificationWillPresent.request.content.title)
-                    .font(.title)
-                Text(verbatim: notificationWillPresent.request.content.subtitle)
-                    .font(.title2)
-                Text(verbatim: notificationWillPresent.request.content.body)
-                    .font(.body)
-                    .padding(.bottom, 5)
-            } else {
-                Text("You have to create Local Notification.")
-                    .padding(.bottom, 5)
-            }
-            
             if let notificationResponseData = localNotificationCenter.notificationResponseData  {
-                Text("Received")
+                Text("Last notification received")
                     .underline()
-                //Text(verbatim: notificationResponseData.actionIdentifier)
                 Text(verbatim: notificationResponseData.notification.request.content.title)
                     .font(.title)
                 Text(verbatim: notificationResponseData.notification.request.content.subtitle)
@@ -47,16 +36,57 @@ struct NotificationListView: View {
                     .padding(.bottom, 5)
             }
             
-            //}
-            Button(action: {
-                withAnimation{
-                    self.showNotification.toggle()
+            HStack {
+                Button(action: {
+                    withAnimation{
+                        self.showNotification.toggle()
+                    }
+                }) {
+                    Text("Close")
                 }
-            }) {
-                Text("Close")
+                Spacer()
+                
+                EditButton()
             }
+            .padding()
+            
+            List {
+                ForEach(localNotifications, id: \.datetime) { notificationData in
+                    VStack(alignment:.leading) {
+                        if let title = notificationData.title, !title.isEmpty {
+                            Text(title).font(.title2).bold()
+                        }
+                        if let subtitle = notificationData.subtitle, !subtitle.isEmpty {
+                            Text(subtitle).font(.title2)
+                        }
+                        if let body = notificationData.body, !body.isEmpty {
+                            Text(body)
+                        }
+                    }
+                }
+                .onDelete(perform: delete)
+                //.onMove(perform: move)
+            }
+            
         }
     }
+    
+    func delete(at offsets: IndexSet) {
+        offsets.forEach { index in
+            let notificationData = self.localNotifications[index]
+            self.managedObjectContext.delete(notificationData)
+        }
+        self.saveContext()
+    }
+
+    func saveContext() {
+        do {
+            try managedObjectContext.save()
+        } catch {
+            print("Error saving managed object context: \(error)")
+        }
+    }
+    
 }
 
 struct NotificationListView_Previews: PreviewProvider {

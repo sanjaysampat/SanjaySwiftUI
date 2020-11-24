@@ -31,6 +31,10 @@
 		7219C797256CE62900F324CC /* signaturesList.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7219C794256CE62900F324CC /* signaturesList.jpg */; };
 		7219C798256CE62900F324CC /* Menu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7219C795256CE62900F324CC /* Menu.jpg */; };
 		7219C799256CE62900F324CC /* Menu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7219C795256CE62900F324CC /* Menu.jpg */; };
+		7219C7C4256D024100F324CC /* LocalNotificationData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7219C7C2256D024100F324CC /* LocalNotificationData+CoreDataClass.swift */; };
+		7219C7C5256D024100F324CC /* LocalNotificationData+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7219C7C2256D024100F324CC /* LocalNotificationData+CoreDataClass.swift */; };
+		7219C7C6256D024100F324CC /* LocalNotificationData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7219C7C3256D024100F324CC /* LocalNotificationData+CoreDataProperties.swift */; };
+		7219C7C7256D024100F324CC /* LocalNotificationData+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7219C7C3256D024100F324CC /* LocalNotificationData+CoreDataProperties.swift */; };
 		7225A43D252DEC830081A793 /* apple-pay-payment-service-providers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7225A43C252DEC810081A793 /* apple-pay-payment-service-providers.jpg */; };
 		7225A43E252DEC830081A793 /* apple-pay-payment-service-providers.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7225A43C252DEC810081A793 /* apple-pay-payment-service-providers.jpg */; };
 		722801222550541100D34AFD /* ReachabilityDg.m in Sources */ = {isa = PBXBuildFile; fileRef = 722801212550541100D34AFD /* ReachabilityDg.m */; };
@@ -401,6 +405,8 @@
 		7219C78D256CE44900F324CC /* localizationLanguges.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = localizationLanguges.jpg; sourceTree = "<group>"; };
 		7219C794256CE62900F324CC /* signaturesList.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = signaturesList.jpg; sourceTree = "<group>"; };
 		7219C795256CE62900F324CC /* Menu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Menu.jpg; sourceTree = "<group>"; };
+		7219C7C2256D024100F324CC /* LocalNotificationData+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalNotificationData+CoreDataClass.swift"; sourceTree = "<group>"; };
+		7219C7C3256D024100F324CC /* LocalNotificationData+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LocalNotificationData+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7225A43C252DEC810081A793 /* apple-pay-payment-service-providers.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "apple-pay-payment-service-providers.jpg"; sourceTree = "<group>"; };
 		7228010B2550532500D34AFD /* SanjaySwiftUI-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SanjaySwiftUI-Bridging-Header.h"; sourceTree = "<group>"; };
 		7228010C2550533400D34AFD /* SanjaySwiftUIPay-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SanjaySwiftUIPay-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -938,6 +944,8 @@
 		729B0EF924C9B41600054F9F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				7219C7C2256D024100F324CC /* LocalNotificationData+CoreDataClass.swift */,
+				7219C7C3256D024100F324CC /* LocalNotificationData+CoreDataProperties.swift */,
 				72F0CBDB24F7F24600BE9DB0 /* Audio+CoreDataClass.swift */,
 				72F0CBDC24F7F24600BE9DB0 /* Audio+CoreDataProperties.swift */,
 				7216BB5D24D17BC30097AFA4 /* Person+CoreDataProperties.swift */,
@@ -1384,8 +1392,10 @@
 				72663AB824C5C7AC000596C9 /* SanjaySwiftUI.xcdatamodeld in Sources */,
 				7204276724DFD43D00DF4958 /* SwiftUIAsyncImageView.swift in Sources */,
 				72B551CA24DD743E009A0014 /* Landmark.swift in Sources */,
+				7219C7C6256D024100F324CC /* LocalNotificationData+CoreDataProperties.swift in Sources */,
 				72735B9124D034B0006B75C9 /* PhotoEditor+Crop.swift in Sources */,
 				72F0CBDE24F7F24600BE9DB0 /* Audio+CoreDataProperties.swift in Sources */,
+				7219C7C4256D024100F324CC /* LocalNotificationData+CoreDataClass.swift in Sources */,
 				72F2EBED2531F2F700AA8454 /* MultiSelector.swift in Sources */,
 				72735B9324D034B0006B75C9 /* GradientView.swift in Sources */,
 				72735B5124D02872006B75C9 /* CustomImagePickerViewController.swift in Sources */,
@@ -1518,8 +1528,10 @@
 				726763F824FBB27E0074715B /* SanjaySwiftUI.xcdatamodeld in Sources */,
 				726763F924FBB27E0074715B /* SwiftUIAsyncImageView.swift in Sources */,
 				726763FA24FBB27E0074715B /* Landmark.swift in Sources */,
+				7219C7C7256D024100F324CC /* LocalNotificationData+CoreDataProperties.swift in Sources */,
 				726763FB24FBB27E0074715B /* PhotoEditor+Crop.swift in Sources */,
 				726763FC24FBB27E0074715B /* Audio+CoreDataProperties.swift in Sources */,
+				7219C7C5256D024100F324CC /* LocalNotificationData+CoreDataClass.swift in Sources */,
 				72F2EBEE2531F2F700AA8454 /* MultiSelector.swift in Sources */,
 				726763FD24FBB27E0074715B /* GradientView.swift in Sources */,
 				726763FE24FBB27E0074715B /* CustomImagePickerViewController.swift in Sources */,

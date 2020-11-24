@@ -80,9 +80,8 @@ struct mainContentView_Previews: PreviewProvider {
                  }
  
  pushnotifications
- // SSTODO (MenuView) to create views to show list of local notifications and to create new local notification
- 
- use new Views lazy grid/stack
+  
+ use new Views lazy stack
  
  how to create App clip
  
