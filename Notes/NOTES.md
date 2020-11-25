@@ -56,15 +56,15 @@
 
 1. [The Atlasnye playing cards deck laid out, in SVG vector format. The picture card images are based on A.I.Charlemagne's original sketches (which are in the public domain themselves due to old age)](https://en.wikipedia.org/wiki/File:Atlasnye_playing_cards_deck.svg)
 
-2. [Artificial intelligence fake people face creation]( https://www.nytimes.com/interactive/2020/11/21/science/artificial-intelligence-fake-people-faces.html?utm_source=pocket-newtab-intl-en) 
+2. [Artificial intelligence - fake image creation]( https://www.nytimes.com/interactive/2020/11/21/science/artificial-intelligence-fake-people-faces.html?utm_source=pocket-newtab-intl-en) 
     * Examples
-        * Person [https://thispersondoesnotexist.com/](https://thispersondoesnotexist.com/)
+        * Person - fake people face creation [https://thispersondoesnotexist.com/](https://thispersondoesnotexist.com/)
         * Cat [https://thiscatdoesnotexist.com/](https://thiscatdoesnotexist.com/)
         * Art [https://thisartworkdoesnotexist.com/](https://thisartworkdoesnotexist.com/)
         * Horse [https://thishorsedoesnotexist.com/](https://thishorsedoesnotexist.com/)
         * Chemicals [https://thischemicaldoesnotexist.com/](https://thischemicaldoesnotexist.com/)
     * Imagined by a GAN [generative adversarial network](https://en.wikipedia.org/wiki/Generative_adversarial_network)
-    * Learn how it works - [[1](https://www.youtube.com/watch?v=u8qPvzk0AfY)], [[2](https://www.youtube.com/watch?v=dCKbRCUyop8)] and [[3](https://www.youtube.com/watch?v=SWoravHhsUU)]
+    * how it works (youtube) - [[1](https://www.youtube.com/watch?v=u8qPvzk0AfY)], [[2](https://www.youtube.com/watch?v=dCKbRCUyop8)] and [[3](https://www.youtube.com/watch?v=SWoravHhsUU)]
     * Code for training your own [[original](https://github.com/NVlabs/stylegan2)], [[simple](https://github.com/lucidrains/stylegan2-pytorch)]
 
 
