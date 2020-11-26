@@ -372,6 +372,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		72412B5C256FCE1F00E18E33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72663AA724C5C7AC000596C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 726763EE24FBB27E0074715B;
+			remoteInfo = SanjaySwiftUIPay;
+		};
+		72412B5E256FCE2300E18E33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 72663AA724C5C7AC000596C9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 726763EE24FBB27E0074715B;
+			remoteInfo = SanjaySwiftUIPay;
+		};
 		72663AC924C5C7BD000596C9 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 72663AA724C5C7AC000596C9 /* Project object */;
@@ -1114,6 +1128,7 @@
 			);
 			dependencies = (
 				72663ACA24C5C7BD000596C9 /* PBXTargetDependency */,
+				72412B5D256FCE1F00E18E33 /* PBXTargetDependency */,
 			);
 			name = SanjaySwiftUITests;
 			productName = SanjaySwiftUITests;
@@ -1132,6 +1147,7 @@
 			);
 			dependencies = (
 				72663AD524C5C7BE000596C9 /* PBXTargetDependency */,
+				72412B5F256FCE2300E18E33 /* PBXTargetDependency */,
 			);
 			name = SanjaySwiftUIUITests;
 			productName = SanjaySwiftUIUITests;
@@ -1171,11 +1187,11 @@
 					};
 					72663AC724C5C7BD000596C9 = {
 						CreatedOnToolsVersion = 11.6;
-						TestTargetID = 72663AAE24C5C7AC000596C9;
+						TestTargetID = 726763EE24FBB27E0074715B;
 					};
 					72663AD224C5C7BE000596C9 = {
 						CreatedOnToolsVersion = 11.6;
-						TestTargetID = 72663AAE24C5C7AC000596C9;
+						TestTargetID = 726763EE24FBB27E0074715B;
 					};
 					726763EE24FBB27E0074715B = {
 						LastSwiftMigration = 1210;
@@ -1629,6 +1645,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		72412B5D256FCE1F00E18E33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 726763EE24FBB27E0074715B /* SanjaySwiftUIPay */;
+			targetProxy = 72412B5C256FCE1F00E18E33 /* PBXContainerItemProxy */;
+		};
+		72412B5F256FCE2300E18E33 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 726763EE24FBB27E0074715B /* SanjaySwiftUIPay */;
+			targetProxy = 72412B5E256FCE2300E18E33 /* PBXContainerItemProxy */;
+		};
 		72663ACA24C5C7BD000596C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 72663AAE24C5C7AC000596C9 /* SanjaySwiftUI */;
@@ -1839,9 +1865,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XH9Q2X3CYJ;
+				DEVELOPMENT_TEAM = H83M7E9Y5U;
 				INFOPLIST_FILE = SanjaySwiftUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1851,7 +1877,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SanjaySwiftUI.app/SanjaySwiftUI";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SanjaySwiftUIPay.app/SanjaySwiftUIPay";
 			};
 			name = Debug;
 		};
@@ -1861,9 +1887,9 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XH9Q2X3CYJ;
+				DEVELOPMENT_TEAM = H83M7E9Y5U;
 				INFOPLIST_FILE = SanjaySwiftUITests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1873,7 +1899,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SanjaySwiftUI.app/SanjaySwiftUI";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SanjaySwiftUIPay.app/SanjaySwiftUIPay";
 			};
 			name = Release;
 		};
@@ -1882,8 +1908,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XH9Q2X3CYJ;
+				DEVELOPMENT_TEAM = H83M7E9Y5U;
 				INFOPLIST_FILE = SanjaySwiftUIUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1893,7 +1920,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SanjaySwiftUI;
+				TEST_TARGET_NAME = SanjaySwiftUIPay;
 			};
 			name = Debug;
 		};
@@ -1902,8 +1929,9 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XH9Q2X3CYJ;
+				DEVELOPMENT_TEAM = H83M7E9Y5U;
 				INFOPLIST_FILE = SanjaySwiftUIUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1913,7 +1941,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = SanjaySwiftUI;
+				TEST_TARGET_NAME = SanjaySwiftUIPay;
 			};
 			name = Release;
 		};

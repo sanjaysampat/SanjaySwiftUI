@@ -87,7 +87,7 @@ struct CommonUtils {
     static var cuApplicationSupportFolder       = ""
     static var cuScreenRecordFolder             = ""
     
-    
+    // TDD - testCommonUtilsCreateRequiredFolders()
     static func createRequiredFolders() -> Bool {
         
         let fileManager:FileManager = FileManager.default
@@ -130,6 +130,7 @@ struct CommonUtils {
         return true
     }
     
+    // TDD - testCommonUtilssStoreJsonToDocumentFile() - 3
     // eg. to use - storeJsonToDocumentFile(signin, to: "Users/\(userEmail)", as: "signin.json")
     static func storeJsonToDocumentFile<T: Encodable>(_ object: T, to folderName:String, as fileName: String) -> Bool {
         var isSuccess = false
@@ -143,6 +144,7 @@ struct CommonUtils {
         return isSuccess
     }
     
+    // TDD - testCommonUtilssStoreJsonToDocumentFile() - 4
     static func writeFileToDocument(folderName:String, fileName:String, fileData:Data, atomicWrite:Bool = true) -> Bool {
         return writeFile(basePath:CommonUtils.cuDocumentFolderPath, folderName:folderName, fileName:fileName, fileData:fileData, atomicWrite:atomicWrite)
     }
@@ -151,6 +153,7 @@ struct CommonUtils {
         return writeFile(basePath:CommonUtils.cuApplicationSupportFolder, folderName:folderName, fileName:fileName, fileData:fileData, atomicWrite:atomicWrite)
     }
 
+    // TDD - testCommonUtilssStoreJsonToDocumentFile() - 5
     static func writeFile(basePath:String, folderName:String, fileName:String, fileData:Data, atomicWrite:Bool = true) -> Bool {
         let fileManager:FileManager = FileManager.default
         do
@@ -203,6 +206,7 @@ struct CommonUtils {
         return fileData
     }
     
+    // TDD - testCommonUtilssStoreJsonToDocumentFile() - 6
     static func removeFileFromDocument(folderName:String, fileName:String) -> Bool {
         return removeFile(basePath:CommonUtils.cuDocumentFolderPath, folderName:folderName, fileName:fileName)
     }
@@ -211,6 +215,7 @@ struct CommonUtils {
         return removeFile(basePath:CommonUtils.cuApplicationSupportFolder, folderName:folderName, fileName:fileName)
     }
 
+    // TDD - testCommonUtilssStoreJsonToDocumentFile() - 7
     static func removeFile( basePath:String, folderName:String, fileName:String ) -> Bool {
         do
         {
@@ -227,7 +232,7 @@ struct CommonUtils {
     }
     
     // MARK: - Image Methods
-    
+    // TDD - testCommonUtilsthumbnailForVideoAtURL() && testPerformanceCommonUtilsthumbnailForVideoAtURL()
     static func thumbnailForVideoAtURL(url: URL, maxWidth: Int = 0) -> UIImage? {
         var returnImageOptional:UIImage? // = UIImage(named: "delete_selection_gray")  // default image if required.
         let asset = AVAsset(url: url)

@@ -171,6 +171,8 @@ SwiftUI project creation to learn.
     * Remote Notification error when calling 'UIApplication.shared.registerForRemoteNotifications()'
         * Failed to register for notifications: no valid “aps-environment” entitlement string found for application
             * To resolve add "Push Notifications" capability at - Project Settings - targets - Signing and Capabilities.
+            
+18. XCTestCase - testing case creation started. ( Ref: SanjaySwiftUITests.swift )
 
 * Important Note :-
     1. When SwiftUI does not have many views in a screen, the loading of App is faster. ( SwiftUI only loads views when they are seen on screen )

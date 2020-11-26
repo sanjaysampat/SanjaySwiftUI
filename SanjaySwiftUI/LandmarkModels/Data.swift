@@ -27,10 +27,13 @@ func reloadLandmarkData() {
 fileprivate let signaturesDocumentFolder = "signatures"
 fileprivate let signaturesFilename = "signaturesData.json"
 
+// TDD - testCommonUtilssStoreJsonToDocumentFile() - 1
 var signaturesData: [Signature] = loadJsonFile(signaturesFilename, signaturesDocumentFolder)
 
+// call this var when required to save file to document folder
 let isSignatuesDataSaved:Bool = CommonUtils.storeJsonToDocumentFile(signaturesData, to: signaturesDocumentFolder, as: signaturesFilename)
 
+// call this var when required to delete file from document folder
 let isSignaturesDataFileDeleted:Bool = CommonUtils.removeFileFromDocument(folderName: signaturesDocumentFolder, fileName: signaturesFilename)
 
 func reloadSignaturesDataWithShuffle() {
@@ -39,6 +42,7 @@ func reloadSignaturesDataWithShuffle() {
 }
 
 
+// TDD - testCommonUtilssStoreJsonToDocumentFile() - 2
 func loadJsonFile<T: Decodable>(_ filename: String, _ folderName: String) -> T {
     // SSNote - to search first in local folder then load from Bundle
     let folderPath = CommonUtils.cuDocumentFolderPath.stringByAppendingPathComponent(path: folderName)
