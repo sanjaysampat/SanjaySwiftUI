@@ -33,4 +33,12 @@ extension View {
         for v in vars { print(v) }
         return EmptyView()
     }
+    
+    // useful to dismiss keyboard from view.
+    func endEditing() {
+        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+    }
+    
 }
+
+// 

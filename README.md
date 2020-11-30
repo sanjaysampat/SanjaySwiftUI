@@ -166,8 +166,11 @@ SwiftUI project creation to learn.
     
 16. Changed from AppDelegate and SceneDelegate to App protocol introduced in XCode 12.
 
-17. PushNotifications :
-    * MenuView - Create and present Local Notification after 10 seconds, add to coredata, show Notification List with Last Received Notification.
+17. PushNotifications : ( from MenuView )
+    * CreateLocalNotificationView with user selectable timer and Notification title, subtitle and body.
+        * Showing approx time of notification in animated clock.
+    * Present Local Notification, add to coredata, show Notification List with Last Received Notification. 
+        
     * Remote Notification error when calling 'UIApplication.shared.registerForRemoteNotifications()'
         * Failed to register for notifications: no valid “aps-environment” entitlement string found for application
             * To resolve add "Push Notifications" capability at - Project Settings - targets - Signing and Capabilities.

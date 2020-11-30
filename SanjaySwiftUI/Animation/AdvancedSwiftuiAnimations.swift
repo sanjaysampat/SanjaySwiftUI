@@ -508,7 +508,7 @@ struct Example5: View {
                 
                 MyButton(label: "10:10:40", font: .caption, textColor: .black) {
                     self.duration = 10.0
-                    self.time = ClockTime(10, 01, 45)
+                    self.time = ClockTime(10, 10, 40)
                 }
                 
             }

@@ -313,13 +313,8 @@ struct MenuView: View {
                         Divider()
                     }
                     
-                    //Group {
-                    //    Divider()
-                    //}
-                    
                     Group {
-                        // SSTODO to create views to show list of local notifications and to create new local notification
-                        
+                        /*
                         Button(action: {
                             let formatter3 = DateFormatter()
                             formatter3.dateFormat = CommonUtils.cu_VideoFileNameDateFormat
@@ -345,7 +340,26 @@ struct MenuView: View {
                                 .shadow(radius: 1.5)
                             }
                         }
-                        
+                        */
+                        NavigationLink(destination:
+                                        CreateLocalNotificaitonView()
+                        ) {
+                            VStack( alignment: .leading) {
+                                HStack {
+                                    ZStack {
+                                        Image(systemName: "bell")
+                                            .scaleEffect(CGSize(width: 1.0, height: 1.0))
+                                    }
+                                    Text("Create Local Notificaiton")
+                                        .font(.caption)
+                                }
+                                .font(.body)
+                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                .shadow(radius: 1.5)
+                            }
+                            
+                        }
+
                         Button(action: {
                             withAnimation{
                                 self.showNotification.toggle()

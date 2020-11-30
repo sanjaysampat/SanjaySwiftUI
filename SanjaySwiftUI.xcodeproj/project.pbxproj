@@ -66,6 +66,8 @@
 		7252C1862555445E005C1B4F /* RecordedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7252C1842555445E005C1B4F /* RecordedStore.swift */; };
 		7252C192255583F2005C1B4F /* RecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7252C191255583F2005C1B4F /* RecordDetailView.swift */; };
 		7252C193255583F2005C1B4F /* RecordDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7252C191255583F2005C1B4F /* RecordDetailView.swift */; };
+		7263927A2574C241002BA011 /* CreateLocalNotificaitonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726392792574C241002BA011 /* CreateLocalNotificaitonView.swift */; };
+		7263927B2574C241002BA011 /* CreateLocalNotificaitonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726392792574C241002BA011 /* CreateLocalNotificaitonView.swift */; };
 		7263AD51251B79910041A810 /* CheckGridsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7263AD50251B79900041A810 /* CheckGridsView.swift */; };
 		7263AD52251B79910041A810 /* CheckGridsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7263AD50251B79900041A810 /* CheckGridsView.swift */; };
 		72663AB324C5C7AC000596C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72663AB224C5C7AC000596C9 /* AppDelegate.swift */; };
@@ -442,6 +444,7 @@
 		7252C17D255541B1005C1B4F /* RecordedListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedListView.swift; sourceTree = "<group>"; };
 		7252C1842555445E005C1B4F /* RecordedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordedStore.swift; sourceTree = "<group>"; };
 		7252C191255583F2005C1B4F /* RecordDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordDetailView.swift; sourceTree = "<group>"; };
+		726392792574C241002BA011 /* CreateLocalNotificaitonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLocalNotificaitonView.swift; sourceTree = "<group>"; };
 		7263AD50251B79900041A810 /* CheckGridsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckGridsView.swift; sourceTree = "<group>"; };
 		72663AAF24C5C7AC000596C9 /* SanjaySwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SanjaySwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		72663AB224C5C7AC000596C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -788,6 +791,7 @@
 				7252C191255583F2005C1B4F /* RecordDetailView.swift */,
 				7297839F25654DC7009DE59D /* SignatureListView.swift */,
 				72066E51256BD98400D16AE7 /* NotificationListView.swift */,
+				726392792574C241002BA011 /* CreateLocalNotificaitonView.swift */,
 			);
 			path = SanjaySwiftUI;
 			sourceTree = "<group>";
@@ -1499,6 +1503,7 @@
 				727ACC28256B86E300FD7711 /* LocalNotificationCenter.swift in Sources */,
 				72735B9A24D048C7006B75C9 /* UIImage+Extra.swift in Sources */,
 				72735B9224D034B0006B75C9 /* ColorCollectionViewCell.swift in Sources */,
+				7263927A2574C241002BA011 /* CreateLocalNotificaitonView.swift in Sources */,
 				727E111224F6A994007231F7 /* MenuView.swift in Sources */,
 				7228012D2550547000D34AFD /* Reachability.swift in Sources */,
 				727ACC2F256B89DD00FD7711 /* LocalNotification.swift in Sources */,
@@ -1635,6 +1640,7 @@
 				727ACC29256B86E300FD7711 /* LocalNotificationCenter.swift in Sources */,
 				7267643224FBB27E0074715B /* UIImage+Extra.swift in Sources */,
 				7267643324FBB27E0074715B /* ColorCollectionViewCell.swift in Sources */,
+				7263927B2574C241002BA011 /* CreateLocalNotificaitonView.swift in Sources */,
 				7267643424FBB27E0074715B /* MenuView.swift in Sources */,
 				7228012E2550547000D34AFD /* Reachability.swift in Sources */,
 				727ACC30256B89DD00FD7711 /* LocalNotification.swift in Sources */,
