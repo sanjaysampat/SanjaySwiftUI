@@ -347,6 +347,8 @@
 		72D2498924FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D2498724FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift */; };
 		72D9779F24E1116E0044754C /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D9779E24E1116E0044754C /* CommonExtensions.swift */; };
 		72D977A124E120AC0044754C /* String+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D977A024E120AB0044754C /* String+Extra.swift */; };
+		72E115C12578F7910055B55C /* EnumerationSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E115C02578F7910055B55C /* EnumerationSampleView.swift */; };
+		72E115C22578F7910055B55C /* EnumerationSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E115C02578F7910055B55C /* EnumerationSampleView.swift */; };
 		72E42CD82511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E42CD72511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift */; };
 		72E42CD92511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E42CD72511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift */; };
 		72EDF200250BA81F00879E40 /* LocalArabic.strings in Resources */ = {isa = PBXBuildFile; fileRef = 72EDF1FF250BA81F00879E40 /* LocalArabic.strings */; };
@@ -588,6 +590,7 @@
 		72D2498724FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLandmarkSwiftUIView.swift; sourceTree = "<group>"; };
 		72D9779E24E1116E0044754C /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
 		72D977A024E120AB0044754C /* String+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extra.swift"; sourceTree = "<group>"; };
+		72E115C02578F7910055B55C /* EnumerationSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumerationSampleView.swift; sourceTree = "<group>"; };
 		72E42CD72511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedSwiftuiAnimations.swift; sourceTree = "<group>"; };
 		72EDF1FF250BA81F00879E40 /* LocalArabic.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = LocalArabic.strings; sourceTree = "<group>"; };
 		72EDF202250BC30800879E40 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -792,6 +795,7 @@
 				7297839F25654DC7009DE59D /* SignatureListView.swift */,
 				72066E51256BD98400D16AE7 /* NotificationListView.swift */,
 				726392792574C241002BA011 /* CreateLocalNotificaitonView.swift */,
+				72E115C02578F7910055B55C /* EnumerationSampleView.swift */,
 			);
 			path = SanjaySwiftUI;
 			sourceTree = "<group>";
@@ -1491,6 +1495,7 @@
 				7252C192255583F2005C1B4F /* RecordDetailView.swift in Sources */,
 				72FEEAA6255133920054AA79 /* Persistence.swift in Sources */,
 				72735B8924D034B0006B75C9 /* EmojisCollectionViewDelegate.swift in Sources */,
+				72E115C12578F7910055B55C /* EnumerationSampleView.swift in Sources */,
 				72735B8B24D034B0006B75C9 /* ResizeControl.swift in Sources */,
 				7204276F24DFFA3600DF4958 /* PrivateCommit.swift in Sources */,
 				723ACB33250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift in Sources */,
@@ -1628,6 +1633,7 @@
 				7252C193255583F2005C1B4F /* RecordDetailView.swift in Sources */,
 				72FEEAA7255133920054AA79 /* Persistence.swift in Sources */,
 				7267642B24FBB27E0074715B /* EmojisCollectionViewDelegate.swift in Sources */,
+				72E115C22578F7910055B55C /* EnumerationSampleView.swift in Sources */,
 				7267642C24FBB27E0074715B /* ResizeControl.swift in Sources */,
 				7267642D24FBB27E0074715B /* PrivateCommit.swift in Sources */,
 				723ACB34250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift in Sources */,

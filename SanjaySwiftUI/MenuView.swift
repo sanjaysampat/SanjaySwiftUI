@@ -142,6 +142,7 @@ struct MenuView: View {
                         
                     }
                     
+                    Group {
                     NavigationLink(destination:
                                     CheckShapesView()
                     ) {
@@ -175,6 +176,7 @@ struct MenuView: View {
                         }
                         
                     }
+                }
                     
                     Group {
                         NavigationLink(destination:
@@ -313,6 +315,29 @@ struct MenuView: View {
                         Divider()
                     }
                     
+                    Group {
+                        NavigationLink(destination:
+                                        EnumerationSampleView()
+                        ) {
+                            VStack( alignment: .leading) {
+                                HStack {
+                                    ZStack {
+                                        Image(systemName: "ellipsis.circle")
+                                        //    .scaleEffect(CGSize(width: 1.2, height: 1.2))
+                                        //Image(systemName: "staroflife")
+                                        //    .scaleEffect(CGSize(width: 1.0, height: 1.0))
+                                    }
+                                    Text("Enumeration Code Samples")
+                                        .font(.caption)
+                                }
+                                .font(.body)
+                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                .shadow(radius: 1.5)
+                            }
+                        }
+                        Divider()
+                    }
+
                     Group {
                         /*
                         Button(action: {

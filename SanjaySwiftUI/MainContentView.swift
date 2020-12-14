@@ -79,6 +79,8 @@ struct mainContentView_Previews: PreviewProvider {
                      }
                  }
  
+ Check structure declaration with proper static, let, var, lazy declaration.
+ 
  pushnotifications
   
  use new Views lazy stack
