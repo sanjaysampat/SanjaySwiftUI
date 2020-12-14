@@ -39,6 +39,21 @@ extension View {
         UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
     
+    /*
+    func flippedUpsideDown() -> some View{
+        self.modifier(FlippedUpsideDown())
+        
+    }
+     */
 }
+
+/*
+struct FlippedUpsideDown: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .rotationEffect(Angle(degrees: .pi))
+            .scaleEffect(x: -1, y: 1, anchor: .center)
+    }}
+*/
 
 // 
