@@ -33,12 +33,12 @@ struct ViewLandmarkSwiftUIView: View {
     }
 
     var body: some View {
-        VStack {
+        ScrollView {
             
             Text(filteredLandMark?.category.rawValue ?? "")
                 .foregroundColor(CommonUtils.cu_activity_light_text_color)
                 .shadow(radius: 1.5)
-
+            
             ZStack {
                 filteredLandMark?.image
                     .resizable()
@@ -51,23 +51,23 @@ struct ViewLandmarkSwiftUIView: View {
                     .shadow(radius: 1.5)
                     .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .top)
                 
-                    // bought text
-                    if ( filteredLandMark?.bought ?? false ) == true {
-                        Text("bought")
-                            .shadow(radius: 1.5)
-                            .padding(5)
-                            .background(CommonUtils.cu_activity_light_theam_color)
-                            .cornerRadius(5)
-                            .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .bottom)
+                // bought text
+                if ( filteredLandMark?.bought ?? false ) == true {
+                    Text("bought")
+                        .shadow(radius: 1.5)
+                        .padding(5)
+                        .background(CommonUtils.cu_activity_light_theam_color)
+                        .cornerRadius(5)
+                        .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .bottom)
                         .opacity(0.5)
-                    } else {
-                        Text("")
-                    }
+                } else {
+                    Text("")
+                }
                 
             }
-
+            
             self.bottomBar
-                //.frame(alignment: .bottom)
+            //.frame(alignment: .bottom)
             
             Button(action: { self.loadLandmarkView = false } ) {
                 Text("Close")
@@ -76,8 +76,11 @@ struct ViewLandmarkSwiftUIView: View {
             .background(CommonUtils.cu_activity_light_theam_color)
             .cornerRadius(10)
             
+            SSWebView(htmlText: filteredLandMark?.htmlDescription ?? "" )
+                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, idealHeight: 500, maxHeight: .infinity, alignment: .center)
+                .padding()
         }
-
+        
     }
     
     func orderItem() {

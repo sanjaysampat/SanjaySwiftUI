@@ -1,5 +1,4 @@
-[
-     {
+[{
         "name": "Learning Python",
         "category": "EBook",
         "city": "Fabrizio Romano",
@@ -11,11 +10,12 @@
             "latitude": 0
         },
         "Amount": "1.0",
-        "Tax":"0.2",
-        "Total":"1.2",
-        "imageName": "LearningPython"
+        "Tax": "0.2",
+        "Total": "1.2",
+        "imageName": "LearningPython",
+        "htmlDescription": "<html> <body> <h3>About this book</h3> <div class=\"overview__body\" itemprop=\"description\" data-gtm-vis-has-fired-9995629_87=\"1\"> <p>Learning Python has a dynamic and varied nature. It reads easily and lays a good foundation for those who are interested in digging deeper. It has a practical and example-oriented approach through which both the introductory and the advanced topics are explained. Starting with the fundamentals of programming and Python, it ends by exploring very different topics, like GUIs, web apps and data science. The book takes you all the way to creating a fully fledged application.</p> <p>The book begins by exploring the essentials of programming, data structures and teaches you how to manipulate them. It then moves on to controlling the flow of a program and writing reusable and error proof code. You will then explore different programming paradigms that will allow you to find the best approach to any situation, and also learn how to perform performance optimization as well as effective debugging. Throughout, the book steers you through the various types of applications, and it concludes with a complete mini website built upon all the concepts that you learned.</p> </div> <div class=\"col-md-4\" data-gtm-vis-has-fired-9995629_87=\"1\"> <dl class=\"datalist overview__datalist\"> <div class=\"datalist__item\" data-gtm-vis-has-fired-9995629_87=\"1\"> <dt class=\"datalist__name\"><h4>Publication date:</h4></dt> <dd class=\"datalist__value\">December 2015</dd> </div> <div class=\"datalist__item\" data-gtm-vis-has-fired-9995629_87=\"1\"> <dt class=\"datalist__name\"><h4>Publisher</h4></dt> <dd class=\"datalist__value\">Packt</dd> </div> <div class=\"datalist__item\" data-gtm-vis-has-fired-9995629_87=\"1\"> <dt class=\"datalist__name\"><h4>Pages</h4></dt> <dd class=\"datalist__value\">442</dd> </div> <div class=\"datalist__item\" data-gtm-vis-has-fired-9995629_87=\"1\"> <dt class=\"datalist__name\"><h4>ISBN</h4></dt> <dd class=\"datalist__value\" itemprop=\"gtin13\">9781783551712</dd> </div> </div> </body> </html>"
     },
-   {
+    {
         "name": "Turtle Rock",
         "category": "Featured",
         "city": "Twentynine Palms",
@@ -27,9 +27,10 @@
             "latitude": 34.011286
         },
         "Amount": "8.88",
-        "Tax":"1.12",
-        "Total":"10.00",
-        "imageName": "turtlerock"
+        "Tax": "1.12",
+        "Total": "10.00",
+        "imageName": "turtlerock",
+        "htmlDescription": "<h3>Joshua Tree National Park</h3> It is a vast protected area in southern California. It's characterized by rugged rock formations and stark desert landscapes. Named for the region’s twisted, bristled Joshua trees, the park straddles the cactus-dotted Colorado Desert and the Mojave Desert, which is higher and cooler. Keys View looks out over the Coachella Valley. Hiking trails weave through the boulders of Hidden Valley.<span><span class= \"eHaQD \"> ―&nbsp;Google</span></span></span></div></div></div></div><!--n--></div><div class= \"mod \" data-md= \"30 \" style= \"clear:none \" data-hveid= \"CFEQAA \" data-ved= \"2ahUKEwjq6-aWj9XtAhWlheYKHSyJDFsQ6-0CMCN6BAhREAA \" lang= \"en-IN \"><!--m--><!--n--></div><div class= \"xsZWvb EfDVh mod \" data-attrid= \"kc:/location/location:address \" data-md= \"1002 \" style= \"clear:none \" data-hveid= \"CFoQAA \" data-ved= \"2ahUKEwjq6-aWj9XtAhWlheYKHSyJDFsQkCkwJHoECFoQAA \" lang= \"en-IN \"><!--m--><div class= \"Z1hOCe \"><div class= \"zloOqf PZPZlf \" data-dtype= \"d3ifr \" data-local-attribute= \"d3adr \" data-ved= \"2ahUKEwjq6-aWj9XtAhWlheYKHSyJDFsQghwoADAkegQIWhAB \"><span class= \"w8qArf \"><a class= \"fl \" href= \"/search?client=firefox-b-d&amp;sxsrf=ALeKk02rySnLNRrs1By0mNMlb0b5GQfGBQ:1608211628674&amp;q=joshua+tree+national+park+address&amp;stick=H4sIAAAAAAAAAOPgE-LUz9U3MLRIr0zXks1OttLPyU9OLMnMz4MzrBJTUopSi4sXsSpm5RdnlCYqlBSlpirkgSUTcxQKEouyFaBqAFhj7YtQAAAA&amp;ludocid=1835196675680607714&amp;sa=X&amp;ved=2ahUKEwjq6-aWj9XtAhWlheYKHSyJDFsQ6BMwJHoECFoQAg \" data-ved= \"2ahUKEwjq6-aWj9XtAhWlheYKHSyJDFsQ6BMwJHoECFoQAg \"><h4>Address</h4></a>: </span><span class= \"LrzXr \">California, United States</span><div jscontroller= \"JpM2Oe \" class= \"GDRHkb \" data-at= \"5 \" data-uid= \"1 \" jsaction= \"rcuQ6b:npT2md \"></div><div jscontroller= \"JpM2Oe \" class= \"GDRHkb \" data-at= \"2 \" data-uid= \"1 \" jsaction= \"rcuQ6b:npT2md \"></div></div></div><!--n--></div></div></div><div class= \"mod \" data-attrid= \"kc:/location/location:area \" data-md= \"1001 \" style= \"clear:none \" data-hveid= \"CEsQAA \" data-ved= \"2ahUKEwjq6-aWj9XtAhWlheYKHSyJDFsQkCkwJnoECEsQAA \" lang= \"en-IN \"><!--m--><div class= \"Z1hOCe \"><div class= \"zloOqf PZPZlf \" data-ved= \"2ahUKEwjq6-aWj9XtAhWlheYKHSyJDFsQyxMoADAmegQISxAB \"><span class= \"w8qArf \"><a class= \"fl \" href= \"/search?client=firefox-b-d&amp;sxsrf=ALeKk02rySnLNRrs1By0mNMlb0b5GQfGBQ:1608211628674&amp;q=joshua+tree+national+park+area&amp;stick=H4sIAAAAAAAAAOPgE-LUz9U3MLRIr0zXkspOttLPyU9OLMnMz4MzrBKLUhMXscpl5RdnlCYqlBSlpirkgWUScxQKEouyFUAKANNHD3JKAAAA&amp;sa=X&amp;ved=2ahUKEwjq6-aWj9XtAhWlheYKHSyJDFsQ6BMoADAmegQISxAC \" data-ved= \"2ahUKEwjq6-aWj9XtAhWlheYKHSyJDFsQ6BMoADAmegQISxAC \"><h4>Area</h4></a>: </span><span class= \"LrzXr kno-fv \">3,200&nbsp;km²</span></div></div><!--n--></div><div class= \"mod \" data-attrid= \"hw:/collection/protected_sites:established date \" data-md= \"1001 \" style= \"clear:none \" data-hveid= \"CEwQAA \" data-ved= \"2ahUKEwjq6-aWj9XtAhWlheYKHSyJDFsQkCkwJ3oECEwQAA \" lang= \"en-IN \"><!--m--><div class= \"Z1hOCe \"><div class= \"zloOqf PZPZlf \" data-ved= \"2ahUKEwjq6-aWj9XtAhWlheYKHSyJDFsQyxMoADAnegQITBAB \"><span class= \"w8qArf \"><a class= \"fl \" href= \"/search?client=firefox-b-d&amp;sxsrf=ALeKk02rySnLNRrs1By0mNMlb0b5GQfGBQ:1608211628674&amp;q=joshua+tree+national+park+established&amp;stick=H4sIAAAAAAAAAOPgE-LUz9U3MLRIr0zX0s8ot9JPzs_JSU0uyczP0y8oyi8BMlNT4oszS1KLrVKLSxKTcjKLM1JTFFISS1IXsapm5RdnlCYqlBSlpirkJYJ0JeYoFCQWZSsgKQYAO7KspmYAAAA&amp;sa=X&amp;ved=2ahUKEwjq6-aWj9XtAhWlheYKHSyJDFsQ6BMoADAnegQITBAC \" data-ved= \"2ahUKEwjq6-aWj9XtAhWlheYKHSyJDFsQ6BMoADAnegQITBAC \"><h4>Established</h4></a>: </span><span class= \"LrzXr kno-fv \">31 October 1994</span>"
     },
     {
         "name": "Silver Salmon Creek",
@@ -43,9 +44,10 @@
             "latitude": 59.980167
         },
         "Amount": "9.88",
-        "Tax":"2.12",
-        "Total":"12.00",
-        "imageName": "silversalmoncreek"
+        "Tax": "2.12",
+        "Total": "12.00",
+        "imageName": "silversalmoncreek",
+        "htmlDescription": "<div id=\"cs_spacer_1420202\" class=\"CS_Layout_SpacingHeight\" style=\"line-height:1;\">&nbsp;</div><div id=\"cs_control_1420202\" class=\"cs_control CS_Element_Custom\"><style>blockquote {border-left: 5px solid #fff;}</style><div class=\"Component text-content-size text-content-style ArticleTextGroup clearfix\"><figure class=\"-right\"><img alt=\"an orange plane on a beach with a rainbow overhead\" title=\"Aircraft parking at Silver Salmon Creek\" src=\"https://www.nps.gov/lacl/planyourvisit/images/LACL_2013_PlaneRainbowSSC_JaredIrvine.JPG?maxwidth=650&amp;autorotate=false\"><figcaption>Fixed-wing aircraft can land on the beach at Silver Salmon Creek. Rainbow not guaranteed. <p class=\"figcredit\">NPS/J. Irvine</p></figcaption></figure><!-- floating-image alignment  --><p><span class=\"section_title\">Getting to Silver<br>Salmon Creek</span></p><p><strong><a href=\"https://www.nps.gov/lacl/planyourvisit/directions.htm\" id=\"CP___PAGEID=877228,directions.htm,4796|\">Flying to Silver Salmon Creek</a><br>Landing gear: Wheels</strong><br>Most visitors arrive by small plane operating on wheels that land on the beach. Though it is legal for planes to land in the ocean or in the river, many operators choose not to take their float planes here due to the corrosive nature of salt water and the extreme tides in Cook Inlet that can make operating on floats tricky. The flight from Homer, Kenai or Anchorage is less than an hour.</p><p>Prices depend on group size, type of airplane, length of flight, where the flight originates, and whether you choose to hire a guided trip or just an air taxi. Contact each operator directly to determine the cost for your trip.<br><br>The linked air taxi operators are permitted to operate within the national park under <a href=\"https://www.faa.gov/about/initiatives/atos/135_certification/\" id=\"https://www.faa.gov/about/initiatives/atos/135_certification/|\">FAA Part 135 air taxi regulations </a>which require three miles visibility and glide distance to shorelines while crossing open water such as Cook Inlet. There are also guide services permitted to guide in the park who fly aircraft, land outside the park and walk into the park for guiding purposes. Those guides operate under <a href=\"https://www.ecfr.gov/cgi-bin/text-idx?c=ecfr&amp;sid=3efaad1b0a259d4e48f1150a34d1aa77&amp;rgn=div5&amp;view=text&amp;node=14:2.0.1.3.10&amp;idno=14\" id=\"https://www.ecfr.gov/cgi-bin/text-idx?c=ecfr&amp;sid=3efaad1b0a259d4e48f1150a34d1aa77&amp;rgn=div5&amp;view=text&amp;node=14:2.0.1.3.10&amp;idno=14|\">FAA part 91 regulations</a> which have lower safety visibility and glide distance requirements. The beaches below mean high tide along Cook Inlet are outside Lake Clark National Park.</p>"
     },
     {
         "name": "Chilkoot Trail",
@@ -59,8 +61,8 @@
             "latitude": 59.560551
         },
         "Amount": "100",
-        "Tax":"20",
-        "Total":"120",
+        "Tax": "20",
+        "Total": "120",
         "imageName": "chilkoottrail"
     },
     {
@@ -75,8 +77,8 @@
             "latitude": 48.69423
         },
         "Amount": "19.88",
-        "Tax":"2.12",
-        "Total":"22.00",
+        "Tax": "2.12",
+        "Total": "22.00",
         "imageName": "stmarylake"
     },
     {
@@ -91,8 +93,8 @@
             "latitude": 60.641684
         },
         "Amount": "9.08",
-        "Tax":"2.92",
-        "Total":"12.00",
+        "Tax": "2.92",
+        "Total": "12.00",
         "imageName": "twinlake"
     },
     {
@@ -107,8 +109,8 @@
             "latitude": 48.56002
         },
         "Amount": "5.88",
-        "Tax":"0.12",
-        "Total":"6.00",
+        "Tax": "0.12",
+        "Total": "6.00",
         "imageName": "lakemcdonald"
     },
     {
@@ -123,8 +125,8 @@
             "latitude": 65.350021
         },
         "Amount": "49",
-        "Tax":"2",
-        "Total":"51",
+        "Tax": "2",
+        "Total": "51",
         "imageName": "yukon_charleyrivers"
     },
     {
@@ -139,8 +141,8 @@
             "latitude": 60.089917
         },
         "Amount": "8.80",
-        "Tax":"1.20",
-        "Total":"10.00",
+        "Tax": "1.20",
+        "Total": "10.00",
         "imageName": "icybay"
     },
     {
@@ -155,8 +157,8 @@
             "latitude": 61.694334
         },
         "Amount": "101.00",
-        "Tax":"0",
-        "Total":"101",
+        "Tax": "0",
+        "Total": "101",
         "imageName": "rainbowlake"
     },
     {
@@ -171,8 +173,8 @@
             "latitude": 48.495442
         },
         "Amount": "0.00",
-        "Tax":"0",
-        "Total":"0.00",
+        "Tax": "0",
+        "Total": "0.00",
         "imageName": "hiddenlake"
     },
     {
@@ -187,8 +189,8 @@
             "latitude": 37.91531
         },
         "Amount": "0.45",
-        "Tax":"0.05",
-        "Total":"0.5",
+        "Tax": "0.05",
+        "Total": "0.5",
         "imageName": "chincoteague"
     },
     {
@@ -203,8 +205,8 @@
             "latitude": 44.747408
         },
         "Amount": "9988",
-        "Tax":"12.00",
-        "Total":"10000",
+        "Tax": "12.00",
+        "Total": "10000",
         "imageName": "umbagog"
     }
 ]

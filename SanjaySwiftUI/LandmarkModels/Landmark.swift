@@ -35,6 +35,8 @@ struct Landmark: Hashable, Codable, Identifiable {
     var Amount:String
     var Tax:String
     var Total:String
+    
+    var htmlDescription:String
         
     init( from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
@@ -50,6 +52,7 @@ struct Landmark: Hashable, Codable, Identifiable {
         category = try container.decode(Category.self, forKey: .category)
         // optional json item
         bought = ( try? container.decodeIfPresent(Bool.self, forKey: .bought) ) ?? false
+        htmlDescription = ( try? container.decodeIfPresent(String.self, forKey: .htmlDescription) ) ?? ""
     }
 }
 

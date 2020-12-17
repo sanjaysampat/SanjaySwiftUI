@@ -300,6 +300,8 @@
 		72A42D62254861B4002201DF /* UserSettings21.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72A42D5E254861B4002201DF /* UserSettings21.jpg */; };
 		72A548622516200400CB82CD /* CheckShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A548612516200400CB82CD /* CheckShapesView.swift */; };
 		72A548632516200400CB82CD /* CheckShapesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A548612516200400CB82CD /* CheckShapesView.swift */; };
+		72B2436B258B8C2600C44A5F /* SSWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B2436A258B8C2600C44A5F /* SSWebView.swift */; };
+		72B2436C258B8C2600C44A5F /* SSWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B2436A258B8C2600C44A5F /* SSWebView.swift */; };
 		72B551AF24DD1690009A0014 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B551AE24DD1690009A0014 /* ListView.swift */; };
 		72B551B124DD1C8A009A0014 /* UserAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B551B024DD1C8A009A0014 /* UserAuth.swift */; };
 		72B551C924DD743E009A0014 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72B551B924DD743E009A0014 /* Data.swift */; };
@@ -551,6 +553,7 @@
 		72A42D5D254861B4002201DF /* Example21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Example21.jpg; sourceTree = "<group>"; };
 		72A42D5E254861B4002201DF /* UserSettings21.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = UserSettings21.jpg; sourceTree = "<group>"; };
 		72A548612516200400CB82CD /* CheckShapesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckShapesView.swift; sourceTree = "<group>"; };
+		72B2436A258B8C2600C44A5F /* SSWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSWebView.swift; sourceTree = "<group>"; };
 		72B551AE24DD1690009A0014 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		72B551B024DD1C8A009A0014 /* UserAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuth.swift; sourceTree = "<group>"; };
 		72B551B924DD743E009A0014 /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -942,6 +945,7 @@
 			children = (
 				727ACC26256B869600FD7711 /* Notifications */,
 				7228011E255053F000D34AFD /* Reachability */,
+				72B24369258B8BF200C44A5F /* SSWebView */,
 				727BF0CA2525EE810061BD7F /* SSMapView */,
 				726763EC24FBA27E0074715B /* VisualEffectBlur.swift */,
 				727E111324F6C091007231F7 /* PublicCommit.swift */,
@@ -994,6 +998,14 @@
 				729D987B252B3A12001AC519 /* NOTES.md */,
 			);
 			path = Notes;
+			sourceTree = "<group>";
+		};
+		72B24369258B8BF200C44A5F /* SSWebView */ = {
+			isa = PBXGroup;
+			children = (
+				72B2436A258B8C2600C44A5F /* SSWebView.swift */,
+			);
+			path = SSWebView;
 			sourceTree = "<group>";
 		};
 		72B551B824DD743E009A0014 /* LandmarkModels */ = {
@@ -1479,6 +1491,7 @@
 				7204277B24E01CC800DF4958 /* SCLAlertView.swift in Sources */,
 				7263AD51251B79910041A810 /* CheckGridsView.swift in Sources */,
 				72735B8F24D034B0006B75C9 /* StickerCollectionViewCell.swift in Sources */,
+				72B2436B258B8C2600C44A5F /* SSWebView.swift in Sources */,
 				72B551C924DD743E009A0014 /* Data.swift in Sources */,
 				7210DD9E2518D77D0013DB94 /* GeometryOfView.swift in Sources */,
 				7216BB5E24D17BC30097AFA4 /* Person+CoreDataProperties.swift in Sources */,
@@ -1617,6 +1630,7 @@
 				7267642224FBB27E0074715B /* SCLAlertView.swift in Sources */,
 				7263AD52251B79910041A810 /* CheckGridsView.swift in Sources */,
 				7267642324FBB27E0074715B /* StickerCollectionViewCell.swift in Sources */,
+				72B2436C258B8C2600C44A5F /* SSWebView.swift in Sources */,
 				7267642424FBB27E0074715B /* Data.swift in Sources */,
 				7210DD9F2518D77D0013DB94 /* GeometryOfView.swift in Sources */,
 				7267642524FBB27E0074715B /* Person+CoreDataProperties.swift in Sources */,
