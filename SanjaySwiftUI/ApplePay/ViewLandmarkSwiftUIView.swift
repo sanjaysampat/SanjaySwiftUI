@@ -10,9 +10,12 @@ import SwiftUI
 import PassKit
 
 struct ViewLandmarkSwiftUIView: View {
+    @ObservedObject var ssWebViewModel = SSWebViewModel()
     @Binding var loadLandmarkView:Bool
     @Binding var currentLandmarkId:Int
     //var landmarkOptional: Landmark?
+
+    @State var showSpinLoader = false
 
     let paymentHandler = PaymentHandler()
 
@@ -76,9 +79,24 @@ struct ViewLandmarkSwiftUIView: View {
             .background(CommonUtils.cu_activity_light_theam_color)
             .cornerRadius(10)
             
-            SSWebView(htmlText: filteredLandMark?.htmlDescription ?? "" )
-                .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, idealHeight: 500, maxHeight: .infinity, alignment: .center)
-                .padding()
+            ZStack {
+                let headerString = "<header><meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no'></header>"
+                let htmlText = filteredLandMark?.htmlDescription ?? ""
+                let textToShow = htmlText.isEmpty ? "" : headerString + htmlText
+                
+                SSWebView(ssWebViewModel: ssWebViewModel, htmlText: textToShow )
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, idealHeight: 500, maxHeight: .infinity, alignment: .center)
+                    .padding()
+                
+                if self.showSpinLoader {
+                    CircleSpinLoader("Loading info of \(filteredLandMark?.name ?? "")")
+                }
+                
+            }
+            .onReceive(self.ssWebViewModel.showSpinLoader.receive(on: RunLoop.main)) { value in
+                self.showSpinLoader = value
+            }
+            
         }
         
     }

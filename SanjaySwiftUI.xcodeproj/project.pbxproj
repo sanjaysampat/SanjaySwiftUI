@@ -349,6 +349,12 @@
 		72D2498924FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D2498724FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift */; };
 		72D9779F24E1116E0044754C /* CommonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D9779E24E1116E0044754C /* CommonExtensions.swift */; };
 		72D977A124E120AC0044754C /* String+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D977A024E120AB0044754C /* String+Extra.swift */; };
+		72DA25D3258CA77200A864E8 /* SSWebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DA25D2258CA77200A864E8 /* SSWebViewModel.swift */; };
+		72DA25D4258CA77200A864E8 /* SSWebViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DA25D2258CA77200A864E8 /* SSWebViewModel.swift */; };
+		72DA25E8258CAF4C00A864E8 /* LocalPageInBundle.html in Resources */ = {isa = PBXBuildFile; fileRef = 72DA25E7258CAF4B00A864E8 /* LocalPageInBundle.html */; };
+		72DA25E9258CAF4C00A864E8 /* LocalPageInBundle.html in Resources */ = {isa = PBXBuildFile; fileRef = 72DA25E7258CAF4B00A864E8 /* LocalPageInBundle.html */; };
+		72DA25EF258CB41C00A864E8 /* CircleSpinLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DA25EE258CB41C00A864E8 /* CircleSpinLoader.swift */; };
+		72DA25F0258CB41C00A864E8 /* CircleSpinLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DA25EE258CB41C00A864E8 /* CircleSpinLoader.swift */; };
 		72E115C12578F7910055B55C /* EnumerationSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E115C02578F7910055B55C /* EnumerationSampleView.swift */; };
 		72E115C22578F7910055B55C /* EnumerationSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E115C02578F7910055B55C /* EnumerationSampleView.swift */; };
 		72E42CD82511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E42CD72511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift */; };
@@ -593,6 +599,9 @@
 		72D2498724FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewLandmarkSwiftUIView.swift; sourceTree = "<group>"; };
 		72D9779E24E1116E0044754C /* CommonExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonExtensions.swift; sourceTree = "<group>"; };
 		72D977A024E120AB0044754C /* String+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extra.swift"; sourceTree = "<group>"; };
+		72DA25D2258CA77200A864E8 /* SSWebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSWebViewModel.swift; sourceTree = "<group>"; };
+		72DA25E7258CAF4B00A864E8 /* LocalPageInBundle.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = LocalPageInBundle.html; sourceTree = "<group>"; };
+		72DA25EE258CB41C00A864E8 /* CircleSpinLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSpinLoader.swift; sourceTree = "<group>"; };
 		72E115C02578F7910055B55C /* EnumerationSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumerationSampleView.swift; sourceTree = "<group>"; };
 		72E42CD72511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedSwiftuiAnimations.swift; sourceTree = "<group>"; };
 		72EDF1FF250BA81F00879E40 /* LocalArabic.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = LocalArabic.strings; sourceTree = "<group>"; };
@@ -963,6 +972,7 @@
 				72D9779E24E1116E0044754C /* CommonExtensions.swift */,
 				72C29E8F25373D900051E936 /* ScreenRecorder.swift */,
 				72BCAD412538454E00AD427D /* RecordFloatingMenuView.swift */,
+				72DA25EE258CB41C00A864E8 /* CircleSpinLoader.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1003,7 +1013,9 @@
 		72B24369258B8BF200C44A5F /* SSWebView */ = {
 			isa = PBXGroup;
 			children = (
+				72DA25E7258CAF4B00A864E8 /* LocalPageInBundle.html */,
 				72B2436A258B8C2600C44A5F /* SSWebView.swift */,
+				72DA25D2258CA77200A864E8 /* SSWebViewModel.swift */,
 			);
 			path = SSWebView;
 			sourceTree = "<group>";
@@ -1296,6 +1308,7 @@
 				7249749424E52684006F5C52 /* getHomeSliderCatRecordTony.json in Resources */,
 				72EDF200250BA81F00879E40 /* LocalArabic.strings in Resources */,
 				72663ABF24C5C7BD000596C9 /* Preview Assets.xcassets in Resources */,
+				72DA25E8258CAF4C00A864E8 /* LocalPageInBundle.html in Resources */,
 				729D988E252B3C13001AC519 /* Flipclock_file_structure.png in Resources */,
 				729CC95D2521F0F40078A0CC /* Rooms.xcassets in Resources */,
 				72EDF205250BC48800879E40 /* Localizable.strings in Resources */,
@@ -1383,6 +1396,7 @@
 				7267645624FBB27E0074715B /* getHomeSliderCatRecordTony.json in Resources */,
 				72EDF201250BA81F00879E40 /* LocalArabic.strings in Resources */,
 				7267645724FBB27E0074715B /* Preview Assets.xcassets in Resources */,
+				72DA25E9258CAF4C00A864E8 /* LocalPageInBundle.html in Resources */,
 				729D988F252B3C13001AC519 /* Flipclock_file_structure.png in Resources */,
 				729CC95E2521F0F40078A0CC /* Rooms.xcassets in Resources */,
 				72EDF206250BC48800879E40 /* Localizable.strings in Resources */,
@@ -1480,6 +1494,7 @@
 				72B551AF24DD1690009A0014 /* ListView.swift in Sources */,
 				72735B7624D034B0006B75C9 /* ColorsCollectionViewDelegate.swift in Sources */,
 				7232FABD2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift in Sources */,
+				72DA25EF258CB41C00A864E8 /* CircleSpinLoader.swift in Sources */,
 				72D9779F24E1116E0044754C /* CommonExtensions.swift in Sources */,
 				72735B8A24D034B0006B75C9 /* CropView.swift in Sources */,
 				7267B250254417DE00822C61 /* MainContentView.swift in Sources */,
@@ -1522,6 +1537,7 @@
 				72735B9A24D048C7006B75C9 /* UIImage+Extra.swift in Sources */,
 				72735B9224D034B0006B75C9 /* ColorCollectionViewCell.swift in Sources */,
 				7263927A2574C241002BA011 /* CreateLocalNotificaitonView.swift in Sources */,
+				72DA25D3258CA77200A864E8 /* SSWebViewModel.swift in Sources */,
 				727E111224F6A994007231F7 /* MenuView.swift in Sources */,
 				7228012D2550547000D34AFD /* Reachability.swift in Sources */,
 				727ACC2F256B89DD00FD7711 /* LocalNotification.swift in Sources */,
@@ -1619,6 +1635,7 @@
 				7267641B24FBB27E0074715B /* ListView.swift in Sources */,
 				7267641C24FBB27E0074715B /* ColorsCollectionViewDelegate.swift in Sources */,
 				7232FABE2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift in Sources */,
+				72DA25F0258CB41C00A864E8 /* CircleSpinLoader.swift in Sources */,
 				7267641D24FBB27E0074715B /* CommonExtensions.swift in Sources */,
 				7267641E24FBB27E0074715B /* CropView.swift in Sources */,
 				7267B251254417DE00822C61 /* MainContentView.swift in Sources */,
@@ -1661,6 +1678,7 @@
 				7267643224FBB27E0074715B /* UIImage+Extra.swift in Sources */,
 				7267643324FBB27E0074715B /* ColorCollectionViewCell.swift in Sources */,
 				7263927B2574C241002BA011 /* CreateLocalNotificaitonView.swift in Sources */,
+				72DA25D4258CA77200A864E8 /* SSWebViewModel.swift in Sources */,
 				7267643424FBB27E0074715B /* MenuView.swift in Sources */,
 				7228012E2550547000D34AFD /* Reachability.swift in Sources */,
 				727ACC30256B89DD00FD7711 /* LocalNotification.swift in Sources */,

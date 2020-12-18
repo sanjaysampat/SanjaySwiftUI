@@ -84,6 +84,7 @@ SwiftUI project creation to learn.
     * Set landmark item as 'bought' 
         * used filteredLandMark and 'firstIndex' to find the index of record, to modify it.
         * It is always better to pass id's of struct array (insted of object). We can get index of it to modify the record.
+     * Description in html shown below 'close' button, from htmlDescription in landmarkData.json 
     
 2. Animation test ( links added in 'Menuview' )
     * Basic animation examples 

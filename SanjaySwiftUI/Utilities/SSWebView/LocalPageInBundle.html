@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="Content-Style-Type" content="text/css">
+        <title>Local Site</title>
+        <style>
+            h1 {
+                font-size: 70px;
+            }
+        
+            h2 {
+                font-size: 50px;
+            }
+            
+            p {
+                font-size: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>JavaScript Interaction with Swift</h1>
+        
+        <p>This example shows how to interact between iOS app and web app by JavaScript Functions.</p>
+        
+        <p id="output"></p>
+        
+        <script type = "text/javascript">
+            sendStringValueToIOS();
+            sendJsonValueToIOS();
+            
+            function sendJsonValueToIOS() {
+                // Here ssFromiOSApp is the name we passed from iOS app
+                window.webkit.messageHandlers.ssFromiOSApp.postMessage({Name : "John Doe"});
+            }
+        
+            function sendStringValueToIOS() {
+                // Here ssFromiOSApp is the name we passed from iOS app
+                window.webkit.messageHandlers.ssFromiOSApp.postMessage("A message in String");
+            }
+            
+            function valueGotFromIOS(value) {
+                document.getElementById("output").innerHTML = value;
+            }
+        
+        
+        </script>
+    </body>
+</html>
