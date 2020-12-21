@@ -43,7 +43,7 @@ SwiftUI project creation to learn.
         * Use Photo Editor ( earlier version swift ). This is using UI with custom storyboard
     * ~~Custom AlertControlView via UIViewControllerRepresentable for getting 'name' text from user.~~ (not in use)
     * 'alertSS' functions to call custom alerts with textfield.
-    * 'View' extension to print debug messages with PrintView method.
+    * 'View' extension to print debug messages with PrintinView method.
     * Integration / modification of Views created by 'Chris Mash' project [AVPlayer-SwiftUI](https://github.com/ChrisMash/AVPlayer-SwiftUI) for Audio/Video List View
         * List refill on shuffle array of songs.
         * Add/delete single item to core data in second audio list.

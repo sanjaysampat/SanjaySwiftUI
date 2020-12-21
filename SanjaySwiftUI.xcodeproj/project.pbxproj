@@ -1863,7 +1863,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SanjaySwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = XH9Q2X3CYJ;
+				DEVELOPMENT_TEAM = H83M7E9Y5U;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SanjaySwiftUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1887,7 +1887,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"SanjaySwiftUI/Preview Content\"";
-				DEVELOPMENT_TEAM = XH9Q2X3CYJ;
+				DEVELOPMENT_TEAM = H83M7E9Y5U;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = SanjaySwiftUI/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -1919,6 +1919,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sanjay.SanjaySwiftUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SanjaySwiftUI-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SanjaySwiftUIPay.app/SanjaySwiftUIPay";
@@ -1941,6 +1942,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sanjay.SanjaySwiftUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SanjaySwiftUI-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SanjaySwiftUIPay.app/SanjaySwiftUIPay";
@@ -1962,6 +1964,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sanjay.SanjaySwiftUIUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SanjaySwiftUI-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SanjaySwiftUIPay;
@@ -1983,6 +1986,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.sanjay.SanjaySwiftUIUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SanjaySwiftUI-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SanjaySwiftUIPay;
