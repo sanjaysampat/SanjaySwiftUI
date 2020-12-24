@@ -41,6 +41,8 @@
 		722801232550541100D34AFD /* ReachabilityDg.m in Sources */ = {isa = PBXBuildFile; fileRef = 722801212550541100D34AFD /* ReachabilityDg.m */; };
 		7228012D2550547000D34AFD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228012C2550547000D34AFD /* Reachability.swift */; };
 		7228012E2550547000D34AFD /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7228012C2550547000D34AFD /* Reachability.swift */; };
+		7230D3E52594C0BD00FFD7CC /* SSWebViewBrowse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7230D3E42594C0BD00FFD7CC /* SSWebViewBrowse.swift */; };
+		7230D3E62594C0BD00FFD7CC /* SSWebViewBrowse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7230D3E42594C0BD00FFD7CC /* SSWebViewBrowse.swift */; };
 		7232FABD2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7232FABC2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift */; };
 		7232FABE2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7232FABC2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift */; };
 		723ACB30250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723ACB2F250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift */; };
@@ -439,6 +441,7 @@
 		722801202550541100D34AFD /* ReachabilityDg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReachabilityDg.h; sourceTree = "<group>"; };
 		722801212550541100D34AFD /* ReachabilityDg.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReachabilityDg.m; sourceTree = "<group>"; };
 		7228012C2550547000D34AFD /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		7230D3E42594C0BD00FFD7CC /* SSWebViewBrowse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSWebViewBrowse.swift; sourceTree = "<group>"; };
 		7232FABC2546AE21000EF9B9 /* SanjaySwiftuiAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SanjaySwiftuiAnimations.swift; sourceTree = "<group>"; };
 		723ACB2F250CD55A00C29C93 /* AnimatablePairSwiftUIViewEx.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatablePairSwiftUIViewEx.swift; sourceTree = "<group>"; };
 		723ACB32250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimArcInsettableShapeViewEx.swift; sourceTree = "<group>"; };
@@ -1016,6 +1019,7 @@
 				72DA25E7258CAF4B00A864E8 /* LocalPageInBundle.html */,
 				72B2436A258B8C2600C44A5F /* SSWebView.swift */,
 				72DA25D2258CA77200A864E8 /* SSWebViewModel.swift */,
+				7230D3E42594C0BD00FFD7CC /* SSWebViewBrowse.swift */,
 			);
 			path = SSWebView;
 			sourceTree = "<group>";
@@ -1524,6 +1528,7 @@
 				72FEEAA6255133920054AA79 /* Persistence.swift in Sources */,
 				72735B8924D034B0006B75C9 /* EmojisCollectionViewDelegate.swift in Sources */,
 				72E115C12578F7910055B55C /* EnumerationSampleView.swift in Sources */,
+				7230D3E52594C0BD00FFD7CC /* SSWebViewBrowse.swift in Sources */,
 				72735B8B24D034B0006B75C9 /* ResizeControl.swift in Sources */,
 				7204276F24DFFA3600DF4958 /* PrivateCommit.swift in Sources */,
 				723ACB33250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift in Sources */,
@@ -1665,6 +1670,7 @@
 				72FEEAA7255133920054AA79 /* Persistence.swift in Sources */,
 				7267642B24FBB27E0074715B /* EmojisCollectionViewDelegate.swift in Sources */,
 				72E115C22578F7910055B55C /* EnumerationSampleView.swift in Sources */,
+				7230D3E62594C0BD00FFD7CC /* SSWebViewBrowse.swift in Sources */,
 				7267642C24FBB27E0074715B /* ResizeControl.swift in Sources */,
 				7267642D24FBB27E0074715B /* PrivateCommit.swift in Sources */,
 				723ACB34250CEFEC00C29C93 /* AnimArcInsettableShapeViewEx.swift in Sources */,

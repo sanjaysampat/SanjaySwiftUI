@@ -414,6 +414,27 @@ struct MenuView: View {
                     }
                     
                     Group {
+                        
+                        NavigationLink(destination:
+                                        SSWebViewBrowse()
+                        ) {
+                            VStack( alignment: .leading) {
+                                HStack {
+                                    ZStack {
+                                        //Image(systemName: "bell")
+                                            //.scaleEffect(CGSize(width: 1.0, height: 1.0))
+                                    }
+                                    Text("Browse web")
+                                        .font(.caption)
+                                }
+                                .font(.body)
+                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                .shadow(radius: 1.5)
+                            }
+                            
+                        }
+                        Divider()
+
                         NavigationLink(destination:
                                         RecordedListView()
                         ) {
