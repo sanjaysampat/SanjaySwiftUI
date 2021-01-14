@@ -15,6 +15,12 @@ import Combine
 protocol WebViewHandlerDelegate {
     func receivedJsonValueFromWebView(value: [String: Any?])
     func receivedStringValueFromWebView(value: String)
+    func receivedStatus(status: SSWebViewHandlerStatus, description: String)
+}
+
+public enum SSWebViewHandlerStatus : Int {
+    case success = 0
+    case fail = 1
 }
 
 struct SSWebView: UIViewRepresentable, WebViewHandlerDelegate {
@@ -26,12 +32,18 @@ struct SSWebView: UIViewRepresentable, WebViewHandlerDelegate {
     func receivedStringValueFromWebView(value: String) {
         print("String value received from site is: \(value)")
     }
+    
+    func receivedStatus(status: SSWebViewHandlerStatus, description: String) {
+        print("\(status == .fail ? "Error" : "Success"): \(description)")
+        // SSTODO to create new delegate to send the message out to display
+        // create SSWebViewHandlerDelegate
+    }
 
     let htmlText: String
     let localFileUrlOpt:URL?
     let localUrlFolderForReadAccessOpt:URL?
     let publicUrlOpt:URL?
-    
+
     // Observable SSWebViewModel object
     @ObservedObject var ssWebViewModel: SSWebViewModel
 
@@ -145,6 +157,9 @@ struct SSWebView: UIViewRepresentable, WebViewHandlerDelegate {
         
         func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
             // Hides loader
+            // show error
+            let errorStr = error.localizedDescription
+            delegate?.receivedStatus(status: .fail, description: errorStr)
             parent.ssWebViewModel.showSpinLoader.send(false)
         }
 
@@ -158,16 +173,18 @@ struct SSWebView: UIViewRepresentable, WebViewHandlerDelegate {
             parent.ssWebViewModel.showSpinLoader.send(true)
             self.webViewNavigationSubscriber = self.parent.ssWebViewModel.webViewNavigationPublisher.receive(on: RunLoop.main).sink(receiveValue: { navigation in
                 switch navigation {
-                    case .backward:
-                        if webView.canGoBack {
-                            webView.goBack()
-                        }
-                    case .forward:
-                        if webView.canGoForward {
-                            webView.goForward()
-                        }
-                    case .reload:
-                        webView.reload()
+                case .backward:
+                    if webView.canGoBack {
+                        webView.goBack()
+                    }
+                case .forward:
+                    if webView.canGoForward {
+                        webView.goForward()
+                    }
+                case .reload:
+                    webView.reload()
+                default:
+                    break
                 }
             })
         }
