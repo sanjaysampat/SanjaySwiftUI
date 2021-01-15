@@ -18,6 +18,7 @@ protocol WebViewHandlerDelegate {
     func receivedStatus(status: SSWebViewHandlerStatus, description: String)
 }
 
+// MARK: - WebView success / failure handler
 public enum SSWebViewHandlerStatus : Int {
     case success = 0
     case fail = 1
@@ -27,16 +28,18 @@ struct SSWebView: UIViewRepresentable, WebViewHandlerDelegate {
     
     func receivedJsonValueFromWebView(value: [String : Any?]) {
         print("JSON value received from site is: \(value)")
+        self.ssWebViewModel.jsonValueFromSSWebView.send(value)
     }
     
     func receivedStringValueFromWebView(value: String) {
         print("String value received from site is: \(value)")
+        self.ssWebViewModel.stringValueFromSSWebView.send(value)
     }
     
     func receivedStatus(status: SSWebViewHandlerStatus, description: String) {
-        print("\(status == .fail ? "Error" : "Success"): \(description)")
-        // SSTODO to create new delegate to send the message out to display
-        // create SSWebViewHandlerDelegate
+        let value = "\(status == .success ? "Success" : "Error"): \(description)"
+        print(value)
+        self.ssWebViewModel.statusMessageFromSSWebView.send(value)
     }
 
     let htmlText: String
@@ -122,7 +125,8 @@ struct SSWebView: UIViewRepresentable, WebViewHandlerDelegate {
                 self.parent.ssWebViewModel.showWebTitle.send(title)
             }
             
-            /* Observer that observes 'ssWebViewModel.valuePublisher' to pass the value to web app by calling JavaScript function */
+            /* Observer that observes 'ssWebViewModel.valuePublisher' to pass the value to web app - html by calling JavaScript function */
+            // to send value 'valuePublisher' from ssWebViewModel to web app - html
             valueSubscriber = parent.ssWebViewModel.valuePublisher
                 .receive(on: RunLoop.main)
                 .sink(receiveValue: { value in
@@ -147,8 +151,6 @@ struct SSWebView: UIViewRepresentable, WebViewHandlerDelegate {
             // Hides loader
             parent.ssWebViewModel.showSpinLoader.send(false)
         }
-        
-        
         
         func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
             // Hides loader

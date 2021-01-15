@@ -176,7 +176,7 @@ SwiftUI project creation to learn.
         * Failed to register for notifications: no valid “aps-environment” entitlement string found for application
             * To resolve add "Push Notifications" capability at - Project Settings - targets - Signing and Capabilities.
             
-19. Webbrowser : ( Work started )
+19. Webbrowser : ( Work continued - Menu option 'Browse web')
             
 18. XCTestCase - testing case creation started. ( Ref: SanjaySwiftUITests.swift )
 

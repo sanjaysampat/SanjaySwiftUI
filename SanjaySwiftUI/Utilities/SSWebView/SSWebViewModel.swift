@@ -14,6 +14,9 @@ class SSWebViewModel: ObservableObject {
     var showWebTitle = PassthroughSubject<String, Never>()
     var showSpinLoader = PassthroughSubject<Bool, Never>()
     var valuePublisher = PassthroughSubject<String, Never>()
+    var jsonValueFromSSWebView = PassthroughSubject<[String : Any?], Never>()
+    var stringValueFromSSWebView = PassthroughSubject<String, Never>()
+    var statusMessageFromSSWebView = PassthroughSubject<String, Never>()
 }
 
 // For identifiying WebView's forward and backward navigation

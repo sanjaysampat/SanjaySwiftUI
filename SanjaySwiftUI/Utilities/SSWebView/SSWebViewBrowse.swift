@@ -14,7 +14,8 @@ struct SSWebViewBrowse: View {
     @State private var showingAlert:Int = 0
     @State private var showSpinLoader = false
     @State private var siteTitle = ""
-    @State var urlString = "https://www.dgflick.com"
+    @State private var siteStatus = ""
+    @State var urlString = "https://apple.com"
     @State var isHtmlText = false
 
     // For WebView's refresh, forward and backward navigation
@@ -24,11 +25,9 @@ struct SSWebViewBrowse: View {
             HStack {
                 Spacer()
                 Button(action: {
-                    // SSTODO to add button to get new url from user.
-                    // change urlString to new url
-                    // use alertSS
+                    // use alertSS to get urlString and will convert to new url
                     self.showingAlert = 1
-                    self.alertSS(title: "URL", message: "Enter", text: urlString )
+                    self.alertSS(title: "URL", message: "Enter web address or html text", text: urlString )
                 }) {
                     //Text("New")
                     Image(systemName: "cloud")
@@ -89,23 +88,39 @@ struct SSWebViewBrowse: View {
             
             VStack(spacing: 0) {
                 
+                Group {
+                    if siteStatus.isEmpty {
+                        EmptyView()
+                    } else {
+                        Text(siteStatus)
+                            .font(.caption2)
+                            .foregroundColor( ( siteStatus.starts(with: "Success") ? .primary : .red ) )
+                            .lineLimit(nil)
+                            .multilineTextAlignment(.center)
+                        Divider()
+                    }
+                }
+                .onReceive(self.ssWebViewModel.statusMessageFromSSWebView.receive(on: RunLoop.main)) { value in
+                    self.siteStatus = value
+                }
+                
                 Text(siteTitle)
                     .font(.caption2)
                     .lineLimit(nil)
                     .multilineTextAlignment(.center)
                     .onReceive(self.ssWebViewModel.showWebTitle.receive(on: RunLoop.main)) { value in
-                    self.siteTitle = value
-                }
+                        self.siteTitle = value
+                    }
                 Divider()
-
+                
                 if isHtmlText {
                     SSWebView(ssWebViewModel: ssWebViewModel, htmlText: urlString )
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, idealHeight: 500, maxHeight: .infinity, alignment: .center)
                         .padding()
                 } else {
-                SSWebView(ssWebViewModel: ssWebViewModel, publicUrlOpt: url )
-                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, idealHeight: 500, maxHeight: .infinity, alignment: .center)
-                    .padding()
+                    SSWebView(ssWebViewModel: ssWebViewModel, publicUrlOpt: url )
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, idealHeight: 500, maxHeight: .infinity, alignment: .center)
+                        .padding()
                 }
                 webViewNavigationBar
                 
@@ -121,9 +136,16 @@ struct SSWebViewBrowse: View {
         }
         
     }
-    
+
+    private func showAlert(alert: UIAlertController) {
+        if let controller = CommonUtils.topMostViewController() {
+            controller.present(alert, animated: true)
+        }
+    }
+
     private func alertSS( title:String = "", message:String = "", placeHolder:String = "Enter text here", text:String = "" ) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
         alert.addTextField { (textField) in
             textField.text = text
             textField.placeholder = placeHolder
@@ -133,22 +155,7 @@ struct SSWebViewBrowse: View {
             
             let textField = alert.textFields![0] as UITextField
             if let textString = textField.text {
-                var urlTextString = textString
-                if urlTextString.lowercased().starts(with: "http://") {
-                    let indexStartOfText = urlTextString.index(urlTextString.startIndex, offsetBy: 7)
-                    let substring = urlTextString[indexStartOfText...]
-                    urlTextString = String(substring)
-                }
-                if !urlTextString.isEmpty {
-                if urlTextString.lowercased().starts(with: "<html>") {
-                    self.urlString = urlTextString
-                    self.isHtmlText = true
-                } else if !urlTextString.lowercased().starts(with: "http") {
-                    urlTextString = "https://\(urlTextString)"
-                }
-                    self.urlString = urlTextString
-                    self.isHtmlText = false
-                }
+                formUrlString(urlString: textString)
             }
         })
         
@@ -156,42 +163,28 @@ struct SSWebViewBrowse: View {
         
         showAlert(alert: alert)
     }
-
-    private func showAlert(alert: UIAlertController) {
-        if let controller = topMostViewController() {
-            controller.present(alert, animated: true)
-        }
-    }
     
-    private func keyWindow() -> UIWindow? {
-        return UIApplication.shared.connectedScenes
-        .filter {$0.activationState == .foregroundActive}
-        .compactMap {$0 as? UIWindowScene}
-        .first?.windows.filter {$0.isKeyWindow}.first
-    }
-    
-    private func topMostViewController() -> UIViewController? {
-        guard let rootController = keyWindow()?.rootViewController else {
-            return nil
+    private func formUrlString( urlString : String) {
+        var urlTextString = urlString
+        if urlTextString.lowercased().starts(with: "http://") {
+            let indexStartOfText = urlTextString.index(urlTextString.startIndex, offsetBy: 7)
+            let substring = urlTextString[indexStartOfText...]
+            urlTextString = String(substring)
         }
-        return topMostViewController(for: rootController)
-    }
-
-    private func topMostViewController(for controller: UIViewController) -> UIViewController {
-        if let presentedController = controller.presentedViewController {
-            return topMostViewController(for: presentedController)
-        } else if let navigationController = controller as? UINavigationController {
-            guard let topController = navigationController.topViewController else {
-                return navigationController
+        if !urlTextString.isEmpty {
+            self.isHtmlText = false
+            if urlTextString.lowercased().starts(with: "<html>") {
+                let indexStartOfText = urlTextString.index(urlTextString.startIndex, offsetBy: 6)
+                let substring = urlTextString[indexStartOfText...]
+                let headerString = "<html><header><meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes'></header>"
+                urlTextString = headerString + String(substring)
+                self.isHtmlText = true
+            } else if !urlTextString.lowercased().starts(with: "http") {
+                urlTextString = "https://\(urlTextString)"
             }
-            return topMostViewController(for: topController)
-        } else if let tabController = controller as? UITabBarController {
-            guard let topController = tabController.selectedViewController else {
-                return tabController
-            }
-            return topMostViewController(for: topController)
+            self.ssWebViewModel.statusMessageFromSSWebView.send("")
+            self.urlString = urlTextString
         }
-        return controller
     }
 
 }

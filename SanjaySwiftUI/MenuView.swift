@@ -421,8 +421,8 @@ struct MenuView: View {
                             VStack( alignment: .leading) {
                                 HStack {
                                     ZStack {
-                                        //Image(systemName: "bell")
-                                            //.scaleEffect(CGSize(width: 1.0, height: 1.0))
+                                        Image(systemName: "cloud")
+                                            .scaleEffect(CGSize(width: 1.0, height: 1.0))
                                     }
                                     Text("Browse web")
                                         .font(.caption)
