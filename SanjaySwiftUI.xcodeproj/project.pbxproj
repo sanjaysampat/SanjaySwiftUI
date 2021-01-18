@@ -205,6 +205,8 @@
 		7267646D24FBD7DA0074715B /* PaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267646924FBD7DA0074715B /* PaymentHandler.swift */; };
 		7267646F24FBE3E50074715B /* ApplePayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267646E24FBE3E50074715B /* ApplePayController.swift */; };
 		7267647024FBE3E50074715B /* ApplePayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267646E24FBE3E50074715B /* ApplePayController.swift */; };
+		72678E3325B5ACCB00E2D8C2 /* roundSpecificCorners.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72678E3225B5ACC800E2D8C2 /* roundSpecificCorners.jpg */; };
+		72678E3425B5ACCB00E2D8C2 /* roundSpecificCorners.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72678E3225B5ACC800E2D8C2 /* roundSpecificCorners.jpg */; };
 		7267B250254417DE00822C61 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267B24F254417DE00822C61 /* MainContentView.swift */; };
 		7267B251254417DE00822C61 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267B24F254417DE00822C61 /* MainContentView.swift */; };
 		72735B4F24D01A86006B75C9 /* StoryboardSanjay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72735B4E24D01A86006B75C9 /* StoryboardSanjay.storyboard */; };
@@ -487,6 +489,7 @@
 		7267646824FBD7D90074715B /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		7267646924FBD7DA0074715B /* PaymentHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentHandler.swift; sourceTree = "<group>"; };
 		7267646E24FBE3E50074715B /* ApplePayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayController.swift; sourceTree = "<group>"; };
+		72678E3225B5ACC800E2D8C2 /* roundSpecificCorners.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = roundSpecificCorners.jpg; sourceTree = "<group>"; };
 		7267B24F254417DE00822C61 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
 		72735B4E24D01A86006B75C9 /* StoryboardSanjay.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryboardSanjay.storyboard; sourceTree = "<group>"; };
 		72735B5024D02872006B75C9 /* CustomImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImagePickerViewController.swift; sourceTree = "<group>"; };
@@ -926,6 +929,7 @@
 		728445682530879500338F55 /* readmeResource */ = {
 			isa = PBXGroup;
 			children = (
+				72678E3225B5ACC800E2D8C2 /* roundSpecificCorners.jpg */,
 				7219C795256CE62900F324CC /* Menu.jpg */,
 				7219C794256CE62900F324CC /* signaturesList.jpg */,
 				7219C78D256CE44900F324CC /* localizationLanguges.jpg */,
@@ -1284,6 +1288,7 @@
 				72B88D3225285C4C00321710 /* MyParticleMagic.sks in Resources */,
 				7284458025308A5200338F55 /* honeycombGrid.jpg in Resources */,
 				72663AC224C5C7BD000596C9 /* LaunchScreen.storyboard in Resources */,
+				72678E3325B5ACCB00E2D8C2 /* roundSpecificCorners.jpg in Resources */,
 				72735B7524D034B0006B75C9 /* StickersViewController.xib in Resources */,
 				7299E6A624E8046800704724 /* gettonyCategoryList.json in Resources */,
 				7299E6A424E8046800704724 /* getnewpriorityFreedomsbyuser.json in Resources */,
@@ -1372,6 +1377,7 @@
 				72B88D3325285C4C00321710 /* MyParticleMagic.sks in Resources */,
 				7284458125308A5200338F55 /* honeycombGrid.jpg in Resources */,
 				7267644424FBB27E0074715B /* LaunchScreen.storyboard in Resources */,
+				72678E3425B5ACCB00E2D8C2 /* roundSpecificCorners.jpg in Resources */,
 				7267644524FBB27E0074715B /* StickersViewController.xib in Resources */,
 				7267644624FBB27E0074715B /* gettonyCategoryList.json in Resources */,
 				7267644724FBB27E0074715B /* getnewpriorityFreedomsbyuser.json in Resources */,

@@ -26,6 +26,10 @@ SwiftUI project creation to learn.
             * loading list of filtered images in multiple HStacks on a screen in various sizes.
             * loading image from web URL with cache
         * Added displaying of views from viewArray. We can shuffle the array.
+        * Round Specific Corners
+        
+            ![roundSpecificCorners](readmeResource/roundSpecificCorners.jpg)
+        
     * Multiple SwiftUI views loading from contentView
     * JSON service with Codable protocol
         * Loading and updating JSON service response. 

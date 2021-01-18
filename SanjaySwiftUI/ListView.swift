@@ -74,6 +74,11 @@ struct ListView: View {
          ))
     ]
     
+    @State private var topLeft: CGFloat = 0
+    @State private var topRight: CGFloat = 100
+    @State private var bottomLeft: CGFloat = 100
+    @State private var bottomRight: CGFloat = 0
+    
     var body: some View {
         ZStack {
             if showMultiSelector {
@@ -154,19 +159,43 @@ struct ListView: View {
                         if multiSelecterTask.servingGoals.contains( MultiSelectorGoal(name: ViewNames.person.rawValue) ) {
                             Group {
                                 if self.persons.count > 0 && self.currentPos >= 0 && self.currentPos < self.persons.count {
-                                    ZStack {
-                                        Image( uiImage: UIImage(data: self.persons[self.currentPos].photo ?? Data()), placeholderSystemName: "person")
-                                            .resizable(resizingMode: .stretch)
-                                            .scaledToFit()
-                                            .font(Font.title.weight(.ultraLight))
-                                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                                            .cornerRadius(self.myCornerRadius)
+                                    VStack {
+                                        HStack(spacing:32) {
+                                            Slider(value: $topLeft, in: 0...100)
+                                            Slider(value: $topRight, in: 0...100)
+                                        }
+                                        ZStack(alignment: .bottom) {
+                                            /*
+                                             Image( uiImage: UIImage(data: self.persons[self.currentPos].photo ?? Data()), placeholderSystemName: "person")
+                                             .resizable(resizingMode: .stretch)
+                                             .scaledToFit()
+                                             .font(Font.title.weight(.ultraLight))
+                                             .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                             .cornerRadius(self.myCornerRadius)
+                                             */
+                                            
+                                            Image( uiImage: UIImage(data: self.persons[self.currentPos].photo ?? Data()), placeholderSystemName: "person")
+                                                .resizable(resizingMode: .stretch)
+                                                .scaledToFit()
+                                                .font(Font.title.weight(.ultraLight))
+                                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                                .cornerRadius(topLeft, corners: .topLeft)
+                                                .cornerRadius(topRight, corners: .topRight)
+                                                .cornerRadius(bottomLeft, corners: .bottomLeft)
+                                                .cornerRadius(bottomRight, corners: .bottomRight)
+                                            
+                                            Text(self.persons[self.currentPos].name ?? "")
+                                                .foregroundColor(CommonUtils.cu_activity_background_color)
+                                                .shadow(radius: 1.5)
+                                        }
                                         
-                                        Text(self.persons[self.currentPos].name ?? "")
-                                            .foregroundColor(CommonUtils.cu_activity_background_color)
-                                            .shadow(radius: 1.5)
+                                        HStack(spacing:32) {
+                                            Slider(value: $bottomLeft, in: 0...100)
+                                            Slider(value: $bottomRight, in: 0...100)
+                                        }
+                                        
                                     }
-                                    .padding(10)
+                                    .padding(.horizontal, 20)
                                     
                                 }
                             }
@@ -189,7 +218,7 @@ struct ListView: View {
                                                     .font(Font.title.weight(.ultraLight))
                                                     .foregroundColor(CommonUtils.cu_activity_light_text_color)
                                                     .cornerRadius(self.myCornerRadius)
-
+                                                
                                                 Text("\(person.name ?? "")")
                                                     .foregroundColor(CommonUtils.cu_activity_background_color)
                                                     .shadow(radius: 1.5)
@@ -301,7 +330,7 @@ struct ListView: View {
                                 
                             }
                             .layoutPriority(1)  // SSNote : high priority for this layout by Parent, specially in case of multiline text.
-
+                            
                         } else {
                             
                             TonySectionViewer(tonySectionFeatcher: TonySectionFeatcher(userEmail: userAuth.userEmail), photoFrame: $photoFrame )
