@@ -145,7 +145,7 @@ SwiftUI project creation to learn.
 11. RoomList - Listing of conference rooms example by Apple. 
     * List add sample room, delete list item
     * Room detail view
-        * Map view with 'eat' annotations.
+        * Map view with 'eat' annotations. Tap on annotation to show more information.
     
 12. Implementing SpriteKit with SwiftUI
     * Demo SpriteKit - Scene and Particle effect  (SpriteKitResources)  

@@ -13,6 +13,8 @@ struct SSMapView: View {
     @Binding var isPresentedSSMap: Bool
     @Binding var coordinateRegion: MKCoordinateRegion
     var annotaionItemPlaces : [SSAnnotaionItemPlace] = []
+    
+    @State private var itemDescription: String = ""
 
     var body: some View {
         ZStack(alignment: .topLeading) {
@@ -35,6 +37,10 @@ struct SSMapView: View {
                                         .frame(width: 8.0, height: 8.0)
                                 }
                                 .foregroundColor(.red)
+                                .onTapGesture {
+                                    self.itemDescription = "Any extra information of \(place.name) in multi line."
+                                }
+                                
                                 Text(place.name)
                                     .font(.subheadline)
                                     .foregroundColor(CommonUtils.cu_activity_light_text_color)
@@ -46,7 +52,23 @@ struct SSMapView: View {
                          MapPin(coordinate: location.coordinate)
                          */
                     }
-                    
+                    //.onTapGesture {
+                    //    self.itemDescription = ""
+                    //}
+
+                    if !self.itemDescription.isEmpty {
+                        HStack(alignment: .center) {
+                            Spacer()
+                            Text(self.itemDescription)
+                                .font(.caption2)
+                                .lineLimit(nil)
+                                .multilineTextAlignment(.center)
+                                .padding(5)
+                            Spacer()
+                        }
+                        .background(CommonUtils.cu_activity_light_theam_color).cornerRadius(10).opacity(0.6)
+                        .padding(30)
+                    }
                 }
             } else {
                 Text("The example will work only on and above iOS 14.")
