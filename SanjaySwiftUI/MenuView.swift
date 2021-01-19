@@ -434,6 +434,26 @@ struct MenuView: View {
                             
                         }
                         Divider()
+                        
+                        NavigationLink(destination:
+                                        ChartDemoView()
+                        ) {
+                            VStack( alignment: .leading) {
+                                HStack {
+                                    ZStack {
+                                        Image(systemName: "chart.bar.xaxis")
+                                            .scaleEffect(CGSize(width: 1.0, height: 1.0))
+                                    }
+                                    Text("Chart Demo ( using Swift Package )")
+                                        .font(.caption)
+                                }
+                                .font(.body)
+                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                .shadow(radius: 1.5)
+                            }
+                            
+                        }
+                        Divider()
 
                         NavigationLink(destination:
                                         RecordedListView()

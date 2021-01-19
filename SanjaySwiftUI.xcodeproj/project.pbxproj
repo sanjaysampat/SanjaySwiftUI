@@ -253,6 +253,8 @@
 		727BF0CD2525EEAA0061BD7F /* SSMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727BF0CB2525EEA90061BD7F /* SSMapView.swift */; };
 		727E111224F6A994007231F7 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E111124F6A994007231F7 /* MenuView.swift */; };
 		727E111424F6C092007231F7 /* PublicCommit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E111324F6C091007231F7 /* PublicCommit.swift */; };
+		727EBBF825B6F16800142F3B /* ChartDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EBBF725B6F16800142F3B /* ChartDemoView.swift */; };
+		727EBBF925B6F16800142F3B /* ChartDemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727EBBF725B6F16800142F3B /* ChartDemoView.swift */; };
 		7282060A24E5769600F5F8CB /* getnewMostLovedCatData.json in Resources */ = {isa = PBXBuildFile; fileRef = 7282060924E5769500F5F8CB /* getnewMostLovedCatData.json */; };
 		7284458025308A5200338F55 /* honeycombGrid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7284457F25308A5200338F55 /* honeycombGrid.jpg */; };
 		7284458125308A5200338F55 /* honeycombGrid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7284457F25308A5200338F55 /* honeycombGrid.jpg */; };
@@ -418,6 +420,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		727EBBF325B6EFA300142F3B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		727EBC0425B6F8EF00142F3B /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		7204276624DFD43D00DF4958 /* SwiftUIAsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIAsyncImageView.swift; sourceTree = "<group>"; };
 		7204276824DFD4A200DF4958 /* SwiftUIImageLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftUIImageLoader.swift; sourceTree = "<group>"; };
@@ -532,6 +557,7 @@
 		727BF0CB2525EEA90061BD7F /* SSMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSMapView.swift; sourceTree = "<group>"; };
 		727E111124F6A994007231F7 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		727E111324F6C091007231F7 /* PublicCommit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicCommit.swift; sourceTree = "<group>"; };
+		727EBBF725B6F16800142F3B /* ChartDemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDemoView.swift; sourceTree = "<group>"; };
 		7282060924E5769500F5F8CB /* getnewMostLovedCatData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getnewMostLovedCatData.json; sourceTree = "<group>"; };
 		7284457F25308A5200338F55 /* honeycombGrid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = honeycombGrid.jpg; sourceTree = "<group>"; };
 		7284458625308DB500338F55 /* vstackRotation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vstackRotation.jpg; sourceTree = "<group>"; };
@@ -768,6 +794,7 @@
 		72663AB124C5C7AC000596C9 /* SanjaySwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				727EBBFD25B6F3EC00142F3B /* Charts */,
 				72F2EBDF2531F2F700AA8454 /* MultiSelector */,
 				72B88D2F25285BE100321710 /* SpriteKitResources */,
 				729CC94D2521E1240078A0CC /* RoomListResources */,
@@ -814,6 +841,7 @@
 				72066E51256BD98400D16AE7 /* NotificationListView.swift */,
 				726392792574C241002BA011 /* CreateLocalNotificaitonView.swift */,
 				72E115C02578F7910055B55C /* EnumerationSampleView.swift */,
+				727EBBF725B6F16800142F3B /* ChartDemoView.swift */,
 			);
 			path = SanjaySwiftUI;
 			sourceTree = "<group>";
@@ -924,6 +952,13 @@
 				727BF0CB2525EEA90061BD7F /* SSMapView.swift */,
 			);
 			path = SSMapView;
+			sourceTree = "<group>";
+		};
+		727EBBFD25B6F3EC00142F3B /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Charts;
 			sourceTree = "<group>";
 		};
 		728445682530879500338F55 /* readmeResource */ = {
@@ -1146,12 +1181,15 @@
 				72663AAB24C5C7AC000596C9 /* Sources */,
 				72663AAC24C5C7AC000596C9 /* Frameworks */,
 				72663AAD24C5C7AC000596C9 /* Resources */,
+				727EBBF325B6EFA300142F3B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SanjaySwiftUI;
+			packageProductDependencies = (
+			);
 			productName = SanjaySwiftUI;
 			productReference = 72663AAF24C5C7AC000596C9 /* SanjaySwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -1201,12 +1239,15 @@
 				726763EF24FBB27E0074715B /* Sources */,
 				7267643524FBB27E0074715B /* Frameworks */,
 				7267643624FBB27E0074715B /* Resources */,
+				727EBC0425B6F8EF00142F3B /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SanjaySwiftUIPay;
+			packageProductDependencies = (
+			);
 			productName = SanjaySwiftUI;
 			productReference = 7267646524FBB27E0074715B /* SanjaySwiftUIPay.app */;
 			productType = "com.apple.product-type.application";
@@ -1250,6 +1291,8 @@
 				"mr-IN",
 			);
 			mainGroup = 72663AA624C5C7AC000596C9;
+			packageReferences = (
+			);
 			productRefGroup = 72663AB024C5C7AC000596C9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -1546,6 +1589,7 @@
 				72735B7E24D034B0006B75C9 /* PhotoEditor+Font.swift in Sources */,
 				727ACC28256B86E300FD7711 /* LocalNotificationCenter.swift in Sources */,
 				72735B9A24D048C7006B75C9 /* UIImage+Extra.swift in Sources */,
+				727EBBF825B6F16800142F3B /* ChartDemoView.swift in Sources */,
 				72735B9224D034B0006B75C9 /* ColorCollectionViewCell.swift in Sources */,
 				7263927A2574C241002BA011 /* CreateLocalNotificaitonView.swift in Sources */,
 				72DA25D3258CA77200A864E8 /* SSWebViewModel.swift in Sources */,
@@ -1688,6 +1732,7 @@
 				7267643124FBB27E0074715B /* PhotoEditor+Font.swift in Sources */,
 				727ACC29256B86E300FD7711 /* LocalNotificationCenter.swift in Sources */,
 				7267643224FBB27E0074715B /* UIImage+Extra.swift in Sources */,
+				727EBBF925B6F16800142F3B /* ChartDemoView.swift in Sources */,
 				7267643324FBB27E0074715B /* ColorCollectionViewCell.swift in Sources */,
 				7263927B2574C241002BA011 /* CreateLocalNotificaitonView.swift in Sources */,
 				72DA25D4258CA77200A864E8 /* SSWebViewModel.swift in Sources */,
@@ -1871,6 +1916,7 @@
 		72663ADD24C5C7BE000596C9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -1895,6 +1941,7 @@
 		72663ADE24C5C7BE000596C9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;

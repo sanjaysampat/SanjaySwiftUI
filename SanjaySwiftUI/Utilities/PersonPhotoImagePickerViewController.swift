@@ -1,5 +1,5 @@
 //
-//  PersonPhotoImagePickerViewControllerDelegate.swift
+//  PersonPhotoImagePickerViewController.swift
 //  SanjaySwiftUI
 //
 //  Created by Sanjay on 29/07/20.
