@@ -87,6 +87,54 @@ struct CommonUtils {
     static var cuApplicationSupportFolder       = ""
     static var cuScreenRecordFolder             = ""
     
+    static func trialWork() {
+        
+    }
+    
+    // Tests in TrialWorksTests.swift
+    //let intArray2 = [2,500, 2,10,20,30,40,500, 100,100,100,200,200,500,500, -40,-30,-20,-10,0,10,20,30,40,500, -9,-8,-7,-6,-5,-4,-3,-2,-1,0, ]
+    // eg. 2,500 is first sequence. Next sequence starts as 2 is smaller then 500.
+    static func getHighestTotalOfNumericSequence<T:Numeric & Comparable>( tArray:[T] ) -> T? {
+        var total:T? = nil
+        var lastElement:T? = nil
+        var maxTotal:T? = nil
+        
+        tArray.map { element in
+            //print(element)
+            if let lastUsedElement = lastElement {
+                if element >= lastUsedElement {
+                    total = (total ?? 0) + element
+                    //print("total=\(total ?? 0)")
+                } else {
+                    if let maxUsedTotal = maxTotal {
+                        if let totalUsed = total {
+                            maxTotal = max( maxUsedTotal, totalUsed )
+                            //print("Next maxTotal=\(maxTotal ?? 0)")
+                        }
+                    } else {
+                        maxTotal = total
+                        //print("First maxTotal=\(maxTotal ?? 0)")
+                    }
+                    total = element
+                }
+            } else {
+                total = element
+                //print("First total=\(total ?? 0)")
+            }
+            lastElement = element
+            
+        }
+        if let maxUsedTotal = maxTotal {
+            if let totalUsed = total {
+                maxTotal = max( maxUsedTotal, totalUsed )
+            }
+        } else {
+            maxTotal = total
+        }
+        //print("Last maxTotal=\(maxTotal ?? 0)")
+        return maxTotal
+    }
+    
     // TDD - testCommonUtilsCreateRequiredFolders()
     static func createRequiredFolders() -> Bool {
         
