@@ -181,8 +181,10 @@ SwiftUI project creation to learn.
             * To resolve add "Push Notifications" capability at - Project Settings - targets - Signing and Capabilities.
             
 19. Webbrowser : ( Work continued - Menu option 'Browse web')
+
+20. Sample form with Inline error validation using combine.
             
-18. XCTestCase - testing case creation started. ( Ref: SanjaySwiftUITests.swift )
+21. XCTestCase - testing case creation started. ( Ref: SanjaySwiftUITests, TrialWorkTests )
 
 * Important Note :-
     1. When SwiftUI does not have many views in a screen, the loading of App is faster. ( SwiftUI only loads views when they are seen on screen )

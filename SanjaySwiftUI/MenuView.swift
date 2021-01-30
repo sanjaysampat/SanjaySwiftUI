@@ -436,6 +436,28 @@ struct MenuView: View {
                         Divider()
                         
                         NavigationLink(destination:
+                                        CombineFormView()
+                        ) {
+                            VStack( alignment: .leading) {
+                                HStack {
+                                    ZStack {
+                                        Image(systemName: "rectangle")
+                                            .scaleEffect(CGSize(width: 1.2, height: 1.5))
+                                        Image(systemName: "text.alignleft")
+                                            .scaleEffect(CGSize(width: 1.0, height: 1.0))
+                                    }
+                                    Text("Form with Inline error validation using combine")
+                                        .font(.caption)
+                                }
+                                .font(.body)
+                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                .shadow(radius: 1.5)
+                            }
+                            
+                        }
+                        Divider()
+
+                        NavigationLink(destination:
                                         ChartDemoView()
                         ) {
                             VStack( alignment: .leading) {
@@ -444,7 +466,7 @@ struct MenuView: View {
                                         Image(systemName: "chart.bar.xaxis")
                                             .scaleEffect(CGSize(width: 1.0, height: 1.0))
                                     }
-                                    Text("Chart Demo ( using Swift Package )")
+                                    Text("Chart Demo ( using Swift Package ) - WIP")
                                         .font(.caption)
                                 }
                                 .font(.body)
