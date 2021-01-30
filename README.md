@@ -182,7 +182,7 @@ SwiftUI project creation to learn.
             
 19. Webbrowser : ( Work continued - Menu option 'Browse web')
 
-20. Sample form with Inline error validation using combine.
+20. Sample form with Inline error validation using combine. ( Ref: https://www.youtube.com/watch?v=YJRApch2cc4&feature=youtu.be )
             
 21. XCTestCase - testing case creation started. ( Ref: SanjaySwiftUITests, TrialWorkTests )
 
