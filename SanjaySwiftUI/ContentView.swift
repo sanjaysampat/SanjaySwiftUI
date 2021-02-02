@@ -35,7 +35,7 @@ struct ContentView: View {
     @State private var photoChanged = false
     @State private var personPhoto:UIImage? = nil
 
-    private let paddingSize:CGFloat = 10
+    private let paddingSize:CGFloat = 5
     
     @State private var lastPos:Int = -1
 
@@ -300,6 +300,28 @@ struct ContentView: View {
                         
                     }
                     
+                    Button(action: {
+                        if self.currentPos >= 0 {
+                            self.menuSelection = 2
+                            
+                        } else {
+                            // default add mode
+                            self.showingAlert = 1
+                            self.nameChanged = false
+                            self.isEditMode = false
+                            self.alertSS(title: "in your Heart", message: "What's name ?", text: "" )
+                        }
+                    }) {
+                        VStack( alignment: .center) {
+                            Image(systemName: "text.justify")
+                            Text("Menu List")
+                                .font(.caption)
+                            
+                        }
+                    }
+                    .foregroundColor(CommonUtils.cu_activity_foreground_color)
+                    .padding(paddingSize)
+
                 }
                 .rotationEffect(Angle(degrees: -45), anchor: .center)
                 .onReceive(resetEmitterNotification) { (output) in
@@ -312,7 +334,11 @@ struct ContentView: View {
                  }
                  */
             } else {
-                MenuView(menuSelection: $menuSelection, currentPos: $currentPos)
+                if menuSelection == 2 {
+                    SSMenuListView(menuSelection: $menuSelection)
+                } else {
+                    MenuView(menuSelection: $menuSelection, currentPos: $currentPos)
+                }
             }
 
         }

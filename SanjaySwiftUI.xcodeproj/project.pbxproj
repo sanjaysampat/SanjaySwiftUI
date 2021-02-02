@@ -275,6 +275,12 @@
 		7297839A25653931009DE59D /* signaturesData.json in Resources */ = {isa = PBXBuildFile; fileRef = 7297839825653931009DE59D /* signaturesData.json */; };
 		729783A025654DC7009DE59D /* SignatureListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7297839F25654DC7009DE59D /* SignatureListView.swift */; };
 		729783A125654DC7009DE59D /* SignatureListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7297839F25654DC7009DE59D /* SignatureListView.swift */; };
+		7298A42E25C92B1900E01A8D /* SSMenuListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298A42D25C92B1900E01A8D /* SSMenuListView.swift */; };
+		7298A42F25C92B1900E01A8D /* SSMenuListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298A42D25C92B1900E01A8D /* SSMenuListView.swift */; };
+		7298A43525C92D0400E01A8D /* SSMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298A43425C92D0400E01A8D /* SSMenuItem.swift */; };
+		7298A43625C92D0400E01A8D /* SSMenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298A43425C92D0400E01A8D /* SSMenuItem.swift */; };
+		7298A44625C94FC700E01A8D /* SSMenuItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298A43B25C94C4C00E01A8D /* SSMenuItemStore.swift */; };
+		7298A44925C94FCA00E01A8D /* SSMenuItemStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7298A43B25C94C4C00E01A8D /* SSMenuItemStore.swift */; };
 		7299E6A324E8046800704724 /* getDailyQuote.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69924E8046300704724 /* getDailyQuote.json */; };
 		7299E6A424E8046800704724 /* getnewpriorityFreedomsbyuser.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69A24E8046500704724 /* getnewpriorityFreedomsbyuser.json */; };
 		7299E6A524E8046800704724 /* getdailyStory.json in Resources */ = {isa = PBXBuildFile; fileRef = 7299E69B24E8046500704724 /* getdailyStory.json */; };
@@ -572,6 +578,9 @@
 		72978391256538A9009DE59D /* Signature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
 		7297839825653931009DE59D /* signaturesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signaturesData.json; sourceTree = "<group>"; };
 		7297839F25654DC7009DE59D /* SignatureListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignatureListView.swift; sourceTree = "<group>"; };
+		7298A42D25C92B1900E01A8D /* SSMenuListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSMenuListView.swift; sourceTree = "<group>"; };
+		7298A43425C92D0400E01A8D /* SSMenuItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSMenuItem.swift; sourceTree = "<group>"; };
+		7298A43B25C94C4C00E01A8D /* SSMenuItemStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSMenuItemStore.swift; sourceTree = "<group>"; };
 		7299E69924E8046300704724 /* getDailyQuote.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getDailyQuote.json; sourceTree = "<group>"; };
 		7299E69A24E8046500704724 /* getnewpriorityFreedomsbyuser.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getnewpriorityFreedomsbyuser.json; sourceTree = "<group>"; };
 		7299E69B24E8046500704724 /* getdailyStory.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = getdailyStory.json; sourceTree = "<group>"; };
@@ -830,6 +839,9 @@
 				72B551B024DD1C8A009A0014 /* UserAuth.swift */,
 				72A42D522547F044002201DF /* UserSettings.swift */,
 				727E111124F6A994007231F7 /* MenuView.swift */,
+				7298A42D25C92B1900E01A8D /* SSMenuListView.swift */,
+				7298A43425C92D0400E01A8D /* SSMenuItem.swift */,
+				7298A43B25C94C4C00E01A8D /* SSMenuItemStore.swift */,
 				72CEEB5024F92EBE00A1AFE9 /* AVListView.swift */,
 				726763DC24FB76D00074715B /* TabSwiftUiView.swift */,
 				726763E124FB7FA40074715B /* LocalDemoView.swift */,
@@ -1484,6 +1496,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7298A43525C92D0400E01A8D /* SSMenuItem.swift in Sources */,
 				7210DDA52518E48C0013DB94 /* EnviornmentView.swift in Sources */,
 				72F0CBDD24F7F24600BE9DB0 /* Audio+CoreDataClass.swift in Sources */,
 				7216BB5C24D165380097AFA4 /* PersonPhotoImagePickerViewController.swift in Sources */,
@@ -1523,6 +1536,7 @@
 				72F2EBE92531F2F700AA8454 /* MultiSelectorGoal.swift in Sources */,
 				72735B8524D034B0006B75C9 /* PhotoEditor+Drawing.swift in Sources */,
 				7249749024E4F112006F5C52 /* TonySectionFeatcher.swift in Sources */,
+				7298A42E25C92B1900E01A8D /* SSMenuListView.swift in Sources */,
 				72735B8C24D034B0006B75C9 /* PhotoEditor+Gestures.swift in Sources */,
 				729B0EF424C99FCF00054F9F /* AlertControlView.swift in Sources */,
 				72FEEAC125517D9D0054AA79 /* UIViewController+Extra.swift in Sources */,
@@ -1565,6 +1579,7 @@
 				72D2498824FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift in Sources */,
 				72735B7924D034B0006B75C9 /* PhotoEditor+StickersViewController.swift in Sources */,
 				7204277B24E01CC800DF4958 /* SCLAlertView.swift in Sources */,
+				7298A44625C94FC700E01A8D /* SSMenuItemStore.swift in Sources */,
 				7263AD51251B79910041A810 /* CheckGridsView.swift in Sources */,
 				72735B8F24D034B0006B75C9 /* StickerCollectionViewCell.swift in Sources */,
 				72B2436B258B8C2600C44A5F /* SSWebView.swift in Sources */,
@@ -1629,6 +1644,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7298A43625C92D0400E01A8D /* SSMenuItem.swift in Sources */,
 				7210DDA62518E48C0013DB94 /* EnviornmentView.swift in Sources */,
 				726763F024FBB27E0074715B /* Audio+CoreDataClass.swift in Sources */,
 				726763F124FBB27E0074715B /* PersonPhotoImagePickerViewController.swift in Sources */,
@@ -1668,6 +1684,7 @@
 				72F2EBEA2531F2F700AA8454 /* MultiSelectorGoal.swift in Sources */,
 				7267640524FBB27E0074715B /* PhotoEditor+Drawing.swift in Sources */,
 				7267640624FBB27E0074715B /* TonySectionFeatcher.swift in Sources */,
+				7298A42F25C92B1900E01A8D /* SSMenuListView.swift in Sources */,
 				7267640724FBB27E0074715B /* PhotoEditor+Gestures.swift in Sources */,
 				7267640824FBB27E0074715B /* AlertControlView.swift in Sources */,
 				72FEEAC225517D9D0054AA79 /* UIViewController+Extra.swift in Sources */,
@@ -1710,6 +1727,7 @@
 				72D2498924FE2C40004A1F25 /* ViewLandmarkSwiftUIView.swift in Sources */,
 				7267642124FBB27E0074715B /* PhotoEditor+StickersViewController.swift in Sources */,
 				7267642224FBB27E0074715B /* SCLAlertView.swift in Sources */,
+				7298A44925C94FCA00E01A8D /* SSMenuItemStore.swift in Sources */,
 				7263AD52251B79910041A810 /* CheckGridsView.swift in Sources */,
 				7267642324FBB27E0074715B /* StickerCollectionViewCell.swift in Sources */,
 				72B2436C258B8C2600C44A5F /* SSWebView.swift in Sources */,

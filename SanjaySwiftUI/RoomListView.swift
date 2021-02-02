@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct RoomListView: View {
-    //var rooms: [Room] = testData    //[]
-    @ObservedObject var store = RoomStore(rooms: testData)
+    //var rooms: [Room] = testRoomData    //[]
+    @ObservedObject var store = RoomStore(rooms: testRoomData)
     
     var body: some View {
         NavigationView {
@@ -52,8 +52,8 @@ struct RoomListView: View {
 
 struct RoomListView_Previews: PreviewProvider {
     static var previews: some View {
-        //RoomListView(rooms: testData)
-        RoomListView(store: RoomStore(rooms: testData))
+        //RoomListView(rooms: testRoomData)
+        RoomListView(store: RoomStore(rooms: testRoomData))
     }
 }
 

@@ -30,7 +30,7 @@ struct Room: Identifiable {
     
 }
 
-let testData = [
+let testRoomData = [
     Room(name: "Tree Room", building: "A", floor: "1", capacity: 6, hasVideo: true, imageName: "room01", coordinates: Coordinates(latitude: 19.229497, longitude: 72.864994), annotaionItemPlaces: [
         SSAnnotaionItemPlace(name: "Tree Room", latitude: 19.229497, longitude: 72.864994),
         SSAnnotaionItemPlace(name: "Eat - Paratha Zone", latitude: 19.229932, longitude: 72.864297),

@@ -74,6 +74,6 @@ struct RoomDetailView: View {
 
 struct RoomDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        RoomDetailView(room: testData[0])
+        RoomDetailView(room: testRoomData[0])
     }
 }

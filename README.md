@@ -55,7 +55,7 @@ SwiftUI project creation to learn.
         * Continuing how to create proper observers of AVPlayer.
             * Issue while adding more observers.
             * 'SourceKitService" and/or 'Swift' process on mac taking max memory, so xcode and all mac proccesses slogs to halt ( macOS Catalina 10.15.6, tried on XCode 11.6 and 11.5). The issue was solved after update of XCode 11.7.
-    * Added Navigation view - 'Menu' option in content view. Now back and User Settings button on navigation bar.
+    * Added Navigation view - 'Menu' option in content view. Now back and User Settings button on navigation bar. ( Menu items are seperated in 'Menu' option and 'Menu List' option views. )
     
         ![localizationLanguges](readmeResource/Menu.jpg)
     
@@ -180,7 +180,7 @@ SwiftUI project creation to learn.
         * Failed to register for notifications: no valid “aps-environment” entitlement string found for application
             * To resolve add "Push Notifications" capability at - Project Settings - targets - Signing and Capabilities.
             
-19. Webbrowser : ( Work continued - Menu option 'Browse web')
+19. Webbrowser : ( Work continued - 'Menu List' option 'Browse web')
 
 20. Sample form with Inline error validation using combine. ( Ref: https://www.youtube.com/watch?v=YJRApch2cc4&feature=youtu.be )
             

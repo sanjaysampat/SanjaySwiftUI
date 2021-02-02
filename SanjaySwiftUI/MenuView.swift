@@ -16,96 +16,93 @@ struct MenuView: View {
     
     @StateObject var localNotification = LocalNotification()
     @StateObject var localNotificationCenter = LocalNotificationCenter.shared
-
+    
     @State var showNotification:Bool = false
     
-    @State var presentedSettings:Bool = false
+    @State private var presentedSettings:Bool = false
     
     private let whoAmI:CallingViews = CallingViews.main
-
+    
     var body: some View {
         NavigationView {
             ScrollView {
                 VStack(alignment: .leading) {
                     
-                    Group {
-                        NavigationLink(destination:
-                                        ListView(currentPos: $currentPos)
-                        ) {
-                            VStack( alignment: .leading) {
-                                HStack {
-                                    Image(systemName: "square.stack.3d.down.right")
-                                    Text("List View")
-                                        .font(.caption)
-                                }
-                                .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                                .shadow(radius: 1.5)
+                    NavigationLink(destination:
+                                    ListView(currentPos: $currentPos)
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                Image(systemName: "square.stack.3d.down.right")
+                                Text("List View")
+                                    .font(.caption)
                             }
-                            .padding(.vertical, 5)
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
                         }
-                        
-                        NavigationLink(destination:
-                                        AVListView()
-                        ) {
-                            VStack( alignment: .leading) {
-                                HStack {
-                                    Image(systemName: "play.circle")
-                                    Text("Audio/Video List View")
-                                        .font(.caption)
-                                }
-                                .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                                .shadow(radius: 1.5)
-                            }
-                            .padding(.bottom, 5)
-                            
-                        }
-                        
-                        NavigationLink(destination:
-                                        RoomListView()
-                        ) {
-                            VStack( alignment: .leading) {
-                                HStack {
-                                    ZStack {
-                                        Image(systemName: "rectangle")
-                                            .scaleEffect(CGSize(width: 1.2, height: 1.2))
-                                        Image(systemName: "person.2.fill")
-                                            .scaleEffect(CGSize(width: 0.8, height: 0.8))
-                                    }
-                                    Text("List of conferance rooms")
-                                        .font(.caption)
-                                }
-                                .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                                .shadow(radius: 1.5)
-                            }
-                            .padding(.bottom, 5)
-                            
-                        }
-                        
-                        NavigationLink(destination:
-                                        SignatureListView()
-                        ) {
-                            VStack( alignment: .leading) {
-                                HStack {
-                                    ZStack {
-                                        Image(systemName: "signature")
-                                        //    .scaleEffect(CGSize(width: 1.2, height: 1.2))
-                                        //Image(systemName: "staroflife")
-                                        //    .scaleEffect(CGSize(width: 1.0, height: 1.0))
-                                    }
-                                    Text("Signature List")
-                                        .font(.caption)
-                                }
-                                .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                                .shadow(radius: 1.5)
-                            }
-                        }
-                        
-                        Divider()
+                        .padding(.vertical, 5)
                     }
+                    Divider()
+                    
+                    /*
+                    NavigationLink(destination:
+                                    AVListView()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                Image(systemName: "play.circle")
+                                Text("Audio/Video List View")
+                                    .font(.caption)
+                            }
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
+                        }
+                        .padding(.bottom, 5)
+                        
+                    }
+                    
+                    NavigationLink(destination:
+                                    RoomListView()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                ZStack {
+                                    Image(systemName: "rectangle")
+                                        .scaleEffect(CGSize(width: 1.2, height: 1.2))
+                                    Image(systemName: "person.2.fill")
+                                        .scaleEffect(CGSize(width: 0.8, height: 0.8))
+                                }
+                                Text("List of conferance rooms")
+                                    .font(.caption)
+                            }
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
+                        }
+                        .padding(.bottom, 5)
+                        
+                    }
+                    
+                    NavigationLink(destination:
+                                    SignatureListView()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                ZStack {
+                                    Image(systemName: "signature")
+                                }
+                                Text("Signature List")
+                                    .font(.caption)
+                            }
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
+                        }
+                    }
+                    
+                    Divider()
                     
                     NavigationLink(destination:
                                     TabSwiftUiView()
@@ -142,7 +139,6 @@ struct MenuView: View {
                         
                     }
                     
-                    Group {
                     NavigationLink(destination:
                                     CheckShapesView()
                     ) {
@@ -176,52 +172,48 @@ struct MenuView: View {
                         }
                         
                     }
-                }
                     
-                    Group {
-                        NavigationLink(destination:
-                                        GeometryOfView()
-                        ) {
-                            VStack( alignment: .leading) {
-                                HStack {
-                                    ZStack(alignment: Alignment(horizontal: .leading, vertical: .center)) {
-                                        Image(systemName: "sum")
-                                        Image(systemName: "function")
-                                            .scaleEffect(CGSize(width: 0.8, height: 0.8))
-                                    }
-                                    Text("Geometry")
-                                        .font(.caption)
+                    NavigationLink(destination:
+                                    GeometryOfView()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                ZStack(alignment: .leading) {
+                                    Image(systemName: "sum")
+                                    Image(systemName: "function")
+                                        .scaleEffect(CGSize(width: 0.8, height: 0.8))
                                 }
-                                .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                                .shadow(radius: 1.5)
-                                Divider()
+                                Text("Geometry")
+                                    .font(.caption)
                             }
-                            
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
+                            Divider()
                         }
                         
-                        NavigationLink(destination:
-                                        EnviornmentView()
-                        ) {
-                            VStack( alignment: .leading) {
-                                HStack {
-                                    ZStack {
-                                        Image(systemName: "text.justify")
-                                        //Image(systemName: "globe")
-                                    }
-                                    Text("Environment")
-                                        .font(.caption)
-                                }
-                                .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                                .shadow(radius: 1.5)
-                            }
-                            
-                        }
-                        .padding(.bottom, 5)
-                        
-                        Divider()
                     }
+                    
+                    NavigationLink(destination:
+                                    EnviornmentView()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                ZStack {
+                                    Image(systemName: "text.justify")
+                                    //Image(systemName: "globe")
+                                }
+                                Text("Environment")
+                                    .font(.caption)
+                            }
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
+                        }
+                        
+                    }
+                    .padding(.bottom, 5)
+                    */
                     
                     Group {
                         NavigationLink(destination:
@@ -314,58 +306,54 @@ struct MenuView: View {
                         }
                         Divider()
                     }
+                    /*
+                    NavigationLink(destination:
+                                    EnumerationSampleView()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                ZStack {
+                                    Image(systemName: "ellipsis.circle")
+                                }
+                                Text("Enumeration Code Samples")
+                                    .font(.caption)
+                            }
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
+                        }
+                    }
+                    Divider()
+                    */
                     
                     Group {
-                        NavigationLink(destination:
-                                        EnumerationSampleView()
-                        ) {
-                            VStack( alignment: .leading) {
-                                HStack {
-                                    ZStack {
-                                        Image(systemName: "ellipsis.circle")
-                                        //    .scaleEffect(CGSize(width: 1.2, height: 1.2))
-                                        //Image(systemName: "staroflife")
-                                        //    .scaleEffect(CGSize(width: 1.0, height: 1.0))
-                                    }
-                                    Text("Enumeration Code Samples")
-                                        .font(.caption)
-                                }
-                                .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                                .shadow(radius: 1.5)
-                            }
-                        }
-                        Divider()
-                    }
-
-                    Group {
                         /*
-                        Button(action: {
-                            let formatter3 = DateFormatter()
-                            formatter3.dateFormat = CommonUtils.cu_VideoFileNameDateFormat
-                            let dateTimeString = formatter3.string(from: Date())
-                            localNotification.setLocalNotification(title: "Local",
-                                                                   subtitle: "Notification",
-                                                                   body: "Created on \(dateTimeString)",
-                                                                   when: 10)
-                        }) {
-                            VStack( alignment: .leading) {
-                                HStack {
-                                    ZStack {
-                                        //Image(systemName: "square.stack")
-                                        //    .scaleEffect(CGSize(width: 1.2, height: 1.2))
-                                        Image(systemName: "bell")
-                                            .scaleEffect(CGSize(width: 1.0, height: 1.0))
-                                    }
-                                    Text("Create Local Notificaiton in 10 seconds")
-                                        .font(.caption)
-                                }
-                                .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                                .shadow(radius: 1.5)
-                            }
-                        }
-                        */
+                         Button(action: {
+                         let formatter3 = DateFormatter()
+                         formatter3.dateFormat = CommonUtils.cu_VideoFileNameDateFormat
+                         let dateTimeString = formatter3.string(from: Date())
+                         localNotification.setLocalNotification(title: "Local",
+                         subtitle: "Notification",
+                         body: "Created on \(dateTimeString)",
+                         when: 10)
+                         }) {
+                         VStack( alignment: .leading) {
+                         HStack {
+                         ZStack {
+                         //Image(systemName: "square.stack")
+                         //    .scaleEffect(CGSize(width: 1.2, height: 1.2))
+                         Image(systemName: "bell")
+                         .scaleEffect(CGSize(width: 1.0, height: 1.0))
+                         }
+                         Text("Create Local Notificaiton in 10 seconds")
+                         .font(.caption)
+                         }
+                         .font(.body)
+                         .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                         .shadow(radius: 1.5)
+                         }
+                         }
+                         */
                         NavigationLink(destination:
                                         CreateLocalNotificaitonView()
                         ) {
@@ -384,7 +372,7 @@ struct MenuView: View {
                             }
                             
                         }
-
+                        
                         Button(action: {
                             withAnimation{
                                 self.showNotification.toggle()
@@ -413,91 +401,87 @@ struct MenuView: View {
                         
                     }
                     
-                    Group {
+                    /*
+                    NavigationLink(destination:
+                                    SSWebViewBrowse()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                ZStack {
+                                    Image(systemName: "cloud")
+                                        .scaleEffect(CGSize(width: 1.0, height: 1.0))
+                                }
+                                Text("Browse web")
+                                    .font(.caption)
+                            }
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
+                        }
                         
-                        NavigationLink(destination:
-                                        SSWebViewBrowse()
-                        ) {
-                            VStack( alignment: .leading) {
-                                HStack {
-                                    ZStack {
-                                        Image(systemName: "cloud")
-                                            .scaleEffect(CGSize(width: 1.0, height: 1.0))
-                                    }
-                                    Text("Browse web")
-                                        .font(.caption)
-                                }
-                                .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                                .shadow(radius: 1.5)
-                            }
-                            
-                        }
-                        Divider()
-                        
-                        NavigationLink(destination:
-                                        CombineFormView()
-                        ) {
-                            VStack( alignment: .leading) {
-                                HStack {
-                                    ZStack {
-                                        Image(systemName: "rectangle")
-                                            .scaleEffect(CGSize(width: 1.2, height: 1.5))
-                                        Image(systemName: "text.alignleft")
-                                            .scaleEffect(CGSize(width: 1.0, height: 1.0))
-                                    }
-                                    Text("Form with Inline error validation using combine")
-                                        .font(.caption)
-                                }
-                                .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                                .shadow(radius: 1.5)
-                            }
-                            
-                        }
-                        Divider()
-
-                        NavigationLink(destination:
-                                        ChartDemoView()
-                        ) {
-                            VStack( alignment: .leading) {
-                                HStack {
-                                    ZStack {
-                                        Image(systemName: "chart.bar.xaxis")
-                                            .scaleEffect(CGSize(width: 1.0, height: 1.0))
-                                    }
-                                    Text("Chart Demo ( using Swift Package ) - WIP")
-                                        .font(.caption)
-                                }
-                                .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                                .shadow(radius: 1.5)
-                            }
-                            
-                        }
-                        Divider()
-
-                        NavigationLink(destination:
-                                        RecordedListView()
-                        ) {
-                            VStack( alignment: .leading) {
-                                HStack {
-                                    ZStack {
-                                        Image(systemName: "squares.below.rectangle")
-                                        //    .scaleEffect(CGSize(width: 1.2, height: 1.2))
-                                        //Image(systemName: "staroflife")
-                                        //    .scaleEffect(CGSize(width: 1.0, height: 1.0))
-                                    }
-                                    Text("Screen Recording List")
-                                        .font(.caption)
-                                }
-                                .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
-                                .shadow(radius: 1.5)
-                            }
-                        }
-                        Divider()
                     }
+                    Divider()
+                    
+                    NavigationLink(destination:
+                                    CombineFormView()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                ZStack {
+                                    Image(systemName: "rectangle")
+                                        .scaleEffect(CGSize(width: 1.2, height: 1.5))
+                                    Image(systemName: "text.alignleft")
+                                        .scaleEffect(CGSize(width: 1.0, height: 1.0))
+                                }
+                                Text("Form with Inline error validation using combine")
+                                    .font(.caption)
+                            }
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
+                        }
+                        
+                    }
+                    Divider()
+                    
+                    NavigationLink(destination:
+                                    ChartDemoView()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                ZStack {
+                                    Image(systemName: "chart.bar.xaxis")
+                                        .scaleEffect(CGSize(width: 1.0, height: 1.0))
+                                }
+                                Text("Chart Demo ( using Swift Package ) - WIP")
+                                    .font(.caption)
+                            }
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
+                        }
+                        
+                    }
+                    Divider()
+                    
+                    NavigationLink(destination:
+                                    RecordedListView()
+                    ) {
+                        VStack( alignment: .leading) {
+                            HStack {
+                                ZStack {
+                                    Image(systemName: "squares.below.rectangle")
+                                }
+                                Text("Screen Recording List")
+                                    .font(.caption)
+                            }
+                            .font(.body)
+                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .shadow(radius: 1.5)
+                        }
+                    }
+                    Divider()
+                    */
                     
                     Spacer()
                 }
