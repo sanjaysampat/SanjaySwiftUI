@@ -51,6 +51,7 @@ final public class ScreenRecorder {
     private func checkPhotoLibraryAuthorizationStatus() {
         let status = PHPhotoLibrary.authorizationStatus()
         if status == .notDetermined {
+            // Escaping closure
             PHPhotoLibrary.requestAuthorization({ _ in })
         }
     }

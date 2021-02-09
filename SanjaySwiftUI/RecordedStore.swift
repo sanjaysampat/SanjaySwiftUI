@@ -59,10 +59,10 @@ fileprivate func fillRecordedFilesList() -> [Recorded] {
         let sortedFileList = fileList.sorted().reversed()
         for fileName in sortedFileList {
             if fileName.hasSuffix(".mp4") {
-            var name = ""
-            if let fileDate = fileNameFormatter.date(from: String(fileName.prefix(14))) {
-                name = displayDateFormatter.string(from: fileDate)
-            }
+                var name = ""
+                if let fileDate = fileNameFormatter.date(from: String(fileName.prefix(14))) {
+                    name = displayDateFormatter.string(from: fileDate)
+                }
                 let imageName = "\(String(fileName.prefix(14))).jpg"
                 if let _ = UIImage(contentsOfFile: CommonUtils.cuScreenRecordFolder.stringByAppendingPathComponent(path: imageName)) {
                     

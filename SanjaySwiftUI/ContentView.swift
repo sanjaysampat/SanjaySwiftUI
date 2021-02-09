@@ -332,6 +332,7 @@ struct ContentView: View {
                  NotificationCenter.default.addObserver(forName: Utils.callEmitterNotification, object: nil, queue: nil, using: self.userDidBuyCoffee(_:))
                  NotificationCenter.default.addObserver(forName: Utils.resetEmitterNotification, object: nil, queue: nil, using: self.resetCoffee(_:))
                  }
+                 .onDisappear // remove observers
                  */
             } else {
                 if menuSelection == 2 {
@@ -392,6 +393,7 @@ struct ContentView: View {
             textField.placeholder = placeHolder
         }
 
+        // nonEscaping closure
         alert.addAction(UIAlertAction(title: "Done", style: .default) { _ in
             let textField = alert.textFields![0] as UITextField
             self.name = textField.text ?? "Name"

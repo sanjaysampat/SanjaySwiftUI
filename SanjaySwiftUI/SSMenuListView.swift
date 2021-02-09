@@ -76,7 +76,10 @@ struct SSMenuCell: View {
                             .scaleEffect(ssMenuItem.image2ScaleEffect)
                     }
                 }
-                .frame(width: 50.0)
+                .frame(width: 45.0, height: 45.0)
+                .background(Color.blue)
+                .cornerRadius(7)
+                .foregroundColor(.white)
                 
                 Text(ssMenuItem.title)
                     .font(.body)

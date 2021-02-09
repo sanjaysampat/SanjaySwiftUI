@@ -28,6 +28,7 @@ func gMemoize<Input: Hashable, Output>(_ function: @escaping (Input) -> Output) 
     // our item cache
     var storage = [ Input: Output]()
 
+    // Escaping closure
     // send back a new closure that does our calculation
     return { input in
         if let cached = storage[input] {
@@ -44,6 +45,8 @@ func gRecursiveMemoize<Input: Hashable, Output>(_ function: @escaping ((Input) -
     // our item cache
     var storage = [Input: Output]()
 
+    // Escaping closure
+    // send back a new closure that does our calculation
     var memo: ((Input) -> Output)!
     memo = { input in
         if let cached = storage[input] {

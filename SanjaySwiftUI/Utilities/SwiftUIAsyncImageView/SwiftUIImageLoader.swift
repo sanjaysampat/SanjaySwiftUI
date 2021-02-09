@@ -37,9 +37,11 @@ class SwiftUIImageLoader: ObservableObject {
             return
         }
         
+        // SSCHECK Combine's Publisher example of URLSession with Escaping closure
         if let url = self.url {
             cancellable = URLSession.shared.dataTaskPublisher(for: url)
                  .subscribe(on: Self.imageProcessingQueue)
+                // Escaping closure
                 .map { UIImage(data: $0.data) }
                 .replaceError(with: nil)
                 .handleEvents(receiveSubscription: { [weak self] _ in self?.onStart() },

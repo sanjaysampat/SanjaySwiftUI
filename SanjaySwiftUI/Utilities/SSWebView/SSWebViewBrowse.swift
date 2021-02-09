@@ -151,6 +151,7 @@ struct SSWebViewBrowse: View {
             textField.placeholder = placeHolder
         }
 
+        // nonEscaping closure
         alert.addAction(UIAlertAction(title: "Done", style: .default) { _ in
             
             let textField = alert.textFields![0] as UITextField
