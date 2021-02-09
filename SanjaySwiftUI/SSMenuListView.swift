@@ -77,6 +77,8 @@ struct SSMenuCell: View {
                     }
                 }
                 .frame(width: 45.0, height: 45.0)
+                // Better looking coloured icon images
+                // SSTODO to keep background and foreground color in ssMenuItem.
                 .background(Color.blue)
                 .cornerRadius(7)
                 .foregroundColor(.white)
