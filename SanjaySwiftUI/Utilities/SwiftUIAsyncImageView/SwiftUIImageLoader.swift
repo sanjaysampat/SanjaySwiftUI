@@ -11,7 +11,7 @@ import SwiftUI
 import Combine
 
 class SwiftUIImageLoader: ObservableObject {
-    @Published var image : UIImage?
+    @Published var imageLoaded : UIImage?
     
     private let url : URL?
     private var cancellable: AnyCancellable?
@@ -33,7 +33,7 @@ class SwiftUIImageLoader: ObservableObject {
         guard !isLoading else { return }
         
         if let url = self.url, let image = cache?[url] {
-            self.image = image
+            self.imageLoaded = image
             return
         }
         
@@ -49,7 +49,7 @@ class SwiftUIImageLoader: ObservableObject {
                               receiveCompletion: { [weak self] _ in self?.onFinish() },
                               receiveCancel: { [weak self] in self?.onFinish() })
                 .receive(on: DispatchQueue.main)
-                .assign(to: \.image, on: self)
+                .assign(to: \.imageLoaded, on: self)
         }
     }
     

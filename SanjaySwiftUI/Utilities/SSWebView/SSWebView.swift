@@ -111,18 +111,20 @@ struct SSWebView: UIViewRepresentable, WebViewHandlerDelegate {
         }
         
         func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
-            // Get the title of loaded webcontent
-            webView.evaluateJavaScript("document.title") { (response, error) in
-                if let error = error {
-                    print("Error getting title")
-                    print(error.localizedDescription)
+            // If url is not html text then get the title of loaded webcontent
+            if self.parent.htmlText.isEmpty {
+                webView.evaluateJavaScript("document.title") { (response, error) in
+                    if let error = error {
+                        print("Error getting title")
+                        print(error.localizedDescription)
+                    }
+                    
+                    guard let title = response as? String else {
+                        return
+                    }
+                    
+                    self.parent.ssWebViewModel.showWebTitle.send(title)
                 }
-                
-                guard let title = response as? String else {
-                    return
-                }
-                
-                self.parent.ssWebViewModel.showWebTitle.send(title)
             }
             
             /* Observer that observes 'ssWebViewModel.valuePublisher' to pass the value to web app - html by calling JavaScript function */

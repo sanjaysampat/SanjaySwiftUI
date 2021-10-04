@@ -26,7 +26,7 @@ struct UserCompanyData: Codable {
     public var UserCompanyWebsite: String = ""
     public var UserCompanyLogo: String = ""
     public var UserCompanyAddress: String = ""
-    
+    public var UserCompanyDescription: String = ""
 }
 
 struct UserProfileData: Codable {

@@ -13,10 +13,12 @@ struct SSWebViewBrowse: View {
 
     @State private var showingAlert:Int = 0
     @State private var showSpinLoader = false
-    @State private var siteTitle = ""
     @State private var siteStatus = ""
     @State var urlString = "https://apple.com"
     @State var isHtmlText = false
+    @State var siteTitle = ""
+    @State var showTitle = true
+    @State var showNavigationBar = true
 
     // For WebView's refresh, forward and backward navigation
     var webViewNavigationBar: some View {
@@ -104,14 +106,16 @@ struct SSWebViewBrowse: View {
                     self.siteStatus = value
                 }
                 
-                Text(siteTitle)
-                    .font(.caption2)
-                    .lineLimit(nil)
-                    .multilineTextAlignment(.center)
-                    .onReceive(self.ssWebViewModel.showWebTitle.receive(on: RunLoop.main)) { value in
-                        self.siteTitle = value
-                    }
-                Divider()
+                if showTitle {
+                    Text(siteTitle)
+                        .font(.caption2)
+                        .lineLimit(nil)
+                        .multilineTextAlignment(.center)
+                        .onReceive(self.ssWebViewModel.showWebTitle.receive(on: RunLoop.main)) { value in
+                            self.siteTitle = value
+                        }
+                    Divider()
+                }
                 
                 if isHtmlText {
                     SSWebView(ssWebViewModel: ssWebViewModel, htmlText: urlString )
@@ -122,7 +126,10 @@ struct SSWebViewBrowse: View {
                         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, idealHeight: 500, maxHeight: .infinity, alignment: .center)
                         .padding()
                 }
-                webViewNavigationBar
+                
+                if showNavigationBar {
+                    webViewNavigationBar
+                }
                 
             }
             

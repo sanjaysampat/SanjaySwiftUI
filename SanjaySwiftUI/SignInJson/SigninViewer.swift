@@ -134,18 +134,25 @@ struct ExtractedView: View {
                     .lineLimit(nil)
                 
                 SwiftUIAsyncImageView(url: URL(string: self.signinSuccess.users[recordNumber].profileData.UserProfileImagePathActual), placeholder: Text("User Photo"), cache: self.cache)
-                    .frame(width: self.photoFrame.width, height: self.photoFrame.height, alignment: .center)
+                    .frame(minWidth: 0, idealWidth: self.photoFrame.width, maxWidth: .infinity, minHeight: 0, idealHeight: self.photoFrame.height, maxHeight: 400, alignment: .center)
                     .cornerRadius(CommonUtils.cu_CornerRadius)
+
+                Divider()
                 
                 Text("Company Logo:")
                     .padding(.top, 10)
                 Text(self.signinSuccess.users[recordNumber].companyData.UserCompanyLogo)
                     .lineLimit(nil)
                 
-                SwiftUIAsyncImageView(url: URL(string: self.signinSuccess.users[recordNumber].companyData.UserCompanyLogo), placeholder: Text("Company Logo"), cache: self.cache)
-                    .frame(width: self.photoFrame.width, height: self.photoFrame.height, alignment: .top)
+                SwiftUIAsyncImageView(url: URL(string: self.signinSuccess.users[recordNumber].companyData.UserCompanyLogo), placeholder: Text(""), cache: self.cache)
+                    .frame(minWidth: 0, idealWidth: self.photoFrame.width, maxWidth: .infinity, minHeight: 0, idealHeight: self.photoFrame.height, maxHeight: 400, alignment: .center)
                     .cornerRadius(CommonUtils.cu_CornerRadius)
+                    .padding(0)
                 
+                SSWebViewBrowse(urlString: "<html><header><meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes'></header><p align='justify'>\(self.signinSuccess.users[recordNumber].companyData.UserCompanyDescription)</p></html>", isHtmlText: true, siteTitle:"Company Description (in html justified text)", showNavigationBar:false)
+                    .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, idealHeight: 300, maxHeight: 400, alignment: .center)
+                    .padding(0)
+
             }
             //SSTODO  how to do following and
             //let user = self.signinSuccess.users[number]

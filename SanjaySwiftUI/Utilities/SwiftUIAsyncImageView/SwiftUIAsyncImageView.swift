@@ -29,8 +29,8 @@ struct SwiftUIAsyncImageView<Placeholder: View>: View {
     
     private var image: some View {
         Group {
-            if loader.image != nil {
-                Image(uiImage: loader.image!)
+            if loader.imageLoaded != nil {
+                Image(uiImage: loader.imageLoaded!)
                 //configuration(Image(uiImage: loader.image!))
                     .resizable()
                     .scaledToFit()

@@ -76,7 +76,7 @@ SwiftUI project creation to learn.
     * Apple Pay test integration
         * Buy with various Landmark items. 
             * Saving Landmark data in document folder after buying, to store status of 'bought' 
-            * Loading the landmark json from document folder if available ( or from bundle )
+            * Loading the landmark json from document folder if available (or from bundle)
             * 'Clear all Bought data'
                 * Local JSON file deleted.
                 * When reloading the landmark data with load() method, view promptly refreshed 'bought' text.
@@ -88,7 +88,7 @@ SwiftUI project creation to learn.
     * Set landmark item as 'bought' 
         * used filteredLandMark and 'firstIndex' to find the index of record, to modify it.
         * It is always better to pass id's of struct array (insted of object). We can get index of it to modify the record.
-     * Description in html shown below 'close' button, from htmlDescription in landmarkData.json 
+     * Description in html shown below 'close' button, from htmlDescription in landmarkData.json, using SSWebView 
     
 2. Animation test ( links added in 'Menuview' )
     * Basic animation examples 
@@ -178,13 +178,17 @@ SwiftUI project creation to learn.
         
     * Remote Notification error when calling 'UIApplication.shared.registerForRemoteNotifications()'
         * Failed to register for notifications: no valid “aps-environment” entitlement string found for application
-            * To resolve add "Push Notifications" capability at - Project Settings - targets - Signing and Capabilities.
+            * To resolve add "Push Notifications" capability at - Project Settings - targets - Signin and Capabilities.
             
 19. Webbrowser : ( Work continued - 'Menu List' option 'Browse web')
 
-20. Sample form with Inline error validation using combine. ( Ref: https://www.youtube.com/watch?v=YJRApch2cc4&feature=youtu.be )
+20. ListView :
+    * Demo Signin User (SigninViewer) - Company Description (in html justified text) displayed with SSWebViewBrowse like a normal text control.
+
+
+21. Sample form with Inline error validation using combine. ( Ref: https://www.youtube.com/watch?v=YJRApch2cc4&feature=youtu.be )
             
-21. XCTestCase - testing case creation started. ( Ref: SanjaySwiftUITests, TrialWorkTests )
+22. XCTestCase - testing case creation started. ( Ref: SanjaySwiftUITests, TrialWorkTests )
 
 * Important Note :-
     1. When SwiftUI does not have many views in a screen, the loading of App is faster. ( SwiftUI only loads views when they are seen on screen )

@@ -62,8 +62,8 @@
             filePath = "SanjaySwiftUI/Utilities/SSWebView/SSWebView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "152"
-            endingLineNumber = "152"
+            startingLineNumber = "154"
+            endingLineNumber = "154"
             landmarkName = "webViewWebContentProcessDidTerminate(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -78,8 +78,8 @@
             filePath = "SanjaySwiftUI/Utilities/SSWebView/SSWebView.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "157"
-            endingLineNumber = "157"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
             landmarkName = "webView(_:didFail:withError:)"
             landmarkType = "7">
          </BreakpointContent>
