@@ -138,6 +138,41 @@ struct CommonUtils {
         return maxTotal
     }
     
+    static func trialCode() -> Void {
+        print("trialCode : start *****")
+        
+        // Example of flatMap and CompactMap
+        let numbers = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+        let result = numbers.flatMap({ $0 })
+        print("flatMap: \(result)")
+        // flatMap: [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+        // example difference between map and flatMap
+        let giraffes = [[5, 6, 9], [11, 2, 13, 20], [1, 13, 7, 8, 2]]
+        let tallestFlatMap = giraffes.flatMap({ $0.filter({ $0 > 10 }) })
+        print("flatMap: tallest > 10 : \(tallestFlatMap)")
+        // flatMap: tallest > 10 : [11, 13, 20, 13]
+
+        let tallestMap = giraffes.map({ $0.filter({ $0 > 10 }) })
+        print("map: tallest > 10 : \(tallestMap)")
+        //map: tallest > 10 : [[], [11, 13, 20], [13]]
+        
+        let numberString = ["5", "42", "nine", "100", "Bob"]
+        // return type of Int($0) is Int?
+        let numberMap = numberString.map({ Int($0) })
+        print("numberMap : \(numberMap)")
+        // numberMap : [Optional(5), Optional(42), nil, Optional(100), nil]
+        // return type is [Int?]
+
+        //The compactMap(_:) function removes nil values from the input array. It’s useful when working with optionals
+        let numberCompactMap = numberString.compactMap({ Int($0) })
+        print("numberCompactMap : \(numberCompactMap)")
+        //numberCompactMap : [5, 42, 100]
+        // return type is [Int]
+        
+        print("trialCode: end *****")
+    }
+    
     // TDD - testCommonUtilsCreateRequiredFolders()
     static func createRequiredFolders() -> Bool {
         

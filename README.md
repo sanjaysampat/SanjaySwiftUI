@@ -185,10 +185,13 @@ SwiftUI project creation to learn.
 20. ListView :
     * Demo Signin User (SigninViewer) - Company Description (in html justified text) displayed with SSWebViewBrowse like a normal text control.
 
-
 21. Sample form with Inline error validation using combine. ( Ref: https://www.youtube.com/watch?v=YJRApch2cc4&feature=youtu.be )
+
+22. iOS 15 or newer
+    * Example usage of AsyncImage view (SigninViewer.swift)
+    * Example usage of AXChartDescriptor - Bar Chart with Audio Graph as accessibility feature (ChartDemoView.swift)
             
-22. XCTestCase - testing case creation started. ( Ref: SanjaySwiftUITests, TrialWorkTests )
+23. XCTestCase - testing case creation started. ( Ref: SanjaySwiftUITests, TrialWorkTests )
 
 * Important Note :-
     1. When SwiftUI does not have many views in a screen, the loading of App is faster. ( SwiftUI only loads views when they are seen on screen )
@@ -201,4 +204,5 @@ SwiftUI project creation to learn.
 (2) Images of face belongs to their respective copyrights.
 (3) Images of RoomList by [Jan Zavrel](http://www.zavrel.net/swiftui-rooms-resources)
 (4) Signature images and respective photo images and weblinks are used from Wikimedia Commons - commons.wikimedia.org and Wikipedia - www.wikipedia.org
+(5) All 'iOS 15 or newer' examples are taken from [Swift with Majid](https://swiftwithmajid.com/)
 </sub></sup>

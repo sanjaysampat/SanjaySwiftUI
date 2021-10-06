@@ -47,7 +47,7 @@ let mainMenuData = [
 
     SSMenuItem( title: "Form with Inline error validation using combine", systemImage1: "rectangle", systemImage2: "text.alignleft", image1ScaleEffect: CGSize(width: 1.2, height: 1.5), isGroupEnd: false, destination: AnyView( CombineFormView() ) ),
 
-    SSMenuItem( title: "Chart Demo ( using Swift Package ) - WIP", systemImage1: "chart.bar.xaxis", systemImage2: "", isGroupEnd: false, destination: AnyView( ChartDemoView() ) ),
+    SSMenuItem( title: "Chart Demo", systemImage1: "chart.bar.xaxis", systemImage2: "", isGroupEnd: false, destination: AnyView( ChartDemoView() ) ),
 
     SSMenuItem( title: "Screen Recording List", systemImage1: "squares.below.rectangle", systemImage2: "", isGroupEnd: false, destination: AnyView( RecordedListView() ) ),
 

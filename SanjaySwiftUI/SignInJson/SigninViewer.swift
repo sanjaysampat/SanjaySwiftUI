@@ -152,8 +152,41 @@ struct ExtractedView: View {
                 SSWebViewBrowse(urlString: "<html><header><meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes'></header><p align='justify'>\(self.signinSuccess.users[recordNumber].companyData.UserCompanyDescription)</p></html>", isHtmlText: true, siteTitle:"Company Description (in html justified text)", showNavigationBar:false)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, idealHeight: 300, maxHeight: 400, alignment: .center)
                     .padding(0)
+                
+                // SSNote :
+                // Example of SwiftUI view AsyncImage ( iOS 15.0 or newer )
+                // view that downloads and shows an image via URL
+                // AsyncImagePhase enum defines a bunch of image loading states like empty, success, and failed. You can handle all these cases.
+                // Another parameter of the currently used initializer is the SwiftUI transaction. By default, AsyncImage creates a new transaction with the default configuration. In this example, a custom transaction with a particular animation that AsyncImage will use whenever phase changes.
+                
+                if #available(iOS 15.0, *) {
+                    AsyncImage(
+                        url: URL(string: self.signinSuccess.users[recordNumber].companyData.UserCompanyLogo),
+                        transaction: Transaction(animation: .easeInOut)
+                    ) { phase in
+                        switch phase {
+                        case .empty:
+                            ProgressView()
+                        case .success(let image):
+                            image
+                                .resizable()
+                                .scaledToFit()
+                                .transition(.scale(scale: 0.1, anchor: .center))
+                        case .failure:
+                            Image(systemName: "wifi.slash")
+                        @unknown default:
+                            EmptyView()
+                        }
+                    }
+                    .frame(width: 150, height: 150)
+                    .background(Color.yellow)
+                    .clipShape(Circle())
+                } else {
+                    // Fallback on earlier versions
+                }
 
             }
+            
             //SSTODO  how to do following and
             //let user = self.signinSuccess.users[number]
             /*

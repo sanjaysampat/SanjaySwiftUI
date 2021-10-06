@@ -30,6 +30,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         
         _ = CommonUtils.createRequiredFolders()
         
+        CommonUtils.trialCode()
+        
         return true
     }
     
