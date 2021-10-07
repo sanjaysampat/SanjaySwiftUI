@@ -188,8 +188,11 @@ SwiftUI project creation to learn.
 21. Sample form with Inline error validation using combine. ( Ref: https://www.youtube.com/watch?v=YJRApch2cc4&feature=youtu.be )
 
 22. iOS 15 or newer
-    * Example usage of AsyncImage view (SigninViewer.swift)
-    * Example usage of AXChartDescriptor - Bar Chart with Audio Graph as accessibility feature (ChartDemoView.swift)
+    * Example usage of 
+        * AsyncImage view (SigninViewer.swift)
+        * AXChartDescriptor - Bar Chart with Audio Graph as accessibility feature (ChartDemoView.swift)
+        * .swipeActions - Adds custom swipe actions to a row in a list. (SignatureListView.swift)
+        * .confirmationDialog - Viewmodifier to display confirmation dialogs. (SignatureListView.swift)
             
 23. XCTestCase - testing case creation started. ( Ref: SanjaySwiftUITests, TrialWorkTests )
 
