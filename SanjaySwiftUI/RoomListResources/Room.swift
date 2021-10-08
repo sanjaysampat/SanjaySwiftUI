@@ -9,7 +9,11 @@
 import SwiftUI
 import CoreLocation
 
-struct Room: Identifiable {
+struct Room: Identifiable, Equatable {
+    static func == (lhs: Room, rhs: Room) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
     var id = UUID()
     var name: String
     var building: String
@@ -20,6 +24,7 @@ struct Room: Identifiable {
     var coordinates: Coordinates
     var annotaionItemPlaces : [SSAnnotaionItemPlace] = []
     var mapZoomLevel: Double = 0.005      // near 0.0 to wide 1.0
+    var searched: Bool = false
 
     var locationCoordinate: CLLocationCoordinate2D {
         CLLocationCoordinate2D(

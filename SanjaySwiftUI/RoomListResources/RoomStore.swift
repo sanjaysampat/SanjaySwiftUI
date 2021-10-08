@@ -20,4 +20,11 @@ class RoomStore: ObservableObject {
     
     let objectWillChange = PassthroughSubject<Void, Never>()
     
+    func roomArrayFoundFrom(searchQuery query:String) -> [Room] {
+        let roomArray = rooms.compactMap {
+            $0.name.lowercased().contains(query.lowercased()) ? $0 : nil
+        }
+        return roomArray
+    }
+    
 }

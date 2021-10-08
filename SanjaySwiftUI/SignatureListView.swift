@@ -77,7 +77,10 @@ struct SignatureListView: View {
                                 Text("you want to delete signature of \(selectedIndex >= 0 && signaturesData.count > selectedIndex ? signaturesData[selectedIndex].name : "(no record)")")
                             }
                     }
+                    .listRowSeparatorTint(Color.green)
+                    .listRowSeparator(.visible, edges: .all)
                 }
+                .listStyle(.grouped)
                 .refreshable {
                     // SSNote : Pending to do Pull to Refresh funtionality of List
                     reloadSignaturesDataWithShuffle()

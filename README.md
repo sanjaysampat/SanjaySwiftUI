@@ -191,8 +191,10 @@ SwiftUI project creation to learn.
     * Example usage of 
         * AsyncImage view (SigninViewer.swift)
         * AXChartDescriptor - Bar Chart with Audio Graph as accessibility feature (ChartDemoView.swift)
-        * .swipeActions - Adds custom swipe actions to a row in a list. (SignatureListView.swift)
         * .confirmationDialog - Viewmodifier to display confirmation dialogs. (SignatureListView.swift)
+        * List modifiers
+            * .swipeActions - Adds custom swipe actions to a row in a list. (SignatureListView.swift)
+            * .searchable, .onChange(of:""), .onSubmit(of: .search) - search text view in list items, set flag in list item (.map return mutable item) to highlight (RoomListView.swift, RoomStore.swift, Room.swift)
             
 23. XCTestCase - testing case creation started. ( Ref: SanjaySwiftUITests, TrialWorkTests )
 
