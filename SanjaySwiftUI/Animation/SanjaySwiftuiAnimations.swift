@@ -28,10 +28,20 @@ struct SanjaySwiftuiAnimations: View {
                     })
                     
                     NavigationLink(destination: Example23(), label: {
-                        Text("Exmaple 23 - Skew with Tap and Gestures")
+                        Text("Example 23 - Skew with Tap and Gestures")
+                    })
+                    
+                    NavigationLink(destination: Example24(), label: {
+                        Text("Example 24 - WIP")
                     })
 
+                }
+                
+                Section(header: Text("Path Animations")) {
                     
+                    NavigationLink(destination: Example25(), label: {
+                        Text("Example 25 - TimelineView with Clock")
+                    })
                 }
             }
             .navigationBarTitle(Text("Animation Experiments"), displayMode: .inline)
@@ -623,6 +633,129 @@ extension SSOffsetData : VectorArithmetic {
         SSOffsetData()
     }
     
+    
+}
+
+// MARK: Exmaple 24 - WIP
+struct Example24: View {
+    
+    
+    var body: some View {
+        
+        
+        Text("WIP")
+    }
+    
+}
+
+// MARK: Exmaple 25 - TimelineView - Clock - Path Animations - selectable timezones
+// ClockTime, ClockShape struct are defined in AdvancedSwiftuiAnimations.swift
+struct Example25: View {
+    //@State private var selection: UUID?
+    @State private var duration: Double = 4.0
+    @State private var searchQuery: String = ""
+    @State private var timeZoneArrayLocal:[SSTimeZone] = []
+    @State private var selectedTimeZone:SSTimeZone?
+    
+    @State private var format = DateFormatter()
+    @State private var timeZoneLocalizedName = "\(TimeZone.current.localizedName(for: .standard, locale: Locale.current) ?? "")"
+    @State private var timeZoneDisplayText = "\(TimeZone.current.identifier) \(TimeZone.current.abbreviation() ?? "")"
+    
+    init() {
+        timeZoneArrayLocal = timeZoneData
+    }
+
+    var body: some View {
+        //ScrollViewReader { proxy in
+        VStack {
+            Text("Tap on list item to display selected Timezone time")
+                .font(.subheadline)
+            List/*(selection: $selection)*/ {
+                ForEach(timeZoneData) { ssTimeZone in
+                    Text("\(ssTimeZone.city), \(ssTimeZone.continent)")
+                        .onTapGesture {
+                            format.timeZone = TimeZone(identifier: "\(ssTimeZone.continent)/\(ssTimeZone.city)")
+                            timeZoneLocalizedName = "\(ssTimeZone.localizedName)"
+                            timeZoneDisplayText = "\(ssTimeZone.city), \(ssTimeZone.continent) \(ssTimeZone.abbreviation)"
+                            //self.duration = 5.0
+                            //self.clockTime = ClockTime(format.string(from: Date()))
+                        }
+                }
+            }
+            .listStyle(.grouped)
+            .frame(height: 200)
+            .overlay(
+                        RoundedRectangle(cornerRadius: 10)
+                            .stroke(Color.blue, lineWidth: 2)
+                    )
+            .padding(.bottom,5)
+            .padding(.horizontal,5)
+            //.toolbar { EditButton() }
+            //.searchable(text: $searchQuery, placement: .automatic, prompt:"Search term")
+            // SSNote : to NOT to autocorrect in search bar, disableAutocorrection(true)
+            //.disableAutocorrection(true)
+            //.onSubmit(of: .search) {
+            //    submitCurrentSearchQuery()
+            //}
+            //.onChange(of: searchQuery) {
+            //    print($0)
+            //    returnTimeZoneFromQuery(searchString: $0)
+            //}
+
+            if #available(iOS 15.0, *) {
+                TimelineView(.periodic(from: Date(), by: 1)) { context in
+                    Text("\(timeZoneLocalizedName)")
+                        .font(.subheadline)
+                    Text("\(timeZoneDisplayText) \(format.string(from: context.date))")
+                    ClockShape(clockTime: ClockTime(format.string(from: context.date)))
+                        .stroke(Color.blue, lineWidth: 3)
+                        .padding(10)
+                        .animation(.easeInOut(duration: 1.25))
+                        .layoutPriority(1)
+                }
+            } else {
+                // Fallback on earlier versions
+                Text("\(timeZoneLocalizedName) - TimelineView is for iOS 15 and newer.")
+                    .font(.subheadline)
+                Text("\(timeZoneDisplayText) \(format.string(from: Date()))")
+                ClockShape(clockTime: ClockTime(format.string(from: Date())))
+                    .stroke(Color.blue, lineWidth: 3)
+                    .padding(10)
+                    .animation(.easeInOut(duration: duration))
+                    .layoutPriority(1)
+            }
+        //}
+        }
+        .navigationBarTitle(Text("Example 25"), displayMode: .inline)
+        .onAppear(perform: {
+            //returnTimeZoneFromQuery( searchString:"Calcutta" )
+            format.dateFormat = "hh:mm:ss:a"  // 'HH' for 24 hour format. 'hh' for 12 hour format
+            format.timeZone = TimeZone(identifier: "\(TimeZone.current.identifier)")
+            timeZoneLocalizedName = "\(TimeZone.current.localizedName(for: .standard, locale: Locale.current) ?? "")"
+            timeZoneDisplayText = "\(TimeZone.current.identifier) \(TimeZone.current.abbreviation() ?? "")"
+
+        })
+        //.padding(.bottom, 50)
+    }
+    
+    func returnTimeZoneFromQuery( searchString:String = "" ) {
+        if timeZoneArrayLocal.count > 0 {
+            if let existingIndex = timeZoneArrayLocal.firstIndex(where: { $0.city.lowercased() .contains(searchString.lowercased()) || $0.continent.lowercased().contains(searchString.lowercased()) })
+            {
+                selectedTimeZone = timeZoneArrayLocal[existingIndex]
+            }
+            if selectedTimeZone == nil {
+                selectedTimeZone = timeZoneArrayLocal.last
+            }
+            if let selectedTimeZoneFound = selectedTimeZone {
+                // 3) Set the format of the altered date.
+                format.timeZone = TimeZone(identifier: "\(selectedTimeZoneFound.continent)/\(selectedTimeZoneFound.city)")
+                timeZoneDisplayText = "\(selectedTimeZoneFound.city), \(selectedTimeZoneFound.continent) \(selectedTimeZoneFound.abbreviation)"
+                //self.duration = 4.0
+                //self.clockTime = ClockTime(format.string(from: Date()))
+            }
+        }
+    }
     
 }
 

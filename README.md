@@ -195,6 +195,7 @@ SwiftUI project creation to learn.
         * List modifiers
             * .swipeActions - Adds custom swipe actions to a row in a list. (SignatureListView.swift)
             * .searchable, .onChange(of:""), .onSubmit(of: .search) - search text view in list items, set flag in list item (.map return mutable item) to highlight (RoomListView.swift, RoomStore.swift, Room.swift)
+        * TimelineView - Example 25 - Clock - Path Animations - selectable timezones (SanjaySwiftuiAnimations.swift)
             
 23. XCTestCase - testing case creation started. ( Ref: SanjaySwiftUITests, TrialWorkTests )
 

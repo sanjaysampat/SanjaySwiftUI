@@ -267,6 +267,8 @@
 		7284458F25308FCA00338F55 /* CustomPersonPhotoImagePickerViewController.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7284458D25308FCA00338F55 /* CustomPersonPhotoImagePickerViewController.jpg */; };
 		7284459C25309B0B00338F55 /* SpriteSceneParticleEffect.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7284459B25309B0B00338F55 /* SpriteSceneParticleEffect.jpg */; };
 		7284459D25309B0B00338F55 /* SpriteSceneParticleEffect.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7284459B25309B0B00338F55 /* SpriteSceneParticleEffect.jpg */; };
+		728A3CE82711C9910080F1AC /* SSTimeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A3CE72711C9910080F1AC /* SSTimeZone.swift */; };
+		728A3CE92711C9920080F1AC /* SSTimeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A3CE72711C9910080F1AC /* SSTimeZone.swift */; };
 		728CBF392500D32C00EBEC9D /* LearningPython.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 728CBF382500D32C00EBEC9D /* LearningPython.jpg */; };
 		728CBF3A2500D32C00EBEC9D /* LearningPython.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 728CBF382500D32C00EBEC9D /* LearningPython.jpg */; };
 		72978392256538A9009DE59D /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72978391256538A9009DE59D /* Signature.swift */; };
@@ -574,6 +576,7 @@
 		7284458625308DB500338F55 /* vstackRotation.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = vstackRotation.jpg; sourceTree = "<group>"; };
 		7284458D25308FCA00338F55 /* CustomPersonPhotoImagePickerViewController.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CustomPersonPhotoImagePickerViewController.jpg; sourceTree = "<group>"; };
 		7284459B25309B0B00338F55 /* SpriteSceneParticleEffect.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SpriteSceneParticleEffect.jpg; sourceTree = "<group>"; };
+		728A3CE72711C9910080F1AC /* SSTimeZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTimeZone.swift; sourceTree = "<group>"; };
 		728CBF382500D32C00EBEC9D /* LearningPython.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LearningPython.jpg; sourceTree = "<group>"; };
 		72978391256538A9009DE59D /* Signature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
 		7297839825653931009DE59D /* signaturesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signaturesData.json; sourceTree = "<group>"; };
@@ -1087,6 +1090,7 @@
 			children = (
 				72B551B924DD743E009A0014 /* Data.swift */,
 				72B551BA24DD743E009A0014 /* Landmark.swift */,
+				728A3CE72711C9910080F1AC /* SSTimeZone.swift */,
 			);
 			path = LandmarkModels;
 			sourceTree = "<group>";
@@ -1600,6 +1604,7 @@
 				72FEEAA6255133920054AA79 /* Persistence.swift in Sources */,
 				72735B8924D034B0006B75C9 /* EmojisCollectionViewDelegate.swift in Sources */,
 				72E115C12578F7910055B55C /* EnumerationSampleView.swift in Sources */,
+				728A3CE82711C9910080F1AC /* SSTimeZone.swift in Sources */,
 				7230D3E52594C0BD00FFD7CC /* SSWebViewBrowse.swift in Sources */,
 				72735B8B24D034B0006B75C9 /* ResizeControl.swift in Sources */,
 				7204276F24DFFA3600DF4958 /* PrivateCommit.swift in Sources */,
@@ -1748,6 +1753,7 @@
 				72FEEAA7255133920054AA79 /* Persistence.swift in Sources */,
 				7267642B24FBB27E0074715B /* EmojisCollectionViewDelegate.swift in Sources */,
 				72E115C22578F7910055B55C /* EnumerationSampleView.swift in Sources */,
+				728A3CE92711C9920080F1AC /* SSTimeZone.swift in Sources */,
 				7230D3E62594C0BD00FFD7CC /* SSWebViewBrowse.swift in Sources */,
 				7267642C24FBB27E0074715B /* ResizeControl.swift in Sources */,
 				7267642D24FBB27E0074715B /* PrivateCommit.swift in Sources */,

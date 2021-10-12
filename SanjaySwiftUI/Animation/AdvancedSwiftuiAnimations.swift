@@ -537,7 +537,10 @@ struct ClockShape: Shape {
         let mHypotenuse = Double(radius) * 0.7 // minute needle length
         let sHypotenuse = Double(radius) * 0.9 // second needle length
         
-        let hAngle: Angle = .degrees(Double(clockTime.hours) / 12 * 360 - 90)
+        //let hAngle: Angle = .degrees(Double(clockTime.hours) / 12 * 360 - 90)
+        // SSNote : more presise hour Angle ( including minutes )
+        let hAngle: Angle = .degrees(( Double(clockTime.hours*5) + Double(clockTime.minutes/12) ) / 60 * 360 - 90)
+        
         let mAngle: Angle = .degrees(Double(clockTime.minutes) / 60 * 360 - 90)
         let sAngle: Angle = .degrees(Double(clockTime.seconds) / 60 * 360 - 90)
         
@@ -573,6 +576,18 @@ struct ClockTime {
         self.hours = h
         self.minutes = m
         self.seconds = s
+    }
+    
+    init(_ timeString:String ) {
+        self.hours = 0
+        self.minutes = 0
+        self.seconds = 0
+        let timeArray = timeString.split(separator: ":")
+        if timeArray.count >= 3 {
+            self.hours = Int(timeArray[0]) ?? 0
+            self.minutes = Int(timeArray[1]) ?? 0
+            self.seconds = Double(timeArray[2]) ?? 0.0
+        }
     }
     
     // Initializer with total of seconds

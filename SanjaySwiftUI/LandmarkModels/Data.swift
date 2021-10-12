@@ -42,6 +42,17 @@ func reloadSignaturesDataWithShuffle() {
 }
 
 
+let timeZoneData: [SSTimeZone] = TimeZone.knownTimeZoneIdentifiers.compactMap{ id->SSTimeZone? in
+    let components = id.components(separatedBy: "/")
+    guard components.count == 2, let continent = components.first, let city = components.last else {return nil}
+    let timeZone = TimeZone(identifier: id)
+    let localizedName = timeZone?.localizedName(for: .standard, locale: Locale.current) ?? id
+    let abbreviation = timeZone?.abbreviation() ?? "" 
+    let secondsFromGMT = timeZone?.secondsFromGMT() ?? 0
+    return SSTimeZone(city: city, continent: continent, abbreviation: abbreviation, localizedName: localizedName, secondsFromGMT:secondsFromGMT)
+}.sorted { $0.city < $1.city /*&& $0.continent < $1.continent*/ }
+
+
 // TDD - testCommonUtilssStoreJsonToDocumentFile() - 2
 func loadJsonFile<T: Decodable>(_ filename: String, _ folderName: String) -> T {
     // SSNote - to search first in local folder then load from Bundle
