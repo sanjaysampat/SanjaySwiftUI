@@ -167,6 +167,7 @@ SwiftUI project creation to learn.
 
     ![localizationLanguges](readmeResource/signaturesList.jpg)
 
+    * To handle timer oriented events, the use of (a) Timer.publish(every:...), .onReceive(...) and (b) DispatchQueue.main.asyncAfter(deadline:...)
     * Work-In-Progress - Will develop a puzzle game to match Name with Signatures and Photos.
     
 16. Changed from AppDelegate and SceneDelegate to App protocol introduced in XCode 12.

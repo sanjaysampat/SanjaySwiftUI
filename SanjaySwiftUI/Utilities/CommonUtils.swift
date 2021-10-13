@@ -170,6 +170,34 @@ struct CommonUtils {
         //numberCompactMap : [5, 42, 100]
         // return type is [Int]
         
+        /*
+        let text = "Forty-two!"
+        print(text[text.index(text.startIndex, offsetBy: 3)]) // t
+        print(text[..<text.index(text.startIndex, offsetBy: 3)]) // For //i.e. 0,1,2
+        print(text[text.index(text.endIndex, offsetBy: -4)...]) // two! //i.e. -1,-2,-3,-4
+        
+        var score = [
+            "Fry": 10,
+            nil: 5,
+            "Bender": nil,
+            "Zoidberg": 0
+        ]
+        for (name, points) in score
+        {
+            print("\(name) has \(points) points");
+        }
+        let mapScore = score.map { name -> String? in
+            print("\(name)")
+            return name.key
+        }
+        print("\(mapScore.count)")     // 4
+        let compactScore = score.compactMap { name -> String? in
+            print("\(name)")
+            return name.key
+        }
+        print("\(compactScore.count)")  // 3 // will be enumerated for 4 times but return value stored for non nil values.
+        */
+        
         print("trialCode: end *****")
     }
     

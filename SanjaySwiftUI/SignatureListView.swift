@@ -16,7 +16,11 @@ struct SignatureListView: View {
     @State private var nextTic = false
     @State private var selectedIndex = -1
     
-    let timer = Timer.publish(every: 30, on: .main, in: .common).autoconnect()
+    // SSNote : 1 - The method is more time accurate. This is continus calling.
+    let timer = Timer.publish(every: 30, on: .main, in: .common).autoconnect()  // SSNote : 1
+    
+    // SSNote : 2 - The method is less time accurate. This is for one time calling only.
+    //@State private var timerAsync: ()  // SSNote : 2
     
     init() {
         reloadSignaturesDataWithShuffle()
@@ -42,7 +46,7 @@ struct SignatureListView: View {
                                         selectedIndex = signaturesData.firstIndex(of: signatureSingle) ?? -1
                                         if selectedIndex >= 0 {
                                             confirmationShow = true
-                                            print("selection : \(selectedIndex) : \(signatureSingle.name)")
+                                            //print("selection : \(selectedIndex) : \(signatureSingle.name)")
                                         }
                                     }
                                 ) {
@@ -58,14 +62,20 @@ struct SignatureListView: View {
                                     confirmationShow = false
                                     if selectedIndex >= 0 && signaturesData.count > selectedIndex {
                                         let signatureRec = signaturesData[selectedIndex]
-                                        print("delete : \(selectedIndex) : \(signatureRec.name)")
+                                        //print("delete : \(selectedIndex) : \(signatureRec.name)")
                                         withAnimation {
                                             signaturesData.remove(at: selectedIndex)
                                             // SSNote : required the following change to message1 - for refresh of list,
                                             message1 = "\(signaturesData.count) total signatures after deletion"
                                             deleteState = 1
-                                            nextTic = false
+                                            nextTic = false    // SSNote : 1
                                             selectedIndex = -1
+                                            
+                                            // SSNote : 2
+                                            /*timerAsync = DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(30)) {
+                                                message1 = ""
+                                                print("deleted")
+                                            }*/
                                         }
                                     }
                                 }
@@ -82,15 +92,23 @@ struct SignatureListView: View {
                 }
                 .listStyle(.grouped)
                 .refreshable {
-                    // SSNote : Pending to do Pull to Refresh funtionality of List
+                    // SSNote : Pull to Refresh funtionality of List
                     reloadSignaturesDataWithShuffle()
                     message1 = "\(signaturesData.count) total signatures"
                     deleteState = 0
-                    nextTic = false
+                    nextTic = false    // SSNote : 1
+                    
+                    // SSNote : 2
+                    /*timerAsync = DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(30)) {
+                        message1 = ""
+                        print("deleted")
+                    }*/
+                    
                 }
                 .onAppear() {
                     message2 = "Pull to Refresh"
                 }
+                // SSNote : 1
                 .onReceive(timer) { _ in
                     //print("tic.")
                     if !message1.isEmpty {
