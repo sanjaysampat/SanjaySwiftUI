@@ -157,7 +157,7 @@ struct AudioView: View {
             .frame(maxWidth: .infinity)
                 
             }
-            .frame( minHeight: 150, idealHeight: 500)
+            .frame( minHeight: 100, idealHeight: 200, maxHeight: 300)
            
             Divider()
 

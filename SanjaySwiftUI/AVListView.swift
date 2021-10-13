@@ -24,7 +24,8 @@ struct AVListView: View {
                     AudioView()
                     
                     VideoView()
-                    
+                        .layoutPriority(1)  // SSNote : high priority for this layout by Parent.
+
                     Text("End")
                         .foregroundColor(CommonUtils.cu_activity_light_text_color)
                         .shadow(radius: 1.5)

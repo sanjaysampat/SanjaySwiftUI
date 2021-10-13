@@ -221,6 +221,8 @@ struct VideoPlayerContainerView : View {
 // This is the main SwiftUI view for this app, containing a single PlayerContainerView
 struct VideoView: View {
     var body: some View {
-        VideoPlayerContainerView(url: URL(string: "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8")!)
+        VideoPlayerContainerView(url: URL(string: "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4")!)
+            .frame( minHeight: 100, idealHeight: 200, maxHeight: 300)
+
     }
 }
