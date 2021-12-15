@@ -216,4 +216,5 @@ SwiftUI project creation to learn.
 (3) Images of RoomList by [Jan Zavrel](http://www.zavrel.net/swiftui-rooms-resources)
 (4) Signature images and respective photo images and weblinks are used from Wikimedia Commons - commons.wikimedia.org and Wikipedia - www.wikipedia.org
 (5) All 'iOS 15 or newer' examples are taken from [Swift with Majid](https://swiftwithmajid.com/)
+(6) .dark and .light dynamic color setting created from [Swift by Sundell](https://www.swiftbysundell.com/articles/defining-dynamic-colors-in-swift/)
 </sub></sup>
