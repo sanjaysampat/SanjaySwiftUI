@@ -188,7 +188,11 @@ SwiftUI project creation to learn.
 
 21. Sample form with Inline error validation using combine. ( Ref: https://www.youtube.com/watch?v=YJRApch2cc4&feature=youtu.be )
 
-22. iOS 15 or newer
+22. iOS 14 or newer
+    * Example usage of 
+        * Custom colors based on .dark and .light display mode with help of UIColor+Extra.swift. The light and dark colors are defined in ColorScheme struct. ( The colors are NOT added in xcasset file ) (15-Dec-2021 .. continued)
+
+23. iOS 15 or newer
     * Example usage of 
         * AsyncImage view (SigninViewer.swift)
         * AXChartDescriptor - Bar Chart with Audio Graph as accessibility feature (ChartDemoView.swift)
@@ -198,7 +202,7 @@ SwiftUI project creation to learn.
             * .searchable, .onChange(of:""), .onSubmit(of: .search) - search text view in list items, set flag in list item (.map return mutable item) to highlight (RoomListView.swift, RoomStore.swift, Room.swift)
         * TimelineView - Example 25 - Clock - Path Animations - selectable timezones (SanjaySwiftuiAnimations.swift)
             
-23. XCTestCase - testing case creation started. ( Ref: SanjaySwiftUITests, TrialWorkTests )
+24. XCTestCase - testing case creation started. ( Ref: SanjaySwiftUITests, TrialWorkTests )
 
 * Important Note :-
     1. When SwiftUI does not have many views in a screen, the loading of App is faster. ( SwiftUI only loads views when they are seen on screen )

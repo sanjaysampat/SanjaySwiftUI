@@ -231,7 +231,8 @@ struct AddButtonView : View {
             Text(title)
         }
         .padding(5)
-        .background(CommonUtils.cu_activity_light_theam_color)
+        //.background(CommonUtils.cu_activity_light_theam_color)
+        .background(ColorScheme.theam)
         .cornerRadius(10)
     }
 }

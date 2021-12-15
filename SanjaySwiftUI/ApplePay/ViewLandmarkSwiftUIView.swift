@@ -59,7 +59,8 @@ struct ViewLandmarkSwiftUIView: View {
                     Text("bought")
                         .shadow(radius: 1.5)
                         .padding(5)
-                        .background(CommonUtils.cu_activity_light_theam_color)
+                        //.background(CommonUtils.cu_activity_light_theam_color)
+                        .background(ColorScheme.theam)
                         .cornerRadius(5)
                         .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .bottom)
                         .opacity(0.5)
@@ -76,7 +77,8 @@ struct ViewLandmarkSwiftUIView: View {
                 Text("Close")
             }
             .padding(5)
-            .background(CommonUtils.cu_activity_light_theam_color)
+            //.background(CommonUtils.cu_activity_light_theam_color)
+            .background(ColorScheme.theam)
             .cornerRadius(10)
             
             ZStack {

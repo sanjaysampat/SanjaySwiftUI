@@ -67,6 +67,14 @@
     * how it works (youtube) - [[1](https://www.youtube.com/watch?v=u8qPvzk0AfY)], [[2](https://www.youtube.com/watch?v=dCKbRCUyop8)] and [[3](https://www.youtube.com/watch?v=SWoravHhsUU)]
     * Code for training your own [[original](https://github.com/NVlabs/stylegan2)], [[simple](https://github.com/lucidrains/stylegan2-pytorch)]
 
+### Notes
+
+1. We can print the view hierarchy at any time in (lldb) via 
+```swift
+po UIWindow.value(forKeyPath: "keyWindow.rootViewController.view.recursiveDescription")!
+```
+
+
 
 -- End --
 

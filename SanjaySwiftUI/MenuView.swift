@@ -486,7 +486,7 @@ struct MenuView: View {
                     Spacer()
                 }
                 .padding(5)
-                //.background(CommonUtils.cu_activity_light_theam_color)
+                //.background(ColorScheme.theam)
                 //.navigationBarTitle("")
                 //.navigationBarHidden(true)
                 .navigationBarTitle(Text("Menu"), displayMode: .inline)

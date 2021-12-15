@@ -212,6 +212,8 @@
 		72678E3425B5ACCB00E2D8C2 /* roundSpecificCorners.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72678E3225B5ACC800E2D8C2 /* roundSpecificCorners.jpg */; };
 		7267B250254417DE00822C61 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267B24F254417DE00822C61 /* MainContentView.swift */; };
 		7267B251254417DE00822C61 /* MainContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7267B24F254417DE00822C61 /* MainContentView.swift */; };
+		726BC101276A03D4004E1776 /* UIColor+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726BC100276A03D4004E1776 /* UIColor+Extra.swift */; };
+		726BC102276A03D4004E1776 /* UIColor+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 726BC100276A03D4004E1776 /* UIColor+Extra.swift */; };
 		72735B4F24D01A86006B75C9 /* StoryboardSanjay.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72735B4E24D01A86006B75C9 /* StoryboardSanjay.storyboard */; };
 		72735B5124D02872006B75C9 /* CustomImagePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B5024D02872006B75C9 /* CustomImagePickerViewController.swift */; };
 		72735B7424D034B0006B75C9 /* icomoon.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 72735B5324D034B0006B75C9 /* icomoon.ttf */; };
@@ -529,6 +531,7 @@
 		7267646E24FBE3E50074715B /* ApplePayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayController.swift; sourceTree = "<group>"; };
 		72678E3225B5ACC800E2D8C2 /* roundSpecificCorners.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = roundSpecificCorners.jpg; sourceTree = "<group>"; };
 		7267B24F254417DE00822C61 /* MainContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainContentView.swift; sourceTree = "<group>"; };
+		726BC100276A03D4004E1776 /* UIColor+Extra.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extra.swift"; sourceTree = "<group>"; };
 		72735B4E24D01A86006B75C9 /* StoryboardSanjay.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StoryboardSanjay.storyboard; sourceTree = "<group>"; };
 		72735B5024D02872006B75C9 /* CustomImagePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImagePickerViewController.swift; sourceTree = "<group>"; };
 		72735B5324D034B0006B75C9 /* icomoon.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = icomoon.ttf; sourceTree = "<group>"; };
@@ -1037,6 +1040,7 @@
 				72C29E8F25373D900051E936 /* ScreenRecorder.swift */,
 				72BCAD412538454E00AD427D /* RecordFloatingMenuView.swift */,
 				72DA25EE258CB41C00A864E8 /* CircleSpinLoader.swift */,
+				726BC100276A03D4004E1776 /* UIColor+Extra.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1534,6 +1538,7 @@
 				72BD188A24EEAA600032E3B7 /* AudioView.swift in Sources */,
 				726763E224FB7FA40074715B /* LocalDemoView.swift in Sources */,
 				72978392256538A9009DE59D /* Signature.swift in Sources */,
+				726BC101276A03D4004E1776 /* UIColor+Extra.swift in Sources */,
 				7249748E24E4F112006F5C52 /* TonySectionCat.swift in Sources */,
 				72BD188924EEAA600032E3B7 /* PlayerUtility.swift in Sources */,
 				72B551B124DD1C8A009A0014 /* UserAuth.swift in Sources */,
@@ -1683,6 +1688,7 @@
 				7267640024FBB27E0074715B /* AudioView.swift in Sources */,
 				7267640124FBB27E0074715B /* LocalDemoView.swift in Sources */,
 				72978393256538A9009DE59D /* Signature.swift in Sources */,
+				726BC102276A03D4004E1776 /* UIColor+Extra.swift in Sources */,
 				7267640224FBB27E0074715B /* TonySectionCat.swift in Sources */,
 				7267640324FBB27E0074715B /* PlayerUtility.swift in Sources */,
 				7267640424FBB27E0074715B /* UserAuth.swift in Sources */,

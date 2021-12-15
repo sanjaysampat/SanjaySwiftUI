@@ -66,7 +66,8 @@ struct SSMapView: View {
                                 .padding(5)
                             Spacer()
                         }
-                        .background(CommonUtils.cu_activity_light_theam_color).cornerRadius(10).opacity(0.6)
+                        //.background(CommonUtils.cu_activity_light_theam_color)
+                        .background(ColorScheme.theam)                        .cornerRadius(10).opacity(0.6)
                         .padding(30)
                     }
                 }

@@ -105,7 +105,8 @@ struct ContentView: View {
                     .rotation(Angle(degrees: -45), anchor: .center)
                     .edgesIgnoringSafeArea(.all)
                     //.opacity(0.15)
-                    .foregroundColor(CommonUtils.cu_activity_light_theam_color)
+                    //.foregroundColor(CommonUtils.cu_activity_light_theam_color)
+                    .foregroundColor(ColorScheme.theam)
                 
                 
                 Image(uiImage: self.personPhoto, placeholderSystemName: "person")
@@ -127,7 +128,8 @@ struct ContentView: View {
                     .scaleEffect(0.55)
                     .opacity(0.45)
                     .font(Font.title.weight(.ultraLight))
-                    .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                    //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                    .foregroundColor(ColorScheme.text)
                     .onReceive([self.$photoChanged].publisher.first()) { (value) in
                         //print("New value photoChanged is: \(value)")
                         //print( "SSPrint - Toggle - self.photoChanged \(self.photoChanged) and self.nameChanged=\(self.nameChanged)   self.isEditmode=\(self.isEditMode) self.currentPos=\(self.currentPos) self.name=\(self.name)" )
@@ -155,7 +157,8 @@ struct ContentView: View {
                     .resizable(resizingMode: .stretch)
                     .rotationEffect(Angle(degrees: -45), anchor: .center)
                     .scaledToFit()
-                    .foregroundColor(CommonUtils.cu_activity_foreground_color)
+                    //.foregroundColor(CommonUtils.cu_activity_foreground_color)
+                    .foregroundColor(ColorScheme.foreground)
                     .opacity(0.75)
                 
                 if self.showingAlert == 1 {
@@ -175,21 +178,25 @@ struct ContentView: View {
                     
                     Text("\(self.name)")
                         .font(.largeTitle)
-                        .foregroundColor(CommonUtils.cu_activity_foreground_color)
-                    
+                        //.foregroundColor(CommonUtils.cu_activity_foreground_color)
+                        .foregroundColor(ColorScheme.foreground)
+
                     Text("in my Heart")
                         .font(.title)
                         .fontWeight(.thin)
-                        .foregroundColor(CommonUtils.cu_activity_foreground_color)
-                    
+                        //.foregroundColor(CommonUtils.cu_activity_foreground_color)
+                        .foregroundColor(ColorScheme.foreground)
+
                     if self.persons.count > 0 {
                         Text("(\(self.currentPos+1) of \(self.persons.count))")
                             .font(.footnote)
-                            .foregroundColor(CommonUtils.cu_activity_foreground_color)
+                            //.foregroundColor(CommonUtils.cu_activity_foreground_color)
+                            .foregroundColor(ColorScheme.foreground)
                     } else {
                         Text("(No Records)")
                             .font(.footnote)
-                            .foregroundColor(CommonUtils.cu_activity_foreground_color)
+                            //.foregroundColor(CommonUtils.cu_activity_foreground_color)
+                            .foregroundColor(ColorScheme.foreground)
                     }
                     
                     HStack(alignment: .center) {
@@ -208,7 +215,8 @@ struct ContentView: View {
                                     .font(.caption)
                             }
                         }
-                        .foregroundColor(CommonUtils.cu_activity_foreground_color)
+                        //.foregroundColor(CommonUtils.cu_activity_foreground_color)
+                        .foregroundColor(ColorScheme.foreground)
                         .padding(paddingSize)
                         
                         Button(action: {
@@ -223,7 +231,8 @@ struct ContentView: View {
                                     .font(.caption)
                             }
                         }
-                        .foregroundColor(CommonUtils.cu_activity_foreground_color)
+                        //.foregroundColor(CommonUtils.cu_activity_foreground_color)
+                        .foregroundColor(ColorScheme.foreground)
                         .padding(paddingSize)
                         
                         Button(action: {
@@ -244,7 +253,8 @@ struct ContentView: View {
                                     .font(.caption)
                             }
                         }
-                        .foregroundColor(CommonUtils.cu_activity_foreground_color)
+                        //.foregroundColor(CommonUtils.cu_activity_foreground_color)
+                        .foregroundColor(ColorScheme.foreground)
                         .padding(paddingSize)
                         
                     }
@@ -271,7 +281,8 @@ struct ContentView: View {
                             // As we want to display the following view on top of the current view, so we are using .sheet to load this view.
                             CustomPersonPhotoImagePickerViewController(isPresentedStoryboardSanjay: self.$isPresentedStoryboardSanjay, photoChanged: self.$photoChanged,  photo: self.$personPhoto)
                         }
-                        .foregroundColor(CommonUtils.cu_activity_foreground_color)
+                        //.foregroundColor(CommonUtils.cu_activity_foreground_color)
+                        .foregroundColor(ColorScheme.foreground)
                         .padding(paddingSize)
                         
                         Button(action: {
@@ -293,7 +304,8 @@ struct ContentView: View {
                                 
                             }
                         }
-                        .foregroundColor(CommonUtils.cu_activity_foreground_color)
+                        //.foregroundColor(CommonUtils.cu_activity_foreground_color)
+                        .foregroundColor(ColorScheme.foreground)
                         .padding(paddingSize)
                         //.padding(.leading, paddingSize)
                         
@@ -319,7 +331,8 @@ struct ContentView: View {
                             
                         }
                     }
-                    .foregroundColor(CommonUtils.cu_activity_foreground_color)
+                    //.foregroundColor(CommonUtils.cu_activity_foreground_color)
+                    .foregroundColor(ColorScheme.foreground)
                     .padding(paddingSize)
 
                 }
@@ -343,7 +356,8 @@ struct ContentView: View {
             }
 
         }
-        .background(CommonUtils.cu_activity_background_color)
+        //.background(CommonUtils.cu_activity_background_color)
+        .background(ColorScheme.background)
         //.edgesIgnoringSafeArea(.all)
         
     }
@@ -374,8 +388,9 @@ struct ContentView: View {
             }
         }
         .padding(padding ? paddingSize : 0)
-        .foregroundColor(CommonUtils.cu_activity_foreground_color)
-        
+        //.foregroundColor(CommonUtils.cu_activity_foreground_color)
+        .foregroundColor(ColorScheme.foreground)
+
     }
     
     func saveContext() {
