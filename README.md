@@ -165,7 +165,7 @@ SwiftUI project creation to learn.
         
 15. SignatureListView - Usage of .svg files from assets (with photos and weblink to wikipedia.org)
 
-    ![localizationLanguges](readmeResource/signaturesList.jpg)
+    ![localizationLanguges](readmeResource/signaturesList-dark-light.jpg)
 
     * To handle timer oriented events, the use of (a) Timer.publish(every:...), .onReceive(...) and (b) DispatchQueue.main.asyncAfter(deadline:...)
     * Work-In-Progress - Will develop a puzzle game to match Name with Signatures and Photos.
