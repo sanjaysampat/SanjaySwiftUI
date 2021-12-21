@@ -163,7 +163,7 @@ SwiftUI project creation to learn.
     * 'Screen Recording List' - Show list of these recording files with mpeg file thumbnail. 
         * On click open the mpeg file to play it.
         
-15. SignatureListView - Usage of .svg files from assets (with photos and weblink to wikipedia.org)
+15. SignatureListView - Usage of .svg files from assets (with photos and weblink to wikipedia.org) (dark-light mode)
 
     ![localizationLanguges](readmeResource/signaturesList-dark-light.jpg)
 
