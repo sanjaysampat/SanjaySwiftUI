@@ -58,7 +58,8 @@ struct RoomDetailView: View {
                     Image(systemName: "location.fill")
                         .font(.title)
                         .padding(.all)
-                        .foregroundColor(CommonUtils.cu_activity_foreground_color)
+                        //.foregroundColor(CommonUtils.cu_activity_foreground_color)
+                        .foregroundColor(ColorScheme.foreground)
                 }
                 .sheet(isPresented: $isPresentedSSMap)
                 {

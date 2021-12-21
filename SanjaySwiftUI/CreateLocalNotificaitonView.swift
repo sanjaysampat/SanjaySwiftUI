@@ -54,7 +54,8 @@ struct CreateLocalNotificaitonView: View {
                     Text("Create")
                         .font(.title)
                 }
-                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                .foregroundColor(ColorScheme.text)
             }
             .alert(isPresented: $alertPresented) {
                 if notetitle.isEmpty &&

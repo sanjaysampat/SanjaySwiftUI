@@ -43,7 +43,8 @@ struct SSMapView: View {
                                 
                                 Text(place.name)
                                     .font(.subheadline)
-                                    .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                    //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                    .foregroundColor(ColorScheme.text)
                                     .shadow(radius: 1.5)
                             }
                         }
@@ -85,12 +86,14 @@ struct SSMapView: View {
                     Image(systemName: "chevron.left")
                     Text("Back")
                         .font(.body)
-                        .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                        //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                        .foregroundColor(ColorScheme.text)
                         .shadow(radius: 1.5)
                     
                 }
             }
-            .foregroundColor(CommonUtils.cu_activity_foreground_color)
+            //.foregroundColor(CommonUtils.cu_activity_foreground_color)
+            .foregroundColor(ColorScheme.foreground)
             .padding()
             
         }

@@ -113,7 +113,8 @@ struct ListView: View {
                         }
                         
                         Text("Start")
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .foregroundColor(ColorScheme.text)
                             .shadow(radius: 1.5)
                             .padding()
                         
@@ -148,7 +149,8 @@ struct ListView: View {
                                  */
                                 
                                 Text("Shuffle views End")
-                                    .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                    //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                    .foregroundColor(ColorScheme.text)
                                     .shadow(radius: 1.5)
                                     .padding()
                             }
@@ -170,7 +172,8 @@ struct ListView: View {
                                              .resizable(resizingMode: .stretch)
                                              .scaledToFit()
                                              .font(Font.title.weight(.ultraLight))
-                                             .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                             //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                             .foregroundColor(ColorScheme.text)
                                              .cornerRadius(self.myCornerRadius)
                                              */
                                             
@@ -178,14 +181,16 @@ struct ListView: View {
                                                 .resizable(resizingMode: .stretch)
                                                 .scaledToFit()
                                                 .font(Font.title.weight(.ultraLight))
-                                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                                //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                                .foregroundColor(ColorScheme.text)
                                                 .cornerRadius(topLeft, corners: .topLeft)
                                                 .cornerRadius(topRight, corners: .topRight)
                                                 .cornerRadius(bottomLeft, corners: .bottomLeft)
                                                 .cornerRadius(bottomRight, corners: .bottomRight)
                                             
                                             Text(self.persons[self.currentPos].name ?? "")
-                                                .foregroundColor(CommonUtils.cu_activity_background_color)
+                                                //.foregroundColor(CommonUtils.cu_activity_background_color)
+                                                .foregroundColor(ColorScheme.background)
                                                 .shadow(radius: 1.5)
                                         }
                                         
@@ -216,11 +221,13 @@ struct ListView: View {
                                                     .scaledToFit()
                                                     .frame(width: 250, height: 250)
                                                     .font(Font.title.weight(.ultraLight))
-                                                    .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                                    //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                                    .foregroundColor(ColorScheme.text)
                                                     .cornerRadius(self.myCornerRadius)
                                                 
                                                 Text("\(person.name ?? "")")
-                                                    .foregroundColor(CommonUtils.cu_activity_background_color)
+                                                    //.foregroundColor(CommonUtils.cu_activity_background_color)
+                                                    .foregroundColor(ColorScheme.background)
                                                     .shadow(radius: 1.5)
                                                     .frame(width: 250, height: 250, alignment: .bottom)
                                             }
@@ -237,7 +244,8 @@ struct ListView: View {
                                                     .cornerRadius(self.myCornerRadius)
                                                 
                                                 Text(landmark.name)
-                                                    .foregroundColor(CommonUtils.cu_activity_background_color)
+                                                    //.foregroundColor(CommonUtils.cu_activity_background_color)
+                                                    .foregroundColor(ColorScheme.background)
                                                     .shadow(radius: 1.5)
                                                     .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 200, idealHeight: 200, maxHeight: 200, alignment: .bottom)
                                             }
@@ -262,7 +270,8 @@ struct ListView: View {
                                                     .cornerRadius(self.myCornerRadius)
                                                 
                                                 Text(landmark.name)
-                                                    .foregroundColor(CommonUtils.cu_activity_background_color)
+                                                    //.foregroundColor(CommonUtils.cu_activity_background_color)
+                                                    .foregroundColor(ColorScheme.background)
                                                     .shadow(radius: 1.5)
                                                     .frame(width: 400, height: 400, alignment: .bottom)
                                             }
@@ -284,7 +293,8 @@ struct ListView: View {
                                             .cornerRadius(self.myCornerRadius)
                                         
                                         Text(landmark.name)
-                                            .foregroundColor(CommonUtils.cu_activity_background_color)
+                                            //.foregroundColor(CommonUtils.cu_activity_background_color)
+                                            .foregroundColor(ColorScheme.background)
                                             .shadow(radius: 1.5)
                                     }
                                     .padding(10)
@@ -306,7 +316,8 @@ struct ListView: View {
                                                     .cornerRadius(self.myCornerRadius)
                                                 
                                                 Text(landmark.name)
-                                                    .foregroundColor(CommonUtils.cu_activity_background_color)
+                                                    //.foregroundColor(CommonUtils.cu_activity_background_color)
+                                                    .foregroundColor(ColorScheme.background)
                                                     .shadow(radius: 1.5)
                                                     .frame(width: 400, height: 400, alignment: .bottom)
                                             }
@@ -342,7 +353,8 @@ struct ListView: View {
                         }
                         
                         Text("End")
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .foregroundColor(ColorScheme.text)
                             .shadow(radius: 1.5)
                             .padding()
                         
@@ -351,7 +363,8 @@ struct ListView: View {
                 }
             }
         }
-        .background(CommonUtils.cu_activity_background_color)
+        //.background(CommonUtils.cu_activity_background_color)
+        .background(ColorScheme.background)
         //.edgesIgnoringSafeArea(.all)
     }
 }
@@ -361,7 +374,8 @@ struct MultiselectorOptionTextMessageView: View {
     
     var body: some View {
         Text("Select '\(selectionText)' from Multiselector")
-            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+            //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+            .foregroundColor(ColorScheme.text)
             .shadow(radius: 1.5)
             .padding()
     }

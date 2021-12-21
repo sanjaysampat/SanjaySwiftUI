@@ -149,7 +149,7 @@ struct ExtractedView: View {
                     .cornerRadius(CommonUtils.cu_CornerRadius)
                     .padding(0)
                 
-                SSWebViewBrowse(urlString: "<html><header><meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes'></header><p align='justify'>\(self.signinSuccess.users[recordNumber].companyData.UserCompanyDescription)</p></html>", isHtmlText: true, siteTitle:"Company Description (in html justified text)", showNavigationBar:false)
+                SSWebViewBrowse(urlString: "<html><header><meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes'><meta name='color-scheme' content='dark light'></header><p align='justify'>\(self.signinSuccess.users[recordNumber].companyData.UserCompanyDescription)</p></html>", isHtmlText: true, siteTitle:"Company Description (in html justified text)", showNavigationBar:false)
                     .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, idealHeight: 300, maxHeight: 400, alignment: .center)
                     .padding(0)
                 

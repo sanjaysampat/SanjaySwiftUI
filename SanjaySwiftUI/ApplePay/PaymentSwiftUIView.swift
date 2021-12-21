@@ -97,7 +97,8 @@ struct PaymentSwiftUIView: View {
                                         .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .top)
                                     
                                     Text(landmark.name)
-                                        .foregroundColor(CommonUtils.cu_activity_background_color)
+                                        //.foregroundColor(CommonUtils.cu_activity_background_color)
+                                        .foregroundColor(ColorScheme.background)
                                         .shadow(radius: 1.5)
                                         .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .top)
 

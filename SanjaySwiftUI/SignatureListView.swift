@@ -30,7 +30,7 @@ struct SignatureListView: View {
         VStack {
             Text("Signatures are SVG files from assets")
             Text("\(message1)")
-                .foregroundColor(deleteState > 0 ? .red : .black)
+                .foregroundColor(deleteState > 0 ? .red : ColorScheme.text)
                 .font(.system(size: 11)) +
             Text(" \(message2)")
                 .foregroundColor(.gray)
@@ -142,6 +142,8 @@ struct SignatureRow: View {
                 .scaledToFit()
                 .font(Font.title.weight(.ultraLight))
                 .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 100, idealHeight: 200, maxHeight: 200)
+                .background(ColorScheme.text)
+                .cornerRadius(20)
             
             HStack {
                 signature.photoImage
@@ -157,7 +159,8 @@ struct SignatureRow: View {
                         Text(signature.name)
                     }
                 }
-                .foregroundColor(CommonUtils.cu_activity_background_color)
+                //.foregroundColor(CommonUtils.cu_activity_background_color)
+                .foregroundColor(ColorScheme.text)   //(ColorScheme.background)
                 .shadow(radius: 1.5)
             }
         }

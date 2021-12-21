@@ -190,7 +190,11 @@ SwiftUI project creation to learn.
 
 22. iOS 14 or newer
     * Example usage of 
-        * Custom colors based on .dark and .light display mode with help of UIColor+Extra.swift. The light and dark colors are defined in ColorScheme struct. ( The colors are NOT added in xcasset file ) (15-Dec-2021 .. continued)
+        * Custom colors based on .dark and .light display mode with help of UIColor+Extra.swift. The light and dark colors are defined in ColorScheme struct. ( The colors are NOT added in xcasset file )
+        * Dark light display mode in WKWebView with help of html headear meta data (eg. SSWebViewBrowse.swift). 
+        ```
+        <meta name='color-scheme' content='dark light'>
+        ```
 
 23. iOS 15 or newer
     * Example usage of 

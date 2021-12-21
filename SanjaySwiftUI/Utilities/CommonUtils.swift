@@ -64,7 +64,7 @@ struct ColorScheme {
     
     static var theam: Color {
         return Color(light: Color(.sRGB, red: 255/255, green: 236/255, blue: 240/255, opacity: 255/255),
-                     dark: Color(.sRGB, red: 0/255, green: 19/255, blue: 15/255, opacity: 255/255))
+                     dark: Color(.sRGB, red: 19/255, green: 49/255, blue: 45/255, opacity: 255/255))
     }
     
     static var foreground: Color {  // Color.pink
@@ -79,19 +79,19 @@ struct ColorScheme {
     
     static var text: Color {
         return Color(light: Color(.sRGB, red: 242/255, green: 125/255, blue: 131/255, opacity: 255/255),
-                     dark: Color(.sRGB, red: 13/255, green: 130/255, blue: 124/255, opacity: 255/255))
+                     dark: Color(.sRGB, red: 19/255, green: 192/255, blue: 185/255, opacity: 255/255))
     }
 }
 
 struct CommonUtils {
 
     static let cu_AppBundleId = "com.sanjay.SanjaySwiftUI"
-
+    /* // old way of setting color. (now using ColorScheme struct)
     static let cu_activity_light_theam_color :Color = Color(.sRGB, red: 255/255, green: 236/255, blue: 240/255, opacity: 255/255)
     static let cu_activity_foreground_color :Color = Color(.sRGB, red: 236/255, green: 63/255, blue: 70/255, opacity: 255/255) // Color.pink
     static let cu_activity_background_color :Color = Color.white
     static let cu_activity_light_text_color :Color = Color(.sRGB, red: 242/255, green: 125/255, blue: 131/255, opacity: 255/255)
-
+    */
     static let cu_CornerRadius:CGFloat = 5
     
     static let cu_NotificationDataAlertKey = "SSNotificationData"

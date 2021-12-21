@@ -39,7 +39,8 @@ struct ViewLandmarkSwiftUIView: View {
         ScrollView {
             
             Text(filteredLandMark?.category.rawValue ?? "")
-                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                .foregroundColor(ColorScheme.text)
                 .shadow(radius: 1.5)
             
             ZStack {
@@ -50,7 +51,8 @@ struct ViewLandmarkSwiftUIView: View {
                     .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .top)
                 
                 Text(filteredLandMark?.name ?? "")
-                    .foregroundColor(CommonUtils.cu_activity_background_color)
+                    //.foregroundColor(CommonUtils.cu_activity_background_color)
+                    .foregroundColor(ColorScheme.background)
                     .shadow(radius: 1.5)
                     .frame(minWidth: 100, idealWidth: 200, maxWidth: 400, minHeight: 250, idealHeight: 250, maxHeight: 250, alignment: .top)
                 
@@ -82,7 +84,7 @@ struct ViewLandmarkSwiftUIView: View {
             .cornerRadius(10)
             
             ZStack {
-                let headerString = "<header><meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no'></header>"
+                let headerString = "<header><meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no'><meta name='color-scheme' content='dark light'></header>"
                 let htmlText = filteredLandMark?.htmlDescription ?? ""
                 let textToShow = htmlText.isEmpty ? "" : headerString + htmlText
                 

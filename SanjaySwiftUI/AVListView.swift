@@ -16,7 +16,8 @@ struct AVListView: View {
                 ScrollView(.vertical) {
                     
                     Text("Start")
-                        .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                        //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                        .foregroundColor(ColorScheme.text)
                         .shadow(radius: 1.5)
                         .padding()
                     
@@ -27,7 +28,8 @@ struct AVListView: View {
                         .layoutPriority(1)  // SSNote : high priority for this layout by Parent.
 
                     Text("End")
-                        .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                        //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                        .foregroundColor(ColorScheme.text)
                         .shadow(radius: 1.5)
                         .padding()
                     

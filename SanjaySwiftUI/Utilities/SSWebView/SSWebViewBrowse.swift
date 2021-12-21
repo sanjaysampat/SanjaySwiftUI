@@ -184,7 +184,7 @@ struct SSWebViewBrowse: View {
             if urlTextString.lowercased().starts(with: "<html>") {
                 let indexStartOfText = urlTextString.index(urlTextString.startIndex, offsetBy: 6)
                 let substring = urlTextString[indexStartOfText...]
-                let headerString = "<html><header><meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes'></header>"
+                let headerString = "<html><header><meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=0.5, user-scalable=yes'><meta name='color-scheme' content='dark light'></header>"
                 urlTextString = headerString + String(substring)
                 self.isHtmlText = true
             } else if !urlTextString.lowercased().starts(with: "http") {

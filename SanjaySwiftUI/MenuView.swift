@@ -38,7 +38,8 @@ struct MenuView: View {
                                     .font(.caption)
                             }
                             .font(.body)
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .foregroundColor(ColorScheme.text)
                             .shadow(radius: 1.5)
                         }
                         .padding(.vertical, 5)
@@ -56,7 +57,8 @@ struct MenuView: View {
                                     .font(.caption)
                             }
                             .font(.body)
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .foregroundColor(ColorScheme.text)
                             .shadow(radius: 1.5)
                         }
                         .padding(.bottom, 5)
@@ -78,7 +80,8 @@ struct MenuView: View {
                                     .font(.caption)
                             }
                             .font(.body)
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .foregroundColor(ColorScheme.text)
                             .shadow(radius: 1.5)
                         }
                         .padding(.bottom, 5)
@@ -97,7 +100,8 @@ struct MenuView: View {
                                     .font(.caption)
                             }
                             .font(.body)
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .foregroundColor(ColorScheme.text)
                             .shadow(radius: 1.5)
                         }
                     }
@@ -115,7 +119,8 @@ struct MenuView: View {
                                     .font(.caption)
                             }
                             .font(.body)
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .foregroundColor(ColorScheme.text)
                             .shadow(radius: 1.5)
                             Divider()
                         }
@@ -132,7 +137,8 @@ struct MenuView: View {
                                     .font(.caption)
                             }
                             .font(.body)
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .foregroundColor(ColorScheme.text)
                             .shadow(radius: 1.5)
                             Divider()
                         }
@@ -149,7 +155,8 @@ struct MenuView: View {
                                     .font(.caption)
                             }
                             .font(.body)
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .foregroundColor(ColorScheme.text)
                             .shadow(radius: 1.5)
                             Divider()
                         }
@@ -166,7 +173,8 @@ struct MenuView: View {
                                     .font(.caption)
                             }
                             .font(.body)
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .foregroundColor(ColorScheme.text)
                             .shadow(radius: 1.5)
                             Divider()
                         }
@@ -187,7 +195,8 @@ struct MenuView: View {
                                     .font(.caption)
                             }
                             .font(.body)
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .foregroundColor(ColorScheme.text)
                             .shadow(radius: 1.5)
                             Divider()
                         }
@@ -207,7 +216,8 @@ struct MenuView: View {
                                     .font(.caption)
                             }
                             .font(.body)
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .foregroundColor(ColorScheme.text)
                             .shadow(radius: 1.5)
                         }
                         
@@ -226,7 +236,8 @@ struct MenuView: View {
                                         .font(.caption)
                                 }
                                 .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                .foregroundColor(ColorScheme.text)
                                 .shadow(radius: 1.5)
                             }
                             .padding(.bottom, 5)
@@ -243,7 +254,8 @@ struct MenuView: View {
                                         .font(.caption)
                                 }
                                 .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                .foregroundColor(ColorScheme.text)
                                 .shadow(radius: 1.5)
                             }
                             .padding(.bottom, 5)
@@ -260,7 +272,8 @@ struct MenuView: View {
                                         .font(.caption)
                                 }
                                 .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                .foregroundColor(ColorScheme.text)
                                 .shadow(radius: 1.5)
                             }
                             .padding(.bottom, 5)
@@ -277,7 +290,8 @@ struct MenuView: View {
                                         .font(.caption)
                                 }
                                 .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                .foregroundColor(ColorScheme.text)
                                 .shadow(radius: 1.5)
                             }
                             .padding(.bottom, 5)
@@ -299,7 +313,8 @@ struct MenuView: View {
                                         .font(.caption)
                                 }
                                 .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                .foregroundColor(ColorScheme.text)
                                 .shadow(radius: 1.5)
                             }
                             
@@ -319,7 +334,8 @@ struct MenuView: View {
                                     .font(.caption)
                             }
                             .font(.body)
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .foregroundColor(ColorScheme.text)
                             .shadow(radius: 1.5)
                         }
                     }
@@ -349,7 +365,8 @@ struct MenuView: View {
                          .font(.caption)
                          }
                          .font(.body)
-                         .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                         //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                         .foregroundColor(ColorScheme.text)
                          .shadow(radius: 1.5)
                          }
                          }
@@ -367,7 +384,8 @@ struct MenuView: View {
                                         .font(.caption)
                                 }
                                 .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                .foregroundColor(ColorScheme.text)
                                 .shadow(radius: 1.5)
                             }
                             
@@ -390,7 +408,8 @@ struct MenuView: View {
                                         .font(.caption)
                                 }
                                 .font(.body)
-                                .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                                .foregroundColor(ColorScheme.text)
                                 .shadow(radius: 1.5)
                             }
                         }
@@ -415,7 +434,8 @@ struct MenuView: View {
                                     .font(.caption)
                             }
                             .font(.body)
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .foregroundColor(ColorScheme.text)
                             .shadow(radius: 1.5)
                         }
                         
@@ -437,7 +457,8 @@ struct MenuView: View {
                                     .font(.caption)
                             }
                             .font(.body)
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .foregroundColor(ColorScheme.text)
                             .shadow(radius: 1.5)
                         }
                         
@@ -457,7 +478,8 @@ struct MenuView: View {
                                     .font(.caption)
                             }
                             .font(.body)
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .foregroundColor(ColorScheme.text)
                             .shadow(radius: 1.5)
                         }
                         
@@ -476,7 +498,8 @@ struct MenuView: View {
                                     .font(.caption)
                             }
                             .font(.body)
-                            .foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            //.foregroundColor(CommonUtils.cu_activity_light_text_color)
+                            .foregroundColor(ColorScheme.text)
                             .shadow(radius: 1.5)
                         }
                     }
