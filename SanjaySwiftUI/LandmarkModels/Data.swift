@@ -41,6 +41,21 @@ func reloadSignaturesDataWithShuffle() {
     signaturesData.shuffle()
 }
 
+/// SFSymbol
+fileprivate let ssSFSymbolFilename = "SSSFSymbol.txt"
+
+var ssSFSymbolData: [String] = CommonUtils.readTextFileFromBundle(ssSFSymbolFilename)
+
+func symbolArrayFoundFrom(searchQuery query:String) -> [String] {
+    //if query.isEmpty {
+    //    return ssSFSymbolData
+    //}
+    let symbolArray = ssSFSymbolData.compactMap {
+        $0.lowercased().contains(query.lowercased()) ? $0 : nil
+    }
+    return symbolArray
+}
+
 
 let timeZoneData: [SSTimeZone] = TimeZone.knownTimeZoneIdentifiers.compactMap{ id->SSTimeZone? in
     let components = id.components(separatedBy: "/")

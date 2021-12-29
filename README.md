@@ -195,6 +195,9 @@ SwiftUI project creation to learn.
         ```
         <meta name='color-scheme' content='dark light'>
         ```
+        * SF Symbols (SSSFSymbolSwiftUIView.swift, SSFSymbol.txt) - Filter, Shuffle, Pull to refresh
+        ![List of Symbols](readmeResource/symbols.jpg)
+            
 
 23. iOS 15 or newer
     * Example usage of 
@@ -203,7 +206,7 @@ SwiftUI project creation to learn.
         * .confirmationDialog - Viewmodifier to display confirmation dialogs. (SignatureListView.swift)
         * List modifiers
             * .swipeActions - Adds custom swipe actions to a row in a list. (SignatureListView.swift)
-            * .searchable, .onChange(of:""), .onSubmit(of: .search) - search text view in list items, set flag in list item (.map return mutable item) to highlight (RoomListView.swift, RoomStore.swift, Room.swift)
+            * .searchable, .onChange(of:""), .onSubmit(of: .search) - search text view in list items, set flag in list item (.map return mutable item) to highlight (RoomListView.swift, RoomStore.swift, Room.swift, SSSFSymbolSwiftUIView.swift)
         * TimelineView - Example 25 - Clock - Path Animations - selectable timezones (SanjaySwiftuiAnimations.swift)
             
 24. XCTestCase - testing case creation started. ( Ref: SanjaySwiftUITests, TrialWorkTests )

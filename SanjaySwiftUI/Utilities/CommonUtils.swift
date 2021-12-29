@@ -163,6 +163,9 @@ struct CommonUtils {
     static func trialCode() -> Void {
         print("trialCode : start *****")
         
+        //
+        
+        /*
         // Example of flatMap and CompactMap
         let numbers = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
         let result = numbers.flatMap({ $0 })
@@ -191,6 +194,7 @@ struct CommonUtils {
         print("numberCompactMap : \(numberCompactMap)")
         //numberCompactMap : [5, 42, 100]
         // return type is [Int]
+        */
         
         /*
         let text = "Forty-two!"
@@ -365,6 +369,24 @@ struct CommonUtils {
             print("An error occured \(error)")
         }
         return false
+    }
+    
+    static func readTextFileFromBundle(_ filename: String) -> [String] {
+        var returnStringArray:[String] = []
+        
+        guard let fileUrl = Bundle.main.url(forResource: filename, withExtension: nil)
+            else {
+                print("readTextFileFromBundle error: textFile \(filename) not found in Bundle")
+                return returnStringArray
+        }
+        do {
+            let file = try String( contentsOf: fileUrl)
+            returnStringArray = file.components(separatedBy: "\n")
+        } catch let error {
+            print("readTextFileFromBundle \(filename) error: \(error.localizedDescription)")
+        }
+        
+        return returnStringArray
     }
     
     // MARK: - Image Methods

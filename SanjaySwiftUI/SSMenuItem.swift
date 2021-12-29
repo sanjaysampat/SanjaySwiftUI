@@ -49,6 +49,8 @@ let mainMenuData = [
 
     SSMenuItem( title: "Chart Demo", systemImage1: "chart.bar.xaxis", systemImage2: "", isGroupEnd: false, destination: AnyView( ChartDemoView() ) ),
 
+    SSMenuItem( title: "SF Symbols", systemImage1: "square.on.square.squareshape.controlhandles", systemImage2: "", isGroupEnd: false, destination: AnyView( SSSFSymbolSwiftUIView() ) ),
+
     SSMenuItem( title: "Screen Recording List", systemImage1: "squares.below.rectangle", systemImage2: "", isGroupEnd: false, destination: AnyView( RecordedListView() ) ),
 
 ]

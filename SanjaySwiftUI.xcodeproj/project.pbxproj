@@ -248,6 +248,10 @@
 		72735B9424D034B0006B75C9 /* CropRectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B7324D034B0006B75C9 /* CropRectView.swift */; };
 		72735B9824D03BE5006B75C9 /* SSPhotoEditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B9724D03BE5006B75C9 /* SSPhotoEditorViewController.swift */; };
 		72735B9A24D048C7006B75C9 /* UIImage+Extra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72735B9924D048C7006B75C9 /* UIImage+Extra.swift */; };
+		7276F29B277B2D2A005878B9 /* SSSFSymbol.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7276F29A277B2D2A005878B9 /* SSSFSymbol.txt */; };
+		7276F29C277B2D2A005878B9 /* SSSFSymbol.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7276F29A277B2D2A005878B9 /* SSSFSymbol.txt */; };
+		7276F29E277B4051005878B9 /* SSSFSymbolSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7276F29D277B4051005878B9 /* SSSFSymbolSwiftUIView.swift */; };
+		7276F29F277B4051005878B9 /* SSSFSymbolSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7276F29D277B4051005878B9 /* SSSFSymbolSwiftUIView.swift */; };
 		727ACC28256B86E300FD7711 /* LocalNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727ACC27256B86E300FD7711 /* LocalNotificationCenter.swift */; };
 		727ACC29256B86E300FD7711 /* LocalNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727ACC27256B86E300FD7711 /* LocalNotificationCenter.swift */; };
 		727ACC2F256B89DD00FD7711 /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727ACC2E256B89DD00FD7711 /* LocalNotification.swift */; };
@@ -269,6 +273,8 @@
 		7284459D25309B0B00338F55 /* SpriteSceneParticleEffect.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7284459B25309B0B00338F55 /* SpriteSceneParticleEffect.jpg */; };
 		728A3CE82711C9910080F1AC /* SSTimeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A3CE72711C9910080F1AC /* SSTimeZone.swift */; };
 		728A3CE92711C9920080F1AC /* SSTimeZone.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A3CE72711C9910080F1AC /* SSTimeZone.swift */; };
+		728B73A1277C4ED100C56437 /* symbols.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 728B73A0277C4ED000C56437 /* symbols.jpg */; };
+		728B73A2277C4ED100C56437 /* symbols.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 728B73A0277C4ED000C56437 /* symbols.jpg */; };
 		728CBF392500D32C00EBEC9D /* LearningPython.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 728CBF382500D32C00EBEC9D /* LearningPython.jpg */; };
 		728CBF3A2500D32C00EBEC9D /* LearningPython.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 728CBF382500D32C00EBEC9D /* LearningPython.jpg */; };
 		72978392256538A9009DE59D /* Signature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72978391256538A9009DE59D /* Signature.swift */; };
@@ -567,6 +573,8 @@
 		72735B7324D034B0006B75C9 /* CropRectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CropRectView.swift; sourceTree = "<group>"; };
 		72735B9724D03BE5006B75C9 /* SSPhotoEditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSPhotoEditorViewController.swift; sourceTree = "<group>"; };
 		72735B9924D048C7006B75C9 /* UIImage+Extra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+Extra.swift"; sourceTree = "<group>"; };
+		7276F29A277B2D2A005878B9 /* SSSFSymbol.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = SSSFSymbol.txt; sourceTree = "<group>"; };
+		7276F29D277B4051005878B9 /* SSSFSymbolSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSSFSymbolSwiftUIView.swift; sourceTree = "<group>"; };
 		727ACC27256B86E300FD7711 /* LocalNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationCenter.swift; sourceTree = "<group>"; };
 		727ACC2E256B89DD00FD7711 /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
 		727BF0CB2525EEA90061BD7F /* SSMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSMapView.swift; sourceTree = "<group>"; };
@@ -579,6 +587,7 @@
 		7284458D25308FCA00338F55 /* CustomPersonPhotoImagePickerViewController.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = CustomPersonPhotoImagePickerViewController.jpg; sourceTree = "<group>"; };
 		7284459B25309B0B00338F55 /* SpriteSceneParticleEffect.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = SpriteSceneParticleEffect.jpg; sourceTree = "<group>"; };
 		728A3CE72711C9910080F1AC /* SSTimeZone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSTimeZone.swift; sourceTree = "<group>"; };
+		728B73A0277C4ED000C56437 /* symbols.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = symbols.jpg; sourceTree = "<group>"; };
 		728CBF382500D32C00EBEC9D /* LearningPython.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = LearningPython.jpg; sourceTree = "<group>"; };
 		72978391256538A9009DE59D /* Signature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signature.swift; sourceTree = "<group>"; };
 		7297839825653931009DE59D /* signaturesData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = signaturesData.json; sourceTree = "<group>"; };
@@ -866,6 +875,7 @@
 				72E115C02578F7910055B55C /* EnumerationSampleView.swift */,
 				727EBBF725B6F16800142F3B /* ChartDemoView.swift */,
 				7231C98A25C5358800BFDA00 /* CombineFormView.swift */,
+				7276F29D277B4051005878B9 /* SSSFSymbolSwiftUIView.swift */,
 			);
 			path = SanjaySwiftUI;
 			sourceTree = "<group>";
@@ -989,6 +999,7 @@
 		728445682530879500338F55 /* readmeResource */ = {
 			isa = PBXGroup;
 			children = (
+				728B73A0277C4ED000C56437 /* symbols.jpg */,
 				72C54F992772179100F8B29A /* signaturesList-dark-light.jpg */,
 				72678E3225B5ACC800E2D8C2 /* roundSpecificCorners.jpg */,
 				7219C795256CE62900F324CC /* Menu.jpg */,
@@ -1041,6 +1052,7 @@
 				72BCAD412538454E00AD427D /* RecordFloatingMenuView.swift */,
 				72DA25EE258CB41C00A864E8 /* CircleSpinLoader.swift */,
 				726BC100276A03D4004E1776 /* UIColor+Extra.swift */,
+				7276F29A277B2D2A005878B9 /* SSSFSymbol.txt */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -1360,6 +1372,7 @@
 				72663AC224C5C7BD000596C9 /* LaunchScreen.storyboard in Resources */,
 				72678E3325B5ACCB00E2D8C2 /* roundSpecificCorners.jpg in Resources */,
 				72735B7524D034B0006B75C9 /* StickersViewController.xib in Resources */,
+				728B73A1277C4ED100C56437 /* symbols.jpg in Resources */,
 				7299E6A624E8046800704724 /* gettonyCategoryList.json in Resources */,
 				7299E6A424E8046800704724 /* getnewpriorityFreedomsbyuser.json in Resources */,
 				72A42D61254861B4002201DF /* UserSettings21.jpg in Resources */,
@@ -1399,6 +1412,7 @@
 				7284458E25308FCA00338F55 /* CustomPersonPhotoImagePickerViewController.jpg in Resources */,
 				72663ABC24C5C7BD000596C9 /* Assets.xcassets in Resources */,
 				7249C424255AC9CA00BD17B1 /* Example23.mp4 in Resources */,
+				7276F29B277B2D2A005878B9 /* SSSFSymbol.txt in Resources */,
 				72B551D424DD743E009A0014 /* yukon_charleyrivers.jpg in Resources */,
 				7297839925653931009DE59D /* signaturesData.json in Resources */,
 				72B551D724DD743E009A0014 /* rainbowlake.jpg in Resources */,
@@ -1449,6 +1463,7 @@
 				7267644424FBB27E0074715B /* LaunchScreen.storyboard in Resources */,
 				72678E3425B5ACCB00E2D8C2 /* roundSpecificCorners.jpg in Resources */,
 				7267644524FBB27E0074715B /* StickersViewController.xib in Resources */,
+				728B73A2277C4ED100C56437 /* symbols.jpg in Resources */,
 				7267644624FBB27E0074715B /* gettonyCategoryList.json in Resources */,
 				7267644724FBB27E0074715B /* getnewpriorityFreedomsbyuser.json in Resources */,
 				72A42D62254861B4002201DF /* UserSettings21.jpg in Resources */,
@@ -1488,6 +1503,7 @@
 				7284458F25308FCA00338F55 /* CustomPersonPhotoImagePickerViewController.jpg in Resources */,
 				7267645D24FBB27E0074715B /* Assets.xcassets in Resources */,
 				7249C425255AC9CA00BD17B1 /* Example23.mp4 in Resources */,
+				7276F29C277B2D2A005878B9 /* SSSFSymbol.txt in Resources */,
 				7267645E24FBB27E0074715B /* yukon_charleyrivers.jpg in Resources */,
 				7297839A25653931009DE59D /* signaturesData.json in Resources */,
 				7267645F24FBB27E0074715B /* rainbowlake.jpg in Resources */,
@@ -1570,6 +1586,7 @@
 				72B88D4225285F2C00321710 /* EmitterSpriteKitView.swift in Sources */,
 				72735B9424D034B0006B75C9 /* CropRectView.swift in Sources */,
 				726763E924FBA1380074715B /* PaymentButton.swift in Sources */,
+				7276F29E277B4051005878B9 /* SSSFSymbolSwiftUIView.swift in Sources */,
 				72663AB324C5C7AC000596C9 /* AppDelegate.swift in Sources */,
 				72A548622516200400CB82CD /* CheckShapesView.swift in Sources */,
 				72735B8324D034B0006B75C9 /* StickersViewController.swift in Sources */,
@@ -1720,6 +1737,7 @@
 				72B88D4325285F2C00321710 /* EmitterSpriteKitView.swift in Sources */,
 				7267641624FBB27E0074715B /* CropRectView.swift in Sources */,
 				7267641724FBB27E0074715B /* PaymentButton.swift in Sources */,
+				7276F29F277B4051005878B9 /* SSSFSymbolSwiftUIView.swift in Sources */,
 				7267641824FBB27E0074715B /* AppDelegate.swift in Sources */,
 				72A548632516200400CB82CD /* CheckShapesView.swift in Sources */,
 				7267641924FBB27E0074715B /* StickersViewController.swift in Sources */,
