@@ -370,7 +370,8 @@ struct CommonUtils {
         }
         return false
     }
-    
+
+    // Swift Text File To Array of Strings
     static func readTextFileFromBundle(_ filename: String) -> [String] {
         var returnStringArray:[String] = []
         

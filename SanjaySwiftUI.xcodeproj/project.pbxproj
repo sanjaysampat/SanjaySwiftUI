@@ -380,6 +380,10 @@
 		72DA25E9258CAF4C00A864E8 /* LocalPageInBundle.html in Resources */ = {isa = PBXBuildFile; fileRef = 72DA25E7258CAF4B00A864E8 /* LocalPageInBundle.html */; };
 		72DA25EF258CB41C00A864E8 /* CircleSpinLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DA25EE258CB41C00A864E8 /* CircleSpinLoader.swift */; };
 		72DA25F0258CB41C00A864E8 /* CircleSpinLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DA25EE258CB41C00A864E8 /* CircleSpinLoader.swift */; };
+		72E10E072783310700292C0F /* symbols02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72E10E052783310600292C0F /* symbols02.jpg */; };
+		72E10E082783310700292C0F /* symbols02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72E10E052783310600292C0F /* symbols02.jpg */; };
+		72E10E092783310700292C0F /* symbols01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72E10E062783310700292C0F /* symbols01.jpg */; };
+		72E10E0A2783310700292C0F /* symbols01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72E10E062783310700292C0F /* symbols01.jpg */; };
 		72E115C12578F7910055B55C /* EnumerationSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E115C02578F7910055B55C /* EnumerationSampleView.swift */; };
 		72E115C22578F7910055B55C /* EnumerationSampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E115C02578F7910055B55C /* EnumerationSampleView.swift */; };
 		72E42CD82511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72E42CD72511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift */; };
@@ -663,6 +667,8 @@
 		72DA25D2258CA77200A864E8 /* SSWebViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SSWebViewModel.swift; sourceTree = "<group>"; };
 		72DA25E7258CAF4B00A864E8 /* LocalPageInBundle.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = LocalPageInBundle.html; sourceTree = "<group>"; };
 		72DA25EE258CB41C00A864E8 /* CircleSpinLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleSpinLoader.swift; sourceTree = "<group>"; };
+		72E10E052783310600292C0F /* symbols02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = symbols02.jpg; sourceTree = "<group>"; };
+		72E10E062783310700292C0F /* symbols01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = symbols01.jpg; sourceTree = "<group>"; };
 		72E115C02578F7910055B55C /* EnumerationSampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumerationSampleView.swift; sourceTree = "<group>"; };
 		72E42CD72511FCF8000CC247 /* AdvancedSwiftuiAnimations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdvancedSwiftuiAnimations.swift; sourceTree = "<group>"; };
 		72EDF1FF250BA81F00879E40 /* LocalArabic.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = LocalArabic.strings; sourceTree = "<group>"; };
@@ -999,6 +1005,8 @@
 		728445682530879500338F55 /* readmeResource */ = {
 			isa = PBXGroup;
 			children = (
+				72E10E062783310700292C0F /* symbols01.jpg */,
+				72E10E052783310600292C0F /* symbols02.jpg */,
 				728B73A0277C4ED000C56437 /* symbols.jpg */,
 				72C54F992772179100F8B29A /* signaturesList-dark-light.jpg */,
 				72678E3225B5ACC800E2D8C2 /* roundSpecificCorners.jpg */,
@@ -1371,6 +1379,7 @@
 				7284458025308A5200338F55 /* honeycombGrid.jpg in Resources */,
 				72663AC224C5C7BD000596C9 /* LaunchScreen.storyboard in Resources */,
 				72678E3325B5ACCB00E2D8C2 /* roundSpecificCorners.jpg in Resources */,
+				72E10E092783310700292C0F /* symbols01.jpg in Resources */,
 				72735B7524D034B0006B75C9 /* StickersViewController.xib in Resources */,
 				728B73A1277C4ED100C56437 /* symbols.jpg in Resources */,
 				7299E6A624E8046800704724 /* gettonyCategoryList.json in Resources */,
@@ -1416,6 +1425,7 @@
 				72B551D424DD743E009A0014 /* yukon_charleyrivers.jpg in Resources */,
 				7297839925653931009DE59D /* signaturesData.json in Resources */,
 				72B551D724DD743E009A0014 /* rainbowlake.jpg in Resources */,
+				72E10E072783310700292C0F /* symbols02.jpg in Resources */,
 				72B551CB24DD743E009A0014 /* turtlerock.jpg in Resources */,
 				72A42D5F254861B4002201DF /* Example21.jpg in Resources */,
 				7299E6AA24E8046800704724 /* getQuestionLockValue.json in Resources */,
@@ -1462,6 +1472,7 @@
 				7284458125308A5200338F55 /* honeycombGrid.jpg in Resources */,
 				7267644424FBB27E0074715B /* LaunchScreen.storyboard in Resources */,
 				72678E3425B5ACCB00E2D8C2 /* roundSpecificCorners.jpg in Resources */,
+				72E10E0A2783310700292C0F /* symbols01.jpg in Resources */,
 				7267644524FBB27E0074715B /* StickersViewController.xib in Resources */,
 				728B73A2277C4ED100C56437 /* symbols.jpg in Resources */,
 				7267644624FBB27E0074715B /* gettonyCategoryList.json in Resources */,
@@ -1507,6 +1518,7 @@
 				7267645E24FBB27E0074715B /* yukon_charleyrivers.jpg in Resources */,
 				7297839A25653931009DE59D /* signaturesData.json in Resources */,
 				7267645F24FBB27E0074715B /* rainbowlake.jpg in Resources */,
+				72E10E082783310700292C0F /* symbols02.jpg in Resources */,
 				7267646024FBB27E0074715B /* turtlerock.jpg in Resources */,
 				72A42D60254861B4002201DF /* Example21.jpg in Resources */,
 				7267646124FBB27E0074715B /* getQuestionLockValue.json in Resources */,
