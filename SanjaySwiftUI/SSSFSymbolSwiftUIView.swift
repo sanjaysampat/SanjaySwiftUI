@@ -149,7 +149,7 @@ struct SSSymbolList: View {
                 submitCurrentSearchQuery(passedSearchString: $0)
             }
             .onSubmit(of: .search) {
-                submitCurrentSearchQuery()
+                submitCurrentSearchQuery( passedSearchString: searchQuery, dismissKeyboard:true )
             }
             .listStyle(.grouped)
             .refreshable {
@@ -164,7 +164,7 @@ struct SSSymbolList: View {
         }
     }
     
-    func submitCurrentSearchQuery( passedSearchString:String = "" ) {
+    func submitCurrentSearchQuery( passedSearchString:String = "", dismissKeyboard:Bool = false ) {
         if passedSearchString.isEmpty {
             symbolsArray = ssSFSymbolData
         } else {
@@ -174,6 +174,9 @@ struct SSSymbolList: View {
             symbolsArray = searchedSymbols
         }
         message1 = "\(symbolsArray.count) items"
+        if dismissKeyboard {
+            self.endEditing()
+        }
     }
     
 }
