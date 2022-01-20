@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -342,6 +342,8 @@
 		72B551D524DD743E009A0014 /* stmarylake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551C624DD743E009A0014 /* stmarylake.jpg */; };
 		72B551D624DD743E009A0014 /* chilkoottrail.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551C724DD743E009A0014 /* chilkoottrail.jpg */; };
 		72B551D724DD743E009A0014 /* rainbowlake.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72B551C824DD743E009A0014 /* rainbowlake.jpg */; };
+		72B6B75927983E69000E898F /* SSPhotoEditor in Frameworks */ = {isa = PBXBuildFile; productRef = 72B6B75827983E69000E898F /* SSPhotoEditor */; };
+		72B6B75B27983E72000E898F /* SSPhotoEditor in Frameworks */ = {isa = PBXBuildFile; productRef = 72B6B75A27983E72000E898F /* SSPhotoEditor */; };
 		72B88D2D25285B1C00321710 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B88D2C25285B1C00321710 /* SpriteKit.framework */; };
 		72B88D2E25285B2C00321710 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72B88D2C25285B1C00321710 /* SpriteKit.framework */; };
 		72B88D3225285C4C00321710 /* MyParticleMagic.sks in Resources */ = {isa = PBXBuildFile; fileRef = 72B88D3025285C4C00321710 /* MyParticleMagic.sks */; };
@@ -641,6 +643,7 @@
 		72B551C624DD743E009A0014 /* stmarylake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = stmarylake.jpg; sourceTree = "<group>"; };
 		72B551C724DD743E009A0014 /* chilkoottrail.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chilkoottrail.jpg; sourceTree = "<group>"; };
 		72B551C824DD743E009A0014 /* rainbowlake.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = rainbowlake.jpg; sourceTree = "<group>"; };
+		72B6B75727981BCE000E898F /* SanjaySwiftUIAppLibrary */ = {isa = PBXFileReference; lastKnownFileType = folder; path = SanjaySwiftUIAppLibrary; sourceTree = "<group>"; };
 		72B88D2C25285B1C00321710 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		72B88D3025285C4C00321710 /* MyParticleMagic.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticleMagic.sks; sourceTree = "<group>"; };
 		72B88D3125285C4C00321710 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -696,6 +699,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72B6B75927983E69000E898F /* SSPhotoEditor in Frameworks */,
 				72B88D2D25285B1C00321710 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -718,6 +722,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				72B6B75B27983E72000E898F /* SSPhotoEditor in Frameworks */,
 				72B88D2E25285B2C00321710 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -800,6 +805,7 @@
 		72663AA624C5C7AC000596C9 = {
 			isa = PBXGroup;
 			children = (
+				72B6B75727981BCE000E898F /* SanjaySwiftUIAppLibrary */,
 				7228010C2550533400D34AFD /* SanjaySwiftUIPay-Bridging-Header.h */,
 				7228010B2550532500D34AFD /* SanjaySwiftUI-Bridging-Header.h */,
 				729D987A252B3A12001AC519 /* Notes */,
@@ -1236,6 +1242,7 @@
 			);
 			name = SanjaySwiftUI;
 			packageProductDependencies = (
+				72B6B75827983E69000E898F /* SSPhotoEditor */,
 			);
 			productName = SanjaySwiftUI;
 			productReference = 72663AAF24C5C7AC000596C9 /* SanjaySwiftUI.app */;
@@ -1294,6 +1301,7 @@
 			);
 			name = SanjaySwiftUIPay;
 			packageProductDependencies = (
+				72B6B75A27983E72000E898F /* SSPhotoEditor */,
 			);
 			productName = SanjaySwiftUI;
 			productReference = 7267646524FBB27E0074715B /* SanjaySwiftUIPay.app */;
@@ -2222,6 +2230,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		72B6B75827983E69000E898F /* SSPhotoEditor */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SSPhotoEditor;
+		};
+		72B6B75A27983E72000E898F /* SSPhotoEditor */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = SSPhotoEditor;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		72663AB624C5C7AC000596C9 /* SanjaySwiftUI.xcdatamodeld */ = {

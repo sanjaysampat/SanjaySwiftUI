@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SSPhotoEditor
 
 let appColor = UIColor(displayP3Red: 0.888, green: 0.636, blue: 0.133, alpha: 1)
 
@@ -276,6 +277,32 @@ class PersonPhotoImagePickerViewController: UIViewController {
     
     @objc
     func editButtonPressed() {
+
+        // Loading PhotoEditor ViewController and all required files from "SSPhotoEditor" package
+        let loadSSPhotoEditorMainViewController = SSPhotoEditorCommon.loadSSPhotoEditorMainViewController()
+        
+        loadSSPhotoEditorMainViewController.image = imageForEditing
+        loadSSPhotoEditorMainViewController.ssPhotoEditorMainDelegate = self
+        
+        //Colors for drawing and Text, If not set default values will be used
+        //loadSSPhotoEditorMainViewController.colors = [.red, .blue, .green]
+        
+        // Stickers that the user will choose from to add on the image
+        for i in 0...10 {
+            loadSSPhotoEditorMainViewController.stickers.append(UIImage(named: i.description )!)
+        }
+        
+        //To hide controls - array of enum control
+        //loadSSPhotoEditorMainViewController.hiddenControls = [.crop, .draw, .share]
+        
+        present(loadSSPhotoEditorMainViewController, animated: true)
+    }
+
+    /*
+     // The following was earlier loading Photo Editor from
+     // StoryboardSanjay.storyboard and files from Photo_Editor folder
+    @objc
+    func editButtonPressed_old() {
         let storyboardSanjay = UIStoryboard(name: "StoryboardSanjay", bundle: Bundle.main)
         let loadSSPhotoEditorViewController = storyboardSanjay.instantiateViewController(identifier: "SSPhotoEditorViewController") as! SSPhotoEditorViewController
         loadSSPhotoEditorViewController.image = imageForEditing
@@ -294,6 +321,7 @@ class PersonPhotoImagePickerViewController: UIViewController {
         
         present(loadSSPhotoEditorViewController, animated: true)
     }
+    */
 
 }
 
@@ -315,7 +343,7 @@ extension PersonPhotoImagePickerViewController: UIImagePickerControllerDelegate,
 }
 
 
-extension PersonPhotoImagePickerViewController: SSPhotoEditorDelegate {
+extension PersonPhotoImagePickerViewController: SSPhotoEditorMainDelegate {
     
     func doneEditing(image: UIImage) {
         self.imageForEditing = image

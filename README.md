@@ -188,7 +188,16 @@ SwiftUI project creation to learn.
 
 21. Sample form with Inline error validation using combine. ( Ref: https://www.youtube.com/watch?v=YJRApch2cc4&feature=youtu.be )
 
-22. iOS 14 or newer
+22. Moved Photo Editor from main project to new Swift Package 'SanjaySwiftUIAppLibrary'. 
+    * Modification to PersonPhotoImagePickerViewController.swift.
+    * Utilities/Photo_Editor folder and StoryboardSanjay.storyboard file is unused now.
+    * Notes for Swift Package: 
+        * different handling of 'Bundle' i.e. resources ( images, storyboard ) from package
+        * Package.swift is a configuration file for package.
+            * "resources:[.process("Resources")]" helps setting resources from "Resources" folder in package 
+            * also take a note of "platforms:" and ".target"
+
+23. iOS 14 or newer
     * Example usage of 
         * Custom colors based on .dark and .light display mode with help of UIColor+Extra.swift. The light and dark colors are defined in ColorScheme struct. ( The colors are NOT added in xcasset file )
         * Dark light display mode in WKWebView with help of html headear meta data (eg. SSWebViewBrowse.swift). 
@@ -196,7 +205,7 @@ SwiftUI project creation to learn.
         <meta name='color-scheme' content='dark light'>
         ```            
 
-23. iOS 15 or newer
+24. iOS 15 or newer
     * Example usage of 
         * AsyncImage view (SigninViewer.swift)
         * AXChartDescriptor - Bar Chart with Audio Graph as accessibility feature (ChartDemoView.swift)
@@ -209,7 +218,7 @@ SwiftUI project creation to learn.
         ![List of Symbols](readmeResource/symbols01.jpg)
         ![List of Symbols](readmeResource/symbols02.jpg)
             
-24. XCTestCase - testing case creation started. ( Ref: SanjaySwiftUITests, TrialWorkTests )
+25. XCTestCase - testing case creation started. ( Ref: SanjaySwiftUITests, TrialWorkTests )
 
 * Important Note :-
     1. When SwiftUI does not have many views in a screen, the loading of App is faster. ( SwiftUI only loads views when they are seen on screen )
