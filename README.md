@@ -191,11 +191,13 @@ SwiftUI project creation to learn.
 22. Moved Photo Editor from main project to new Swift Package 'SanjaySwiftUIAppLibrary'. 
     * Modification to PersonPhotoImagePickerViewController.swift.
     * Utilities/Photo_Editor folder and StoryboardSanjay.storyboard file is unused now.
+    * Localization in Swift Package with en, ar, gu-IN and mr-IN .lproj folders in Resources. ( similar to main project ) Example usage in SSCropViewController.
     * Notes for Swift Package: 
         * different handling of 'Bundle' i.e. resources ( images, storyboard ) from package
         * Package.swift is a configuration file for package.
             * "resources:[.process("Resources")]" helps setting resources from "Resources" folder in package 
             * also take a note of "platforms:" and ".target"
+        
 
 23. iOS 14 or newer
     * Example usage of 

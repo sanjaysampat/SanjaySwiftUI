@@ -1,0 +1,10 @@
+"string_image_saved_title" = "Image Saved";
+"string_image_saved_message" = "Image successfully saved to Photos library";
+"string_done" = "Done";
+"string_cancel" = "Cancel";
+"string_ok" = "OK";
+// SSCropView
+"string_constrain" = "Constrain";
+"string_original" = "Original";
+"string_square" = "Square";
+

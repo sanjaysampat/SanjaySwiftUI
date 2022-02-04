@@ -33,6 +33,13 @@
 5. Article on medium.com [Working With Apple Pay](https://medium.com/@aliakhtar_16369/working-with-apple-pay-27632ee23482) by [Ali Akhtar](https://medium.com/@aliakhtar_16369)
     
 
+### Localization
+
+1. Example from raywenderlich.com. [SwiftUI Localization Tutorial for iOS: Getting Started](https://www.raywenderlich.com/27469286-swiftui-localization-tutorial-for-ios-getting-started)
+
+2. From Apple Developer for Swift packages. [Localizing Package Resources](https://developer.apple.com/documentation/swift_packages/localizing_package_resources)    
+
+
 ### Tutorials
 
 1. Example from hackingwithswift to create project from start. [SwiftUI tutorial: Building a complete project](https://www.hackingwithswift.com/quick-start/swiftui/swiftui-tutorial-building-a-complete-project) by [Paul Hudson](https://www.hackingwithswift.com/about)

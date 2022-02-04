@@ -117,6 +117,9 @@ public class SSPhotoEditorCommon {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.doneButton.setTitle(NSLocalizedString("string_done", bundle: Bundle.module, comment: "Done"), for: UIControl.State.normal)
+        
         if let alphaBackgroundImage = UIImage(named: "alpha_background") {
             self.view.backgroundColor = UIColor( patternImage: alphaBackgroundImage )
         }
@@ -315,8 +318,10 @@ public class SSPhotoEditorCommon {
     //MAKR: helper methods
     
     @objc func image(_ image: UIImage, withPotentialError error: NSErrorPointer, contextInfo: UnsafeRawPointer) {
-        let alert = UIAlertController(title: "Image Saved", message: "Image successfully saved to Photos library", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        let localizedTitle = NSLocalizedString("string_image_saved_title", bundle: Bundle.module, comment: "Image Saved")
+        let localizedMessage = NSLocalizedString("string_image_saved_message", bundle: Bundle.module, comment: "Image successfully saved to Photos library")
+        let alert = UIAlertController(title: localizedTitle, message: localizedMessage, preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: NSLocalizedString("string_ok", bundle: Bundle.module, comment: "OK"), style: UIAlertAction.Style.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
         
         //SCLAlertView().showInfo("Image Saved", subTitle: "Image successfully saved to Photos library", closeButtonTitle: "OK", duration: 0.0, colorStyle: UInt(DgCommonUtils.DgStatic.cu_activity_toolbar_color), colorTextButton: UInt(DgCommonUtils.DgStatic.cu_activity_title_color))
