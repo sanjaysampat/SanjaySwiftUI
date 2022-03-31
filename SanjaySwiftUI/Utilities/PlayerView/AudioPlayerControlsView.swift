@@ -82,7 +82,7 @@ struct AudioPlayerControlsView: View {
         // Listen out for the item observer publishing a change to whether the player has an item
         .onReceive(itemObserver.publisher) { hasItem in
             
-            print("hasItem : \(hasItem)")
+            //print("hasItem : \(hasItem)")
             
             //self.state = hasItem ? self.state : .waitingForSelection
             self.state = hasItem ? .buffering : .waitingForSelection

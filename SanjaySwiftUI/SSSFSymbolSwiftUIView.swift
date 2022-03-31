@@ -46,37 +46,46 @@ struct SSSFSymbolSwiftUIView: View {
                 .foregroundColor(.gray)
                 .font(.system(size: 11))
             
-            HStack {
-                Spacer()
-                Text("SF Symbols")
-                Spacer()
-                Button(action: {
-                    symbolsArray.shuffle()
-                }, label: {
-                    Text("Shuffle \(Image(systemName: "shuffle.circle"))")
-                        .padding(.vertical, 2)
-                })
-                Spacer()
-            }
-            
-            if #available(iOS 15.0, *) {
-                Text("Symbol Rendering Mode : \(symbolRenderingMode.rawValue)")
-                    .padding(.bottom, 0)
-                Picker("", selection: $symbolRenderingMode) {
-                    ForEach(SSSymbolRenderingMode.allCases, id: \.self) {
-                        Text($0.rawValue)
-                    }
-                }
-                .pickerStyle(SegmentedPickerStyle())
+            // ScrollViewReader provide is 'proxy' in list
+            // this helps us to 'scrollTo' particular ID of item in List.
+            //ScrollViewReader { proxy in
+            // I am still unable to make it working on 'SSSymbolList' - pending to check
                 
-                SSSymbolList(symbolsArray: $symbolsArray, symbolRenderingMode: $symbolRenderingMode, message1: $message1, message2: $message2)
-            } else {
-                ScrollView(.vertical) {
-                    ForEach(symbolsArray, id: \.self ) { symbolSingle in
-                        SSSymbolRow(symbol: symbolSingle)
+                HStack {
+                    Spacer()
+                    Text("SF Symbols")
+                    Spacer()
+                    Button(action: {
+                        //proxy.scrollTo(symbolsArray.first)
+                        //withAnimation {
+                            symbolsArray.shuffle()
+                        //}
+                    }, label: {
+                        Text("Shuffle \(Image(systemName: "shuffle.circle"))")
+                            .padding(.vertical, 2)
+                    })
+                    Spacer()
+                }
+                
+                if #available(iOS 15.0, *) {
+                    Text("Symbol Rendering Mode : \(symbolRenderingMode.rawValue)")
+                        .padding(.bottom, 0)
+                    Picker("", selection: $symbolRenderingMode) {
+                        ForEach(SSSymbolRenderingMode.allCases, id: \.self) {
+                            Text($0.rawValue)
+                        }
+                    }
+                    .pickerStyle(SegmentedPickerStyle())
+                    
+                    SSSymbolList(symbolsArray: $symbolsArray, symbolRenderingMode: $symbolRenderingMode, message1: $message1, message2: $message2)
+                } else {
+                    ScrollView(.vertical) {
+                        ForEach(symbolsArray, id: \.self ) { symbolSingle in
+                            SSSymbolRow(symbol: symbolSingle)
+                        }
                     }
                 }
-            }
+            //} // ScrollViewReader
             
         }
     }
