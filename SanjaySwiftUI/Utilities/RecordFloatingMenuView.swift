@@ -165,14 +165,20 @@ struct RecordFloatingMenuView: View {
             screenRecorder.stoprecording(errorHandler: { error in
                 debugPrint("Error when stop recording \(error)")
             })
-            
-            /*
-             // SSTODO to check following
-            //addToRecordedStore()
+
+            // SSTODO to check following, thie may change in next versions.
+#if targetEnvironment(simulator)
+            // your simulator code
+            // Recording is not available in simulator
+#else
+            // your real device code
+            addToRecordedStore()
             DispatchQueue.main.async {
                 store.reloadFileList()
             }
-            */
+#endif
+            
+            
         } else {
             let formatter3 = DateFormatter()
             formatter3.dateFormat = CommonUtils.cu_VideoFileNameDateFormat

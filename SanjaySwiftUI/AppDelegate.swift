@@ -35,6 +35,7 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         return true
     }
     
+    // UIApplication.shared.registerForRemoteNotifications() called from LocalNotification.swift - init()
     func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
         print("Successfully registered for notifications!")
         //print( deviceToken )
@@ -54,28 +55,34 @@ class AppDelegate: NSObject, UIApplicationDelegate {
         
         // Allocate a reachability object
         reachDg = ReachabilityDg.reachabilityForInternetConnection()
-        // Set the blocks
-        reachDg!.reachableBlock = {
-            (reach: ReachabilityDg?) -> Void in
-            
-            // keep in mind this is called on a background thread
-            // and if you are updating the UI it needs to happen
-            // on the main thread, like this:
-            DispatchQueue.main.async {
-                print("REACHABLE!")
-                //self.present(self.createAlertController(message: "REACHABLE!"), animated: true, completion: nil);
-                CommonUtils.cuIsReachabilityThere = true
+        
+        if reachDg != nil
+        {
+            // Set the blocks
+            reachDg!.reachableBlock = {
+                (reach: ReachabilityDg?) -> Void in
+                
+                // keep in mind this is called on a background thread
+                // and if you are updating the UI it needs to happen
+                // on the main thread, like this:
+                DispatchQueue.main.async {
+                    print("REACHABLE!")
+                    //self.present(self.createAlertController(message: "REACHABLE!"), animated: true, completion: nil);
+                    CommonUtils.cuIsReachabilityThere = true
+                }
             }
+            
+            reachDg!.unreachableBlock = {
+                (reach: ReachabilityDg?) -> Void in
+                DispatchQueue.main.async {
+                    print("UNREACHABLE!")
+                    //self.present(self.createAlertController(message: "UNREACHABLE!"), animated: true, completion: nil);
+                    CommonUtils.cuIsReachabilityThere = false
+                }
+            }
+            
+            reachDg!.startNotifier()
         }
-        
-        reachDg!.unreachableBlock = {
-            (reach: ReachabilityDg?) -> Void in
-            print("UNREACHABLE!")
-            //self.present(self.createAlertController(message: "UNREACHABLE!"), animated: true, completion: nil);
-            CommonUtils.cuIsReachabilityThere = false
-        }
-        
-        reachDg!.startNotifier()
     }
     
     class func checkReachabilty() -> Bool {

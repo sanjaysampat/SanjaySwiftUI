@@ -159,6 +159,7 @@ SwiftUI project creation to learn.
 14. RecordFloatingMenuView - floating menu button to record video of the screen in mp4 file, in decoument folder. (ReplayKit)
     * This button can be moved to any of four corners before starting of recording.
     * This feature does not work for app in Simulator, but works on actual devices.
+        * so to use macro as "#if targetEnvironment(simulator)" ( Ref: https://stackoverflow.com/a/24869607/2641380 )
     * Issues - does not create proper mpeg file when we change the view or popup appears, while recording.
     * 'Screen Recording List' - Show list of these recording files with mpeg file thumbnail. 
         * On click open the mpeg file to play it.
@@ -170,7 +171,8 @@ SwiftUI project creation to learn.
     * To handle timer oriented events, the use of (a) Timer.publish(every:...), .onReceive(...) and (b) DispatchQueue.main.asyncAfter(deadline:...)
     * Work-In-Progress - Will develop a puzzle game to match Name with Signatures and Photos.
     
-16. Changed from AppDelegate and SceneDelegate to App protocol introduced in XCode 12.
+16. Changed from AppDelegate and SceneDelegate to App protocol introduced in XCode 12 and iOS 14.0
+    * The application starts from "@main struct SwiftUIViewAppWrapper" in SwiftUIViewApp.swift
 
 17. PushNotifications : ( from MenuView )
     * CreateLocalNotificationView with user selectable timer and Notification title, subtitle and body.

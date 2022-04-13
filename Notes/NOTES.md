@@ -80,7 +80,10 @@
 ```swift
 po UIWindow.value(forKeyPath: "keyWindow.rootViewController.view.recursiveDescription")!
 ```
-
+2. If we want to make a resource from package available to apps that depend on our Swift package, declare a public constant for it. For example, use the following to expose a property list file to apps that use our Swift package:
+```swift
+let settingsURL = Bundle.module.url(forResource: "settings", withExtension: "plist")
+```
 
 
 -- End --

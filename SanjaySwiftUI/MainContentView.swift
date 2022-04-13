@@ -91,8 +91,6 @@ struct mainContentView_Previews: PreviewProvider {
  
  long running background tasks
  
- use of example swift package
- 
  check :-
   https://www.raywenderlich.com/1484288-preventing-man-in-the-middle-attacks-in-ios-with-ssl-pinning
  

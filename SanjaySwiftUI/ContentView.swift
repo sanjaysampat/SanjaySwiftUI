@@ -236,8 +236,7 @@ struct ContentView: View {
                         .padding(paddingSize)
                         
                         Button(action: {
-                            _ =
-                                self.managedObjectContext.delete(self.persons[self.currentPos])
+                            self.managedObjectContext.delete(self.persons[self.currentPos])
                             self.saveContext()
                             self.currentPos = self.currentPos - 1
                             if ( self.currentPos < 0 ) {
